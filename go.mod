@@ -1,4 +1,4 @@
-module github.com/lonegunmanb/terraform-aws-schema/v4
+module github.com/lonegunmanb/terraform-aws-schema/v3
 
 go 1.20
 
