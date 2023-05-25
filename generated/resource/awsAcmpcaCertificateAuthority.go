@@ -40,12 +40,6 @@ const awsAcmpcaCertificateAuthority = `{
         "optional": true,
         "type": "string"
       },
-      "key_storage_security_standard": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "not_after": {
         "computed": true,
         "description_kind": "plain",
@@ -68,7 +62,6 @@ const awsAcmpcaCertificateAuthority = `{
       },
       "status": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "type": "string"
       },
@@ -90,12 +83,6 @@ const awsAcmpcaCertificateAuthority = `{
         ]
       },
       "type": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "usage_mode": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -217,7 +204,7 @@ const awsAcmpcaCertificateAuthority = `{
                   },
                   "expiration_in_days": {
                     "description_kind": "plain",
-                    "optional": true,
+                    "required": true,
                     "type": "number"
                   },
                   "s3_bucket_name": {
@@ -227,25 +214,6 @@ const awsAcmpcaCertificateAuthority = `{
                   },
                   "s3_object_acl": {
                     "computed": true,
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
-            "ocsp_configuration": {
-              "block": {
-                "attributes": {
-                  "enabled": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "bool"
-                  },
-                  "ocsp_custom_cname": {
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"

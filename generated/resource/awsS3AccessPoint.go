@@ -30,12 +30,6 @@ const awsS3AccessPoint = `{
         "required": true,
         "type": "string"
       },
-      "bucket_account_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "domain_name": {
         "computed": true,
         "description_kind": "plain",

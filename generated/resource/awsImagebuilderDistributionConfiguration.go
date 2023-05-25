@@ -116,22 +116,6 @@ const awsImagebuilderDistributionConfiguration = `{
                   "launch_permission": {
                     "block": {
                       "attributes": {
-                        "organization_arns": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": [
-                            "set",
-                            "string"
-                          ]
-                        },
-                        "organizational_unit_arns": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": [
-                            "set",
-                            "string"
-                          ]
-                        },
                         "user_groups": {
                           "description_kind": "plain",
                           "optional": true,
@@ -203,94 +187,6 @@ const awsImagebuilderDistributionConfiguration = `{
               },
               "max_items": 1,
               "nesting_mode": "list"
-            },
-            "fast_launch_configuration": {
-              "block": {
-                "attributes": {
-                  "account_id": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "enabled": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "bool"
-                  },
-                  "max_parallel_launches": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  }
-                },
-                "block_types": {
-                  "launch_template": {
-                    "block": {
-                      "attributes": {
-                        "launch_template_id": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "string"
-                        },
-                        "launch_template_name": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "string"
-                        },
-                        "launch_template_version": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "string"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "max_items": 1,
-                    "nesting_mode": "list"
-                  },
-                  "snapshot_configuration": {
-                    "block": {
-                      "attributes": {
-                        "target_resource_count": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "number"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "max_items": 1,
-                    "nesting_mode": "list"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1000,
-              "nesting_mode": "set"
-            },
-            "launch_template_configuration": {
-              "block": {
-                "attributes": {
-                  "account_id": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "default": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "bool"
-                  },
-                  "launch_template_id": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 100,
-              "nesting_mode": "set"
             }
           },
           "description_kind": "plain"

@@ -25,11 +25,6 @@ const awsLaunchTemplate = `{
         "optional": true,
         "type": "string"
       },
-      "disable_api_stop": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "disable_api_termination": {
         "description_kind": "plain",
         "optional": true,
@@ -233,11 +228,6 @@ const awsLaunchTemplate = `{
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"
-                  },
-                  "capacity_reservation_resource_group_arn": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
                   }
                 },
                 "description_kind": "plain"
@@ -254,11 +244,6 @@ const awsLaunchTemplate = `{
       "cpu_options": {
         "block": {
           "attributes": {
-            "amd_sev_snp": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "core_count": {
               "description_kind": "plain",
               "optional": true,
@@ -414,284 +399,6 @@ const awsLaunchTemplate = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
-      "instance_requirements": {
-        "block": {
-          "attributes": {
-            "accelerator_manufacturers": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "accelerator_names": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "accelerator_types": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "allowed_instance_types": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "bare_metal": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "burstable_performance": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "cpu_manufacturers": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "excluded_instance_types": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "instance_generations": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "local_storage": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "local_storage_types": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "on_demand_max_price_percentage_over_lowest_price": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "require_hibernate_support": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "spot_max_price_percentage_over_lowest_price": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            }
-          },
-          "block_types": {
-            "accelerator_count": {
-              "block": {
-                "attributes": {
-                  "max": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  },
-                  "min": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
-            "accelerator_total_memory_mib": {
-              "block": {
-                "attributes": {
-                  "max": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  },
-                  "min": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
-            "baseline_ebs_bandwidth_mbps": {
-              "block": {
-                "attributes": {
-                  "max": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  },
-                  "min": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
-            "memory_gib_per_vcpu": {
-              "block": {
-                "attributes": {
-                  "max": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  },
-                  "min": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
-            "memory_mib": {
-              "block": {
-                "attributes": {
-                  "max": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  },
-                  "min": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "number"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "min_items": 1,
-              "nesting_mode": "list"
-            },
-            "network_bandwidth_gbps": {
-              "block": {
-                "attributes": {
-                  "max": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  },
-                  "min": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
-            "network_interface_count": {
-              "block": {
-                "attributes": {
-                  "max": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  },
-                  "min": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
-            "total_local_storage_gb": {
-              "block": {
-                "attributes": {
-                  "max": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  },
-                  "min": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
-            "vcpu_count": {
-              "block": {
-                "attributes": {
-                  "max": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  },
-                  "min": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "number"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "min_items": 1,
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "license_specification": {
         "block": {
           "attributes": {
@@ -704,20 +411,6 @@ const awsLaunchTemplate = `{
           "description_kind": "plain"
         },
         "nesting_mode": "set"
-      },
-      "maintenance_options": {
-        "block": {
-          "attributes": {
-            "auto_recovery": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
       },
       "metadata_options": {
         "block": {
@@ -816,38 +509,12 @@ const awsLaunchTemplate = `{
                 "string"
               ]
             },
-            "ipv4_prefix_count": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "ipv4_prefixes": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
             "ipv6_address_count": {
               "description_kind": "plain",
               "optional": true,
               "type": "number"
             },
             "ipv6_addresses": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "ipv6_prefix_count": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "ipv6_prefixes": {
               "description_kind": "plain",
               "optional": true,
               "type": [
@@ -927,30 +594,6 @@ const awsLaunchTemplate = `{
               "type": "string"
             },
             "tenancy": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "private_dns_name_options": {
-        "block": {
-          "attributes": {
-            "enable_resource_name_dns_a_record": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "enable_resource_name_dns_aaaa_record": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "hostname_type": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"

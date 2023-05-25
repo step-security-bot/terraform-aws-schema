@@ -9,11 +9,6 @@ import (
 const awsAcmpcaCertificate = `{
   "block": {
     "attributes": {
-      "api_passthrough": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "arn": {
         "computed": true,
         "description_kind": "plain",

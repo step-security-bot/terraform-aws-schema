@@ -19,11 +19,6 @@ const awsStoragegatewayNfsFileShare = `{
         "optional": true,
         "type": "string"
       },
-      "bucket_region": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "client_list": {
         "description_kind": "plain",
         "required": true,
@@ -130,11 +125,6 @@ const awsStoragegatewayNfsFileShare = `{
           "map",
           "string"
         ]
-      },
-      "vpc_endpoint_dns_name": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
       }
     },
     "block_types": {

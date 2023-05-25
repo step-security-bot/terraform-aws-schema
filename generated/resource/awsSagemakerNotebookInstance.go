@@ -9,14 +9,6 @@ import (
 const awsSagemakerNotebookInstance = `{
   "block": {
     "attributes": {
-      "accelerator_types": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
       "additional_code_repositories": {
         "description_kind": "plain",
         "optional": true,
@@ -127,23 +119,6 @@ const awsSagemakerNotebookInstance = `{
         "description_kind": "plain",
         "optional": true,
         "type": "number"
-      }
-    },
-    "block_types": {
-      "instance_metadata_service_configuration": {
-        "block": {
-          "attributes": {
-            "minimum_instance_metadata_service_version": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

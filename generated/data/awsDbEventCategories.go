@@ -13,7 +13,7 @@ const awsDbEventCategories = `{
         "computed": true,
         "description_kind": "plain",
         "type": [
-          "list",
+          "set",
           "string"
         ]
       },

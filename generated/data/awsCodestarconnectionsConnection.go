@@ -10,9 +10,8 @@ const awsCodestarconnectionsConnection = `{
   "block": {
     "attributes": {
       "arn": {
-        "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "connection_status": {
@@ -34,7 +33,6 @@ const awsCodestarconnectionsConnection = `{
       "name": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "provider_type": {

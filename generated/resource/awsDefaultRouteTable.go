@@ -48,7 +48,6 @@ const awsDefaultRouteTable = `{
             "object",
             {
               "cidr_block": "string",
-              "core_network_arn": "string",
               "destination_prefix_list_id": "string",
               "egress_only_gateway_id": "string",
               "gateway_id": "string",

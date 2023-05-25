@@ -15,12 +15,6 @@ const awsRoute = `{
         "optional": true,
         "type": "string"
       },
-      "core_network_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "destination_cidr_block": {
         "computed": true,
         "description_kind": "plain",
@@ -97,21 +91,6 @@ const awsRoute = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      }
-    },
-    "block_types": {
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "read": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

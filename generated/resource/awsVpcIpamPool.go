@@ -83,11 +83,6 @@ const awsVpcIpamPool = `{
         "description_kind": "plain",
         "type": "number"
       },
-      "public_ip_source": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "publicly_advertisable": {
         "description_kind": "plain",
         "optional": true,
@@ -119,31 +114,6 @@ const awsVpcIpamPool = `{
           "map",
           "string"
         ]
-      }
-    },
-    "block_types": {
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "create": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "update": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

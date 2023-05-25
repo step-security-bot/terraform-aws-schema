@@ -38,17 +38,7 @@ const awsAmi = `{
           ]
         ]
       },
-      "boot_mode": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "creation_date": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "deprecation_time": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -102,16 +92,6 @@ const awsAmi = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "imds_support": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "include_deprecated": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "kernel_id": {
         "computed": true,
         "description_kind": "plain",
@@ -139,7 +119,7 @@ const awsAmi = `{
       },
       "owners": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": [
           "list",
           "string"
@@ -221,11 +201,6 @@ const awsAmi = `{
           "string"
         ]
       },
-      "tpm_support": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "usage_operation": {
         "computed": true,
         "description_kind": "plain",
@@ -258,19 +233,6 @@ const awsAmi = `{
           "description_kind": "plain"
         },
         "nesting_mode": "set"
-      },
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "read": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

@@ -9,12 +9,6 @@ import (
 const awsNeptuneCluster = `{
   "block": {
     "attributes": {
-      "allow_major_version_upgrade": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "apply_immediately": {
         "computed": true,
         "description_kind": "plain",
@@ -104,11 +98,6 @@ const awsNeptuneCluster = `{
         "optional": true,
         "type": "string"
       },
-      "global_cluster_identifier": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "hosted_zone_id": {
         "computed": true,
         "description_kind": "plain",
@@ -140,11 +129,6 @@ const awsNeptuneCluster = `{
         "type": "string"
       },
       "neptune_cluster_parameter_group_name": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "neptune_instance_parameter_group_name": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -225,25 +209,6 @@ const awsNeptuneCluster = `{
       }
     },
     "block_types": {
-      "serverless_v2_scaling_configuration": {
-        "block": {
-          "attributes": {
-            "max_capacity": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "min_capacity": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "timeouts": {
         "block": {
           "attributes": {

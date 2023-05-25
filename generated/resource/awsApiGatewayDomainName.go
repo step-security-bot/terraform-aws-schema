@@ -66,12 +66,6 @@ const awsApiGatewayDomainName = `{
         "optional": true,
         "type": "string"
       },
-      "ownership_verification_certificate_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "regional_certificate_arn": {
         "description_kind": "plain",
         "optional": true,

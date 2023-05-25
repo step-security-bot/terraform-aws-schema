@@ -9,12 +9,6 @@ import (
 const awsS3OutpostsEndpoint = `{
   "block": {
     "attributes": {
-      "access_type": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
@@ -28,11 +22,6 @@ const awsS3OutpostsEndpoint = `{
       "creation_time": {
         "computed": true,
         "description_kind": "plain",
-        "type": "string"
-      },
-      "customer_owned_ipv4_pool": {
-        "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "id": {

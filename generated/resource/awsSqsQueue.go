@@ -92,13 +92,11 @@ const awsSqsQueue = `{
         "type": "number"
       },
       "redrive_allow_policy": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
       "redrive_policy": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

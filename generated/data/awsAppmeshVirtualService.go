@@ -90,7 +90,6 @@ const awsAppmeshVirtualService = `{
         ]
       },
       "tags": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

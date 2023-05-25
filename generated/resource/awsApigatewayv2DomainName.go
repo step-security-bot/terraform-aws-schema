@@ -67,12 +67,6 @@ const awsApigatewayv2DomainName = `{
               "description_kind": "plain",
               "type": "string"
             },
-            "ownership_verification_certificate_arn": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "security_policy": {
               "description_kind": "plain",
               "required": true,

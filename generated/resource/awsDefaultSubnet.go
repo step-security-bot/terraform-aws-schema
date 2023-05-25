@@ -15,8 +15,8 @@ const awsDefaultSubnet = `{
         "type": "string"
       },
       "assign_ipv6_address_on_creation": {
+        "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "bool"
       },
       "availability_zone": {
@@ -44,27 +44,12 @@ const awsDefaultSubnet = `{
         "optional": true,
         "type": "bool"
       },
-      "enable_lni_at_device_index": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "number"
-      },
       "enable_resource_name_dns_a_record_on_launch": {
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
       },
       "enable_resource_name_dns_aaaa_record_on_launch": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "existing_default_subnet": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
-      "force_destroy": {
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
@@ -78,7 +63,6 @@ const awsDefaultSubnet = `{
       "ipv6_cidr_block": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "ipv6_cidr_block_association_id": {
@@ -97,13 +81,14 @@ const awsDefaultSubnet = `{
         "type": "bool"
       },
       "map_public_ip_on_launch": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
       },
       "outpost_arn": {
-        "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "owner_id": {

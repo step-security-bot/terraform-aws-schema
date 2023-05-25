@@ -55,11 +55,6 @@ const awsEc2TransitGateway = `{
         "optional": true,
         "type": "string"
       },
-      "multicast_support": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "owner_id": {
         "computed": true,
         "description_kind": "plain",
@@ -87,43 +82,10 @@ const awsEc2TransitGateway = `{
           "string"
         ]
       },
-      "transit_gateway_cidr_blocks": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
       "vpn_ecmp_support": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      }
-    },
-    "block_types": {
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "create": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "update": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

@@ -21,7 +21,6 @@ const awsIamPolicyDocument = `{
         "type": "string"
       },
       "override_json": {
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -40,7 +39,6 @@ const awsIamPolicyDocument = `{
         "type": "string"
       },
       "source_json": {
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

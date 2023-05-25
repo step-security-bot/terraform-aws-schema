@@ -42,29 +42,6 @@ const awsCodestarconnectionsHost = `{
       }
     },
     "block_types": {
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "create": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "update": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
-      },
       "vpc_configuration": {
         "block": {
           "attributes": {

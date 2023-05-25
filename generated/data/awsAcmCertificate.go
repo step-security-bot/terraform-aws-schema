@@ -14,16 +14,6 @@ const awsAcmCertificate = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "certificate": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "certificate_chain": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "domain": {
         "description_kind": "plain",
         "required": true,

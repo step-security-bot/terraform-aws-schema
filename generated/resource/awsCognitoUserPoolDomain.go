@@ -19,17 +19,7 @@ const awsCognitoUserPoolDomain = `{
         "optional": true,
         "type": "string"
       },
-      "cloudfront_distribution": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "cloudfront_distribution_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "cloudfront_distribution_zone_id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"

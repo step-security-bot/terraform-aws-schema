@@ -9,16 +9,6 @@ import (
 const awsSsmMaintenanceWindowTask = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "cutoff_behavior": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "description": {
         "description_kind": "plain",
         "optional": true,
@@ -31,15 +21,13 @@ const awsSsmMaintenanceWindowTask = `{
         "type": "string"
       },
       "max_concurrency": {
-        "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "max_errors": {
-        "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "name": {
@@ -71,11 +59,6 @@ const awsSsmMaintenanceWindowTask = `{
       "window_id": {
         "description_kind": "plain",
         "required": true,
-        "type": "string"
-      },
-      "window_task_id": {
-        "computed": true,
-        "description_kind": "plain",
         "type": "string"
       }
     },

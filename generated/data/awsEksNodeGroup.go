@@ -19,11 +19,6 @@ const awsEksNodeGroup = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "capacity_type": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "cluster_name": {
         "description_kind": "plain",
         "required": true,
@@ -54,21 +49,6 @@ const awsEksNodeGroup = `{
         "type": [
           "map",
           "string"
-        ]
-      },
-      "launch_template": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "id": "string",
-              "name": "string",
-              "version": "string"
-            }
-          ]
         ]
       },
       "node_group_name": {
@@ -160,21 +140,6 @@ const awsEksNodeGroup = `{
         "type": [
           "map",
           "string"
-        ]
-      },
-      "taints": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "effect": "string",
-              "key": "string",
-              "value": "string"
-            }
-          ]
         ]
       },
       "version": {

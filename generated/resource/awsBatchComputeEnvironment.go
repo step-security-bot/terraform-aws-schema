@@ -136,7 +136,7 @@ const awsBatchComputeEnvironment = `{
             },
             "security_group_ids": {
               "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": [
                 "set",
                 "string"
@@ -187,7 +187,7 @@ const awsBatchComputeEnvironment = `{
                 },
                 "description_kind": "plain"
               },
-              "max_items": 2,
+              "max_items": 1,
               "nesting_mode": "list"
             },
             "launch_template": {
@@ -213,25 +213,6 @@ const awsBatchComputeEnvironment = `{
               },
               "max_items": 1,
               "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "eks_configuration": {
-        "block": {
-          "attributes": {
-            "eks_cluster_arn": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "kubernetes_namespace": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
             }
           },
           "description_kind": "plain"

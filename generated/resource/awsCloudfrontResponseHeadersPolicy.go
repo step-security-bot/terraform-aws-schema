@@ -162,28 +162,6 @@ const awsCloudfrontResponseHeadersPolicy = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
-      "remove_headers_config": {
-        "block": {
-          "block_types": {
-            "items": {
-              "block": {
-                "attributes": {
-                  "header": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "set"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "security_headers_config": {
         "block": {
           "block_types": {
@@ -315,25 +293,6 @@ const awsCloudfrontResponseHeadersPolicy = `{
               },
               "max_items": 1,
               "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "server_timing_headers_config": {
-        "block": {
-          "attributes": {
-            "enabled": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "bool"
-            },
-            "sampling_rate": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "number"
             }
           },
           "description_kind": "plain"

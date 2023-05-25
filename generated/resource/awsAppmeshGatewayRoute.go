@@ -77,13 +77,6 @@ const awsAppmeshGatewayRoute = `{
     "block_types": {
       "spec": {
         "block": {
-          "attributes": {
-            "priority": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            }
-          },
           "block_types": {
             "grpc_route": {
               "block": {
@@ -93,13 +86,6 @@ const awsAppmeshGatewayRoute = `{
                       "block_types": {
                         "target": {
                           "block": {
-                            "attributes": {
-                              "port": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "number"
-                              }
-                            },
                             "block_types": {
                               "virtual_service": {
                                 "block": {
@@ -133,11 +119,6 @@ const awsAppmeshGatewayRoute = `{
                   "match": {
                     "block": {
                       "attributes": {
-                        "port": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "number"
-                        },
                         "service_name": {
                           "description_kind": "plain",
                           "required": true,
@@ -162,57 +143,8 @@ const awsAppmeshGatewayRoute = `{
                   "action": {
                     "block": {
                       "block_types": {
-                        "rewrite": {
-                          "block": {
-                            "block_types": {
-                              "hostname": {
-                                "block": {
-                                  "attributes": {
-                                    "default_target_hostname": {
-                                      "description_kind": "plain",
-                                      "required": true,
-                                      "type": "string"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "max_items": 1,
-                                "nesting_mode": "list"
-                              },
-                              "prefix": {
-                                "block": {
-                                  "attributes": {
-                                    "default_prefix": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "string"
-                                    },
-                                    "value": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "string"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "max_items": 1,
-                                "nesting_mode": "list"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 1,
-                          "nesting_mode": "list"
-                        },
                         "target": {
                           "block": {
-                            "attributes": {
-                              "port": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "number"
-                              }
-                            },
                             "block_types": {
                               "virtual_service": {
                                 "block": {
@@ -246,156 +178,10 @@ const awsAppmeshGatewayRoute = `{
                   "match": {
                     "block": {
                       "attributes": {
-                        "port": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "number"
-                        },
                         "prefix": {
                           "description_kind": "plain",
-                          "optional": true,
+                          "required": true,
                           "type": "string"
-                        }
-                      },
-                      "block_types": {
-                        "header": {
-                          "block": {
-                            "attributes": {
-                              "invert": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "bool"
-                              },
-                              "name": {
-                                "description_kind": "plain",
-                                "required": true,
-                                "type": "string"
-                              }
-                            },
-                            "block_types": {
-                              "match": {
-                                "block": {
-                                  "attributes": {
-                                    "exact": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "string"
-                                    },
-                                    "prefix": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "string"
-                                    },
-                                    "regex": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "string"
-                                    },
-                                    "suffix": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "string"
-                                    }
-                                  },
-                                  "block_types": {
-                                    "range": {
-                                      "block": {
-                                        "attributes": {
-                                          "end": {
-                                            "description_kind": "plain",
-                                            "required": true,
-                                            "type": "number"
-                                          },
-                                          "start": {
-                                            "description_kind": "plain",
-                                            "required": true,
-                                            "type": "number"
-                                          }
-                                        },
-                                        "description_kind": "plain"
-                                      },
-                                      "max_items": 1,
-                                      "nesting_mode": "list"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "max_items": 1,
-                                "nesting_mode": "list"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 10,
-                          "nesting_mode": "set"
-                        },
-                        "hostname": {
-                          "block": {
-                            "attributes": {
-                              "exact": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "string"
-                              },
-                              "suffix": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "string"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 1,
-                          "nesting_mode": "list"
-                        },
-                        "path": {
-                          "block": {
-                            "attributes": {
-                              "exact": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "string"
-                              },
-                              "regex": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "string"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 1,
-                          "nesting_mode": "list"
-                        },
-                        "query_parameter": {
-                          "block": {
-                            "attributes": {
-                              "name": {
-                                "description_kind": "plain",
-                                "required": true,
-                                "type": "string"
-                              }
-                            },
-                            "block_types": {
-                              "match": {
-                                "block": {
-                                  "attributes": {
-                                    "exact": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "string"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "max_items": 1,
-                                "nesting_mode": "list"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 10,
-                          "nesting_mode": "set"
                         }
                       },
                       "description_kind": "plain"
@@ -416,57 +202,8 @@ const awsAppmeshGatewayRoute = `{
                   "action": {
                     "block": {
                       "block_types": {
-                        "rewrite": {
-                          "block": {
-                            "block_types": {
-                              "hostname": {
-                                "block": {
-                                  "attributes": {
-                                    "default_target_hostname": {
-                                      "description_kind": "plain",
-                                      "required": true,
-                                      "type": "string"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "max_items": 1,
-                                "nesting_mode": "list"
-                              },
-                              "prefix": {
-                                "block": {
-                                  "attributes": {
-                                    "default_prefix": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "string"
-                                    },
-                                    "value": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "string"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "max_items": 1,
-                                "nesting_mode": "list"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 1,
-                          "nesting_mode": "list"
-                        },
                         "target": {
                           "block": {
-                            "attributes": {
-                              "port": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "number"
-                              }
-                            },
                             "block_types": {
                               "virtual_service": {
                                 "block": {
@@ -500,156 +237,10 @@ const awsAppmeshGatewayRoute = `{
                   "match": {
                     "block": {
                       "attributes": {
-                        "port": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "number"
-                        },
                         "prefix": {
                           "description_kind": "plain",
-                          "optional": true,
+                          "required": true,
                           "type": "string"
-                        }
-                      },
-                      "block_types": {
-                        "header": {
-                          "block": {
-                            "attributes": {
-                              "invert": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "bool"
-                              },
-                              "name": {
-                                "description_kind": "plain",
-                                "required": true,
-                                "type": "string"
-                              }
-                            },
-                            "block_types": {
-                              "match": {
-                                "block": {
-                                  "attributes": {
-                                    "exact": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "string"
-                                    },
-                                    "prefix": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "string"
-                                    },
-                                    "regex": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "string"
-                                    },
-                                    "suffix": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "string"
-                                    }
-                                  },
-                                  "block_types": {
-                                    "range": {
-                                      "block": {
-                                        "attributes": {
-                                          "end": {
-                                            "description_kind": "plain",
-                                            "required": true,
-                                            "type": "number"
-                                          },
-                                          "start": {
-                                            "description_kind": "plain",
-                                            "required": true,
-                                            "type": "number"
-                                          }
-                                        },
-                                        "description_kind": "plain"
-                                      },
-                                      "max_items": 1,
-                                      "nesting_mode": "list"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "max_items": 1,
-                                "nesting_mode": "list"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 10,
-                          "nesting_mode": "set"
-                        },
-                        "hostname": {
-                          "block": {
-                            "attributes": {
-                              "exact": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "string"
-                              },
-                              "suffix": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "string"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 1,
-                          "nesting_mode": "list"
-                        },
-                        "path": {
-                          "block": {
-                            "attributes": {
-                              "exact": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "string"
-                              },
-                              "regex": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "string"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 1,
-                          "nesting_mode": "list"
-                        },
-                        "query_parameter": {
-                          "block": {
-                            "attributes": {
-                              "name": {
-                                "description_kind": "plain",
-                                "required": true,
-                                "type": "string"
-                              }
-                            },
-                            "block_types": {
-                              "match": {
-                                "block": {
-                                  "attributes": {
-                                    "exact": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "string"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "max_items": 1,
-                                "nesting_mode": "list"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 10,
-                          "nesting_mode": "set"
                         }
                       },
                       "description_kind": "plain"

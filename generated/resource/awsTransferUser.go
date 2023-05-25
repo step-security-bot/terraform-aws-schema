@@ -113,19 +113,6 @@ const awsTransferUser = `{
         },
         "max_items": 1,
         "nesting_mode": "list"
-      },
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

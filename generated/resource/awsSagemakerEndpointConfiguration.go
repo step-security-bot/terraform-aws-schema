@@ -31,12 +31,6 @@ const awsSagemakerEndpointConfiguration = `{
         "optional": true,
         "type": "string"
       },
-      "name_prefix": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "tags": {
         "description_kind": "plain",
         "optional": true,
@@ -81,11 +75,6 @@ const awsSagemakerEndpointConfiguration = `{
                     "optional": true,
                     "type": "string"
                   },
-                  "s3_failure_path": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
                   "s3_output_path": {
                     "description_kind": "plain",
                     "required": true,
@@ -100,14 +89,6 @@ const awsSagemakerEndpointConfiguration = `{
                           "description_kind": "plain",
                           "optional": true,
                           "type": "string"
-                        },
-                        "include_inference_response_in": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": [
-                            "set",
-                            "string"
-                          ]
                         },
                         "success_topic": {
                           "description_kind": "plain",
@@ -212,19 +193,9 @@ const awsSagemakerEndpointConfiguration = `{
               "optional": true,
               "type": "string"
             },
-            "container_startup_health_check_timeout_in_seconds": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "enable_ssm_access": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
             "initial_instance_count": {
               "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": "number"
             },
             "initial_variant_weight": {
@@ -234,13 +205,8 @@ const awsSagemakerEndpointConfiguration = `{
             },
             "instance_type": {
               "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": "string"
-            },
-            "model_data_download_timeout_in_seconds": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
             },
             "model_name": {
               "description_kind": "plain",
@@ -252,158 +218,11 @@ const awsSagemakerEndpointConfiguration = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
-            },
-            "volume_size_in_gb": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            }
-          },
-          "block_types": {
-            "core_dump_config": {
-              "block": {
-                "attributes": {
-                  "destination_s3_uri": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "kms_key_id": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
-            "serverless_config": {
-              "block": {
-                "attributes": {
-                  "max_concurrency": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "number"
-                  },
-                  "memory_size_in_mb": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "number"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"
         },
-        "max_items": 10,
         "min_items": 1,
-        "nesting_mode": "list"
-      },
-      "shadow_production_variants": {
-        "block": {
-          "attributes": {
-            "accelerator_type": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "container_startup_health_check_timeout_in_seconds": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "enable_ssm_access": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "initial_instance_count": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "initial_variant_weight": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "instance_type": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "model_data_download_timeout_in_seconds": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "model_name": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "variant_name": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "volume_size_in_gb": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            }
-          },
-          "block_types": {
-            "core_dump_config": {
-              "block": {
-                "attributes": {
-                  "destination_s3_uri": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "kms_key_id": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
-            "serverless_config": {
-              "block": {
-                "attributes": {
-                  "max_concurrency": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "number"
-                  },
-                  "memory_size_in_mb": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "number"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 10,
         "nesting_mode": "list"
       }
     },

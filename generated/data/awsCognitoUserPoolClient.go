@@ -76,11 +76,6 @@ const awsCognitoUserPoolClient = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "enable_propagate_additional_user_context_data": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
       "enable_token_revocation": {
         "computed": true,
         "description_kind": "plain",

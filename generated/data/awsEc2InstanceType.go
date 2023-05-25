@@ -37,11 +37,13 @@ const awsEc2InstanceType = `{
       "default_cores": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "number"
       },
       "default_threads_per_core": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "number"
       },
       "default_vcpus": {
@@ -109,42 +111,10 @@ const awsEc2InstanceType = `{
         "description_kind": "plain",
         "type": "bool"
       },
-      "fpgas": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "set",
-          [
-            "object",
-            {
-              "count": "number",
-              "manufacturer": "string",
-              "memory_size": "number",
-              "name": "string"
-            }
-          ]
-        ]
-      },
       "free_tier_eligible": {
         "computed": true,
         "description_kind": "plain",
         "type": "bool"
-      },
-      "gpus": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "set",
-          [
-            "object",
-            {
-              "count": "number",
-              "manufacturer": "string",
-              "memory_size": "number",
-              "name": "string"
-            }
-          ]
-        ]
       },
       "hibernation_supported": {
         "computed": true,
@@ -154,6 +124,7 @@ const awsEc2InstanceType = `{
       "hypervisor": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "id": {
@@ -161,36 +132,6 @@ const awsEc2InstanceType = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "inference_accelerators": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "set",
-          [
-            "object",
-            {
-              "count": "number",
-              "manufacturer": "string",
-              "name": "string"
-            }
-          ]
-        ]
-      },
-      "instance_disks": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "set",
-          [
-            "object",
-            {
-              "count": "number",
-              "size": "number",
-              "type": "string"
-            }
-          ]
-        ]
       },
       "instance_storage_supported": {
         "computed": true,
@@ -215,6 +156,7 @@ const awsEc2InstanceType = `{
       "maximum_ipv6_addresses_per_interface": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "number"
       },
       "maximum_network_interfaces": {
@@ -280,16 +222,19 @@ const awsEc2InstanceType = `{
       "total_fpga_memory": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "number"
       },
       "total_gpu_memory": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "number"
       },
       "total_instance_storage": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "number"
       },
       "valid_cores": {
@@ -310,18 +255,107 @@ const awsEc2InstanceType = `{
       }
     },
     "block_types": {
-      "timeouts": {
+      "fpgas": {
         "block": {
           "attributes": {
-            "read": {
+            "count": {
+              "computed": true,
               "description_kind": "plain",
-              "optional": true,
+              "type": "number"
+            },
+            "manufacturer": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "string"
+            },
+            "memory_size": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "number"
+            },
+            "name": {
+              "computed": true,
+              "description_kind": "plain",
               "type": "string"
             }
           },
           "description_kind": "plain"
         },
-        "nesting_mode": "single"
+        "nesting_mode": "set"
+      },
+      "gpus": {
+        "block": {
+          "attributes": {
+            "count": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "number"
+            },
+            "manufacturer": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "string"
+            },
+            "memory_size": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "number"
+            },
+            "name": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "set"
+      },
+      "inference_accelerators": {
+        "block": {
+          "attributes": {
+            "count": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "number"
+            },
+            "manufacturer": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "string"
+            },
+            "name": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "set"
+      },
+      "instance_disks": {
+        "block": {
+          "attributes": {
+            "count": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "number"
+            },
+            "size": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "number"
+            },
+            "type": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "set"
       }
     },
     "description_kind": "plain"

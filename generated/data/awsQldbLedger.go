@@ -25,11 +25,6 @@ const awsQldbLedger = `{
         "optional": true,
         "type": "string"
       },
-      "kms_key": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "name": {
         "description_kind": "plain",
         "required": true,
@@ -39,15 +34,6 @@ const awsQldbLedger = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "tags": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "description_kind": "plain"

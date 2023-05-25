@@ -45,11 +45,6 @@ const awsDxConnection = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "partner_name": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "provider_name": {
         "computed": true,
         "description_kind": "plain",
@@ -63,11 +58,6 @@ const awsDxConnection = `{
           "map",
           "string"
         ]
-      },
-      "vlan_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
       }
     },
     "description_kind": "plain"

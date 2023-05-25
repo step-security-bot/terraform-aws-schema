@@ -15,7 +15,6 @@ const awsS3BucketObject = `{
         "type": "string"
       },
       "bucket": {
-        "deprecated": true,
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -80,7 +79,6 @@ const awsS3BucketObject = `{
         "type": "string"
       },
       "key": {
-        "deprecated": true,
         "description_kind": "plain",
         "required": true,
         "type": "string"

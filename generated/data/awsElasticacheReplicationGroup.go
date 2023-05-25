@@ -29,32 +29,11 @@ const awsElasticacheReplicationGroup = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "description": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "log_delivery_configuration": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "set",
-          [
-            "object",
-            {
-              "destination": "string",
-              "destination_type": "string",
-              "log_format": "string",
-              "log_type": "string"
-            }
-          ]
-        ]
       },
       "member_clusters": {
         "computed": true,
@@ -74,19 +53,8 @@ const awsElasticacheReplicationGroup = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "num_cache_clusters": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "number"
-      },
-      "num_node_groups": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "number"
-      },
       "number_cache_clusters": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "type": "number"
       },
@@ -105,14 +73,8 @@ const awsElasticacheReplicationGroup = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "replicas_per_node_group": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "number"
-      },
       "replication_group_description": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "type": "string"
       },

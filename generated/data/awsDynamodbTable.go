@@ -33,11 +33,6 @@ const awsDynamodbTable = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "deletion_protection_enabled": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
       "global_secondary_index": {
         "computed": true,
         "description_kind": "plain",

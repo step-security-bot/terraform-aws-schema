@@ -29,14 +29,6 @@ const awsLbSslNegotiationPolicy = `{
         "description_kind": "plain",
         "required": true,
         "type": "string"
-      },
-      "triggers": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "block_types": {

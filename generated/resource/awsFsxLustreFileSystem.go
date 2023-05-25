@@ -176,48 +176,6 @@ const awsFsxLustreFileSystem = `{
       }
     },
     "block_types": {
-      "log_configuration": {
-        "block": {
-          "attributes": {
-            "destination": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "level": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "root_squash_configuration": {
-        "block": {
-          "attributes": {
-            "no_squash_nids": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "root_squash": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "timeouts": {
         "block": {
           "attributes": {

@@ -9,16 +9,6 @@ import (
 const awsSnsPlatformApplication = `{
   "block": {
     "attributes": {
-      "apple_platform_bundle_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "apple_platform_team_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "arn": {
         "computed": true,
         "description_kind": "plain",

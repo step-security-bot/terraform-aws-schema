@@ -19,11 +19,6 @@ const awsDynamodbTable = `{
         "optional": true,
         "type": "string"
       },
-      "deletion_protection_enabled": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "hash_key": {
         "computed": true,
         "description_kind": "plain",
@@ -230,40 +225,15 @@ const awsDynamodbTable = `{
       "replica": {
         "block": {
           "attributes": {
-            "arn": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
             "kms_key_arn": {
               "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
-            "point_in_time_recovery": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "propagate_tags": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
             "region_name": {
               "description_kind": "plain",
               "required": true,
-              "type": "string"
-            },
-            "stream_arn": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "stream_label": {
-              "computed": true,
-              "description_kind": "plain",
               "type": "string"
             }
           },

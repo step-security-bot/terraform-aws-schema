@@ -30,12 +30,6 @@ const awsEksAddon = `{
         "required": true,
         "type": "string"
       },
-      "configuration_values": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "created_at": {
         "computed": true,
         "description_kind": "plain",
@@ -51,11 +45,6 @@ const awsEksAddon = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "preserve": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       },
       "resolve_conflicts": {
         "description_kind": "plain",
@@ -83,31 +72,6 @@ const awsEksAddon = `{
           "map",
           "string"
         ]
-      }
-    },
-    "block_types": {
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "create": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "update": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

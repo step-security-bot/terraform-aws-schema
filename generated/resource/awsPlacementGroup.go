@@ -36,12 +36,6 @@ const awsPlacementGroup = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "spread_level": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "strategy": {
         "description_kind": "plain",
         "required": true,

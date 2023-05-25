@@ -54,17 +54,7 @@ const awsLb = `{
         "optional": true,
         "type": "bool"
       },
-      "enable_tls_version_and_cipher_suite_headers": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "enable_waf_fail_open": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "enable_xff_client_port": {
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
@@ -108,11 +98,6 @@ const awsLb = `{
         "optional": true,
         "type": "string"
       },
-      "preserve_host_header": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "security_groups": {
         "computed": true,
         "description_kind": "plain",
@@ -151,11 +136,6 @@ const awsLb = `{
       "vpc_id": {
         "computed": true,
         "description_kind": "plain",
-        "type": "string"
-      },
-      "xff_header_processing_mode": {
-        "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "zone_id": {

@@ -61,19 +61,6 @@ const awsLambdaFunction = `{
           ]
         ]
       },
-      "ephemeral_storage": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "size": "number"
-            }
-          ]
-        ]
-      },
       "file_system_config": {
         "computed": true,
         "description_kind": "plain",
@@ -138,11 +125,6 @@ const awsLambdaFunction = `{
         "type": "number"
       },
       "qualified_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "qualified_invoke_arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"

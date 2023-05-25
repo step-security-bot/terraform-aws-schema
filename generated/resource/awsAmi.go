@@ -19,16 +19,6 @@ const awsAmi = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "boot_mode": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "deprecation_time": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "description": {
         "description_kind": "plain",
         "optional": true,
@@ -64,11 +54,6 @@ const awsAmi = `{
       "image_type": {
         "computed": true,
         "description_kind": "plain",
-        "type": "string"
-      },
-      "imds_support": {
-        "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "kernel_id": {
@@ -143,11 +128,6 @@ const awsAmi = `{
           "string"
         ]
       },
-      "tpm_support": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "usage_operation": {
         "computed": true,
         "description_kind": "plain",
@@ -182,11 +162,6 @@ const awsAmi = `{
               "description_kind": "plain",
               "optional": true,
               "type": "number"
-            },
-            "outpost_arn": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
             },
             "snapshot_id": {
               "description_kind": "plain",

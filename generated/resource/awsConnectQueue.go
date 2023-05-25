@@ -58,15 +58,6 @@ const awsConnectQueue = `{
           "string"
         ]
       },
-      "quick_connect_ids_associated": {
-        "computed": true,
-        "deprecated": true,
-        "description_kind": "plain",
-        "type": [
-          "set",
-          "string"
-        ]
-      },
       "status": {
         "computed": true,
         "description_kind": "plain",

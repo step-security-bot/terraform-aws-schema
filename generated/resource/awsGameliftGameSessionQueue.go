@@ -14,11 +14,6 @@ const awsGameliftGameSessionQueue = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "custom_event_data": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "destinations": {
         "description_kind": "plain",
         "optional": true,
@@ -36,11 +31,6 @@ const awsGameliftGameSessionQueue = `{
       "name": {
         "description_kind": "plain",
         "required": true,
-        "type": "string"
-      },
-      "notification_target": {
-        "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "tags": {

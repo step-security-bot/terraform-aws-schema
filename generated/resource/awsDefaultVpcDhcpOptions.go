@@ -31,13 +31,16 @@ const awsDefaultVpcDhcpOptions = `{
         "type": "string"
       },
       "netbios_name_servers": {
-        "computed": true,
         "description_kind": "plain",
-        "type": "string"
+        "optional": true,
+        "type": [
+          "list",
+          "string"
+        ]
       },
       "netbios_node_type": {
-        "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "ntp_servers": {

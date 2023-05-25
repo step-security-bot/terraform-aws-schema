@@ -9,14 +9,6 @@ import (
 const awsDxLocation = `{
   "block": {
     "attributes": {
-      "available_macsec_port_speeds": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          "string"
-        ]
-      },
       "available_port_speeds": {
         "computed": true,
         "description_kind": "plain",

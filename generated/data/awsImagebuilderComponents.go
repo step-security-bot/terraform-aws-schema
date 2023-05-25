@@ -50,7 +50,7 @@ const awsImagebuilderComponents = `{
               "description_kind": "plain",
               "required": true,
               "type": [
-                "set",
+                "list",
                 "string"
               ]
             }

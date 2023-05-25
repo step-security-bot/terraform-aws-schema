@@ -76,21 +76,6 @@ const awsServicecatalogProvisionedProduct = `{
           "string"
         ]
       },
-      "outputs": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "set",
-          [
-            "object",
-            {
-              "description": "string",
-              "key": "string",
-              "value": "string"
-            }
-          ]
-        ]
-      },
       "path_id": {
         "computed": true,
         "description_kind": "plain",
@@ -240,11 +225,6 @@ const awsServicecatalogProvisionedProduct = `{
               "type": "string"
             },
             "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "read": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"

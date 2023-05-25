@@ -83,11 +83,6 @@ const awsRdsCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "engine_mode": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "engine_version": {
         "computed": true,
         "description_kind": "plain",
@@ -127,27 +122,7 @@ const awsRdsCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "master_user_secret": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "kms_key_id": "string",
-              "secret_arn": "string",
-              "secret_status": "string"
-            }
-          ]
-        ]
-      },
       "master_username": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "network_type": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"

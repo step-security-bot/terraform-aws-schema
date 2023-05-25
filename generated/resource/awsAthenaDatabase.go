@@ -11,17 +11,7 @@ const awsAthenaDatabase = `{
     "attributes": {
       "bucket": {
         "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "comment": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "expected_bucket_owner": {
-        "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "force_destroy": {
@@ -39,31 +29,9 @@ const awsAthenaDatabase = `{
         "description_kind": "plain",
         "required": true,
         "type": "string"
-      },
-      "properties": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "block_types": {
-      "acl_configuration": {
-        "block": {
-          "attributes": {
-            "s3_acl_option": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "encryption_configuration": {
         "block": {
           "attributes": {

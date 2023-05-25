@@ -47,14 +47,12 @@ const awsVpc = `{
       },
       "enable_classiclink": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
       },
       "enable_classiclink_dns_support": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
@@ -66,12 +64,6 @@ const awsVpc = `{
         "type": "bool"
       },
       "enable_dns_support": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "enable_network_address_usage_metrics": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"

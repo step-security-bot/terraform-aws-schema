@@ -25,25 +25,19 @@ const awsIamUserLoginProfile = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "password": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "password_length": {
         "description_kind": "plain",
         "optional": true,
         "type": "number"
       },
       "password_reset_required": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
       },
       "pgp_key": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "user": {

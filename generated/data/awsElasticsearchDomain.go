@@ -83,15 +83,6 @@ const awsElasticsearchDomain = `{
           [
             "object",
             {
-              "cold_storage_options": [
-                "list",
-                [
-                  "object",
-                  {
-                    "enabled": "bool"
-                  }
-                ]
-              ],
               "dedicated_master_count": "number",
               "dedicated_master_enabled": "bool",
               "dedicated_master_type": "string",
@@ -160,7 +151,6 @@ const awsElasticsearchDomain = `{
             {
               "ebs_enabled": "bool",
               "iops": "number",
-              "throughput": "number",
               "volume_size": "number",
               "volume_type": "string"
             }

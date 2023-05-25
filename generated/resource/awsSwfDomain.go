@@ -32,7 +32,6 @@ const awsSwfDomain = `{
         "type": "string"
       },
       "name_prefix": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

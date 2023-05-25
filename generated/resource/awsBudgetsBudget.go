@@ -27,7 +27,6 @@ const awsBudgetsBudget = `{
       },
       "cost_filters": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -42,15 +41,13 @@ const awsBudgetsBudget = `{
         "type": "string"
       },
       "limit_amount": {
-        "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "limit_unit": {
-        "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "name": {
@@ -83,46 +80,6 @@ const awsBudgetsBudget = `{
       }
     },
     "block_types": {
-      "auto_adjust_data": {
-        "block": {
-          "attributes": {
-            "auto_adjust_type": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "last_auto_adjust_time": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            }
-          },
-          "block_types": {
-            "historical_options": {
-              "block": {
-                "attributes": {
-                  "budget_adjustment_period": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "number"
-                  },
-                  "lookback_available_periods": {
-                    "computed": true,
-                    "description_kind": "plain",
-                    "type": "number"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "cost_filter": {
         "block": {
           "attributes": {
@@ -243,29 +200,6 @@ const awsBudgetsBudget = `{
               "type": "number"
             },
             "threshold_type": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "set"
-      },
-      "planned_limit": {
-        "block": {
-          "attributes": {
-            "amount": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "start_time": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "unit": {
               "description_kind": "plain",
               "required": true,
               "type": "string"

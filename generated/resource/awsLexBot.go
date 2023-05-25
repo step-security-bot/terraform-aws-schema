@@ -212,7 +212,7 @@ const awsLexBot = `{
           },
           "description_kind": "plain"
         },
-        "max_items": 250,
+        "max_items": 100,
         "min_items": 1,
         "nesting_mode": "set"
       },

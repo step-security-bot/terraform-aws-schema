@@ -25,7 +25,7 @@ const awsCloudwatchLogGroups = `{
       },
       "log_group_name_prefix": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "log_group_names": {

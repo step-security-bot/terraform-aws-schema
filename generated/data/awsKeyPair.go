@@ -14,11 +14,6 @@ const awsKeyPair = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "create_time": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "fingerprint": {
         "computed": true,
         "description_kind": "plain",
@@ -30,11 +25,6 @@ const awsKeyPair = `{
         "optional": true,
         "type": "string"
       },
-      "include_public_key": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "key_name": {
         "description_kind": "plain",
         "optional": true,
@@ -43,16 +33,6 @@ const awsKeyPair = `{
       "key_pair_id": {
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
-      },
-      "key_type": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "public_key": {
-        "computed": true,
-        "description_kind": "plain",
         "type": "string"
       },
       "tags": {
@@ -86,19 +66,6 @@ const awsKeyPair = `{
           "description_kind": "plain"
         },
         "nesting_mode": "set"
-      },
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "read": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

@@ -59,22 +59,8 @@ const awsSubnetIds = `{
           "description_kind": "plain"
         },
         "nesting_mode": "set"
-      },
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "read": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
-    "deprecated": true,
     "description_kind": "plain"
   },
   "version": 0

@@ -35,24 +35,12 @@ const awsAlbTargetGroup = `{
         "optional": true,
         "type": "string"
       },
-      "ip_address_type": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "lambda_multi_value_headers_enabled": {
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
       },
       "load_balancing_algorithm_type": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "load_balancing_cross_zone_enabled": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
@@ -214,24 +202,6 @@ const awsAlbTargetGroup = `{
           "description_kind": "plain"
         },
         "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "target_failover": {
-        "block": {
-          "attributes": {
-            "on_deregistration": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "on_unhealthy": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
         "nesting_mode": "list"
       }
     },

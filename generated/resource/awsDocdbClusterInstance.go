@@ -52,12 +52,6 @@ const awsDocdbClusterInstance = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "enable_performance_insights": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "endpoint": {
         "computed": true,
         "description_kind": "plain",
@@ -99,12 +93,6 @@ const awsDocdbClusterInstance = `{
       "kms_key_id": {
         "computed": true,
         "description_kind": "plain",
-        "type": "string"
-      },
-      "performance_insights_kms_key_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "port": {

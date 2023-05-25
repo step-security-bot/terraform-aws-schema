@@ -16,7 +16,6 @@ const awsEcsCluster = `{
       },
       "capacity_providers": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -137,24 +136,9 @@ const awsEcsCluster = `{
               "type": "number"
             }
           },
-          "deprecated": true,
           "description_kind": "plain"
         },
         "nesting_mode": "set"
-      },
-      "service_connect_defaults": {
-        "block": {
-          "attributes": {
-            "namespace": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
       },
       "setting": {
         "block": {

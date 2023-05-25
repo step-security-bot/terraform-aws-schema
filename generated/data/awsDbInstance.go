@@ -79,7 +79,6 @@ const awsDbInstance = `{
       },
       "db_security_groups": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "type": [
           "list",
@@ -140,21 +139,6 @@ const awsDbInstance = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "master_user_secret": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "kms_key_id": "string",
-              "secret_arn": "string",
-              "secret_status": "string"
-            }
-          ]
-        ]
-      },
       "master_username": {
         "computed": true,
         "description_kind": "plain",
@@ -174,11 +158,6 @@ const awsDbInstance = `{
         "computed": true,
         "description_kind": "plain",
         "type": "bool"
-      },
-      "network_type": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
       },
       "option_group_memberships": {
         "computed": true,
@@ -222,11 +201,6 @@ const awsDbInstance = `{
         "computed": true,
         "description_kind": "plain",
         "type": "bool"
-      },
-      "storage_throughput": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "number"
       },
       "storage_type": {
         "computed": true,

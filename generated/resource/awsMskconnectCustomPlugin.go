@@ -89,11 +89,6 @@ const awsMskconnectCustomPlugin = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
-            },
-            "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
             }
           },
           "description_kind": "plain"

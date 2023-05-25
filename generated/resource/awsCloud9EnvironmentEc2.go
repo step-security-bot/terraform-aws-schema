@@ -19,11 +19,6 @@ const awsCloud9EnvironmentEc2 = `{
         "optional": true,
         "type": "number"
       },
-      "connection_type": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "description": {
         "description_kind": "plain",
         "optional": true,
@@ -31,11 +26,6 @@ const awsCloud9EnvironmentEc2 = `{
       },
       "id": {
         "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "image_id": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"

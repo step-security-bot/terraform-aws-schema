@@ -35,11 +35,6 @@ const awsGlueJob = `{
         "optional": true,
         "type": "string"
       },
-      "execution_class": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "glue_version": {
         "computed": true,
         "description_kind": "plain",
@@ -109,7 +104,6 @@ const awsGlueJob = `{
         ]
       },
       "timeout": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "number"

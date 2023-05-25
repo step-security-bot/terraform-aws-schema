@@ -39,27 +39,6 @@ const awsChimeVoiceConnectorStreaming = `{
         "type": "string"
       }
     },
-    "block_types": {
-      "media_insights_configuration": {
-        "block": {
-          "attributes": {
-            "configuration_arn": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "disabled": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      }
-    },
     "description_kind": "plain"
   },
   "version": 0

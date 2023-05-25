@@ -66,11 +66,6 @@ const awsImagebuilderComponent = `{
         "required": true,
         "type": "string"
       },
-      "skip_destroy": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "supported_os_versions": {
         "description_kind": "plain",
         "optional": true,

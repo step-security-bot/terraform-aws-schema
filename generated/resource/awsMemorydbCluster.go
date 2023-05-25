@@ -38,11 +38,6 @@ const awsMemorydbCluster = `{
           ]
         ]
       },
-      "data_tiering": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "description": {
         "description_kind": "plain",
         "optional": true,

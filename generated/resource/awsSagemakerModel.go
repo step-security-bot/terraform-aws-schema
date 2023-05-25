@@ -97,22 +97,6 @@ const awsSagemakerModel = `{
                     "type": "string"
                   }
                 },
-                "block_types": {
-                  "repository_auth_config": {
-                    "block": {
-                      "attributes": {
-                        "repository_credentials_provider_arn": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "max_items": 1,
-                    "nesting_mode": "list"
-                  }
-                },
                 "description_kind": "plain"
               },
               "max_items": 1,
@@ -177,22 +161,6 @@ const awsSagemakerModel = `{
                     "description_kind": "plain",
                     "required": true,
                     "type": "string"
-                  }
-                },
-                "block_types": {
-                  "repository_auth_config": {
-                    "block": {
-                      "attributes": {
-                        "repository_credentials_provider_arn": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "max_items": 1,
-                    "nesting_mode": "list"
                   }
                 },
                 "description_kind": "plain"

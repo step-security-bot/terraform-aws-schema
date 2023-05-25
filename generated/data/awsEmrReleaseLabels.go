@@ -19,7 +19,7 @@ const awsEmrReleaseLabels = `{
         "computed": true,
         "description_kind": "plain",
         "type": [
-          "list",
+          "set",
           "string"
         ]
       }

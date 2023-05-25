@@ -124,11 +124,6 @@ const awsRdsClusterInstance = `{
         "optional": true,
         "type": "string"
       },
-      "network_type": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "performance_insights_enabled": {
         "computed": true,
         "description_kind": "plain",

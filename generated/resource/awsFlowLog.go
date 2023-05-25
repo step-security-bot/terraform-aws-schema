@@ -14,11 +14,6 @@ const awsFlowLog = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "deliver_cross_account_role": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "eni_id": {
         "description_kind": "plain",
         "optional": true,
@@ -88,17 +83,7 @@ const awsFlowLog = `{
       },
       "traffic_type": {
         "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "transit_gateway_attachment_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "transit_gateway_id": {
-        "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "vpc_id": {

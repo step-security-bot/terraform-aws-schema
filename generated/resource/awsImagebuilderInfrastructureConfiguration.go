@@ -108,25 +108,6 @@ const awsImagebuilderInfrastructureConfiguration = `{
       }
     },
     "block_types": {
-      "instance_metadata_options": {
-        "block": {
-          "attributes": {
-            "http_put_response_hop_limit": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "http_tokens": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "logging": {
         "block": {
           "block_types": {

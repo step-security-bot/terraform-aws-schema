@@ -13,7 +13,7 @@ const awsEfsAccessPoints = `{
         "computed": true,
         "description_kind": "plain",
         "type": [
-          "list",
+          "set",
           "string"
         ]
       },
@@ -32,7 +32,7 @@ const awsEfsAccessPoints = `{
         "computed": true,
         "description_kind": "plain",
         "type": [
-          "list",
+          "set",
           "string"
         ]
       }

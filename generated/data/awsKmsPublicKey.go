@@ -56,11 +56,6 @@ const awsKmsPublicKey = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "public_key_pem": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "signing_algorithms": {
         "computed": true,
         "description_kind": "plain",

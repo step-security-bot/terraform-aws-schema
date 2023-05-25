@@ -33,7 +33,6 @@ const awsImagebuilderImageRecipe = `{
                     "iops": "number",
                     "kms_key_id": "string",
                     "snapshot_id": "string",
-                    "throughput": "number",
                     "volume_size": "number",
                     "volume_type": "string"
                   }
@@ -53,17 +52,7 @@ const awsImagebuilderImageRecipe = `{
           [
             "object",
             {
-              "component_arn": "string",
-              "parameter": [
-                "set",
-                [
-                  "object",
-                  {
-                    "name": "string",
-                    "value": "string"
-                  }
-                ]
-              ]
+              "component_arn": "string"
             }
           ]
         ]

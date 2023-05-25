@@ -19,16 +19,6 @@ const awsFmsPolicy = `{
         "optional": true,
         "type": "bool"
       },
-      "delete_unused_fm_managed_resources": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "description": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "exclude_resource_tags": {
         "description_kind": "plain",
         "required": true,
@@ -75,23 +65,6 @@ const awsFmsPolicy = `{
         "optional": true,
         "type": [
           "set",
-          "string"
-        ]
-      },
-      "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
           "string"
         ]
       }

@@ -125,33 +125,6 @@ const awsApiGatewayStage = `{
         },
         "max_items": 1,
         "nesting_mode": "list"
-      },
-      "canary_settings": {
-        "block": {
-          "attributes": {
-            "percent_traffic": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "stage_variable_overrides": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "map",
-                "string"
-              ]
-            },
-            "use_stage_cache": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

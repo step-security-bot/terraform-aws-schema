@@ -60,33 +60,6 @@ const awsServicequotasServiceQuota = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "usage_metric": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "metric_dimensions": [
-                "list",
-                [
-                  "object",
-                  {
-                    "class": "string",
-                    "resource": "string",
-                    "service": "string",
-                    "type": "string"
-                  }
-                ]
-              ],
-              "metric_name": "string",
-              "metric_namespace": "string",
-              "metric_statistic_recommendation": "string"
-            }
-          ]
-        ]
-      },
       "value": {
         "description_kind": "plain",
         "required": true,

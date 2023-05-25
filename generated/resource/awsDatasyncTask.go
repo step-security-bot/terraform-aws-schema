@@ -78,25 +78,6 @@ const awsDatasyncTask = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
-      "includes": {
-        "block": {
-          "attributes": {
-            "filter_type": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "value": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "options": {
         "block": {
           "attributes": {
@@ -141,12 +122,6 @@ const awsDatasyncTask = `{
               "type": "string"
             },
             "preserve_devices": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "security_descriptor_copy_flags": {
-              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"

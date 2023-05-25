@@ -69,14 +69,6 @@ const awsEmrCluster = `{
         "optional": true,
         "type": "bool"
       },
-      "list_steps_states": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
       "log_encryption_kms_key_id": {
         "description_kind": "plain",
         "optional": true,
@@ -96,20 +88,6 @@ const awsEmrCluster = `{
         "description_kind": "plain",
         "required": true,
         "type": "string"
-      },
-      "placement_group_config": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "instance_role": "string",
-              "placement_strategy": "string"
-            }
-          ]
-        ]
       },
       "release_label": {
         "description_kind": "plain",
@@ -458,11 +436,6 @@ const awsEmrCluster = `{
                     "required": true,
                     "type": "number"
                   },
-                  "throughput": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  },
                   "type": {
                     "description_kind": "plain",
                     "required": true,
@@ -794,11 +767,6 @@ const awsEmrCluster = `{
                   "size": {
                     "description_kind": "plain",
                     "required": true,
-                    "type": "number"
-                  },
-                  "throughput": {
-                    "description_kind": "plain",
-                    "optional": true,
                     "type": "number"
                   },
                   "type": {

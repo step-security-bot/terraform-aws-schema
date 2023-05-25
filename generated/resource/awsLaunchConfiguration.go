@@ -15,7 +15,6 @@ const awsLaunchConfiguration = `{
         "type": "string"
       },
       "associate_public_ip_address": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
@@ -99,13 +98,11 @@ const awsLaunchConfiguration = `{
         "type": "string"
       },
       "vpc_classic_link_id": {
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
       "vpc_classic_link_security_groups": {
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -182,14 +179,9 @@ const awsLaunchConfiguration = `{
               "required": true,
               "type": "string"
             },
-            "no_device": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
             "virtual_name": {
               "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": "string"
             }
           },

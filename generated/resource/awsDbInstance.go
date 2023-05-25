@@ -75,21 +75,10 @@ const awsDbInstance = `{
         "optional": true,
         "type": "bool"
       },
-      "custom_iam_instance_profile": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "customer_owned_ip_enabled": {
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
-      },
-      "db_name": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
       },
       "db_subnet_group_name": {
         "computed": true,
@@ -186,7 +175,6 @@ const awsDbInstance = `{
         "type": "string"
       },
       "iops": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "number"
@@ -208,48 +196,7 @@ const awsDbInstance = `{
         "optional": true,
         "type": "string"
       },
-      "listener_endpoint": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "address": "string",
-              "hosted_zone_id": "string",
-              "port": "number"
-            }
-          ]
-        ]
-      },
       "maintenance_window": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "manage_master_user_password": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "master_user_secret": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "kms_key_id": "string",
-              "secret_arn": "string",
-              "secret_status": "string"
-            }
-          ]
-        ]
-      },
-      "master_user_secret_kms_key_id": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
@@ -279,18 +226,11 @@ const awsDbInstance = `{
       },
       "name": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
       "nchar_character_set_name": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "network_type": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
@@ -343,7 +283,6 @@ const awsDbInstance = `{
         "type": "bool"
       },
       "replica_mode": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -367,7 +306,6 @@ const awsDbInstance = `{
         "type": "string"
       },
       "security_group_names": {
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -395,12 +333,6 @@ const awsDbInstance = `{
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
-      },
-      "storage_throughput": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
       },
       "storage_type": {
         "computed": true,
@@ -448,29 +380,10 @@ const awsDbInstance = `{
       }
     },
     "block_types": {
-      "blue_green_update": {
-        "block": {
-          "attributes": {
-            "enabled": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "restore_to_point_in_time": {
         "block": {
           "attributes": {
             "restore_time": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "source_db_instance_automated_backups_arn": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"

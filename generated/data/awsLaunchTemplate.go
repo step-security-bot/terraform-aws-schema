@@ -45,44 +45,6 @@ const awsLaunchTemplate = `{
           ]
         ]
       },
-      "capacity_reservation_specification": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "capacity_reservation_preference": "string",
-              "capacity_reservation_target": [
-                "list",
-                [
-                  "object",
-                  {
-                    "capacity_reservation_id": "string",
-                    "capacity_reservation_resource_group_arn": "string"
-                  }
-                ]
-              ]
-            }
-          ]
-        ]
-      },
-      "cpu_options": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "amd_sev_snp": "string",
-              "core_count": "number",
-              "threads_per_core": "number"
-            }
-          ]
-        ]
-      },
       "credit_specification": {
         "computed": true,
         "description_kind": "plain",
@@ -106,11 +68,6 @@ const awsLaunchTemplate = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "disable_api_stop": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
       "disable_api_termination": {
         "computed": true,
         "description_kind": "plain",
@@ -122,19 +79,6 @@ const awsLaunchTemplate = `{
         "type": "string"
       },
       "elastic_gpu_specifications": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "type": "string"
-            }
-          ]
-        ]
-      },
-      "elastic_inference_accelerator": {
         "computed": true,
         "description_kind": "plain",
         "type": [
@@ -229,146 +173,6 @@ const awsLaunchTemplate = `{
           ]
         ]
       },
-      "instance_requirements": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "accelerator_count": [
-                "list",
-                [
-                  "object",
-                  {
-                    "max": "number",
-                    "min": "number"
-                  }
-                ]
-              ],
-              "accelerator_manufacturers": [
-                "set",
-                "string"
-              ],
-              "accelerator_names": [
-                "set",
-                "string"
-              ],
-              "accelerator_total_memory_mib": [
-                "list",
-                [
-                  "object",
-                  {
-                    "max": "number",
-                    "min": "number"
-                  }
-                ]
-              ],
-              "accelerator_types": [
-                "set",
-                "string"
-              ],
-              "allowed_instance_types": [
-                "set",
-                "string"
-              ],
-              "bare_metal": "string",
-              "baseline_ebs_bandwidth_mbps": [
-                "list",
-                [
-                  "object",
-                  {
-                    "max": "number",
-                    "min": "number"
-                  }
-                ]
-              ],
-              "burstable_performance": "string",
-              "cpu_manufacturers": [
-                "set",
-                "string"
-              ],
-              "excluded_instance_types": [
-                "set",
-                "string"
-              ],
-              "instance_generations": [
-                "set",
-                "string"
-              ],
-              "local_storage": "string",
-              "local_storage_types": [
-                "set",
-                "string"
-              ],
-              "memory_gib_per_vcpu": [
-                "list",
-                [
-                  "object",
-                  {
-                    "max": "number",
-                    "min": "number"
-                  }
-                ]
-              ],
-              "memory_mib": [
-                "list",
-                [
-                  "object",
-                  {
-                    "max": "number",
-                    "min": "number"
-                  }
-                ]
-              ],
-              "network_bandwidth_gbps": [
-                "list",
-                [
-                  "object",
-                  {
-                    "max": "number",
-                    "min": "number"
-                  }
-                ]
-              ],
-              "network_interface_count": [
-                "list",
-                [
-                  "object",
-                  {
-                    "max": "number",
-                    "min": "number"
-                  }
-                ]
-              ],
-              "on_demand_max_price_percentage_over_lowest_price": "number",
-              "require_hibernate_support": "bool",
-              "spot_max_price_percentage_over_lowest_price": "number",
-              "total_local_storage_gb": [
-                "list",
-                [
-                  "object",
-                  {
-                    "max": "number",
-                    "min": "number"
-                  }
-                ]
-              ],
-              "vcpu_count": [
-                "list",
-                [
-                  "object",
-                  {
-                    "max": "number",
-                    "min": "number"
-                  }
-                ]
-              ]
-            }
-          ]
-        ]
-      },
       "instance_type": {
         "computed": true,
         "description_kind": "plain",
@@ -388,32 +192,6 @@ const awsLaunchTemplate = `{
         "computed": true,
         "description_kind": "plain",
         "type": "number"
-      },
-      "license_specification": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "license_configuration_arn": "string"
-            }
-          ]
-        ]
-      },
-      "maintenance_options": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "auto_recovery": "string"
-            }
-          ]
-        ]
       },
       "metadata_options": {
         "computed": true,
@@ -446,7 +224,6 @@ const awsLaunchTemplate = `{
         ]
       },
       "name": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -470,18 +247,8 @@ const awsLaunchTemplate = `{
                 "set",
                 "string"
               ],
-              "ipv4_prefix_count": "number",
-              "ipv4_prefixes": [
-                "set",
-                "string"
-              ],
               "ipv6_address_count": "number",
               "ipv6_addresses": [
-                "set",
-                "string"
-              ],
-              "ipv6_prefix_count": "number",
-              "ipv6_prefixes": [
                 "set",
                 "string"
               ],
@@ -513,21 +280,6 @@ const awsLaunchTemplate = `{
               "partition_number": "number",
               "spread_domain": "string",
               "tenancy": "string"
-            }
-          ]
-        ]
-      },
-      "private_dns_name_options": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "enable_resource_name_dns_a_record": "bool",
-              "enable_resource_name_dns_aaaa_record": "bool",
-              "hostname_type": "string"
             }
           ]
         ]
@@ -606,19 +358,6 @@ const awsLaunchTemplate = `{
           "description_kind": "plain"
         },
         "nesting_mode": "set"
-      },
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "read": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

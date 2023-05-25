@@ -17,19 +17,6 @@ const awsLakeformationDataLakeSettings = `{
           "string"
         ]
       },
-      "allow_external_data_filtering": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
-      "authorized_session_tag_value_list": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          "string"
-        ]
-      },
       "catalog_id": {
         "description_kind": "plain",
         "optional": true,
@@ -67,14 +54,6 @@ const awsLakeformationDataLakeSettings = `{
               "principal": "string"
             }
           ]
-        ]
-      },
-      "external_data_filtering_allow_list": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "set",
-          "string"
         ]
       },
       "id": {

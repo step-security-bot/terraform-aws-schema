@@ -69,67 +69,9 @@ const awsNetworkfirewallRuleGroup = `{
       }
     },
     "block_types": {
-      "encryption_configuration": {
-        "block": {
-          "attributes": {
-            "key_id": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "type": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "rule_group": {
         "block": {
           "block_types": {
-            "reference_sets": {
-              "block": {
-                "block_types": {
-                  "ip_set_references": {
-                    "block": {
-                      "attributes": {
-                        "key": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        }
-                      },
-                      "block_types": {
-                        "ip_set_reference": {
-                          "block": {
-                            "attributes": {
-                              "reference_arn": {
-                                "description_kind": "plain",
-                                "required": true,
-                                "type": "string"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "min_items": 1,
-                          "nesting_mode": "list"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "max_items": 5,
-                    "nesting_mode": "set"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
             "rule_variables": {
               "block": {
                 "block_types": {
@@ -320,7 +262,7 @@ const awsNetworkfirewallRuleGroup = `{
                       },
                       "description_kind": "plain"
                     },
-                    "nesting_mode": "list"
+                    "nesting_mode": "set"
                   },
                   "stateless_rules_and_custom_actions": {
                     "block": {

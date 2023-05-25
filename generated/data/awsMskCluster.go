@@ -19,21 +19,6 @@ const awsMskCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "bootstrap_brokers_public_sasl_iam": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "bootstrap_brokers_public_sasl_scram": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "bootstrap_brokers_public_tls": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "bootstrap_brokers_sasl_iam": {
         "computed": true,
         "description_kind": "plain",
@@ -80,11 +65,6 @@ const awsMskCluster = `{
         ]
       },
       "zookeeper_connect_string": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "zookeeper_connect_string_tls": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"

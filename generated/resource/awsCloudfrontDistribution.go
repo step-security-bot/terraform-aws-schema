@@ -667,11 +667,6 @@ const awsCloudfrontDistribution = `{
               "required": true,
               "type": "string"
             },
-            "origin_access_control_id": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "origin_id": {
               "description_kind": "plain",
               "required": true,

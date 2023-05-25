@@ -14,11 +14,6 @@ const awsImagebuilderImagePipeline = `{
         "required": true,
         "type": "string"
       },
-      "container_recipe_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "date_created": {
         "computed": true,
         "description_kind": "plain",

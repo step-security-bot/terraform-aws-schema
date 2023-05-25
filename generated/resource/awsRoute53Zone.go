@@ -48,11 +48,6 @@ const awsRoute53Zone = `{
           "string"
         ]
       },
-      "primary_name_server": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "tags": {
         "description_kind": "plain",
         "optional": true,

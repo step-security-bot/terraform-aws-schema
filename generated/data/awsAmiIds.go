@@ -31,11 +31,6 @@ const awsAmiIds = `{
           "string"
         ]
       },
-      "include_deprecated": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "name_regex": {
         "description_kind": "plain",
         "optional": true,
@@ -76,19 +71,6 @@ const awsAmiIds = `{
           "description_kind": "plain"
         },
         "nesting_mode": "set"
-      },
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "read": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

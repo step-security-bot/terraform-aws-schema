@@ -24,11 +24,6 @@ const awsLambdaPermission = `{
         "required": true,
         "type": "string"
       },
-      "function_url_auth_type": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -38,11 +33,6 @@ const awsLambdaPermission = `{
       "principal": {
         "description_kind": "plain",
         "required": true,
-        "type": "string"
-      },
-      "principal_org_id": {
-        "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "qualifier": {
@@ -67,7 +57,6 @@ const awsLambdaPermission = `{
         "type": "string"
       },
       "statement_id_prefix": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

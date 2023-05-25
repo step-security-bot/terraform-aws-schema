@@ -149,29 +149,6 @@ const awsCloudwatchEventTarget = `{
             }
           },
           "block_types": {
-            "capacity_provider_strategy": {
-              "block": {
-                "attributes": {
-                  "base": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  },
-                  "capacity_provider": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "weight": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "set"
-            },
             "network_configuration": {
               "block": {
                 "attributes": {
@@ -200,25 +177,6 @@ const awsCloudwatchEventTarget = `{
                 "description_kind": "plain"
               },
               "max_items": 1,
-              "nesting_mode": "list"
-            },
-            "ordered_placement_strategy": {
-              "block": {
-                "attributes": {
-                  "field": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "type": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 5,
               "nesting_mode": "list"
             },
             "placement_constraint": {
@@ -261,7 +219,7 @@ const awsCloudwatchEventTarget = `{
               "description_kind": "plain",
               "optional": true,
               "type": [
-                "list",
+                "set",
                 "string"
               ]
             },

@@ -98,11 +98,6 @@ const awsDefaultSecurityGroup = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "name_prefix": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "owner_id": {
         "computed": true,
         "description_kind": "plain",

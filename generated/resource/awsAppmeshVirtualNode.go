@@ -478,6 +478,7 @@ const awsAppmeshVirtualNode = `{
                             },
                             "description_kind": "plain"
                           },
+                          "max_items": 1,
                           "nesting_mode": "list"
                         },
                         "http2": {
@@ -491,6 +492,7 @@ const awsAppmeshVirtualNode = `{
                             },
                             "description_kind": "plain"
                           },
+                          "max_items": 1,
                           "nesting_mode": "list"
                         },
                         "tcp": {
@@ -504,6 +506,7 @@ const awsAppmeshVirtualNode = `{
                             },
                             "description_kind": "plain"
                           },
+                          "max_items": 1,
                           "nesting_mode": "list"
                         }
                       },
@@ -966,6 +969,7 @@ const awsAppmeshVirtualNode = `{
                 },
                 "description_kind": "plain"
               },
+              "max_items": 1,
               "nesting_mode": "list"
             },
             "logging": {
@@ -981,42 +985,6 @@ const awsAppmeshVirtualNode = `{
                                 "description_kind": "plain",
                                 "required": true,
                                 "type": "string"
-                              }
-                            },
-                            "block_types": {
-                              "format": {
-                                "block": {
-                                  "attributes": {
-                                    "text": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "string"
-                                    }
-                                  },
-                                  "block_types": {
-                                    "json": {
-                                      "block": {
-                                        "attributes": {
-                                          "key": {
-                                            "description_kind": "plain",
-                                            "required": true,
-                                            "type": "string"
-                                          },
-                                          "value": {
-                                            "description_kind": "plain",
-                                            "required": true,
-                                            "type": "string"
-                                          }
-                                        },
-                                        "description_kind": "plain"
-                                      },
-                                      "nesting_mode": "list"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "max_items": 1,
-                                "nesting_mode": "list"
                               }
                             },
                             "description_kind": "plain"
@@ -1072,16 +1040,6 @@ const awsAppmeshVirtualNode = `{
                         "hostname": {
                           "description_kind": "plain",
                           "required": true,
-                          "type": "string"
-                        },
-                        "ip_preference": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "string"
-                        },
-                        "response_type": {
-                          "description_kind": "plain",
-                          "optional": true,
                           "type": "string"
                         }
                       },

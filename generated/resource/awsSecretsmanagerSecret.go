@@ -129,18 +129,8 @@ const awsSecretsmanagerSecret = `{
           "attributes": {
             "automatically_after_days": {
               "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": "number"
-            },
-            "duration": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "schedule_expression": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
             }
           },
           "deprecated": true,

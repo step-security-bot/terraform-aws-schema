@@ -46,11 +46,6 @@ const awsFsxOpenzfsVolume = `{
         "optional": true,
         "type": "bool"
       },
-      "record_size_kib": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
       "storage_capacity_quota_gib": {
         "computed": true,
         "description_kind": "plain",

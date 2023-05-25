@@ -127,14 +127,6 @@ const awsRdsOrderableDbInstance = `{
           "string"
         ]
       },
-      "supported_network_types": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          "string"
-        ]
-      },
       "supports_enhanced_monitoring": {
         "computed": true,
         "description_kind": "plain",

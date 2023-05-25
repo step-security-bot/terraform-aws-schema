@@ -14,11 +14,6 @@ const awsEcsTaskDefinition = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "arn_without_revision": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "container_definitions": {
         "description_kind": "plain",
         "required": true,

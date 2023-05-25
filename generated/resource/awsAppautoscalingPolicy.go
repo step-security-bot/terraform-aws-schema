@@ -9,14 +9,6 @@ import (
 const awsAppautoscalingPolicy = `{
   "block": {
     "attributes": {
-      "alarm_arns": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          "string"
-        ]
-      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
@@ -139,17 +131,17 @@ const awsAppautoscalingPolicy = `{
                 "attributes": {
                   "metric_name": {
                     "description_kind": "plain",
-                    "optional": true,
+                    "required": true,
                     "type": "string"
                   },
                   "namespace": {
                     "description_kind": "plain",
-                    "optional": true,
+                    "required": true,
                     "type": "string"
                   },
                   "statistic": {
                     "description_kind": "plain",
-                    "optional": true,
+                    "required": true,
                     "type": "string"
                   },
                   "unit": {
@@ -171,97 +163,6 @@ const awsAppautoscalingPolicy = `{
                           "description_kind": "plain",
                           "required": true,
                           "type": "string"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "nesting_mode": "set"
-                  },
-                  "metrics": {
-                    "block": {
-                      "attributes": {
-                        "expression": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "string"
-                        },
-                        "id": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        },
-                        "label": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "string"
-                        },
-                        "return_data": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "bool"
-                        }
-                      },
-                      "block_types": {
-                        "metric_stat": {
-                          "block": {
-                            "attributes": {
-                              "stat": {
-                                "description_kind": "plain",
-                                "required": true,
-                                "type": "string"
-                              },
-                              "unit": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "string"
-                              }
-                            },
-                            "block_types": {
-                              "metric": {
-                                "block": {
-                                  "attributes": {
-                                    "metric_name": {
-                                      "description_kind": "plain",
-                                      "required": true,
-                                      "type": "string"
-                                    },
-                                    "namespace": {
-                                      "description_kind": "plain",
-                                      "required": true,
-                                      "type": "string"
-                                    }
-                                  },
-                                  "block_types": {
-                                    "dimensions": {
-                                      "block": {
-                                        "attributes": {
-                                          "name": {
-                                            "description_kind": "plain",
-                                            "required": true,
-                                            "type": "string"
-                                          },
-                                          "value": {
-                                            "description_kind": "plain",
-                                            "required": true,
-                                            "type": "string"
-                                          }
-                                        },
-                                        "description_kind": "plain"
-                                      },
-                                      "nesting_mode": "set"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "max_items": 1,
-                                "min_items": 1,
-                                "nesting_mode": "list"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 1,
-                          "nesting_mode": "list"
                         }
                       },
                       "description_kind": "plain"

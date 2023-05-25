@@ -35,11 +35,6 @@ const awsOrganizationsPolicy = `{
         "required": true,
         "type": "string"
       },
-      "skip_destroy": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "tags": {
         "description_kind": "plain",
         "optional": true,

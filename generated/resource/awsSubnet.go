@@ -46,11 +46,6 @@ const awsSubnet = `{
         "optional": true,
         "type": "bool"
       },
-      "enable_lni_at_device_index": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
       "enable_resource_name_dns_a_record_on_launch": {
         "description_kind": "plain",
         "optional": true,

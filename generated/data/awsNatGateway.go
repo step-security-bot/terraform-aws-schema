@@ -14,11 +14,6 @@ const awsNatGateway = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "association_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "connectivity_type": {
         "computed": true,
         "description_kind": "plain",
@@ -94,19 +89,6 @@ const awsNatGateway = `{
           "description_kind": "plain"
         },
         "nesting_mode": "set"
-      },
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "read": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

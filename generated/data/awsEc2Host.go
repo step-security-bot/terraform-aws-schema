@@ -56,11 +56,6 @@ const awsEc2Host = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "outpost_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "owner_id": {
         "computed": true,
         "description_kind": "plain",
@@ -107,19 +102,6 @@ const awsEc2Host = `{
           "description_kind": "plain"
         },
         "nesting_mode": "set"
-      },
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "read": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

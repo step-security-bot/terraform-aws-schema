@@ -19,11 +19,6 @@ const awsEc2TrafficMirrorTarget = `{
         "optional": true,
         "type": "string"
       },
-      "gateway_load_balancer_endpoint_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",

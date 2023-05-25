@@ -13,7 +13,7 @@ const awsSsoadminInstances = `{
         "computed": true,
         "description_kind": "plain",
         "type": [
-          "list",
+          "set",
           "string"
         ]
       },
@@ -27,7 +27,7 @@ const awsSsoadminInstances = `{
         "computed": true,
         "description_kind": "plain",
         "type": [
-          "list",
+          "set",
           "string"
         ]
       }

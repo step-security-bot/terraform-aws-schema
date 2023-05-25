@@ -102,24 +102,6 @@ const awsLambdaFunction = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "qualified_invoke_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "replace_security_groups_on_destroy": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "replacement_security_group_ids": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
       "reserved_concurrent_executions": {
         "description_kind": "plain",
         "optional": true,
@@ -159,11 +141,6 @@ const awsLambdaFunction = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "skip_destroy": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       },
       "source_code_hash": {
         "computed": true,
@@ -236,21 +213,6 @@ const awsLambdaFunction = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
-      "ephemeral_storage": {
-        "block": {
-          "attributes": {
-            "size": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "file_system_config": {
         "block": {
           "attributes": {
@@ -300,39 +262,10 @@ const awsLambdaFunction = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
-      "snap_start": {
-        "block": {
-          "attributes": {
-            "apply_on": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "optimization_status": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "timeouts": {
         "block": {
           "attributes": {
             "create": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "update": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"

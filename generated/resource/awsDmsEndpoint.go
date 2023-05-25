@@ -342,129 +342,15 @@ const awsDmsEndpoint = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
-      "redis_settings": {
-        "block": {
-          "attributes": {
-            "auth_password": {
-              "description_kind": "plain",
-              "optional": true,
-              "sensitive": true,
-              "type": "string"
-            },
-            "auth_type": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "auth_user_name": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "port": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "number"
-            },
-            "server_name": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "ssl_ca_certificate_arn": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "ssl_security_protocol": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "redshift_settings": {
-        "block": {
-          "attributes": {
-            "bucket_folder": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "bucket_name": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "encryption_mode": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "server_side_encryption_kms_key_id": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "service_access_role_arn": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "s3_settings": {
         "block": {
           "attributes": {
-            "add_column_name": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
             "bucket_folder": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "bucket_name": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "canned_acl_for_objects": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "cdc_inserts_and_updates": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "cdc_inserts_only": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "cdc_max_batch_interval": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "cdc_min_file_size": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "cdc_path": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -479,16 +365,6 @@ const awsDmsEndpoint = `{
               "optional": true,
               "type": "string"
             },
-            "csv_no_sup_value": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "csv_null_value": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "csv_row_delimiter": {
               "description_kind": "plain",
               "optional": true,
@@ -499,40 +375,10 @@ const awsDmsEndpoint = `{
               "optional": true,
               "type": "string"
             },
-            "data_page_size": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "date_partition_delimiter": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "date_partition_enabled": {
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
-            },
-            "date_partition_sequence": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "dict_page_size_limit": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "enable_statistics": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "encoding_type": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
             },
             "encryption_mode": {
               "description_kind": "plain",
@@ -544,27 +390,6 @@ const awsDmsEndpoint = `{
               "optional": true,
               "type": "string"
             },
-            "ignore_header_rows": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "ignore_headers_row": {
-              "description": "This setting has no effect, is deprecated, and will be removed in a future version",
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "include_op_for_full_load": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "max_file_size": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
             "parquet_timestamp_in_millisecond": {
               "description_kind": "plain",
               "optional": true,
@@ -575,21 +400,6 @@ const awsDmsEndpoint = `{
               "optional": true,
               "type": "string"
             },
-            "preserve_transactions": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "rfc_4180": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "row_group_length": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
             "server_side_encryption_kms_key_id": {
               "description_kind": "plain",
               "optional": true,
@@ -599,46 +409,12 @@ const awsDmsEndpoint = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
-            },
-            "timestamp_column_name": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "use_csv_no_sup_value": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "use_task_start_time_for_full_load_timestamp": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
             }
           },
-          "description": "This argument is deprecated and will be removed in a future version; use aws_dms_s3_endpoint instead",
           "description_kind": "plain"
         },
         "max_items": 1,
         "nesting_mode": "list"
-      },
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "create": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

@@ -523,6 +523,7 @@ const awsAppmeshVirtualGateway = `{
                 },
                 "description_kind": "plain"
               },
+              "max_items": 1,
               "min_items": 1,
               "nesting_mode": "list"
             },
@@ -539,42 +540,6 @@ const awsAppmeshVirtualGateway = `{
                                 "description_kind": "plain",
                                 "required": true,
                                 "type": "string"
-                              }
-                            },
-                            "block_types": {
-                              "format": {
-                                "block": {
-                                  "attributes": {
-                                    "text": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "string"
-                                    }
-                                  },
-                                  "block_types": {
-                                    "json": {
-                                      "block": {
-                                        "attributes": {
-                                          "key": {
-                                            "description_kind": "plain",
-                                            "required": true,
-                                            "type": "string"
-                                          },
-                                          "value": {
-                                            "description_kind": "plain",
-                                            "required": true,
-                                            "type": "string"
-                                          }
-                                        },
-                                        "description_kind": "plain"
-                                      },
-                                      "nesting_mode": "list"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "max_items": 1,
-                                "nesting_mode": "list"
                               }
                             },
                             "description_kind": "plain"

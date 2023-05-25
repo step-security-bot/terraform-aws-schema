@@ -90,24 +90,9 @@ const awsGlueCrawler = `{
       "catalog_target": {
         "block": {
           "attributes": {
-            "connection_name": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "database_name": {
               "description_kind": "plain",
               "required": true,
-              "type": "string"
-            },
-            "dlq_event_queue_arn": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "event_queue_arn": {
-              "description_kind": "plain",
-              "optional": true,
               "type": "string"
             },
             "tables": {
@@ -128,13 +113,8 @@ const awsGlueCrawler = `{
           "attributes": {
             "connection_name": {
               "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": "string"
-            },
-            "create_native_delta_table": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
             },
             "delta_tables": {
               "description_kind": "plain",
@@ -185,14 +165,6 @@ const awsGlueCrawler = `{
               "required": true,
               "type": "string"
             },
-            "enable_additional_metadata": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "list",
-                "string"
-              ]
-            },
             "exclusions": {
               "description_kind": "plain",
               "optional": true,
@@ -209,26 +181,6 @@ const awsGlueCrawler = `{
           },
           "description_kind": "plain"
         },
-        "nesting_mode": "list"
-      },
-      "lake_formation_configuration": {
-        "block": {
-          "attributes": {
-            "account_id": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "use_lake_formation_credentials": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
         "nesting_mode": "list"
       },
       "lineage_configuration": {

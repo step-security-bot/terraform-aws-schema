@@ -10,13 +10,11 @@ const awsCognitoUserPoolClient = `{
   "block": {
     "attributes": {
       "access_token_validity": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "number"
       },
       "allowed_oauth_flows": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -25,25 +23,17 @@ const awsCognitoUserPoolClient = `{
         ]
       },
       "allowed_oauth_flows_user_pool_client": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
       },
       "allowed_oauth_scopes": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
           "set",
           "string"
         ]
-      },
-      "auth_session_validity": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
       },
       "callback_urls": {
         "computed": true,
@@ -61,16 +51,9 @@ const awsCognitoUserPoolClient = `{
         "type": "string"
       },
       "default_redirect_uri": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "enable_propagate_additional_user_context_data": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       },
       "enable_token_revocation": {
         "computed": true,
@@ -79,7 +62,6 @@ const awsCognitoUserPoolClient = `{
         "type": "bool"
       },
       "explicit_auth_flows": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -95,10 +77,10 @@ const awsCognitoUserPoolClient = `{
       "id": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "id_token_validity": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "number"
@@ -124,7 +106,6 @@ const awsCognitoUserPoolClient = `{
         "type": "string"
       },
       "read_attributes": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -133,13 +114,11 @@ const awsCognitoUserPoolClient = `{
         ]
       },
       "refresh_token_validity": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "number"
       },
       "supported_identity_providers": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -153,7 +132,6 @@ const awsCognitoUserPoolClient = `{
         "type": "string"
       },
       "write_attributes": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -188,7 +166,6 @@ const awsCognitoUserPoolClient = `{
               "type": "string"
             },
             "user_data_shared": {
-              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
@@ -196,25 +173,23 @@ const awsCognitoUserPoolClient = `{
           },
           "description_kind": "plain"
         },
+        "max_items": 1,
         "nesting_mode": "list"
       },
       "token_validity_units": {
         "block": {
           "attributes": {
             "access_token": {
-              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "id_token": {
-              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "refresh_token": {
-              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -222,6 +197,7 @@ const awsCognitoUserPoolClient = `{
           },
           "description_kind": "plain"
         },
+        "max_items": 1,
         "nesting_mode": "list"
       }
     },

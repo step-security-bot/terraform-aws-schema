@@ -38,7 +38,7 @@ const awsMacie2Member = `{
       "invitation_disable_email_notification": {
         "description_kind": "plain",
         "optional": true,
-        "type": "bool"
+        "type": "string"
       },
       "invitation_message": {
         "description_kind": "plain",

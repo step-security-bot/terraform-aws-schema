@@ -19,11 +19,6 @@ const awsSyntheticsCanary = `{
         "required": true,
         "type": "string"
       },
-      "delete_lambda": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "engine_arn": {
         "computed": true,
         "description_kind": "plain",
@@ -170,14 +165,6 @@ const awsSyntheticsCanary = `{
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
-            },
-            "environment_variables": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "map",
-                "string"
-              ]
             },
             "memory_in_mb": {
               "computed": true,

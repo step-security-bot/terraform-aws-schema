@@ -92,24 +92,6 @@ const awsIotTopicRule = `{
         },
         "nesting_mode": "set"
       },
-      "cloudwatch_logs": {
-        "block": {
-          "attributes": {
-            "log_group_name": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "role_arn": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "set"
-      },
       "cloudwatch_metric": {
         "block": {
           "attributes": {
@@ -300,25 +282,6 @@ const awsIotTopicRule = `{
               "max_items": 1,
               "nesting_mode": "list"
             },
-            "cloudwatch_logs": {
-              "block": {
-                "attributes": {
-                  "log_group_name": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "role_arn": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
             "cloudwatch_metric": {
               "block": {
                 "attributes": {
@@ -484,11 +447,6 @@ const awsIotTopicRule = `{
             "firehose": {
               "block": {
                 "attributes": {
-                  "batch_mode": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "bool"
-                  },
                   "delivery_stream_name": {
                     "description_kind": "plain",
                     "required": true,
@@ -510,53 +468,9 @@ const awsIotTopicRule = `{
               "max_items": 1,
               "nesting_mode": "list"
             },
-            "http": {
-              "block": {
-                "attributes": {
-                  "confirmation_url": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "url": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "block_types": {
-                  "http_header": {
-                    "block": {
-                      "attributes": {
-                        "key": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        },
-                        "value": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "nesting_mode": "list"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
             "iot_analytics": {
               "block": {
                 "attributes": {
-                  "batch_mode": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "bool"
-                  },
                   "channel_name": {
                     "description_kind": "plain",
                     "required": true,
@@ -576,11 +490,6 @@ const awsIotTopicRule = `{
             "iot_events": {
               "block": {
                 "attributes": {
-                  "batch_mode": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "bool"
-                  },
                   "input_name": {
                     "description_kind": "plain",
                     "required": true,
@@ -592,43 +501,6 @@ const awsIotTopicRule = `{
                     "type": "string"
                   },
                   "role_arn": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
-            "kafka": {
-              "block": {
-                "attributes": {
-                  "client_properties": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": [
-                      "map",
-                      "string"
-                    ]
-                  },
-                  "destination_arn": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "key": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "partition": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "topic": {
                     "description_kind": "plain",
                     "required": true,
                     "type": "string"
@@ -707,11 +579,6 @@ const awsIotTopicRule = `{
                   "bucket_name": {
                     "description_kind": "plain",
                     "required": true,
-                    "type": "string"
-                  },
-                  "canned_acl": {
-                    "description_kind": "plain",
-                    "optional": true,
                     "type": "string"
                   },
                   "key": {
@@ -801,70 +668,6 @@ const awsIotTopicRule = `{
               },
               "max_items": 1,
               "nesting_mode": "list"
-            },
-            "timestream": {
-              "block": {
-                "attributes": {
-                  "database_name": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "role_arn": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "table_name": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "block_types": {
-                  "dimension": {
-                    "block": {
-                      "attributes": {
-                        "name": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        },
-                        "value": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "min_items": 1,
-                    "nesting_mode": "set"
-                  },
-                  "timestamp": {
-                    "block": {
-                      "attributes": {
-                        "unit": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        },
-                        "value": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "max_items": 1,
-                    "nesting_mode": "list"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"
@@ -875,11 +678,6 @@ const awsIotTopicRule = `{
       "firehose": {
         "block": {
           "attributes": {
-            "batch_mode": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
             "delivery_stream_name": {
               "description_kind": "plain",
               "required": true,
@@ -900,52 +698,9 @@ const awsIotTopicRule = `{
         },
         "nesting_mode": "set"
       },
-      "http": {
-        "block": {
-          "attributes": {
-            "confirmation_url": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "url": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "block_types": {
-            "http_header": {
-              "block": {
-                "attributes": {
-                  "key": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "value": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "set"
-      },
       "iot_analytics": {
         "block": {
           "attributes": {
-            "batch_mode": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
             "channel_name": {
               "description_kind": "plain",
               "required": true,
@@ -964,11 +719,6 @@ const awsIotTopicRule = `{
       "iot_events": {
         "block": {
           "attributes": {
-            "batch_mode": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
             "input_name": {
               "description_kind": "plain",
               "required": true,
@@ -980,42 +730,6 @@ const awsIotTopicRule = `{
               "type": "string"
             },
             "role_arn": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "set"
-      },
-      "kafka": {
-        "block": {
-          "attributes": {
-            "client_properties": {
-              "description_kind": "plain",
-              "required": true,
-              "type": [
-                "map",
-                "string"
-              ]
-            },
-            "destination_arn": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "key": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "partition": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "topic": {
               "description_kind": "plain",
               "required": true,
               "type": "string"
@@ -1090,11 +804,6 @@ const awsIotTopicRule = `{
             "bucket_name": {
               "description_kind": "plain",
               "required": true,
-              "type": "string"
-            },
-            "canned_acl": {
-              "description_kind": "plain",
-              "optional": true,
               "type": "string"
             },
             "key": {
@@ -1175,69 +884,6 @@ const awsIotTopicRule = `{
               "description_kind": "plain",
               "required": true,
               "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "set"
-      },
-      "timestream": {
-        "block": {
-          "attributes": {
-            "database_name": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "role_arn": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "table_name": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "block_types": {
-            "dimension": {
-              "block": {
-                "attributes": {
-                  "name": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "value": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "min_items": 1,
-              "nesting_mode": "set"
-            },
-            "timestamp": {
-              "block": {
-                "attributes": {
-                  "unit": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "value": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"

@@ -237,21 +237,6 @@ const awsElasticsearchDomain = `{
             }
           },
           "block_types": {
-            "cold_storage_options": {
-              "block": {
-                "attributes": {
-                  "enabled": {
-                    "computed": true,
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "bool"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
             "zone_awareness_config": {
               "block": {
                 "attributes": {
@@ -345,13 +330,6 @@ const awsElasticsearchDomain = `{
               "type": "bool"
             },
             "iops": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "throughput": {
-              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "number"
@@ -447,16 +425,6 @@ const awsElasticsearchDomain = `{
       "timeouts": {
         "block": {
           "attributes": {
-            "create": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "update": {
               "description_kind": "plain",
               "optional": true,

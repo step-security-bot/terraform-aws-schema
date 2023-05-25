@@ -42,11 +42,6 @@ const awsKeyPair = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "key_type": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "public_key": {
         "description_kind": "plain",
         "required": true,

@@ -21,21 +21,6 @@ const awsEbsEncryptionByDefault = `{
         "type": "string"
       }
     },
-    "block_types": {
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "read": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
-      }
-    },
     "description_kind": "plain"
   },
   "version": 0

@@ -14,20 +14,9 @@ const awsVpnConnection = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "core_network_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "core_network_attachment_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "customer_gateway_configuration": {
         "computed": true,
         "description_kind": "plain",
-        "sensitive": true,
         "type": "string"
       },
       "customer_gateway_id": {
@@ -54,12 +43,6 @@ const awsVpnConnection = `{
         "type": "string"
       },
       "local_ipv6_network_cidr": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "outside_ip_address_type": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
@@ -125,11 +108,6 @@ const awsVpnConnection = `{
         "optional": true,
         "type": "string"
       },
-      "transport_transit_gateway_attachment_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "tunnel1_address": {
         "computed": true,
         "description_kind": "plain",
@@ -159,11 +137,6 @@ const awsVpnConnection = `{
         "description_kind": "plain",
         "optional": true,
         "type": "number"
-      },
-      "tunnel1_enable_tunnel_lifecycle_control": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       },
       "tunnel1_ike_versions": {
         "description_kind": "plain",
@@ -304,11 +277,6 @@ const awsVpnConnection = `{
         "description_kind": "plain",
         "optional": true,
         "type": "number"
-      },
-      "tunnel2_enable_tunnel_lifecycle_control": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       },
       "tunnel2_ike_versions": {
         "description_kind": "plain",
@@ -453,74 +421,6 @@ const awsVpnConnection = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      }
-    },
-    "block_types": {
-      "tunnel1_log_options": {
-        "block": {
-          "block_types": {
-            "cloudwatch_log_options": {
-              "block": {
-                "attributes": {
-                  "log_enabled": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "bool"
-                  },
-                  "log_group_arn": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "log_output_format": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "tunnel2_log_options": {
-        "block": {
-          "block_types": {
-            "cloudwatch_log_options": {
-              "block": {
-                "attributes": {
-                  "log_enabled": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "bool"
-                  },
-                  "log_group_arn": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "log_output_format": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

@@ -179,11 +179,6 @@ const awsFsxOpenzfsFileSystem = `{
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
-            },
-            "record_size_kib": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
             }
           },
           "block_types": {

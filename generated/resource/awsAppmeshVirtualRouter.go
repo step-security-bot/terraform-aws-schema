@@ -99,6 +99,8 @@ const awsAppmeshVirtualRouter = `{
                 },
                 "description_kind": "plain"
               },
+              "max_items": 1,
+              "min_items": 1,
               "nesting_mode": "list"
             }
           },

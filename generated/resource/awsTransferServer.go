@@ -81,18 +81,6 @@ const awsTransferServer = `{
         "optional": true,
         "type": "string"
       },
-      "post_authentication_login_banner": {
-        "description_kind": "plain",
-        "optional": true,
-        "sensitive": true,
-        "type": "string"
-      },
-      "pre_authentication_login_banner": {
-        "description_kind": "plain",
-        "optional": true,
-        "sensitive": true,
-        "type": "string"
-      },
       "protocols": {
         "computed": true,
         "description_kind": "plain",
@@ -169,89 +157,6 @@ const awsTransferServer = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "protocol_details": {
-        "block": {
-          "attributes": {
-            "as2_transports": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "passive_ip": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "set_stat_option": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "tls_session_resumption_mode": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "workflow_details": {
-        "block": {
-          "block_types": {
-            "on_partial_upload": {
-              "block": {
-                "attributes": {
-                  "execution_role": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "workflow_id": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
-            "on_upload": {
-              "block": {
-                "attributes": {
-                  "execution_role": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "workflow_id": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"

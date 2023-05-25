@@ -55,20 +55,6 @@ const awsIamRole = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "role_last_used": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "last_used_date": "string",
-              "region": "string"
-            }
-          ]
-        ]
-      },
       "tags": {
         "computed": true,
         "description_kind": "plain",

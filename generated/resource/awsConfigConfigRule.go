@@ -106,35 +106,11 @@ const awsConfigConfigRule = `{
             },
             "source_identifier": {
               "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": "string"
             }
           },
           "block_types": {
-            "custom_policy_details": {
-              "block": {
-                "attributes": {
-                  "enable_debug_log_delivery": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "bool"
-                  },
-                  "policy_runtime": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "policy_text": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
             "source_detail": {
               "block": {
                 "attributes": {

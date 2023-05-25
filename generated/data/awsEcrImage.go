@@ -44,11 +44,6 @@ const awsEcrImage = `{
           "string"
         ]
       },
-      "most_recent": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "registry_id": {
         "computed": true,
         "description_kind": "plain",

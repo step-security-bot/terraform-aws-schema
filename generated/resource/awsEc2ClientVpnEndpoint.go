@@ -33,7 +33,7 @@ const awsEc2ClientVpnEndpoint = `{
         "description_kind": "plain",
         "optional": true,
         "type": [
-          "list",
+          "set",
           "string"
         ]
       },
@@ -42,15 +42,6 @@ const awsEc2ClientVpnEndpoint = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "security_group_ids": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
       },
       "self_service_portal": {
         "description_kind": "plain",
@@ -62,11 +53,6 @@ const awsEc2ClientVpnEndpoint = `{
         "required": true,
         "type": "string"
       },
-      "session_timeout_hours": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
       "split_tunnel": {
         "description_kind": "plain",
         "optional": true,
@@ -74,7 +60,6 @@ const awsEc2ClientVpnEndpoint = `{
       },
       "status": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "type": "string"
       },
@@ -99,17 +84,6 @@ const awsEc2ClientVpnEndpoint = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "vpc_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "vpn_port": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
       }
     },
     "block_types": {
@@ -146,48 +120,6 @@ const awsEc2ClientVpnEndpoint = `{
         },
         "max_items": 2,
         "min_items": 1,
-        "nesting_mode": "set"
-      },
-      "client_connect_options": {
-        "block": {
-          "attributes": {
-            "enabled": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "lambda_function_arn": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "client_login_banner_options": {
-        "block": {
-          "attributes": {
-            "banner_text": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "enabled": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
         "nesting_mode": "list"
       },
       "connection_log_options": {
@@ -199,7 +131,6 @@ const awsEc2ClientVpnEndpoint = `{
               "type": "string"
             },
             "cloudwatch_log_stream": {
-              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"

@@ -35,11 +35,6 @@ const awsAcmpcaCertificateAuthority = `{
         "optional": true,
         "type": "string"
       },
-      "key_storage_security_standard": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "not_after": {
         "computed": true,
         "description_kind": "plain",
@@ -49,41 +44,6 @@ const awsAcmpcaCertificateAuthority = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "revocation_configuration": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "crl_configuration": [
-                "list",
-                [
-                  "object",
-                  {
-                    "custom_cname": "string",
-                    "enabled": "bool",
-                    "expiration_in_days": "number",
-                    "s3_bucket_name": "string",
-                    "s3_object_acl": "string"
-                  }
-                ]
-              ],
-              "ocsp_configuration": [
-                "list",
-                [
-                  "object",
-                  {
-                    "enabled": "bool",
-                    "ocsp_custom_cname": "string"
-                  }
-                ]
-              ]
-            }
-          ]
-        ]
       },
       "serial": {
         "computed": true,
@@ -108,11 +68,49 @@ const awsAcmpcaCertificateAuthority = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "usage_mode": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
+      }
+    },
+    "block_types": {
+      "revocation_configuration": {
+        "block": {
+          "block_types": {
+            "crl_configuration": {
+              "block": {
+                "attributes": {
+                  "custom_cname": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "type": "string"
+                  },
+                  "enabled": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "type": "bool"
+                  },
+                  "expiration_in_days": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "type": "number"
+                  },
+                  "s3_bucket_name": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "type": "string"
+                  },
+                  "s3_object_acl": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

@@ -14,17 +14,6 @@ const awsRedshiftCluster = `{
         "optional": true,
         "type": "bool"
       },
-      "apply_immediately": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "aqua_configuration_status": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
@@ -40,11 +29,6 @@ const awsRedshiftCluster = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "availability_zone_relocation_enabled": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       },
       "cluster_identifier": {
         "description_kind": "plain",
@@ -86,7 +70,6 @@ const awsRedshiftCluster = `{
       },
       "cluster_security_groups": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -112,12 +95,6 @@ const awsRedshiftCluster = `{
         "type": "string"
       },
       "database_name": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "default_iam_role_arn": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
@@ -175,16 +152,6 @@ const awsRedshiftCluster = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "maintenance_track_name": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "manual_snapshot_retention_period": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
       },
       "master_password": {
         "description_kind": "plain",
@@ -284,19 +251,6 @@ const awsRedshiftCluster = `{
               "description_kind": "plain",
               "required": true,
               "type": "bool"
-            },
-            "log_destination_type": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "log_exports": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
             },
             "s3_key_prefix": {
               "computed": true,

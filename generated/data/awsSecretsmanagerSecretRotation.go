@@ -33,9 +33,7 @@ const awsSecretsmanagerSecretRotation = `{
           [
             "object",
             {
-              "automatically_after_days": "number",
-              "duration": "string",
-              "schedule_expression": "string"
+              "automatically_after_days": "number"
             }
           ]
         ]

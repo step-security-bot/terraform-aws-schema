@@ -45,14 +45,6 @@ const awsDbSubnetGroup = `{
           "string"
         ]
       },
-      "supported_network_types": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "set",
-          "string"
-        ]
-      },
       "tags": {
         "description_kind": "plain",
         "optional": true,
@@ -69,11 +61,6 @@ const awsDbSubnetGroup = `{
           "map",
           "string"
         ]
-      },
-      "vpc_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
       }
     },
     "description_kind": "plain"

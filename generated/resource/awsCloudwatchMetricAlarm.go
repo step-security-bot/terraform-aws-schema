@@ -175,11 +175,6 @@ const awsCloudwatchMetricAlarm = `{
               "optional": true,
               "type": "string"
             },
-            "period": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
             "return_data": {
               "description_kind": "plain",
               "optional": true,

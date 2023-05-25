@@ -35,20 +35,6 @@ const awsImagebuilderInfrastructureConfiguration = `{
         "optional": true,
         "type": "string"
       },
-      "instance_metadata_options": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "http_put_response_hop_limit": "number",
-              "http_tokens": "string"
-            }
-          ]
-        ]
-      },
       "instance_profile_name": {
         "computed": true,
         "description_kind": "plain",

@@ -10,7 +10,6 @@ const awsDmsReplicationTask = `{
   "block": {
     "attributes": {
       "cdc_start_position": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -54,16 +53,6 @@ const awsDmsReplicationTask = `{
       "source_endpoint_arn": {
         "description_kind": "plain",
         "required": true,
-        "type": "string"
-      },
-      "start_replication_task": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "status": {
-        "computed": true,
-        "description_kind": "plain",
         "type": "string"
       },
       "table_mappings": {

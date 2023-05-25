@@ -37,7 +37,7 @@ const awsCustomerGateway = `{
       },
       "ip_address": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "tags": {

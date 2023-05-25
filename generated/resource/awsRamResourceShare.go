@@ -30,15 +30,6 @@ const awsRamResourceShare = `{
         "required": true,
         "type": "string"
       },
-      "permission_arns": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
       "tags": {
         "description_kind": "plain",
         "optional": true,

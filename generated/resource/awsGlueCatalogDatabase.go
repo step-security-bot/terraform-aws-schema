@@ -49,58 +49,9 @@ const awsGlueCatalogDatabase = `{
           "map",
           "string"
         ]
-      },
-      "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "block_types": {
-      "create_table_default_permission": {
-        "block": {
-          "attributes": {
-            "permissions": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            }
-          },
-          "block_types": {
-            "principal": {
-              "block": {
-                "attributes": {
-                  "data_lake_principal_identifier": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
-      },
       "target_database": {
         "block": {
           "attributes": {

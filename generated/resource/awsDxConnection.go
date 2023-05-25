@@ -24,12 +24,6 @@ const awsDxConnection = `{
         "required": true,
         "type": "string"
       },
-      "encryption_mode": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "has_logical_redundancy": {
         "computed": true,
         "description_kind": "plain",
@@ -51,11 +45,6 @@ const awsDxConnection = `{
         "required": true,
         "type": "string"
       },
-      "macsec_capable": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
       "name": {
         "description_kind": "plain",
         "required": true,
@@ -66,31 +55,11 @@ const awsDxConnection = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "partner_name": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "port_encryption_status": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "provider_name": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "request_macsec": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "skip_destroy": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       },
       "tags": {
         "description_kind": "plain",
@@ -108,11 +77,6 @@ const awsDxConnection = `{
           "map",
           "string"
         ]
-      },
-      "vlan_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
       }
     },
     "description_kind": "plain"

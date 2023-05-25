@@ -67,11 +67,6 @@ const awsConnectInstance = `{
         "optional": true,
         "type": "string"
       },
-      "multi_party_conference_enabled": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
       "outbound_calls_enabled": {
         "computed": true,
         "description_kind": "plain",

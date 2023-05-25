@@ -67,11 +67,6 @@ const awsGameliftBuild = `{
               "required": true,
               "type": "string"
             },
-            "object_version": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "role_arn": {
               "description_kind": "plain",
               "required": true,

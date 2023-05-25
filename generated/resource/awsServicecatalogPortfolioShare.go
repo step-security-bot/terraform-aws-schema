@@ -35,11 +35,6 @@ const awsServicecatalogPortfolioShare = `{
         "required": true,
         "type": "string"
       },
-      "share_principals": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "share_tag_options": {
         "description_kind": "plain",
         "optional": true,
@@ -54,36 +49,6 @@ const awsServicecatalogPortfolioShare = `{
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
-      }
-    },
-    "block_types": {
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "create": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "read": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "update": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

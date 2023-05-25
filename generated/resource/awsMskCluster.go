@@ -19,21 +19,6 @@ const awsMskCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "bootstrap_brokers_public_sasl_iam": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "bootstrap_brokers_public_sasl_scram": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "bootstrap_brokers_public_tls": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "bootstrap_brokers_sasl_iam": {
         "computed": true,
         "description_kind": "plain",
@@ -79,12 +64,6 @@ const awsMskCluster = `{
         "description_kind": "plain",
         "required": true,
         "type": "number"
-      },
-      "storage_mode": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
       },
       "tags": {
         "description_kind": "plain",
@@ -132,10 +111,8 @@ const awsMskCluster = `{
               ]
             },
             "ebs_volume_size": {
-              "computed": true,
-              "deprecated": true,
               "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": "number"
             },
             "instance_type": {
@@ -152,76 +129,6 @@ const awsMskCluster = `{
               ]
             }
           },
-          "block_types": {
-            "connectivity_info": {
-              "block": {
-                "block_types": {
-                  "public_access": {
-                    "block": {
-                      "attributes": {
-                        "type": {
-                          "computed": true,
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "string"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "max_items": 1,
-                    "nesting_mode": "list"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
-            "storage_info": {
-              "block": {
-                "block_types": {
-                  "ebs_storage_info": {
-                    "block": {
-                      "attributes": {
-                        "volume_size": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "number"
-                        }
-                      },
-                      "block_types": {
-                        "provisioned_throughput": {
-                          "block": {
-                            "attributes": {
-                              "enabled": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "bool"
-                              },
-                              "volume_throughput": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "number"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 1,
-                          "nesting_mode": "list"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "max_items": 1,
-                    "nesting_mode": "list"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            }
-          },
           "description_kind": "plain"
         },
         "max_items": 1,
@@ -230,13 +137,6 @@ const awsMskCluster = `{
       },
       "client_authentication": {
         "block": {
-          "attributes": {
-            "unauthenticated": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            }
-          },
           "block_types": {
             "sasl": {
               "block": {

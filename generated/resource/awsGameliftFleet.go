@@ -14,14 +14,9 @@ const awsGameliftFleet = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "build_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "build_id": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "description": {
@@ -82,16 +77,6 @@ const awsGameliftFleet = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "script_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "script_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "tags": {
         "description_kind": "plain",
         "optional": true,
@@ -111,20 +96,6 @@ const awsGameliftFleet = `{
       }
     },
     "block_types": {
-      "certificate_configuration": {
-        "block": {
-          "attributes": {
-            "certificate_type": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "ec2_inbound_permission": {
         "block": {
           "attributes": {
@@ -152,7 +123,7 @@ const awsGameliftFleet = `{
           "description_kind": "plain"
         },
         "max_items": 50,
-        "nesting_mode": "set"
+        "nesting_mode": "list"
       },
       "resource_creation_limit_policy": {
         "block": {

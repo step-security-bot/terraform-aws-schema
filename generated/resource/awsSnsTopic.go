@@ -128,12 +128,6 @@ const awsSnsTopic = `{
         "optional": true,
         "type": "string"
       },
-      "signature_version": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
       "sqs_failure_feedback_role_arn": {
         "description_kind": "plain",
         "optional": true,
@@ -165,12 +159,6 @@ const awsSnsTopic = `{
           "map",
           "string"
         ]
-      },
-      "tracing_config": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
       }
     },
     "description_kind": "plain"

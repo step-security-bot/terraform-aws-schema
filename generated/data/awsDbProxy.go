@@ -23,11 +23,9 @@ const awsDbProxy = `{
             "object",
             {
               "auth_scheme": "string",
-              "client_password_auth_type": "string",
               "description": "string",
               "iam_auth": "string",
-              "secret_arn": "string",
-              "username": "string"
+              "secret_arn": "string"
             }
           ]
         ]

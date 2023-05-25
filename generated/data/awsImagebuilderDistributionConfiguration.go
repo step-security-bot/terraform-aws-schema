@@ -53,14 +53,6 @@ const awsImagebuilderDistributionConfiguration = `{
                       [
                         "object",
                         {
-                          "organization_arns": [
-                            "set",
-                            "string"
-                          ],
-                          "organizational_unit_arns": [
-                            "set",
-                            "string"
-                          ],
                           "user_groups": [
                             "set",
                             "string"
@@ -77,71 +69,6 @@ const awsImagebuilderDistributionConfiguration = `{
                       "set",
                       "string"
                     ]
-                  }
-                ]
-              ],
-              "container_distribution_configuration": [
-                "set",
-                [
-                  "object",
-                  {
-                    "container_tags": [
-                      "set",
-                      "string"
-                    ],
-                    "description": "string",
-                    "target_repository": [
-                      "set",
-                      [
-                        "object",
-                        {
-                          "repository_name": "string",
-                          "service": "string"
-                        }
-                      ]
-                    ]
-                  }
-                ]
-              ],
-              "fast_launch_configuration": [
-                "set",
-                [
-                  "object",
-                  {
-                    "account_id": "string",
-                    "enabled": "bool",
-                    "launch_template": [
-                      "set",
-                      [
-                        "object",
-                        {
-                          "launch_template_id": "string",
-                          "launch_template_name": "string",
-                          "launch_template_version": "string"
-                        }
-                      ]
-                    ],
-                    "max_parallel_launches": "number",
-                    "snapshot_configuration": [
-                      "set",
-                      [
-                        "object",
-                        {
-                          "target_resource_count": "number"
-                        }
-                      ]
-                    ]
-                  }
-                ]
-              ],
-              "launch_template_configuration": [
-                "set",
-                [
-                  "object",
-                  {
-                    "account_id": "string",
-                    "default": "bool",
-                    "launch_template_id": "string"
                   }
                 ]
               ],

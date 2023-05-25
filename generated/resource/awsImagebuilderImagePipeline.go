@@ -14,11 +14,6 @@ const awsImagebuilderImagePipeline = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "container_recipe_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "date_created": {
         "computed": true,
         "description_kind": "plain",
@@ -62,7 +57,7 @@ const awsImagebuilderImagePipeline = `{
       },
       "image_recipe_arn": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "infrastructure_configuration_arn": {
@@ -134,12 +129,6 @@ const awsImagebuilderImagePipeline = `{
             "schedule_expression": {
               "description_kind": "plain",
               "required": true,
-              "type": "string"
-            },
-            "timezone": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
               "type": "string"
             }
           },

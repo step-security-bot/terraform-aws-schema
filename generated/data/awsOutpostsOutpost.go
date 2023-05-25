@@ -36,11 +36,6 @@ const awsOutpostsOutpost = `{
         "optional": true,
         "type": "string"
       },
-      "lifecycle_status": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "name": {
         "computed": true,
         "description_kind": "plain",
@@ -48,33 +43,15 @@ const awsOutpostsOutpost = `{
         "type": "string"
       },
       "owner_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "site_arn": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "site_id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "supported_hardware_type": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "tags": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "description_kind": "plain"

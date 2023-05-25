@@ -133,11 +133,6 @@ const awsImagebuilderImageRecipe = `{
                     "optional": true,
                     "type": "string"
                   },
-                  "throughput": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  },
                   "volume_size": {
                     "description_kind": "plain",
                     "optional": true,
@@ -168,43 +163,9 @@ const awsImagebuilderImageRecipe = `{
               "type": "string"
             }
           },
-          "block_types": {
-            "parameter": {
-              "block": {
-                "attributes": {
-                  "name": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "value": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "set"
-            }
-          },
           "description_kind": "plain"
         },
         "min_items": 1,
-        "nesting_mode": "list"
-      },
-      "systems_manager_agent": {
-        "block": {
-          "attributes": {
-            "uninstall_after_build": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
         "nesting_mode": "list"
       }
     },

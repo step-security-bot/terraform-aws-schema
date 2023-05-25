@@ -26,7 +26,6 @@ const awsAutoscalingGroups = `{
       "names": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "list",
           "string"

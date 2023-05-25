@@ -35,11 +35,6 @@ const awsSagemakerApp = `{
         "optional": true,
         "type": "string"
       },
-      "space_name": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "tags": {
         "description_kind": "plain",
         "optional": true,
@@ -59,7 +54,7 @@ const awsSagemakerApp = `{
       },
       "user_profile_name": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       }
     },

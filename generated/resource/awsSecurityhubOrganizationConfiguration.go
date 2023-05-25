@@ -14,12 +14,6 @@ const awsSecurityhubOrganizationConfiguration = `{
         "required": true,
         "type": "bool"
       },
-      "auto_enable_standards": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",

@@ -56,11 +56,6 @@ const awsApiGatewayRestApi = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "fail_on_warnings": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -87,11 +82,6 @@ const awsApiGatewayRestApi = `{
       },
       "policy": {
         "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "put_rest_api_mode": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"

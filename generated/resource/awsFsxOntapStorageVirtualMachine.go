@@ -165,6 +165,12 @@ const awsFsxOntapStorageVirtualMachine = `{
                     "optional": true,
                     "type": "string"
                   },
+                  "organizational_unit_distinguidshed_name": {
+                    "deprecated": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
                   "organizational_unit_distinguished_name": {
                     "description_kind": "plain",
                     "optional": true,
@@ -219,7 +225,7 @@ const awsFsxOntapStorageVirtualMachine = `{
     },
     "description_kind": "plain"
   },
-  "version": 1
+  "version": 0
 }`
 
 func AwsFsxOntapStorageVirtualMachineSchema() *tfjson.Schema {

@@ -40,11 +40,6 @@ const awsCognitoUserPool = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "deletion_protection": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "domain": {
         "computed": true,
         "description_kind": "plain",
@@ -150,7 +145,7 @@ const awsCognitoUserPool = `{
                 },
                 "description_kind": "plain"
               },
-              "max_items": 2,
+              "min_items": 1,
               "nesting_mode": "set"
             }
           },
@@ -481,12 +476,6 @@ const awsCognitoUserPool = `{
               "description_kind": "plain",
               "required": true,
               "type": "string"
-            },
-            "sns_region": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
             }
           },
           "description_kind": "plain"
@@ -501,23 +490,6 @@ const awsCognitoUserPool = `{
               "description_kind": "plain",
               "required": true,
               "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "user_attribute_update_settings": {
-        "block": {
-          "attributes": {
-            "attributes_require_verification_before_update": {
-              "description_kind": "plain",
-              "required": true,
-              "type": [
-                "set",
-                "string"
-              ]
             }
           },
           "description_kind": "plain"

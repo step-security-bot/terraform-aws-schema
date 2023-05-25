@@ -27,12 +27,12 @@ const awsNetworkAclRule = `{
       "icmp_code": {
         "description_kind": "plain",
         "optional": true,
-        "type": "number"
+        "type": "string"
       },
       "icmp_type": {
         "description_kind": "plain",
         "optional": true,
-        "type": "number"
+        "type": "string"
       },
       "id": {
         "computed": true,

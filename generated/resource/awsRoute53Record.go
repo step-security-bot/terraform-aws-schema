@@ -92,27 +92,7 @@ const awsRoute53Record = `{
           },
           "description_kind": "plain"
         },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "cidr_routing_policy": {
-        "block": {
-          "attributes": {
-            "collection_id": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "location_name": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
+        "nesting_mode": "set"
       },
       "failover_routing_policy": {
         "block": {
@@ -125,7 +105,6 @@ const awsRoute53Record = `{
           },
           "description_kind": "plain"
         },
-        "max_items": 1,
         "nesting_mode": "list"
       },
       "geolocation_routing_policy": {
@@ -149,7 +128,6 @@ const awsRoute53Record = `{
           },
           "description_kind": "plain"
         },
-        "max_items": 1,
         "nesting_mode": "list"
       },
       "latency_routing_policy": {
@@ -163,7 +141,6 @@ const awsRoute53Record = `{
           },
           "description_kind": "plain"
         },
-        "max_items": 1,
         "nesting_mode": "list"
       },
       "weighted_routing_policy": {
@@ -177,7 +154,6 @@ const awsRoute53Record = `{
           },
           "description_kind": "plain"
         },
-        "max_items": 1,
         "nesting_mode": "list"
       }
     },

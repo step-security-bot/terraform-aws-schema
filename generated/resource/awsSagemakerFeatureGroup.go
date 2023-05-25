@@ -91,11 +91,6 @@ const awsSagemakerFeatureGroup = `{
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
-            },
-            "table_format": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
             }
           },
           "block_types": {

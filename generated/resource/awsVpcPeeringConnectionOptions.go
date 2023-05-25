@@ -26,7 +26,6 @@ const awsVpcPeeringConnectionOptions = `{
         "block": {
           "attributes": {
             "allow_classic_link_to_remote_vpc": {
-              "deprecated": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
@@ -37,7 +36,6 @@ const awsVpcPeeringConnectionOptions = `{
               "type": "bool"
             },
             "allow_vpc_to_remote_classic_link": {
-              "deprecated": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
@@ -52,7 +50,6 @@ const awsVpcPeeringConnectionOptions = `{
         "block": {
           "attributes": {
             "allow_classic_link_to_remote_vpc": {
-              "deprecated": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
@@ -63,7 +60,6 @@ const awsVpcPeeringConnectionOptions = `{
               "type": "bool"
             },
             "allow_vpc_to_remote_classic_link": {
-              "deprecated": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"

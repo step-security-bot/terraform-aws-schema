@@ -9,11 +9,6 @@ import (
 const awsChimeVoiceConnectorLogging = `{
   "block": {
     "attributes": {
-      "enable_media_metric_logs": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "enable_sip_logs": {
         "description_kind": "plain",
         "optional": true,

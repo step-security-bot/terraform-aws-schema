@@ -18,6 +18,7 @@ const awsDefaultTags = `{
       "tags": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": [
           "map",
           "string"

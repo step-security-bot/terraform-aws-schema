@@ -9,26 +9,6 @@ import (
 const awsSecurityhubAccount = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "auto_enable_controls": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "control_finding_generator": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "enable_default_standards": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -38,7 +18,7 @@ const awsSecurityhubAccount = `{
     },
     "description_kind": "plain"
   },
-  "version": 1
+  "version": 0
 }`
 
 func AwsSecurityhubAccountSchema() *tfjson.Schema {

@@ -41,7 +41,6 @@ const awsEmrInstanceGroup = `{
         "type": "string"
       },
       "instance_count": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "number"

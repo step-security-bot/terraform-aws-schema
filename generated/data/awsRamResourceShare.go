@@ -35,11 +35,6 @@ const awsRamResourceShare = `{
         "required": true,
         "type": "string"
       },
-      "resource_share_status": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "status": {
         "computed": true,
         "description_kind": "plain",

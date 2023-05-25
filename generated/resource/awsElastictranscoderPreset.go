@@ -61,7 +61,6 @@ const awsElastictranscoderPreset = `{
               "type": "string"
             },
             "bit_rate": {
-              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -91,25 +90,21 @@ const awsElastictranscoderPreset = `{
         "block": {
           "attributes": {
             "bit_depth": {
-              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "bit_order": {
-              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "profile": {
-              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "signed": {
-              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -178,7 +173,6 @@ const awsElastictranscoderPreset = `{
               "type": "string"
             },
             "bit_rate": {
-              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"

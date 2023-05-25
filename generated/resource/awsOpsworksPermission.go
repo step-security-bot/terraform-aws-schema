@@ -34,8 +34,9 @@ const awsOpsworksPermission = `{
         "type": "string"
       },
       "stack_id": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "user_arn": {

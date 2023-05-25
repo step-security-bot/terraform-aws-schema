@@ -112,11 +112,6 @@ const awsCloudsearchDomain = `{
               "optional": true,
               "type": "bool"
             },
-            "source_fields": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "type": {
               "description_kind": "plain",
               "required": true,

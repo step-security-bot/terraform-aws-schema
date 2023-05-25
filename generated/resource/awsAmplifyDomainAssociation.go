@@ -29,11 +29,6 @@ const awsAmplifyDomainAssociation = `{
         "required": true,
         "type": "string"
       },
-      "enable_auto_sub_domain": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",

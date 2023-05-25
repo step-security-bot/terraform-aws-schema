@@ -9,11 +9,6 @@ import (
 const awsApiGatewayAuthorizer = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "authorizer_credentials": {
         "description_kind": "plain",
         "optional": true,

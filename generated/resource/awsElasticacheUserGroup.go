@@ -12,6 +12,7 @@ const awsElasticacheUserGroup = `{
       "arn": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "engine": {

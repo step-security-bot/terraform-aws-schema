@@ -25,15 +25,6 @@ const awsLightsailInstancePublicPorts = `{
       "port_info": {
         "block": {
           "attributes": {
-            "cidr_list_aliases": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
             "cidrs": {
               "computed": true,
               "description_kind": "plain",
@@ -47,15 +38,6 @@ const awsLightsailInstancePublicPorts = `{
               "description_kind": "plain",
               "required": true,
               "type": "number"
-            },
-            "ipv6_cidrs": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
             },
             "protocol": {
               "description_kind": "plain",

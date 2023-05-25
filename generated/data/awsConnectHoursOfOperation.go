@@ -9,11 +9,6 @@ import (
 const awsConnectHoursOfOperation = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "config": {
         "computed": true,
         "description_kind": "plain",
@@ -54,7 +49,6 @@ const awsConnectHoursOfOperation = `{
       },
       "hours_of_operation_arn": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "type": "string"
       },

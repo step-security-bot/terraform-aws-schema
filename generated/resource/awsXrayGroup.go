@@ -48,28 +48,6 @@ const awsXrayGroup = `{
         ]
       }
     },
-    "block_types": {
-      "insights_configuration": {
-        "block": {
-          "attributes": {
-            "insights_enabled": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "bool"
-            },
-            "notifications_enabled": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      }
-    },
     "description_kind": "plain"
   },
   "version": 0

@@ -29,11 +29,6 @@ const awsEksAddon = `{
         "required": true,
         "type": "string"
       },
-      "configuration_values": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "created_at": {
         "computed": true,
         "description_kind": "plain",

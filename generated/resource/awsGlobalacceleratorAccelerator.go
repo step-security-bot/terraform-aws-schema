@@ -14,11 +14,6 @@ const awsGlobalacceleratorAccelerator = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "dual_stack_dns_name": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "enabled": {
         "description_kind": "plain",
         "optional": true,
@@ -39,14 +34,6 @@ const awsGlobalacceleratorAccelerator = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "ip_addresses": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "list",
-          "string"
-        ]
       },
       "ip_sets": {
         "computed": true,

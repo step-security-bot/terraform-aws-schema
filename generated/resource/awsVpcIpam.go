@@ -14,21 +14,6 @@ const awsVpcIpam = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "cascade": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "default_resource_discovery_association_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "default_resource_discovery_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "description": {
         "description_kind": "plain",
         "optional": true,
@@ -87,29 +72,6 @@ const awsVpcIpam = `{
         },
         "min_items": 1,
         "nesting_mode": "set"
-      },
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "create": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "update": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

@@ -14,11 +14,6 @@ const awsSsmAssociation = `{
         "optional": true,
         "type": "bool"
       },
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "association_id": {
         "computed": true,
         "description_kind": "plain",
@@ -52,7 +47,6 @@ const awsSsmAssociation = `{
         "type": "string"
       },
       "instance_id": {
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -85,11 +79,6 @@ const awsSsmAssociation = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "wait_for_success_timeout_seconds": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
       }
     },
     "block_types": {

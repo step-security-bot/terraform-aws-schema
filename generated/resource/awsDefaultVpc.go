@@ -15,8 +15,8 @@ const awsDefaultVpc = `{
         "type": "string"
       },
       "assign_generated_ipv6_cidr_block": {
+        "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "bool"
       },
       "cidr_block": {
@@ -46,40 +46,23 @@ const awsDefaultVpc = `{
       },
       "enable_classiclink": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
       },
       "enable_classiclink_dns_support": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
       },
       "enable_dns_hostnames": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
       },
       "enable_dns_support": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "enable_network_address_usage_metrics": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "existing_default_vpc": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
-      "force_destroy": {
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
@@ -94,6 +77,16 @@ const awsDefaultVpc = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
+      },
+      "ipv4_ipam_pool_id": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "ipv4_netmask_length": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
       },
       "ipv6_association_id": {
         "computed": true,

@@ -50,26 +50,6 @@ const awsElasticacheUser = `{
         "type": "string"
       }
     },
-    "block_types": {
-      "authentication_mode": {
-        "block": {
-          "attributes": {
-            "password_count": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "type": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
-      }
-    },
     "description_kind": "plain"
   },
   "version": 0

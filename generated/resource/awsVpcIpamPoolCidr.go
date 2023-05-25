@@ -21,20 +21,10 @@ const awsVpcIpamPoolCidr = `{
         "optional": true,
         "type": "string"
       },
-      "ipam_pool_cidr_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "ipam_pool_id": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
-      },
-      "netmask_length": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
       }
     },
     "block_types": {
@@ -56,24 +46,6 @@ const awsVpcIpamPoolCidr = `{
         },
         "max_items": 1,
         "nesting_mode": "list"
-      },
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "create": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

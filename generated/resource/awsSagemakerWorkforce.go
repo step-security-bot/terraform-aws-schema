@@ -117,41 +117,6 @@ const awsSagemakerWorkforce = `{
         },
         "max_items": 1,
         "nesting_mode": "list"
-      },
-      "workforce_vpc_config": {
-        "block": {
-          "attributes": {
-            "security_group_ids": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "subnets": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "vpc_endpoint_id": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "vpc_id": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

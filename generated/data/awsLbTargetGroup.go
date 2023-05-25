@@ -67,11 +67,6 @@ const awsLbTargetGroup = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "load_balancing_cross_zone_enabled": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "name": {
         "computed": true,
         "description_kind": "plain",
@@ -142,21 +137,6 @@ const awsLbTargetGroup = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      }
-    },
-    "block_types": {
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "read": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

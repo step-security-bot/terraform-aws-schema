@@ -64,7 +64,6 @@ const awsRouteTable = `{
             {
               "carrier_gateway_id": "string",
               "cidr_block": "string",
-              "core_network_arn": "string",
               "destination_prefix_list_id": "string",
               "egress_only_gateway_id": "string",
               "gateway_id": "string",
@@ -123,19 +122,6 @@ const awsRouteTable = `{
           "description_kind": "plain"
         },
         "nesting_mode": "set"
-      },
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "read": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

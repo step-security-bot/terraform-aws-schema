@@ -20,11 +20,13 @@ const awsAppstreamStack = `{
         "type": "string"
       },
       "description": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
       "display_name": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -105,7 +107,7 @@ const awsAppstreamStack = `{
           "attributes": {
             "enabled": {
               "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "bool"
             },
             "settings_group": {
@@ -146,20 +148,6 @@ const awsAppstreamStack = `{
           "description_kind": "plain"
         },
         "nesting_mode": "set"
-      },
-      "streaming_experience_settings": {
-        "block": {
-          "attributes": {
-            "preferred_protocol": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
       },
       "user_settings": {
         "block": {

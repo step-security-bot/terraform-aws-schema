@@ -42,11 +42,6 @@ const awsInstance = `{
           ]
         ]
       },
-      "disable_api_stop": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
       "disable_api_termination": {
         "computed": true,
         "description_kind": "plain",
@@ -126,11 +121,6 @@ const awsInstance = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "host_resource_group_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "iam_instance_profile": {
         "computed": true,
         "description_kind": "plain",
@@ -178,19 +168,6 @@ const awsInstance = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "maintenance_options": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "auto_recovery": "string"
-            }
-          ]
-        ]
       },
       "metadata_options": {
         "computed": true,
@@ -242,21 +219,6 @@ const awsInstance = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "private_dns_name_options": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "enable_resource_name_dns_a_record": "bool",
-              "enable_resource_name_dns_aaaa_record": "bool",
-              "hostname_type": "string"
-            }
-          ]
-        ]
       },
       "private_ip": {
         "computed": true,
@@ -370,7 +332,7 @@ const awsInstance = `{
               "description_kind": "plain",
               "required": true,
               "type": [
-                "set",
+                "list",
                 "string"
               ]
             }
@@ -378,19 +340,6 @@ const awsInstance = `{
           "description_kind": "plain"
         },
         "nesting_mode": "set"
-      },
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "read": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

@@ -30,11 +30,6 @@ const awsCloudwatchMetricStream = `{
         "optional": true,
         "type": "string"
       },
-      "include_linked_accounts_metrics": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "last_update_date": {
         "computed": true,
         "description_kind": "plain",
@@ -89,14 +84,6 @@ const awsCloudwatchMetricStream = `{
       "exclude_filter": {
         "block": {
           "attributes": {
-            "metric_names": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
             "namespace": {
               "description_kind": "plain",
               "required": true,
@@ -110,55 +97,10 @@ const awsCloudwatchMetricStream = `{
       "include_filter": {
         "block": {
           "attributes": {
-            "metric_names": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
             "namespace": {
               "description_kind": "plain",
               "required": true,
               "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "set"
-      },
-      "statistics_configuration": {
-        "block": {
-          "attributes": {
-            "additional_statistics": {
-              "description_kind": "plain",
-              "required": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            }
-          },
-          "block_types": {
-            "include_metric": {
-              "block": {
-                "attributes": {
-                  "metric_name": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "namespace": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "min_items": 1,
-              "nesting_mode": "set"
             }
           },
           "description_kind": "plain"
@@ -174,11 +116,6 @@ const awsCloudwatchMetricStream = `{
               "type": "string"
             },
             "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "update": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"

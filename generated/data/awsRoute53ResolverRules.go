@@ -15,11 +15,6 @@ const awsRoute53ResolverRules = `{
         "optional": true,
         "type": "string"
       },
-      "name_regex": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "owner_id": {
         "description_kind": "plain",
         "optional": true,

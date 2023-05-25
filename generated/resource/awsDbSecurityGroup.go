@@ -82,7 +82,6 @@ const awsDbSecurityGroup = `{
         "nesting_mode": "set"
       }
     },
-    "deprecated": true,
     "description_kind": "plain"
   },
   "version": 0

@@ -9,12 +9,6 @@ import (
 const awsRdsCluster = `{
   "block": {
     "attributes": {
-      "allocated_storage": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
       "allow_major_version_upgrade": {
         "description_kind": "plain",
         "optional": true,
@@ -83,11 +77,6 @@ const awsRdsCluster = `{
       },
       "database_name": {
         "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "db_cluster_instance_class": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -193,21 +182,11 @@ const awsRdsCluster = `{
         "optional": true,
         "type": "string"
       },
-      "iops": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
       "kms_key_id": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "manage_master_user_password": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       },
       "master_password": {
         "description_kind": "plain",
@@ -215,34 +194,7 @@ const awsRdsCluster = `{
         "sensitive": true,
         "type": "string"
       },
-      "master_user_secret": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "kms_key_id": "string",
-              "secret_arn": "string",
-              "secret_status": "string"
-            }
-          ]
-        ]
-      },
-      "master_user_secret_kms_key_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "master_username": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "network_type": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
@@ -296,12 +248,6 @@ const awsRdsCluster = `{
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
-      },
-      "storage_type": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
       },
       "tags": {
         "description_kind": "plain",
@@ -421,25 +367,6 @@ const awsRdsCluster = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "serverlessv2_scaling_configuration": {
-        "block": {
-          "attributes": {
-            "max_capacity": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "number"
-            },
-            "min_capacity": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "number"
             }
           },
           "description_kind": "plain"

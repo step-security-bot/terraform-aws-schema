@@ -55,11 +55,6 @@ const awsEc2TransitGateway = `{
         "optional": true,
         "type": "string"
       },
-      "multicast_support": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "owner_id": {
         "computed": true,
         "description_kind": "plain",
@@ -76,14 +71,6 @@ const awsEc2TransitGateway = `{
         "optional": true,
         "type": [
           "map",
-          "string"
-        ]
-      },
-      "transit_gateway_cidr_blocks": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
           "string"
         ]
       },
@@ -106,7 +93,7 @@ const awsEc2TransitGateway = `{
               "description_kind": "plain",
               "required": true,
               "type": [
-                "set",
+                "list",
                 "string"
               ]
             }
@@ -114,19 +101,6 @@ const awsEc2TransitGateway = `{
           "description_kind": "plain"
         },
         "nesting_mode": "set"
-      },
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "read": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

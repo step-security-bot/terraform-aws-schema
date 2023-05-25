@@ -142,68 +142,6 @@ const awsApprunnerService = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
-      "network_configuration": {
-        "block": {
-          "block_types": {
-            "egress_configuration": {
-              "block": {
-                "attributes": {
-                  "egress_type": {
-                    "computed": true,
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "vpc_connector_arn": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
-            "ingress_configuration": {
-              "block": {
-                "attributes": {
-                  "is_publicly_accessible": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "bool"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "observability_configuration": {
-        "block": {
-          "attributes": {
-            "observability_configuration_arn": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "observability_enabled": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "source_configuration": {
         "block": {
           "attributes": {
@@ -270,14 +208,6 @@ const awsApprunnerService = `{
                                 "description_kind": "plain",
                                 "required": true,
                                 "type": "string"
-                              },
-                              "runtime_environment_secrets": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": [
-                                  "map",
-                                  "string"
-                                ]
                               },
                               "runtime_environment_variables": {
                                 "description_kind": "plain",
@@ -352,14 +282,6 @@ const awsApprunnerService = `{
                           "description_kind": "plain",
                           "optional": true,
                           "type": "string"
-                        },
-                        "runtime_environment_secrets": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": [
-                            "map",
-                            "string"
-                          ]
                         },
                         "runtime_environment_variables": {
                           "description_kind": "plain",

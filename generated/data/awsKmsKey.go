@@ -19,17 +19,7 @@ const awsKmsKey = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "cloud_hsm_cluster_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "creation_date": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "custom_key_store_id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -79,11 +69,6 @@ const awsKmsKey = `{
         "type": "string"
       },
       "key_manager": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "key_spec": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -141,28 +126,10 @@ const awsKmsKey = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "pending_deletion_window_in_days": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "number"
-      },
       "valid_to": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "xks_key_configuration": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "id": "string"
-            }
-          ]
-        ]
       }
     },
     "description_kind": "plain"

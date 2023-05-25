@@ -14,24 +14,9 @@ const awsOrganizationsAccount = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "close_on_deletion": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "create_govcloud": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "email": {
         "description_kind": "plain",
         "required": true,
-        "type": "string"
-      },
-      "govcloud_id": {
-        "computed": true,
-        "description_kind": "plain",
         "type": "string"
       },
       "iam_user_access_to_billing": {

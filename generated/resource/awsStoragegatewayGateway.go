@@ -146,35 +146,6 @@ const awsStoragegatewayGateway = `{
       }
     },
     "block_types": {
-      "maintenance_start_time": {
-        "block": {
-          "attributes": {
-            "day_of_month": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "day_of_week": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "hour_of_day": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "number"
-            },
-            "minute_of_hour": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "smb_active_directory_settings": {
         "block": {
           "attributes": {

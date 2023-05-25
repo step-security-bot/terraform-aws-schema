@@ -20,11 +20,6 @@ const awsOrganizationsPolicyAttachment = `{
         "required": true,
         "type": "string"
       },
-      "skip_destroy": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "target_id": {
         "description_kind": "plain",
         "required": true,

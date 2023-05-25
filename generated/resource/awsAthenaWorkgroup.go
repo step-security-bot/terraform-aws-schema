@@ -72,11 +72,6 @@ const awsAthenaWorkgroup = `{
               "optional": true,
               "type": "bool"
             },
-            "execution_role": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "publish_cloudwatch_metrics_enabled": {
               "description_kind": "plain",
               "optional": true,
@@ -111,11 +106,6 @@ const awsAthenaWorkgroup = `{
             "result_configuration": {
               "block": {
                 "attributes": {
-                  "expected_bucket_owner": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
                   "output_location": {
                     "description_kind": "plain",
                     "optional": true,
@@ -123,20 +113,6 @@ const awsAthenaWorkgroup = `{
                   }
                 },
                 "block_types": {
-                  "acl_configuration": {
-                    "block": {
-                      "attributes": {
-                        "s3_acl_option": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "max_items": 1,
-                    "nesting_mode": "list"
-                  },
                   "encryption_configuration": {
                     "block": {
                       "attributes": {

@@ -39,23 +39,15 @@ const awsSpotInstanceRequest = `{
       },
       "cpu_core_count": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "number"
       },
       "cpu_threads_per_core": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "number"
-      },
-      "disable_api_stop": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       },
       "disable_api_termination": {
         "computed": true,
@@ -85,14 +77,7 @@ const awsSpotInstanceRequest = `{
         "optional": true,
         "type": "string"
       },
-      "host_resource_group_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "iam_instance_profile": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -110,6 +95,14 @@ const awsSpotInstanceRequest = `{
         "type": "string"
       },
       "instance_interruption_behavior": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "instance_interruption_behaviour": {
+        "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -295,11 +288,6 @@ const awsSpotInstanceRequest = `{
         "optional": true,
         "type": "string"
       },
-      "user_data_replace_on_change": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "valid_from": {
         "computed": true,
         "description_kind": "plain",
@@ -353,44 +341,12 @@ const awsSpotInstanceRequest = `{
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"
-                  },
-                  "capacity_reservation_resource_group_arn": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
                   }
                 },
                 "description_kind": "plain"
               },
               "max_items": 1,
               "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "cpu_options": {
-        "block": {
-          "attributes": {
-            "amd_sev_snp": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "core_count": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "threads_per_core": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
             }
           },
           "description_kind": "plain"
@@ -549,21 +505,6 @@ const awsSpotInstanceRequest = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
-      "maintenance_options": {
-        "block": {
-          "attributes": {
-            "auto_recovery": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "metadata_options": {
         "block": {
           "attributes": {
@@ -586,7 +527,6 @@ const awsSpotInstanceRequest = `{
               "type": "string"
             },
             "instance_metadata_tags": {
-              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -610,11 +550,6 @@ const awsSpotInstanceRequest = `{
               "required": true,
               "type": "number"
             },
-            "network_card_index": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
             "network_interface_id": {
               "description_kind": "plain",
               "required": true,
@@ -624,33 +559,6 @@ const awsSpotInstanceRequest = `{
           "description_kind": "plain"
         },
         "nesting_mode": "set"
-      },
-      "private_dns_name_options": {
-        "block": {
-          "attributes": {
-            "enable_resource_name_dns_a_record": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "enable_resource_name_dns_aaaa_record": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "hostname_type": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
       },
       "root_block_device": {
         "block": {

@@ -88,28 +88,6 @@ const awsDirectoryServiceDirectory = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "radius_settings": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "authentication_protocol": "string",
-              "display_label": "string",
-              "radius_port": "number",
-              "radius_retries": "number",
-              "radius_servers": [
-                "set",
-                "string"
-              ],
-              "radius_timeout": "number",
-              "use_same_username": "bool"
-            }
-          ]
-        ]
-      },
       "security_group_id": {
         "computed": true,
         "description_kind": "plain",
@@ -126,7 +104,6 @@ const awsDirectoryServiceDirectory = `{
         "type": "string"
       },
       "tags": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

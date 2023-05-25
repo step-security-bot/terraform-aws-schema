@@ -100,12 +100,6 @@ const awsDbProxy = `{
               "optional": true,
               "type": "string"
             },
-            "client_password_auth_type": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "description": {
               "description_kind": "plain",
               "optional": true,
@@ -120,17 +114,12 @@ const awsDbProxy = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
-            },
-            "username": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
             }
           },
           "description_kind": "plain"
         },
         "min_items": 1,
-        "nesting_mode": "list"
+        "nesting_mode": "set"
       },
       "timeouts": {
         "block": {

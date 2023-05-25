@@ -107,21 +107,12 @@ const awsConfigRemediationConfiguration = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
-            },
-            "static_values": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "list",
-                "string"
-              ]
             }
           },
           "description_kind": "plain"
         },
         "max_items": 25,
-        "nesting_mode": "list"
+        "nesting_mode": "set"
       }
     },
     "description_kind": "plain"

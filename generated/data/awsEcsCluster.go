@@ -40,19 +40,6 @@ const awsEcsCluster = `{
         "description_kind": "plain",
         "type": "number"
       },
-      "service_connect_defaults": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "namespace": "string"
-            }
-          ]
-        ]
-      },
       "setting": {
         "computed": true,
         "description_kind": "plain",
@@ -71,15 +58,6 @@ const awsEcsCluster = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "tags": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "description_kind": "plain"

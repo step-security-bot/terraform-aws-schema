@@ -57,11 +57,6 @@ const awsServicecatalogProvisioningArtifact = `{
         "required": true,
         "type": "string"
       },
-      "provisioning_artifact_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "template_physical_id": {
         "description_kind": "plain",
         "optional": true,
@@ -76,36 +71,6 @@ const awsServicecatalogProvisioningArtifact = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      }
-    },
-    "block_types": {
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "create": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "read": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "update": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

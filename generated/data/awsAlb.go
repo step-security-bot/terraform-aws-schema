@@ -55,11 +55,6 @@ const awsAlb = `{
         "description_kind": "plain",
         "type": "bool"
       },
-      "enable_cross_zone_load_balancing": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
       "enable_deletion_protection": {
         "computed": true,
         "description_kind": "plain",
@@ -70,17 +65,7 @@ const awsAlb = `{
         "description_kind": "plain",
         "type": "bool"
       },
-      "enable_tls_version_and_cipher_suite_headers": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
       "enable_waf_fail_open": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
-      "enable_xff_client_port": {
         "computed": true,
         "description_kind": "plain",
         "type": "bool"
@@ -116,11 +101,6 @@ const awsAlb = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "preserve_host_header": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
       },
       "security_groups": {
         "computed": true,
@@ -169,30 +149,10 @@ const awsAlb = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "xff_header_processing_mode": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "zone_id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      }
-    },
-    "block_types": {
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "read": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

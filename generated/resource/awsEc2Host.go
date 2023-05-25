@@ -45,11 +45,6 @@ const awsEc2Host = `{
         "optional": true,
         "type": "string"
       },
-      "outpost_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "owner_id": {
         "computed": true,
         "description_kind": "plain",

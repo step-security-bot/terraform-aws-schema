@@ -9,11 +9,6 @@ import (
 const awsDatasyncLocationEfs = `{
   "block": {
     "attributes": {
-      "access_point_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
@@ -24,18 +19,8 @@ const awsDatasyncLocationEfs = `{
         "required": true,
         "type": "string"
       },
-      "file_system_access_role_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "id": {
         "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "in_transit_encryption": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"

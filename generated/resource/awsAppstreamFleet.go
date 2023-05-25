@@ -158,13 +158,11 @@ const awsAppstreamFleet = `{
         "block": {
           "attributes": {
             "directory_name": {
-              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "organizational_unit_distinguished_name": {
-              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"

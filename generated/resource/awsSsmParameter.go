@@ -37,12 +37,6 @@ const awsSsmParameter = `{
         "optional": true,
         "type": "string"
       },
-      "insecure_value": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "key_id": {
         "computed": true,
         "description_kind": "plain",
@@ -77,7 +71,6 @@ const awsSsmParameter = `{
         ]
       },
       "tier": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -88,9 +81,8 @@ const awsSsmParameter = `{
         "type": "string"
       },
       "value": {
-        "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "sensitive": true,
         "type": "string"
       },

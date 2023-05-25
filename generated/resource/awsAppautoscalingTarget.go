@@ -9,11 +9,6 @@ import (
 const awsAppautoscalingTarget = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -50,23 +45,6 @@ const awsAppautoscalingTarget = `{
         "description_kind": "plain",
         "required": true,
         "type": "string"
-      },
-      "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "description_kind": "plain"

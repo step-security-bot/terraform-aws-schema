@@ -132,24 +132,6 @@ const awsGlueTrigger = `{
         "min_items": 1,
         "nesting_mode": "list"
       },
-      "event_batching_condition": {
-        "block": {
-          "attributes": {
-            "batch_size": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "number"
-            },
-            "batch_window": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
-      },
       "predicate": {
         "block": {
           "attributes": {

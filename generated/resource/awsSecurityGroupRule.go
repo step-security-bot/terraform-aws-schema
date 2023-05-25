@@ -59,11 +59,6 @@ const awsSecurityGroupRule = `{
         "required": true,
         "type": "string"
       },
-      "security_group_rule_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "self": {
         "description_kind": "plain",
         "optional": true,
@@ -81,24 +76,10 @@ const awsSecurityGroupRule = `{
         "type": "number"
       },
       "type": {
+        "description": "Type of rule, ingress (inbound) or egress (outbound).",
         "description_kind": "plain",
         "required": true,
         "type": "string"
-      }
-    },
-    "block_types": {
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "create": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

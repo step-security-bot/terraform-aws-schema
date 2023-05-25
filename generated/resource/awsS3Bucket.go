@@ -17,7 +17,6 @@ const awsS3Bucket = `{
         "type": "string"
       },
       "acl": {
-        "computed": true,
         "deprecated": true,
         "description_kind": "plain",
         "optional": true,
@@ -26,6 +25,7 @@ const awsS3Bucket = `{
       "arn": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "bucket": {
@@ -40,7 +40,6 @@ const awsS3Bucket = `{
         "type": "string"
       },
       "bucket_prefix": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -58,6 +57,7 @@ const awsS3Bucket = `{
       "hosted_zone_id": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "id": {
@@ -73,8 +73,6 @@ const awsS3Bucket = `{
         "type": "bool"
       },
       "policy": {
-        "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -112,12 +110,14 @@ const awsS3Bucket = `{
         "computed": true,
         "deprecated": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "website_endpoint": {
         "computed": true,
         "deprecated": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       }
     },
@@ -336,8 +336,7 @@ const awsS3Bucket = `{
           "deprecated": true,
           "description_kind": "plain"
         },
-        "max_items": 1,
-        "nesting_mode": "list"
+        "nesting_mode": "set"
       },
       "object_lock_configuration": {
         "block": {
@@ -386,7 +385,6 @@ const awsS3Bucket = `{
               "nesting_mode": "list"
             }
           },
-          "deprecated": true,
           "description_kind": "plain"
         },
         "max_items": 1,
@@ -620,34 +618,6 @@ const awsS3Bucket = `{
         },
         "max_items": 1,
         "nesting_mode": "list"
-      },
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "create": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "read": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "update": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       },
       "versioning": {
         "block": {

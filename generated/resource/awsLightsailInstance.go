@@ -45,11 +45,6 @@ const awsLightsailInstance = `{
         "optional": true,
         "type": "string"
       },
-      "ip_address_type": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "ipv6_address": {
         "computed": true,
         "deprecated": true,
@@ -120,32 +115,6 @@ const awsLightsailInstance = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      }
-    },
-    "block_types": {
-      "add_on": {
-        "block": {
-          "attributes": {
-            "snapshot_time": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "status": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "type": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

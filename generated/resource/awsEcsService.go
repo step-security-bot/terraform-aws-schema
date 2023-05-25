@@ -111,15 +111,6 @@ const awsEcsService = `{
         "optional": true,
         "type": "string"
       },
-      "triggers": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "wait_for_steady_state": {
         "description_kind": "plain",
         "optional": true,
@@ -127,33 +118,6 @@ const awsEcsService = `{
       }
     },
     "block_types": {
-      "alarms": {
-        "block": {
-          "attributes": {
-            "alarm_names": {
-              "description_kind": "plain",
-              "required": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "enable": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "bool"
-            },
-            "rollback": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "capacity_provider_strategy": {
         "block": {
           "attributes": {
@@ -306,114 +270,6 @@ const awsEcsService = `{
         "max_items": 10,
         "nesting_mode": "set"
       },
-      "service_connect_configuration": {
-        "block": {
-          "attributes": {
-            "enabled": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "bool"
-            },
-            "namespace": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "block_types": {
-            "log_configuration": {
-              "block": {
-                "attributes": {
-                  "log_driver": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "options": {
-                    "computed": true,
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": [
-                      "map",
-                      "string"
-                    ]
-                  }
-                },
-                "block_types": {
-                  "secret_option": {
-                    "block": {
-                      "attributes": {
-                        "name": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        },
-                        "value_from": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "nesting_mode": "list"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
-            "service": {
-              "block": {
-                "attributes": {
-                  "discovery_name": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "ingress_port_override": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  },
-                  "port_name": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "block_types": {
-                  "client_alias": {
-                    "block": {
-                      "attributes": {
-                        "dns_name": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "string"
-                        },
-                        "port": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "number"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "max_items": 1,
-                    "nesting_mode": "list"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "service_registries": {
         "block": {
           "attributes": {
@@ -446,17 +302,7 @@ const awsEcsService = `{
       "timeouts": {
         "block": {
           "attributes": {
-            "create": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "update": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"

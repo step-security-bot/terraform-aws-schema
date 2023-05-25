@@ -19,11 +19,6 @@ const awsCloudformationStackSet = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "call_as": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "capabilities": {
         "description_kind": "plain",
         "optional": true,
@@ -114,48 +109,6 @@ const awsCloudformationStackSet = `{
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "operation_preferences": {
-        "block": {
-          "attributes": {
-            "failure_tolerance_count": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "failure_tolerance_percentage": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "max_concurrent_count": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "max_concurrent_percentage": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "region_concurrency_type": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "region_order": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "list",
-                "string"
-              ]
             }
           },
           "description_kind": "plain"

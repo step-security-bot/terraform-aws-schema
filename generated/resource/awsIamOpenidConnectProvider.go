@@ -18,7 +18,7 @@ const awsIamOpenidConnectProvider = `{
         "description_kind": "plain",
         "required": true,
         "type": [
-          "set",
+          "list",
           "string"
         ]
       },

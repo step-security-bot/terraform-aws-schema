@@ -36,28 +36,10 @@ const awsVpcEndpoint = `{
           ]
         ]
       },
-      "dns_options": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "dns_record_ip_type": "string"
-            }
-          ]
-        ]
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
-      },
-      "ip_address_type": {
-        "computed": true,
-        "description_kind": "plain",
         "type": "string"
       },
       "network_interface_ids": {
@@ -171,19 +153,6 @@ const awsVpcEndpoint = `{
           "description_kind": "plain"
         },
         "nesting_mode": "set"
-      },
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "read": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

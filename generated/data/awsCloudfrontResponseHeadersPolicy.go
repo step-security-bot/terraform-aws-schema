@@ -117,27 +117,6 @@ const awsCloudfrontResponseHeadersPolicy = `{
         "optional": true,
         "type": "string"
       },
-      "remove_headers_config": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "items": [
-                "set",
-                [
-                  "object",
-                  {
-                    "header": "string"
-                  }
-                ]
-              ]
-            }
-          ]
-        ]
-      },
       "security_headers_config": {
         "computed": true,
         "description_kind": "plain",
@@ -209,20 +188,6 @@ const awsCloudfrontResponseHeadersPolicy = `{
                   }
                 ]
               ]
-            }
-          ]
-        ]
-      },
-      "server_timing_headers_config": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "enabled": "bool",
-              "sampling_rate": "number"
             }
           ]
         ]

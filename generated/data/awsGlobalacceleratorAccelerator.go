@@ -35,11 +35,6 @@ const awsGlobalacceleratorAccelerator = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "dual_stack_dns_name": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "enabled": {
         "computed": true,
         "description_kind": "plain",
@@ -87,6 +82,7 @@ const awsGlobalacceleratorAccelerator = `{
       "tags": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": [
           "map",
           "string"

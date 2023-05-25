@@ -10,7 +10,6 @@ const awsAutoscalingAttachment = `{
   "block": {
     "attributes": {
       "alb_target_group_arn": {
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -27,11 +26,6 @@ const awsAutoscalingAttachment = `{
       },
       "id": {
         "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "lb_target_group_arn": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"

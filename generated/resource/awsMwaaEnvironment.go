@@ -124,12 +124,6 @@ const awsMwaaEnvironment = `{
         "optional": true,
         "type": "string"
       },
-      "schedulers": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
       "service_role_arn": {
         "computed": true,
         "description_kind": "plain",
@@ -138,17 +132,6 @@ const awsMwaaEnvironment = `{
       "source_bucket_arn": {
         "description_kind": "plain",
         "required": true,
-        "type": "string"
-      },
-      "startup_script_s3_object_version": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "startup_script_s3_path": {
-        "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "status": {
@@ -356,29 +339,6 @@ const awsMwaaEnvironment = `{
         "max_items": 1,
         "min_items": 1,
         "nesting_mode": "list"
-      },
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "create": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "update": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

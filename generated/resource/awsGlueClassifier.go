@@ -35,19 +35,6 @@ const awsGlueClassifier = `{
               "optional": true,
               "type": "string"
             },
-            "custom_datatype_configured": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "custom_datatypes": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "list",
-                "string"
-              ]
-            },
             "delimiter": {
               "description_kind": "plain",
               "optional": true,

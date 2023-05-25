@@ -110,34 +110,9 @@ const awsNetworkfirewallFirewall = `{
       }
     },
     "block_types": {
-      "encryption_configuration": {
-        "block": {
-          "attributes": {
-            "key_id": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "type": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "subnet_mapping": {
         "block": {
           "attributes": {
-            "ip_address_type": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "subnet_id": {
               "description_kind": "plain",
               "required": true,

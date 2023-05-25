@@ -32,7 +32,6 @@ const awsCloudwatchLogGroup = `{
         "type": "string"
       },
       "name_prefix": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -41,11 +40,6 @@ const awsCloudwatchLogGroup = `{
         "description_kind": "plain",
         "optional": true,
         "type": "number"
-      },
-      "skip_destroy": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       },
       "tags": {
         "description_kind": "plain",

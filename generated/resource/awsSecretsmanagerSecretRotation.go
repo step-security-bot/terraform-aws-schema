@@ -29,6 +29,14 @@ const awsSecretsmanagerSecretRotation = `{
         "description_kind": "plain",
         "required": true,
         "type": "string"
+      },
+      "tags": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
       }
     },
     "block_types": {
@@ -37,18 +45,8 @@ const awsSecretsmanagerSecretRotation = `{
           "attributes": {
             "automatically_after_days": {
               "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": "number"
-            },
-            "duration": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "schedule_expression": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
             }
           },
           "description_kind": "plain"

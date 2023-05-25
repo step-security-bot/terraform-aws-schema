@@ -37,11 +37,6 @@ const awsKmsSecrets = `{
                 "string"
               ]
             },
-            "encryption_algorithm": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "grant_tokens": {
               "description_kind": "plain",
               "optional": true,
@@ -49,11 +44,6 @@ const awsKmsSecrets = `{
                 "list",
                 "string"
               ]
-            },
-            "key_id": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
             },
             "name": {
               "description_kind": "plain",

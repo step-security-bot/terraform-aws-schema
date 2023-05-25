@@ -11,12 +11,7 @@ const awsAmiLaunchPermission = `{
     "attributes": {
       "account_id": {
         "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "group": {
-        "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "id": {
@@ -28,16 +23,6 @@ const awsAmiLaunchPermission = `{
       "image_id": {
         "description_kind": "plain",
         "required": true,
-        "type": "string"
-      },
-      "organization_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "organizational_unit_arn": {
-        "description_kind": "plain",
-        "optional": true,
         "type": "string"
       }
     },

@@ -78,14 +78,6 @@ const awsVpcEndpointService = `{
         "optional": true,
         "type": "string"
       },
-      "supported_ip_address_types": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "set",
-          "string"
-        ]
-      },
       "tags": {
         "computed": true,
         "description_kind": "plain",
@@ -114,7 +106,7 @@ const awsVpcEndpointService = `{
               "description_kind": "plain",
               "required": true,
               "type": [
-                "set",
+                "list",
                 "string"
               ]
             }
@@ -122,19 +114,6 @@ const awsVpcEndpointService = `{
           "description_kind": "plain"
         },
         "nesting_mode": "set"
-      },
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "read": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

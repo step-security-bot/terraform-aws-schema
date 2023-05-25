@@ -61,26 +61,6 @@ const awsInspectorAssessmentTemplate = `{
         "type": "string"
       }
     },
-    "block_types": {
-      "event_subscription": {
-        "block": {
-          "attributes": {
-            "event": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "topic_arn": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "set"
-      }
-    },
     "description_kind": "plain"
   },
   "version": 0

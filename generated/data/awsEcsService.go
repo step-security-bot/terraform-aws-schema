@@ -45,15 +45,6 @@ const awsEcsService = `{
         "required": true,
         "type": "string"
       },
-      "tags": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "task_definition": {
         "computed": true,
         "description_kind": "plain",

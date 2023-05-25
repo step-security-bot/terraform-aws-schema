@@ -30,7 +30,6 @@ const awsElasticacheCluster = `{
               "address": "string",
               "availability_zone": "string",
               "id": "string",
-              "outpost_arn": "string",
               "port": "number"
             }
           ]
@@ -67,33 +66,7 @@ const awsElasticacheCluster = `{
         "optional": true,
         "type": "string"
       },
-      "ip_discovery": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "log_delivery_configuration": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "set",
-          [
-            "object",
-            {
-              "destination": "string",
-              "destination_type": "string",
-              "log_format": "string",
-              "log_type": "string"
-            }
-          ]
-        ]
-      },
       "maintenance_window": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "network_type": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -123,11 +96,6 @@ const awsElasticacheCluster = `{
         "description_kind": "plain",
         "type": "number"
       },
-      "preferred_outpost_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "replication_group_id": {
         "computed": true,
         "description_kind": "plain",
@@ -143,7 +111,6 @@ const awsElasticacheCluster = `{
       },
       "security_group_names": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "type": [
           "set",

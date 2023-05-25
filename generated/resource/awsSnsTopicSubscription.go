@@ -44,12 +44,6 @@ const awsSnsTopicSubscription = `{
         "optional": true,
         "type": "string"
       },
-      "filter_policy_scope": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",

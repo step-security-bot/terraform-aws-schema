@@ -32,14 +32,6 @@ const awsLoadBalancerListenerPolicy = `{
           "set",
           "string"
         ]
-      },
-      "triggers": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "description_kind": "plain"

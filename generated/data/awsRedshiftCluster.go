@@ -14,16 +14,6 @@ const awsRedshiftCluster = `{
         "description_kind": "plain",
         "type": "bool"
       },
-      "aqua_configuration_status": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "automated_snapshot_retention_period": {
         "computed": true,
         "description_kind": "plain",
@@ -34,11 +24,6 @@ const awsRedshiftCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "availability_zone_relocation_enabled": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
       "bucket_name": {
         "computed": true,
         "description_kind": "plain",
@@ -48,21 +33,6 @@ const awsRedshiftCluster = `{
         "description_kind": "plain",
         "required": true,
         "type": "string"
-      },
-      "cluster_nodes": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "node_role": "string",
-              "private_ip_address": "string",
-              "public_ip_address": "string"
-            }
-          ]
-        ]
       },
       "cluster_parameter_group_name": {
         "computed": true,
@@ -81,7 +51,6 @@ const awsRedshiftCluster = `{
       },
       "cluster_security_groups": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "type": [
           "list",
@@ -104,11 +73,6 @@ const awsRedshiftCluster = `{
         "type": "string"
       },
       "database_name": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "default_iam_role_arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -156,29 +120,6 @@ const awsRedshiftCluster = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "log_destination_type": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "log_exports": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "set",
-          "string"
-        ]
-      },
-      "maintenance_track_name": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "manual_snapshot_retention_period": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "number"
       },
       "master_username": {
         "computed": true,

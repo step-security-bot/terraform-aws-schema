@@ -57,12 +57,6 @@ const awsServiceDiscoveryService = `{
           "map",
           "string"
         ]
-      },
-      "type": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
       }
     },
     "block_types": {

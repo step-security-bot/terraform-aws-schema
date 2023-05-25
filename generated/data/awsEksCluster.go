@@ -27,11 +27,6 @@ const awsEksCluster = `{
           ]
         ]
       },
-      "cluster_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "created_at": {
         "computed": true,
         "description_kind": "plain",
@@ -86,8 +81,7 @@ const awsEksCluster = `{
             "object",
             {
               "ip_family": "string",
-              "service_ipv4_cidr": "string",
-              "service_ipv6_cidr": "string"
+              "service_ipv4_cidr": "string"
             }
           ]
         ]
@@ -96,32 +90,6 @@ const awsEksCluster = `{
         "description_kind": "plain",
         "required": true,
         "type": "string"
-      },
-      "outpost_config": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "control_plane_instance_type": "string",
-              "control_plane_placement": [
-                "list",
-                [
-                  "object",
-                  {
-                    "group_name": "string"
-                  }
-                ]
-              ],
-              "outpost_arns": [
-                "set",
-                "string"
-              ]
-            }
-          ]
-        ]
       },
       "platform_version": {
         "computed": true,

@@ -14,11 +14,6 @@ const awsRoute = `{
         "optional": true,
         "type": "string"
       },
-      "core_network_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "destination_cidr_block": {
         "description_kind": "plain",
         "optional": true,
@@ -52,7 +47,6 @@ const awsRoute = `{
       },
       "instance_id": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

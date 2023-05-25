@@ -14,11 +14,6 @@ const awsNatGateway = `{
         "optional": true,
         "type": "string"
       },
-      "association_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "connectivity_type": {
         "description_kind": "plain",
         "optional": true,
@@ -38,7 +33,6 @@ const awsNatGateway = `{
       "private_ip": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "public_ip": {

@@ -27,11 +27,6 @@ const awsEksCluster = `{
           ]
         ]
       },
-      "cluster_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "created_at": {
         "computed": true,
         "description_kind": "plain",
@@ -170,49 +165,6 @@ const awsEksCluster = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
-            },
-            "service_ipv6_cidr": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "outpost_config": {
-        "block": {
-          "attributes": {
-            "control_plane_instance_type": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "outpost_arns": {
-              "description_kind": "plain",
-              "required": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            }
-          },
-          "block_types": {
-            "control_plane_placement": {
-              "block": {
-                "attributes": {
-                  "group_name": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"

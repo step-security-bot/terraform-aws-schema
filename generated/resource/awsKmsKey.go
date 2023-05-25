@@ -19,11 +19,6 @@ const awsKmsKey = `{
         "optional": true,
         "type": "bool"
       },
-      "custom_key_store_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "customer_master_key_spec": {
         "description_kind": "plain",
         "optional": true,

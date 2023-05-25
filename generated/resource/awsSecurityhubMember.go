@@ -16,7 +16,7 @@ const awsSecurityhubMember = `{
       },
       "email": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "id": {

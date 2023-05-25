@@ -58,64 +58,6 @@ const awsGuarddutyDetector = `{
       "datasources": {
         "block": {
           "block_types": {
-            "kubernetes": {
-              "block": {
-                "block_types": {
-                  "audit_logs": {
-                    "block": {
-                      "attributes": {
-                        "enable": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "bool"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "max_items": 1,
-                    "min_items": 1,
-                    "nesting_mode": "list"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
-            "malware_protection": {
-              "block": {
-                "block_types": {
-                  "scan_ec2_instance_with_findings": {
-                    "block": {
-                      "block_types": {
-                        "ebs_volumes": {
-                          "block": {
-                            "attributes": {
-                              "enable": {
-                                "description_kind": "plain",
-                                "required": true,
-                                "type": "bool"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 1,
-                          "min_items": 1,
-                          "nesting_mode": "list"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "max_items": 1,
-                    "min_items": 1,
-                    "nesting_mode": "list"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
             "s3_logs": {
               "block": {
                 "attributes": {

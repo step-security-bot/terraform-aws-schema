@@ -9,11 +9,6 @@ import (
 const awsConnectHoursOfOperation = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "description": {
         "description_kind": "plain",
         "optional": true,
@@ -21,7 +16,6 @@ const awsConnectHoursOfOperation = `{
       },
       "hours_of_operation_arn": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "type": "string"
       },
@@ -125,6 +119,24 @@ const awsConnectHoursOfOperation = `{
         },
         "min_items": 1,
         "nesting_mode": "set"
+      },
+      "timeouts": {
+        "block": {
+          "attributes": {
+            "create": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "delete": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

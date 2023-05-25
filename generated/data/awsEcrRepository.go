@@ -52,14 +52,6 @@ const awsEcrRepository = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "most_recent_image_tags": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          "string"
-        ]
-      },
       "name": {
         "description_kind": "plain",
         "required": true,

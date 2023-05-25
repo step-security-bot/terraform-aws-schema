@@ -75,11 +75,6 @@ const awsEc2CapacityReservation = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "placement_group_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "tags": {
         "description_kind": "plain",
         "optional": true,

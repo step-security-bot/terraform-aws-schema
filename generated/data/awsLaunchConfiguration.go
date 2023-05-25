@@ -33,7 +33,7 @@ const awsLaunchConfiguration = `{
               "iops": "number",
               "no_device": "bool",
               "snapshot_id": "string",
-              "throughput": "number",
+              "throughput": "bool",
               "volume_size": "number",
               "volume_type": "string"
             }
@@ -126,7 +126,7 @@ const awsLaunchConfiguration = `{
               "delete_on_termination": "bool",
               "encrypted": "bool",
               "iops": "number",
-              "throughput": "number",
+              "throughput": "bool",
               "volume_size": "number",
               "volume_type": "string"
             }
@@ -153,13 +153,11 @@ const awsLaunchConfiguration = `{
       },
       "vpc_classic_link_id": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "type": "string"
       },
       "vpc_classic_link_security_groups": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "type": [
           "set",

@@ -66,11 +66,6 @@ const awsAppconfigConfigurationProfile = `{
           "map",
           "string"
         ]
-      },
-      "type": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
       }
     },
     "block_types": {

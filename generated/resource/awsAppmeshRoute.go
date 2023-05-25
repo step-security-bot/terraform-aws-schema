@@ -94,11 +94,6 @@ const awsAppmeshRoute = `{
                         "weighted_target": {
                           "block": {
                             "attributes": {
-                              "port": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "number"
-                              },
                               "virtual_node": {
                                 "description_kind": "plain",
                                 "required": true,
@@ -130,11 +125,6 @@ const awsAppmeshRoute = `{
                           "description_kind": "plain",
                           "optional": true,
                           "type": "string"
-                        },
-                        "port": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "number"
                         },
                         "prefix": {
                           "description_kind": "plain",
@@ -347,11 +337,6 @@ const awsAppmeshRoute = `{
                         "weighted_target": {
                           "block": {
                             "attributes": {
-                              "port": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "number"
-                              },
                               "virtual_node": {
                                 "description_kind": "plain",
                                 "required": true,
@@ -384,14 +369,9 @@ const awsAppmeshRoute = `{
                           "optional": true,
                           "type": "string"
                         },
-                        "port": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "number"
-                        },
                         "prefix": {
                           "description_kind": "plain",
-                          "optional": true,
+                          "required": true,
                           "type": "string"
                         },
                         "scheme": {
@@ -459,55 +439,6 @@ const awsAppmeshRoute = `{
                                       },
                                       "max_items": 1,
                                       "nesting_mode": "list"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "max_items": 1,
-                                "nesting_mode": "list"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 10,
-                          "nesting_mode": "set"
-                        },
-                        "path": {
-                          "block": {
-                            "attributes": {
-                              "exact": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "string"
-                              },
-                              "regex": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "string"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 1,
-                          "nesting_mode": "list"
-                        },
-                        "query_parameter": {
-                          "block": {
-                            "attributes": {
-                              "name": {
-                                "description_kind": "plain",
-                                "required": true,
-                                "type": "string"
-                              }
-                            },
-                            "block_types": {
-                              "match": {
-                                "block": {
-                                  "attributes": {
-                                    "exact": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "string"
                                     }
                                   },
                                   "description_kind": "plain"
@@ -642,11 +573,6 @@ const awsAppmeshRoute = `{
                         "weighted_target": {
                           "block": {
                             "attributes": {
-                              "port": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "number"
-                              },
                               "virtual_node": {
                                 "description_kind": "plain",
                                 "required": true,
@@ -679,14 +605,9 @@ const awsAppmeshRoute = `{
                           "optional": true,
                           "type": "string"
                         },
-                        "port": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "number"
-                        },
                         "prefix": {
                           "description_kind": "plain",
-                          "optional": true,
+                          "required": true,
                           "type": "string"
                         },
                         "scheme": {
@@ -754,55 +675,6 @@ const awsAppmeshRoute = `{
                                       },
                                       "max_items": 1,
                                       "nesting_mode": "list"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "max_items": 1,
-                                "nesting_mode": "list"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 10,
-                          "nesting_mode": "set"
-                        },
-                        "path": {
-                          "block": {
-                            "attributes": {
-                              "exact": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "string"
-                              },
-                              "regex": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "string"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 1,
-                          "nesting_mode": "list"
-                        },
-                        "query_parameter": {
-                          "block": {
-                            "attributes": {
-                              "name": {
-                                "description_kind": "plain",
-                                "required": true,
-                                "type": "string"
-                              }
-                            },
-                            "block_types": {
-                              "match": {
-                                "block": {
-                                  "attributes": {
-                                    "exact": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "string"
                                     }
                                   },
                                   "description_kind": "plain"
@@ -937,11 +809,6 @@ const awsAppmeshRoute = `{
                         "weighted_target": {
                           "block": {
                             "attributes": {
-                              "port": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "number"
-                              },
                               "virtual_node": {
                                 "description_kind": "plain",
                                 "required": true,
@@ -964,20 +831,6 @@ const awsAppmeshRoute = `{
                     },
                     "max_items": 1,
                     "min_items": 1,
-                    "nesting_mode": "list"
-                  },
-                  "match": {
-                    "block": {
-                      "attributes": {
-                        "port": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "number"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "max_items": 1,
                     "nesting_mode": "list"
                   },
                   "timeout": {

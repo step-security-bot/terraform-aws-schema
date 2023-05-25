@@ -134,21 +134,6 @@ const awsLambdaEventSourceMapping = `{
       }
     },
     "block_types": {
-      "amazon_managed_kafka_event_source_config": {
-        "block": {
-          "attributes": {
-            "consumer_group_id": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "destination_config": {
         "block": {
           "block_types": {
@@ -165,30 +150,6 @@ const awsLambdaEventSourceMapping = `{
               },
               "max_items": 1,
               "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "document_db_event_source_config": {
-        "block": {
-          "attributes": {
-            "collection_name": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "database_name": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "full_document": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
             }
           },
           "description_kind": "plain"
@@ -219,20 +180,6 @@ const awsLambdaEventSourceMapping = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
-      "scaling_config": {
-        "block": {
-          "attributes": {
-            "maximum_concurrency": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "self_managed_event_source": {
         "block": {
           "attributes": {
@@ -243,21 +190,6 @@ const awsLambdaEventSourceMapping = `{
                 "map",
                 "string"
               ]
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "self_managed_kafka_event_source_config": {
-        "block": {
-          "attributes": {
-            "consumer_group_id": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
             }
           },
           "description_kind": "plain"

@@ -35,15 +35,6 @@ const awsServiceDiscoveryDnsNamespace = `{
         "required": true,
         "type": "string"
       },
-      "tags": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "type": {
         "description_kind": "plain",
         "required": true,

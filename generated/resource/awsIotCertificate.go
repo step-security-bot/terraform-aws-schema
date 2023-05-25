@@ -19,16 +19,9 @@ const awsIotCertificate = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "ca_pem": {
-        "description_kind": "plain",
-        "optional": true,
-        "sensitive": true,
-        "type": "string"
-      },
       "certificate_pem": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "sensitive": true,
         "type": "string"
       },

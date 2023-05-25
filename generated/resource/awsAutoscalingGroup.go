@@ -28,18 +28,8 @@ const awsAutoscalingGroup = `{
         "optional": true,
         "type": "bool"
       },
-      "context": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "default_cooldown": {
         "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
-      "default_instance_warmup": {
         "description_kind": "plain",
         "optional": true,
         "type": "number"
@@ -49,11 +39,6 @@ const awsAutoscalingGroup = `{
         "description_kind": "plain",
         "optional": true,
         "type": "number"
-      },
-      "desired_capacity_type": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
       },
       "enabled_metrics": {
         "description_kind": "plain",
@@ -145,11 +130,6 @@ const awsAutoscalingGroup = `{
         "optional": true,
         "type": "string"
       },
-      "predicted_capacity": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "number"
-      },
       "protect_from_scale_in": {
         "description_kind": "plain",
         "optional": true,
@@ -170,7 +150,6 @@ const awsAutoscalingGroup = `{
         ]
       },
       "tags": {
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -214,11 +193,6 @@ const awsAutoscalingGroup = `{
       "wait_for_elb_capacity": {
         "description_kind": "plain",
         "optional": true,
-        "type": "number"
-      },
-      "warm_pool_size": {
-        "computed": true,
-        "description_kind": "plain",
         "type": "number"
       }
     },
@@ -288,11 +262,6 @@ const awsAutoscalingGroup = `{
             "preferences": {
               "block": {
                 "attributes": {
-                  "auto_rollback": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "bool"
-                  },
                   "checkpoint_delay": {
                     "description_kind": "plain",
                     "optional": true,
@@ -315,11 +284,6 @@ const awsAutoscalingGroup = `{
                     "description_kind": "plain",
                     "optional": true,
                     "type": "number"
-                  },
-                  "skip_matching": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "bool"
                   }
                 },
                 "description_kind": "plain"
@@ -451,282 +415,6 @@ const awsAutoscalingGroup = `{
                         }
                       },
                       "block_types": {
-                        "instance_requirements": {
-                          "block": {
-                            "attributes": {
-                              "accelerator_manufacturers": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": [
-                                  "set",
-                                  "string"
-                                ]
-                              },
-                              "accelerator_names": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": [
-                                  "set",
-                                  "string"
-                                ]
-                              },
-                              "accelerator_types": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": [
-                                  "set",
-                                  "string"
-                                ]
-                              },
-                              "allowed_instance_types": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": [
-                                  "set",
-                                  "string"
-                                ]
-                              },
-                              "bare_metal": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "string"
-                              },
-                              "burstable_performance": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "string"
-                              },
-                              "cpu_manufacturers": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": [
-                                  "set",
-                                  "string"
-                                ]
-                              },
-                              "excluded_instance_types": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": [
-                                  "set",
-                                  "string"
-                                ]
-                              },
-                              "instance_generations": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": [
-                                  "set",
-                                  "string"
-                                ]
-                              },
-                              "local_storage": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "string"
-                              },
-                              "local_storage_types": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": [
-                                  "set",
-                                  "string"
-                                ]
-                              },
-                              "on_demand_max_price_percentage_over_lowest_price": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "number"
-                              },
-                              "require_hibernate_support": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "bool"
-                              },
-                              "spot_max_price_percentage_over_lowest_price": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "number"
-                              }
-                            },
-                            "block_types": {
-                              "accelerator_count": {
-                                "block": {
-                                  "attributes": {
-                                    "max": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "number"
-                                    },
-                                    "min": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "number"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "max_items": 1,
-                                "nesting_mode": "list"
-                              },
-                              "accelerator_total_memory_mib": {
-                                "block": {
-                                  "attributes": {
-                                    "max": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "number"
-                                    },
-                                    "min": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "number"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "max_items": 1,
-                                "nesting_mode": "list"
-                              },
-                              "baseline_ebs_bandwidth_mbps": {
-                                "block": {
-                                  "attributes": {
-                                    "max": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "number"
-                                    },
-                                    "min": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "number"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "max_items": 1,
-                                "nesting_mode": "list"
-                              },
-                              "memory_gib_per_vcpu": {
-                                "block": {
-                                  "attributes": {
-                                    "max": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "number"
-                                    },
-                                    "min": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "number"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "max_items": 1,
-                                "nesting_mode": "list"
-                              },
-                              "memory_mib": {
-                                "block": {
-                                  "attributes": {
-                                    "max": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "number"
-                                    },
-                                    "min": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "number"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "max_items": 1,
-                                "nesting_mode": "list"
-                              },
-                              "network_bandwidth_gbps": {
-                                "block": {
-                                  "attributes": {
-                                    "max": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "number"
-                                    },
-                                    "min": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "number"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "max_items": 1,
-                                "nesting_mode": "list"
-                              },
-                              "network_interface_count": {
-                                "block": {
-                                  "attributes": {
-                                    "max": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "number"
-                                    },
-                                    "min": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "number"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "max_items": 1,
-                                "nesting_mode": "list"
-                              },
-                              "total_local_storage_gb": {
-                                "block": {
-                                  "attributes": {
-                                    "max": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "number"
-                                    },
-                                    "min": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "number"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "max_items": 1,
-                                "nesting_mode": "list"
-                              },
-                              "vcpu_count": {
-                                "block": {
-                                  "attributes": {
-                                    "max": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "number"
-                                    },
-                                    "min": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "number"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "max_items": 1,
-                                "nesting_mode": "list"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 1,
-                          "nesting_mode": "list"
-                        },
                         "launch_template_specification": {
                           "block": {
                             "attributes": {
@@ -801,11 +489,6 @@ const awsAutoscalingGroup = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
-            },
-            "update": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
             }
           },
           "description_kind": "plain"
@@ -829,22 +512,6 @@ const awsAutoscalingGroup = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
-            }
-          },
-          "block_types": {
-            "instance_reuse_policy": {
-              "block": {
-                "attributes": {
-                  "reuse_on_scale_in": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "bool"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"

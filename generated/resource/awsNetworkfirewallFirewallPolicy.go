@@ -54,25 +54,6 @@ const awsNetworkfirewallFirewallPolicy = `{
       }
     },
     "block_types": {
-      "encryption_configuration": {
-        "block": {
-          "attributes": {
-            "key_id": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "type": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "firewall_policy": {
         "block": {
           "attributes": {
@@ -128,22 +109,6 @@ const awsNetworkfirewallFirewallPolicy = `{
                     "description_kind": "plain",
                     "required": true,
                     "type": "string"
-                  }
-                },
-                "block_types": {
-                  "override": {
-                    "block": {
-                      "attributes": {
-                        "action": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "string"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "max_items": 1,
-                    "nesting_mode": "list"
                   }
                 },
                 "description_kind": "plain"

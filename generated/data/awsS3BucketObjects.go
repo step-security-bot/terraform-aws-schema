@@ -10,7 +10,6 @@ const awsS3BucketObjects = `{
   "block": {
     "attributes": {
       "bucket": {
-        "deprecated": true,
         "description_kind": "plain",
         "required": true,
         "type": "string"

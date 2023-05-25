@@ -73,7 +73,6 @@ const awsVpcPeeringConnectionAccepter = `{
         "block": {
           "attributes": {
             "allow_classic_link_to_remote_vpc": {
-              "deprecated": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
@@ -84,7 +83,6 @@ const awsVpcPeeringConnectionAccepter = `{
               "type": "bool"
             },
             "allow_vpc_to_remote_classic_link": {
-              "deprecated": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
@@ -99,7 +97,6 @@ const awsVpcPeeringConnectionAccepter = `{
         "block": {
           "attributes": {
             "allow_classic_link_to_remote_vpc": {
-              "deprecated": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
@@ -110,7 +107,6 @@ const awsVpcPeeringConnectionAccepter = `{
               "type": "bool"
             },
             "allow_vpc_to_remote_classic_link": {
-              "deprecated": true,
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
@@ -120,24 +116,6 @@ const awsVpcPeeringConnectionAccepter = `{
         },
         "max_items": 1,
         "nesting_mode": "list"
-      },
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "create": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "update": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"
