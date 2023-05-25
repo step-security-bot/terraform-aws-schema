@@ -1,0 +1,144 @@
+package data
+
+import (
+	"encoding/json"
+
+	tfjson "github.com/hashicorp/terraform-json"
+)
+
+const awsLb = `{
+  "block": {
+    "attributes": {
+      "access_logs": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "bucket": "string",
+              "enabled": "bool",
+              "prefix": "string"
+            }
+          ]
+        ]
+      },
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "arn_suffix": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "dns_name": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "drop_invalid_header_fields": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
+      "enable_deletion_protection": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
+      "id": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "idle_timeout": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
+      "internal": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "bool"
+      },
+      "ip_address_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "load_balancer_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "name": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "security_groups": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          "string"
+        ]
+      },
+      "subnet_mapping": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          [
+            "object",
+            {
+              "allocation_id": "string",
+              "subnet_id": "string"
+            }
+          ]
+        ]
+      },
+      "subnets": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          "string"
+        ]
+      },
+      "tags": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
+      "vpc_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "zone_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      }
+    },
+    "description_kind": "plain"
+  },
+  "version": 0
+}`
+
+func AwsLbSchema() *tfjson.Schema {
+	var result tfjson.Schema
+	_ = json.Unmarshal([]byte(awsLb), &result)
+	return &result
+}

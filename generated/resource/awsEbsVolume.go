@@ -1,0 +1,92 @@
+package resource
+
+import (
+	"encoding/json"
+
+	tfjson "github.com/hashicorp/terraform-json"
+)
+
+const awsEbsVolume = `{
+  "block": {
+    "attributes": {
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "availability_zone": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "encrypted": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
+      "id": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "iops": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
+      "kms_key_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "multi_attach_enabled": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
+      "outpost_arn": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "size": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
+      "snapshot_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "tags": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
+      "type": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      }
+    },
+    "description_kind": "plain"
+  },
+  "version": 0
+}`
+
+func AwsEbsVolumeSchema() *tfjson.Schema {
+	var result tfjson.Schema
+	_ = json.Unmarshal([]byte(awsEbsVolume), &result)
+	return &result
+}
