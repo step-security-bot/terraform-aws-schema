@@ -9,14 +9,6 @@ import (
 const awsDatasyncLocationS3 = `{
   "block": {
     "attributes": {
-      "agent_arns": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
@@ -33,27 +25,12 @@ const awsDatasyncLocationS3 = `{
         "required": true,
         "type": "string"
       },
-      "s3_storage_class": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "subdirectory": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

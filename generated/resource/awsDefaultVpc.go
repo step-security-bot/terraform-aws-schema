@@ -78,16 +78,6 @@ const awsDefaultVpc = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "ipv4_ipam_pool_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "ipv4_netmask_length": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
       "ipv6_association_id": {
         "computed": true,
         "description_kind": "plain",
@@ -96,24 +86,7 @@ const awsDefaultVpc = `{
       "ipv6_cidr_block": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
-      },
-      "ipv6_cidr_block_network_border_group": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "ipv6_ipam_pool_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "ipv6_netmask_length": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
       },
       "main_route_table_id": {
         "computed": true,
@@ -126,15 +99,6 @@ const awsDefaultVpc = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

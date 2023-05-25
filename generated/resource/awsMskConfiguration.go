@@ -27,7 +27,7 @@ const awsMskConfiguration = `{
       },
       "kafka_versions": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": [
           "set",
           "string"

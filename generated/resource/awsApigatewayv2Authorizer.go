@@ -19,17 +19,6 @@ const awsApigatewayv2Authorizer = `{
         "optional": true,
         "type": "string"
       },
-      "authorizer_payload_format_version": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "authorizer_result_ttl_in_seconds": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
       "authorizer_type": {
         "description_kind": "plain",
         "required": true,
@@ -40,11 +29,6 @@ const awsApigatewayv2Authorizer = `{
         "optional": true,
         "type": "string"
       },
-      "enable_simple_responses": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -53,7 +37,7 @@ const awsApigatewayv2Authorizer = `{
       },
       "identity_sources": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": [
           "set",
           "string"

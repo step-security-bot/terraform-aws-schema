@@ -76,33 +76,6 @@ const awsGlueCatalogTable = `{
       }
     },
     "block_types": {
-      "partition_index": {
-        "block": {
-          "attributes": {
-            "index_name": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "index_status": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "keys": {
-              "description_kind": "plain",
-              "required": true,
-              "type": [
-                "list",
-                "string"
-              ]
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 3,
-        "nesting_mode": "list"
-      },
       "partition_keys": {
         "block": {
           "attributes": {
@@ -190,14 +163,6 @@ const awsGlueCatalogTable = `{
                     "required": true,
                     "type": "string"
                   },
-                  "parameters": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": [
-                      "map",
-                      "string"
-                    ]
-                  },
                   "type": {
                     "description_kind": "plain",
                     "optional": true,
@@ -206,51 +171,6 @@ const awsGlueCatalogTable = `{
                 },
                 "description_kind": "plain"
               },
-              "nesting_mode": "list"
-            },
-            "schema_reference": {
-              "block": {
-                "attributes": {
-                  "schema_version_id": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "schema_version_number": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "number"
-                  }
-                },
-                "block_types": {
-                  "schema_id": {
-                    "block": {
-                      "attributes": {
-                        "registry_name": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "string"
-                        },
-                        "schema_arn": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "string"
-                        },
-                        "schema_name": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "string"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "max_items": 1,
-                    "nesting_mode": "list"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
               "nesting_mode": "list"
             },
             "ser_de_info": {
@@ -330,30 +250,6 @@ const awsGlueCatalogTable = `{
                 "description_kind": "plain"
               },
               "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "target_table": {
-        "block": {
-          "attributes": {
-            "catalog_id": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "database_name": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "name": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
             }
           },
           "description_kind": "plain"

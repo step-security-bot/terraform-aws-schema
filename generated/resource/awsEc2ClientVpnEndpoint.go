@@ -43,11 +43,6 @@ const awsEc2ClientVpnEndpoint = `{
         "optional": true,
         "type": "string"
       },
-      "self_service_portal": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "server_certificate_arn": {
         "description_kind": "plain",
         "required": true,
@@ -71,15 +66,6 @@ const awsEc2ClientVpnEndpoint = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "transport_protocol": {
         "description_kind": "plain",
         "optional": true,
@@ -96,16 +82,6 @@ const awsEc2ClientVpnEndpoint = `{
               "type": "string"
             },
             "root_certificate_chain_arn": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "saml_provider_arn": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "self_service_saml_provider_arn": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"

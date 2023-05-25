@@ -9,11 +9,6 @@ import (
 const awsEc2TransitGatewayRouteTable = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "default_association_route_table": {
         "computed": true,
         "description_kind": "plain",
@@ -25,7 +20,6 @@ const awsEc2TransitGatewayRouteTable = `{
         "type": "bool"
       },
       "id": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

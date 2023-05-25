@@ -9,20 +9,7 @@ import (
 const awsLambdaFunction = `{
   "block": {
     "attributes": {
-      "architectures": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          "string"
-        ]
-      },
       "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "code_signing_config_arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -91,11 +78,6 @@ const awsLambdaFunction = `{
         "optional": true,
         "type": "string"
       },
-      "image_uri": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "invoke_arn": {
         "computed": true,
         "description_kind": "plain",
@@ -145,16 +127,6 @@ const awsLambdaFunction = `{
         "type": "string"
       },
       "runtime": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "signing_job_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "signing_profile_version_arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"

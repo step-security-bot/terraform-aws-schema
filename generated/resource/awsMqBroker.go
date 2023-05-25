@@ -19,12 +19,6 @@ const awsMqBroker = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "authentication_strategy": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "auto_minor_version_upgrade": {
         "description_kind": "plain",
         "optional": true,
@@ -86,17 +80,11 @@ const awsMqBroker = `{
       },
       "security_groups": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": [
           "set",
           "string"
         ]
-      },
-      "storage_type": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
       },
       "subnet_ids": {
         "computed": true,
@@ -108,15 +96,6 @@ const awsMqBroker = `{
         ]
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -167,81 +146,13 @@ const awsMqBroker = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
-      "ldap_server_metadata": {
-        "block": {
-          "attributes": {
-            "hosts": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "list",
-                "string"
-              ]
-            },
-            "role_base": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "role_name": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "role_search_matching": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "role_search_subtree": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "service_account_password": {
-              "description_kind": "plain",
-              "optional": true,
-              "sensitive": true,
-              "type": "string"
-            },
-            "service_account_username": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "user_base": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "user_role_name": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "user_search_matching": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "user_search_subtree": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "logs": {
         "block": {
           "attributes": {
             "audit": {
               "description_kind": "plain",
               "optional": true,
-              "type": "string"
+              "type": "bool"
             },
             "general": {
               "description_kind": "plain",

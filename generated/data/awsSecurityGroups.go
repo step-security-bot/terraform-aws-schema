@@ -9,14 +9,6 @@ import (
 const awsSecurityGroups = `{
   "block": {
     "attributes": {
-      "arns": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          "string"
-        ]
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",

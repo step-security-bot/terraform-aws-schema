@@ -48,7 +48,7 @@ const awsKinesisStream = `{
       },
       "shard_count": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "number"
       },
       "shard_level_metrics": {
@@ -66,32 +66,9 @@ const awsKinesisStream = `{
           "map",
           "string"
         ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "block_types": {
-      "stream_mode_details": {
-        "block": {
-          "attributes": {
-            "stream_mode": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "timeouts": {
         "block": {
           "attributes": {

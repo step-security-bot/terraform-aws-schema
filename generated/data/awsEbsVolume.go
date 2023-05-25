@@ -74,11 +74,6 @@ const awsEbsVolume = `{
           "string"
         ]
       },
-      "throughput": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "number"
-      },
       "volume_id": {
         "computed": true,
         "description_kind": "plain",

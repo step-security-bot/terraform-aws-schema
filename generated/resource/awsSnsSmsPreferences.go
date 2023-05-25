@@ -36,10 +36,9 @@ const awsSnsSmsPreferences = `{
         "type": "string"
       },
       "monthly_spend_limit": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
-        "type": "number"
+        "type": "string"
       },
       "usage_report_s3_bucket": {
         "description_kind": "plain",

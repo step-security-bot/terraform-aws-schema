@@ -29,11 +29,6 @@ const awsQldbLedger = `{
         "description_kind": "plain",
         "required": true,
         "type": "string"
-      },
-      "permissions_mode": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
       }
     },
     "description_kind": "plain"

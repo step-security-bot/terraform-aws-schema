@@ -14,12 +14,6 @@ const awsMqConfiguration = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "authentication_strategy": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "data": {
         "description_kind": "plain",
         "required": true,
@@ -57,15 +51,6 @@ const awsMqConfiguration = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

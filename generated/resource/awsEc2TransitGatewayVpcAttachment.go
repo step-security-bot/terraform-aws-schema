@@ -9,11 +9,6 @@ import (
 const awsEc2TransitGatewayVpcAttachment = `{
   "block": {
     "attributes": {
-      "appliance_mode_support": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "dns_support": {
         "description_kind": "plain",
         "optional": true,
@@ -39,15 +34,6 @@ const awsEc2TransitGatewayVpcAttachment = `{
         ]
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

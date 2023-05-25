@@ -19,12 +19,6 @@ const awsSqsQueue = `{
         "optional": true,
         "type": "bool"
       },
-      "deduplication_scope": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "delay_seconds": {
         "description_kind": "plain",
         "optional": true,
@@ -34,12 +28,6 @@ const awsSqsQueue = `{
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
-      },
-      "fifo_throughput_limit": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
       },
       "id": {
         "computed": true,
@@ -75,7 +63,6 @@ const awsSqsQueue = `{
         "type": "string"
       },
       "name_prefix": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -91,21 +78,10 @@ const awsSqsQueue = `{
         "optional": true,
         "type": "number"
       },
-      "redrive_allow_policy": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "redrive_policy": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "sqs_managed_sse_enabled": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       },
       "tags": {
         "description_kind": "plain",
@@ -114,20 +90,6 @@ const awsSqsQueue = `{
           "map",
           "string"
         ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "url": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
       },
       "visibility_timeout_seconds": {
         "description_kind": "plain",

@@ -9,14 +9,6 @@ import (
 const awsCloudfrontDistribution = `{
   "block": {
     "attributes": {
-      "aliases": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "set",
-          "string"
-        ]
-      },
       "arn": {
         "computed": true,
         "description_kind": "plain",

@@ -20,12 +20,6 @@ const awsEksNodeGroup = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "capacity_type": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "cluster_name": {
         "description_kind": "plain",
         "required": true,
@@ -66,15 +60,8 @@ const awsEksNodeGroup = `{
         ]
       },
       "node_group_name": {
-        "computed": true,
         "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "node_group_name_prefix": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "node_role_arn": {
@@ -131,15 +118,6 @@ const awsEksNodeGroup = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "version": {
         "computed": true,
         "description_kind": "plain",
@@ -148,32 +126,6 @@ const awsEksNodeGroup = `{
       }
     },
     "block_types": {
-      "launch_template": {
-        "block": {
-          "attributes": {
-            "id": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "name": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "version": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "remote_access": {
         "block": {
           "attributes": {
@@ -221,30 +173,6 @@ const awsEksNodeGroup = `{
         "min_items": 1,
         "nesting_mode": "list"
       },
-      "taint": {
-        "block": {
-          "attributes": {
-            "effect": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "key": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "value": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 50,
-        "nesting_mode": "set"
-      },
       "timeouts": {
         "block": {
           "attributes": {
@@ -267,25 +195,6 @@ const awsEksNodeGroup = `{
           "description_kind": "plain"
         },
         "nesting_mode": "single"
-      },
-      "update_config": {
-        "block": {
-          "attributes": {
-            "max_unavailable": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "max_unavailable_percentage": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

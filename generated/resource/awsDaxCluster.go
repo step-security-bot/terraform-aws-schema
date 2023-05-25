@@ -27,11 +27,6 @@ const awsDaxCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "cluster_endpoint_encryption_type": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "cluster_name": {
         "description_kind": "plain",
         "required": true,
@@ -122,15 +117,6 @@ const awsDaxCluster = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

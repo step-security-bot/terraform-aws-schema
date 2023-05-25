@@ -25,15 +25,6 @@ const awsBackupSelection = `{
         "required": true,
         "type": "string"
       },
-      "not_resources": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
       "plan_id": {
         "description_kind": "plain",
         "required": true,
@@ -49,86 +40,6 @@ const awsBackupSelection = `{
       }
     },
     "block_types": {
-      "condition": {
-        "block": {
-          "block_types": {
-            "string_equals": {
-              "block": {
-                "attributes": {
-                  "key": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "value": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "set"
-            },
-            "string_like": {
-              "block": {
-                "attributes": {
-                  "key": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "value": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "set"
-            },
-            "string_not_equals": {
-              "block": {
-                "attributes": {
-                  "key": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "value": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "set"
-            },
-            "string_not_like": {
-              "block": {
-                "attributes": {
-                  "key": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "value": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "set"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "set"
-      },
       "selection_tag": {
         "block": {
           "attributes": {

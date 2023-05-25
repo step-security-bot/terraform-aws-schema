@@ -14,11 +14,6 @@ const awsCloudwatchEventPermission = `{
         "optional": true,
         "type": "string"
       },
-      "event_bus_name": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",

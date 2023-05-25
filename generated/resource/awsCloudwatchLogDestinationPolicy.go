@@ -19,11 +19,6 @@ const awsCloudwatchLogDestinationPolicy = `{
         "required": true,
         "type": "string"
       },
-      "force_update": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",

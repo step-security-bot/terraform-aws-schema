@@ -41,6 +41,11 @@ const awsApiGatewayMethodResponse = `{
           "bool"
         ]
       },
+      "response_parameters_in_json": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "rest_api_id": {
         "description_kind": "plain",
         "required": true,

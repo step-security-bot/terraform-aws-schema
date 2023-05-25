@@ -149,15 +149,6 @@ const awsOpsworksMysqlLayer = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "use_ebs_optimized_instances": {
         "description_kind": "plain",
         "optional": true,
@@ -165,85 +156,6 @@ const awsOpsworksMysqlLayer = `{
       }
     },
     "block_types": {
-      "cloudwatch_configuration": {
-        "block": {
-          "attributes": {
-            "enabled": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            }
-          },
-          "block_types": {
-            "log_streams": {
-              "block": {
-                "attributes": {
-                  "batch_count": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  },
-                  "batch_size": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  },
-                  "buffer_duration": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  },
-                  "datetime_format": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "encoding": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "file": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "file_fingerprint_lines": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "initial_position": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "log_group_name": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "multiline_start_pattern": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "time_zone": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "ebs_volume": {
         "block": {
           "attributes": {

@@ -19,16 +19,6 @@ const awsMskCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "bootstrap_brokers_sasl_iam": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "bootstrap_brokers_sasl_scram": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "bootstrap_brokers_tls": {
         "computed": true,
         "description_kind": "plain",
@@ -73,21 +63,7 @@ const awsMskCluster = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "zookeeper_connect_string": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "zookeeper_connect_string_tls": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -106,7 +82,7 @@ const awsMskCluster = `{
               "description_kind": "plain",
               "required": true,
               "type": [
-                "set",
+                "list",
                 "string"
               ]
             },
@@ -124,7 +100,7 @@ const awsMskCluster = `{
               "description_kind": "plain",
               "required": true,
               "type": [
-                "set",
+                "list",
                 "string"
               ]
             }
@@ -138,25 +114,6 @@ const awsMskCluster = `{
       "client_authentication": {
         "block": {
           "block_types": {
-            "sasl": {
-              "block": {
-                "attributes": {
-                  "iam": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "bool"
-                  },
-                  "scram": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "bool"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
             "tls": {
               "block": {
                 "attributes": {
@@ -362,29 +319,6 @@ const awsMskCluster = `{
         },
         "max_items": 1,
         "nesting_mode": "list"
-      },
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "create": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "update": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

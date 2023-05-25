@@ -9,11 +9,6 @@ import (
 const awsSesTemplate = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "html": {
         "description_kind": "plain",
         "optional": true,

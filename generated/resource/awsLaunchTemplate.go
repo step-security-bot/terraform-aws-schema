@@ -78,7 +78,6 @@ const awsLaunchTemplate = `{
         "type": "string"
       },
       "name_prefix": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -97,15 +96,6 @@ const awsLaunchTemplate = `{
         ]
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -181,12 +171,6 @@ const awsLaunchTemplate = `{
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"
-                  },
-                  "throughput": {
-                    "computed": true,
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
                   },
                   "volume_size": {
                     "computed": true,
@@ -301,20 +285,6 @@ const awsLaunchTemplate = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
-      "enclave_options": {
-        "block": {
-          "attributes": {
-            "enabled": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "hibernation_options": {
         "block": {
           "attributes": {
@@ -421,11 +391,6 @@ const awsLaunchTemplate = `{
               "optional": true,
               "type": "string"
             },
-            "http_protocol_ipv6": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "http_put_response_hop_limit": {
               "computed": true,
               "description_kind": "plain",
@@ -434,11 +399,6 @@ const awsLaunchTemplate = `{
             },
             "http_tokens": {
               "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "instance_metadata_tags": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -466,11 +426,6 @@ const awsLaunchTemplate = `{
       "network_interfaces": {
         "block": {
           "attributes": {
-            "associate_carrier_ip_address": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "associate_public_ip_address": {
               "description_kind": "plain",
               "optional": true,
@@ -479,7 +434,7 @@ const awsLaunchTemplate = `{
             "delete_on_termination": {
               "description_kind": "plain",
               "optional": true,
-              "type": "string"
+              "type": "bool"
             },
             "description": {
               "description_kind": "plain",
@@ -490,11 +445,6 @@ const awsLaunchTemplate = `{
               "description_kind": "plain",
               "optional": true,
               "type": "number"
-            },
-            "interface_type": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
             },
             "ipv4_address_count": {
               "description_kind": "plain",
@@ -521,11 +471,6 @@ const awsLaunchTemplate = `{
                 "set",
                 "string"
               ]
-            },
-            "network_card_index": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
             },
             "network_interface_id": {
               "description_kind": "plain",
@@ -574,11 +519,6 @@ const awsLaunchTemplate = `{
               "type": "string"
             },
             "host_id": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "host_resource_group_arn": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"

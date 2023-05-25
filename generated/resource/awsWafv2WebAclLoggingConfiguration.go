@@ -32,86 +32,11 @@ const awsWafv2WebAclLoggingConfiguration = `{
       }
     },
     "block_types": {
-      "logging_filter": {
-        "block": {
-          "attributes": {
-            "default_behavior": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "block_types": {
-            "filter": {
-              "block": {
-                "attributes": {
-                  "behavior": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "requirement": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "block_types": {
-                  "condition": {
-                    "block": {
-                      "block_types": {
-                        "action_condition": {
-                          "block": {
-                            "attributes": {
-                              "action": {
-                                "description_kind": "plain",
-                                "required": true,
-                                "type": "string"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 1,
-                          "nesting_mode": "list"
-                        },
-                        "label_name_condition": {
-                          "block": {
-                            "attributes": {
-                              "label_name": {
-                                "description_kind": "plain",
-                                "required": true,
-                                "type": "string"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 1,
-                          "nesting_mode": "list"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "min_items": 1,
-                    "nesting_mode": "set"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "min_items": 1,
-              "nesting_mode": "set"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "redacted_fields": {
         "block": {
           "block_types": {
             "all_query_arguments": {
               "block": {
-                "deprecated": true,
                 "description_kind": "plain"
               },
               "max_items": 1,
@@ -119,7 +44,6 @@ const awsWafv2WebAclLoggingConfiguration = `{
             },
             "body": {
               "block": {
-                "deprecated": true,
                 "description_kind": "plain"
               },
               "max_items": 1,
@@ -157,13 +81,11 @@ const awsWafv2WebAclLoggingConfiguration = `{
               "block": {
                 "attributes": {
                   "name": {
-                    "deprecated": true,
                     "description_kind": "plain",
                     "required": true,
                     "type": "string"
                   }
                 },
-                "deprecated": true,
                 "description_kind": "plain"
               },
               "max_items": 1,
@@ -181,7 +103,7 @@ const awsWafv2WebAclLoggingConfiguration = `{
           "description_kind": "plain"
         },
         "max_items": 100,
-        "nesting_mode": "list"
+        "nesting_mode": "set"
       }
     },
     "description_kind": "plain"

@@ -11,7 +11,7 @@ const awsCloudformationStackSet = `{
     "attributes": {
       "administration_role_arn": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "arn": {
@@ -33,7 +33,6 @@ const awsCloudformationStackSet = `{
         "type": "string"
       },
       "execution_role_name": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -57,26 +56,12 @@ const awsCloudformationStackSet = `{
           "string"
         ]
       },
-      "permission_model": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "stack_set_id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -97,25 +82,6 @@ const awsCloudformationStackSet = `{
       }
     },
     "block_types": {
-      "auto_deployment": {
-        "block": {
-          "attributes": {
-            "enabled": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "retain_stacks_on_account_removal": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "timeouts": {
         "block": {
           "attributes": {

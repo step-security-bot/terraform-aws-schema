@@ -14,11 +14,6 @@ const awsEip = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "carrier_ip": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "customer_owned_ip": {
         "computed": true,
         "description_kind": "plain",

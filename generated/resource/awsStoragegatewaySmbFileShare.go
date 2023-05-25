@@ -9,27 +9,9 @@ import (
 const awsStoragegatewaySmbFileShare = `{
   "block": {
     "attributes": {
-      "access_based_enumeration": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "admin_user_list": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
-        "type": "string"
-      },
-      "audit_destination_arn": {
-        "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "authentication": {
@@ -37,23 +19,7 @@ const awsStoragegatewaySmbFileShare = `{
         "optional": true,
         "type": "string"
       },
-      "bucket_region": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "case_sensitivity": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "default_storage_class": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "file_share_name": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -102,21 +68,10 @@ const awsStoragegatewaySmbFileShare = `{
         "required": true,
         "type": "string"
       },
-      "notification_policy": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "object_acl": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "oplocks_enabled": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       },
       "path": {
         "computed": true,
@@ -138,21 +93,7 @@ const awsStoragegatewaySmbFileShare = `{
         "required": true,
         "type": "string"
       },
-      "smb_acl_enabled": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -167,28 +108,9 @@ const awsStoragegatewaySmbFileShare = `{
           "set",
           "string"
         ]
-      },
-      "vpc_endpoint_dns_name": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
       }
     },
     "block_types": {
-      "cache_attributes": {
-        "block": {
-          "attributes": {
-            "cache_stale_timeout_in_seconds": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "timeouts": {
         "block": {
           "attributes": {

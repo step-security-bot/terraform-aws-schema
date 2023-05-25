@@ -10,9 +10,8 @@ const awsIamPolicy = `{
   "block": {
     "attributes": {
       "arn": {
-        "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "description": {
@@ -29,7 +28,6 @@ const awsIamPolicy = `{
       "name": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "path": {
@@ -37,29 +35,10 @@ const awsIamPolicy = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "path_prefix": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "policy": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "policy_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "tags": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "description_kind": "plain"

@@ -47,37 +47,9 @@ const awsDatasyncTask = `{
           "map",
           "string"
         ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "block_types": {
-      "excludes": {
-        "block": {
-          "attributes": {
-            "filter_type": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "value": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "options": {
         "block": {
           "attributes": {
@@ -96,17 +68,7 @@ const awsDatasyncTask = `{
               "optional": true,
               "type": "string"
             },
-            "log_level": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "mtime": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "overwrite_mode": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -126,16 +88,6 @@ const awsDatasyncTask = `{
               "optional": true,
               "type": "string"
             },
-            "task_queueing": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "transfer_mode": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "uid": {
               "description_kind": "plain",
               "optional": true,
@@ -144,20 +96,6 @@ const awsDatasyncTask = `{
             "verify_mode": {
               "description_kind": "plain",
               "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "schedule": {
-        "block": {
-          "attributes": {
-            "schedule_expression": {
-              "description_kind": "plain",
-              "required": true,
               "type": "string"
             }
           },

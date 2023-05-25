@@ -33,15 +33,6 @@ const awsAccessanalyzerAnalyzer = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "type": {
         "description_kind": "plain",
         "optional": true,

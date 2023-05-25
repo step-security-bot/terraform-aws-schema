@@ -31,9 +31,7 @@ const awsLaunchConfiguration = `{
               "device_name": "string",
               "encrypted": "bool",
               "iops": "number",
-              "no_device": "bool",
               "snapshot_id": "string",
-              "throughput": "bool",
               "volume_size": "number",
               "volume_type": "string"
             }
@@ -90,21 +88,6 @@ const awsLaunchConfiguration = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "metadata_options": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "http_endpoint": "string",
-              "http_put_response_hop_limit": "number",
-              "http_tokens": "string"
-            }
-          ]
-        ]
-      },
       "name": {
         "description_kind": "plain",
         "required": true,
@@ -126,7 +109,6 @@ const awsLaunchConfiguration = `{
               "delete_on_termination": "bool",
               "encrypted": "bool",
               "iops": "number",
-              "throughput": "bool",
               "volume_size": "number",
               "volume_type": "string"
             }

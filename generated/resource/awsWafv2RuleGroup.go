@@ -52,41 +52,9 @@ const awsWafv2RuleGroup = `{
           "map",
           "string"
         ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "block_types": {
-      "custom_response_body": {
-        "block": {
-          "attributes": {
-            "content": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "content_type": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "key": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "set"
-      },
       "rule": {
         "block": {
           "attributes": {
@@ -107,36 +75,6 @@ const awsWafv2RuleGroup = `{
                 "block_types": {
                   "allow": {
                     "block": {
-                      "block_types": {
-                        "custom_request_handling": {
-                          "block": {
-                            "block_types": {
-                              "insert_header": {
-                                "block": {
-                                  "attributes": {
-                                    "name": {
-                                      "description_kind": "plain",
-                                      "required": true,
-                                      "type": "string"
-                                    },
-                                    "value": {
-                                      "description_kind": "plain",
-                                      "required": true,
-                                      "type": "string"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "min_items": 1,
-                                "nesting_mode": "set"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 1,
-                          "nesting_mode": "list"
-                        }
-                      },
                       "description_kind": "plain"
                     },
                     "max_items": 1,
@@ -144,47 +82,6 @@ const awsWafv2RuleGroup = `{
                   },
                   "block": {
                     "block": {
-                      "block_types": {
-                        "custom_response": {
-                          "block": {
-                            "attributes": {
-                              "custom_response_body_key": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "string"
-                              },
-                              "response_code": {
-                                "description_kind": "plain",
-                                "required": true,
-                                "type": "number"
-                              }
-                            },
-                            "block_types": {
-                              "response_header": {
-                                "block": {
-                                  "attributes": {
-                                    "name": {
-                                      "description_kind": "plain",
-                                      "required": true,
-                                      "type": "string"
-                                    },
-                                    "value": {
-                                      "description_kind": "plain",
-                                      "required": true,
-                                      "type": "string"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "nesting_mode": "set"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 1,
-                          "nesting_mode": "list"
-                        }
-                      },
                       "description_kind": "plain"
                     },
                     "max_items": 1,
@@ -192,36 +89,6 @@ const awsWafv2RuleGroup = `{
                   },
                   "count": {
                     "block": {
-                      "block_types": {
-                        "custom_request_handling": {
-                          "block": {
-                            "block_types": {
-                              "insert_header": {
-                                "block": {
-                                  "attributes": {
-                                    "name": {
-                                      "description_kind": "plain",
-                                      "required": true,
-                                      "type": "string"
-                                    },
-                                    "value": {
-                                      "description_kind": "plain",
-                                      "required": true,
-                                      "type": "string"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "min_items": 1,
-                                "nesting_mode": "set"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 1,
-                          "nesting_mode": "list"
-                        }
-                      },
                       "description_kind": "plain"
                     },
                     "max_items": 1,
@@ -233,19 +100,6 @@ const awsWafv2RuleGroup = `{
               "max_items": 1,
               "min_items": 1,
               "nesting_mode": "list"
-            },
-            "rule_label": {
-              "block": {
-                "attributes": {
-                  "name": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "set"
             },
             "statement": {
               "block": {
@@ -386,27 +240,6 @@ const awsWafv2RuleGroup = `{
                                                   ]
                                                 }
                                               },
-                                              "block_types": {
-                                                "forwarded_ip_config": {
-                                                  "block": {
-                                                    "attributes": {
-                                                      "fallback_behavior": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "header_name": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      }
-                                                    },
-                                                    "description_kind": "plain"
-                                                  },
-                                                  "max_items": 1,
-                                                  "nesting_mode": "list"
-                                                }
-                                              },
                                               "description_kind": "plain"
                                             },
                                             "max_items": 1,
@@ -416,51 +249,6 @@ const awsWafv2RuleGroup = `{
                                             "block": {
                                               "attributes": {
                                                 "arn": {
-                                                  "description_kind": "plain",
-                                                  "required": true,
-                                                  "type": "string"
-                                                }
-                                              },
-                                              "block_types": {
-                                                "ip_set_forwarded_ip_config": {
-                                                  "block": {
-                                                    "attributes": {
-                                                      "fallback_behavior": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "header_name": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "position": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      }
-                                                    },
-                                                    "description_kind": "plain"
-                                                  },
-                                                  "max_items": 1,
-                                                  "nesting_mode": "list"
-                                                }
-                                              },
-                                              "description_kind": "plain"
-                                            },
-                                            "max_items": 1,
-                                            "nesting_mode": "list"
-                                          },
-                                          "label_match_statement": {
-                                            "block": {
-                                              "attributes": {
-                                                "key": {
-                                                  "description_kind": "plain",
-                                                  "required": true,
-                                                  "type": "string"
-                                                },
-                                                "scope": {
                                                   "description_kind": "plain",
                                                   "required": true,
                                                   "type": "string"
@@ -1026,27 +814,6 @@ const awsWafv2RuleGroup = `{
                                       ]
                                     }
                                   },
-                                  "block_types": {
-                                    "forwarded_ip_config": {
-                                      "block": {
-                                        "attributes": {
-                                          "fallback_behavior": {
-                                            "description_kind": "plain",
-                                            "required": true,
-                                            "type": "string"
-                                          },
-                                          "header_name": {
-                                            "description_kind": "plain",
-                                            "required": true,
-                                            "type": "string"
-                                          }
-                                        },
-                                        "description_kind": "plain"
-                                      },
-                                      "max_items": 1,
-                                      "nesting_mode": "list"
-                                    }
-                                  },
                                   "description_kind": "plain"
                                 },
                                 "max_items": 1,
@@ -1056,51 +823,6 @@ const awsWafv2RuleGroup = `{
                                 "block": {
                                   "attributes": {
                                     "arn": {
-                                      "description_kind": "plain",
-                                      "required": true,
-                                      "type": "string"
-                                    }
-                                  },
-                                  "block_types": {
-                                    "ip_set_forwarded_ip_config": {
-                                      "block": {
-                                        "attributes": {
-                                          "fallback_behavior": {
-                                            "description_kind": "plain",
-                                            "required": true,
-                                            "type": "string"
-                                          },
-                                          "header_name": {
-                                            "description_kind": "plain",
-                                            "required": true,
-                                            "type": "string"
-                                          },
-                                          "position": {
-                                            "description_kind": "plain",
-                                            "required": true,
-                                            "type": "string"
-                                          }
-                                        },
-                                        "description_kind": "plain"
-                                      },
-                                      "max_items": 1,
-                                      "nesting_mode": "list"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "max_items": 1,
-                                "nesting_mode": "list"
-                              },
-                              "label_match_statement": {
-                                "block": {
-                                  "attributes": {
-                                    "key": {
-                                      "description_kind": "plain",
-                                      "required": true,
-                                      "type": "string"
-                                    },
-                                    "scope": {
                                       "description_kind": "plain",
                                       "required": true,
                                       "type": "string"
@@ -1241,27 +963,6 @@ const awsWafv2RuleGroup = `{
                                                   ]
                                                 }
                                               },
-                                              "block_types": {
-                                                "forwarded_ip_config": {
-                                                  "block": {
-                                                    "attributes": {
-                                                      "fallback_behavior": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "header_name": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      }
-                                                    },
-                                                    "description_kind": "plain"
-                                                  },
-                                                  "max_items": 1,
-                                                  "nesting_mode": "list"
-                                                }
-                                              },
                                               "description_kind": "plain"
                                             },
                                             "max_items": 1,
@@ -1271,51 +972,6 @@ const awsWafv2RuleGroup = `{
                                             "block": {
                                               "attributes": {
                                                 "arn": {
-                                                  "description_kind": "plain",
-                                                  "required": true,
-                                                  "type": "string"
-                                                }
-                                              },
-                                              "block_types": {
-                                                "ip_set_forwarded_ip_config": {
-                                                  "block": {
-                                                    "attributes": {
-                                                      "fallback_behavior": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "header_name": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "position": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      }
-                                                    },
-                                                    "description_kind": "plain"
-                                                  },
-                                                  "max_items": 1,
-                                                  "nesting_mode": "list"
-                                                }
-                                              },
-                                              "description_kind": "plain"
-                                            },
-                                            "max_items": 1,
-                                            "nesting_mode": "list"
-                                          },
-                                          "label_match_statement": {
-                                            "block": {
-                                              "attributes": {
-                                                "key": {
-                                                  "description_kind": "plain",
-                                                  "required": true,
-                                                  "type": "string"
-                                                },
-                                                "scope": {
                                                   "description_kind": "plain",
                                                   "required": true,
                                                   "type": "string"
@@ -1887,27 +1543,6 @@ const awsWafv2RuleGroup = `{
                                                   ]
                                                 }
                                               },
-                                              "block_types": {
-                                                "forwarded_ip_config": {
-                                                  "block": {
-                                                    "attributes": {
-                                                      "fallback_behavior": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "header_name": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      }
-                                                    },
-                                                    "description_kind": "plain"
-                                                  },
-                                                  "max_items": 1,
-                                                  "nesting_mode": "list"
-                                                }
-                                              },
                                               "description_kind": "plain"
                                             },
                                             "max_items": 1,
@@ -1917,51 +1552,6 @@ const awsWafv2RuleGroup = `{
                                             "block": {
                                               "attributes": {
                                                 "arn": {
-                                                  "description_kind": "plain",
-                                                  "required": true,
-                                                  "type": "string"
-                                                }
-                                              },
-                                              "block_types": {
-                                                "ip_set_forwarded_ip_config": {
-                                                  "block": {
-                                                    "attributes": {
-                                                      "fallback_behavior": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "header_name": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "position": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      }
-                                                    },
-                                                    "description_kind": "plain"
-                                                  },
-                                                  "max_items": 1,
-                                                  "nesting_mode": "list"
-                                                }
-                                              },
-                                              "description_kind": "plain"
-                                            },
-                                            "max_items": 1,
-                                            "nesting_mode": "list"
-                                          },
-                                          "label_match_statement": {
-                                            "block": {
-                                              "attributes": {
-                                                "key": {
-                                                  "description_kind": "plain",
-                                                  "required": true,
-                                                  "type": "string"
-                                                },
-                                                "scope": {
                                                   "description_kind": "plain",
                                                   "required": true,
                                                   "type": "string"
@@ -2958,27 +2548,6 @@ const awsWafv2RuleGroup = `{
                           ]
                         }
                       },
-                      "block_types": {
-                        "forwarded_ip_config": {
-                          "block": {
-                            "attributes": {
-                              "fallback_behavior": {
-                                "description_kind": "plain",
-                                "required": true,
-                                "type": "string"
-                              },
-                              "header_name": {
-                                "description_kind": "plain",
-                                "required": true,
-                                "type": "string"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 1,
-                          "nesting_mode": "list"
-                        }
-                      },
                       "description_kind": "plain"
                     },
                     "max_items": 1,
@@ -2988,51 +2557,6 @@ const awsWafv2RuleGroup = `{
                     "block": {
                       "attributes": {
                         "arn": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        }
-                      },
-                      "block_types": {
-                        "ip_set_forwarded_ip_config": {
-                          "block": {
-                            "attributes": {
-                              "fallback_behavior": {
-                                "description_kind": "plain",
-                                "required": true,
-                                "type": "string"
-                              },
-                              "header_name": {
-                                "description_kind": "plain",
-                                "required": true,
-                                "type": "string"
-                              },
-                              "position": {
-                                "description_kind": "plain",
-                                "required": true,
-                                "type": "string"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 1,
-                          "nesting_mode": "list"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "max_items": 1,
-                    "nesting_mode": "list"
-                  },
-                  "label_match_statement": {
-                    "block": {
-                      "attributes": {
-                        "key": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        },
-                        "scope": {
                           "description_kind": "plain",
                           "required": true,
                           "type": "string"
@@ -3179,27 +2703,6 @@ const awsWafv2RuleGroup = `{
                                                   ]
                                                 }
                                               },
-                                              "block_types": {
-                                                "forwarded_ip_config": {
-                                                  "block": {
-                                                    "attributes": {
-                                                      "fallback_behavior": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "header_name": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      }
-                                                    },
-                                                    "description_kind": "plain"
-                                                  },
-                                                  "max_items": 1,
-                                                  "nesting_mode": "list"
-                                                }
-                                              },
                                               "description_kind": "plain"
                                             },
                                             "max_items": 1,
@@ -3209,51 +2712,6 @@ const awsWafv2RuleGroup = `{
                                             "block": {
                                               "attributes": {
                                                 "arn": {
-                                                  "description_kind": "plain",
-                                                  "required": true,
-                                                  "type": "string"
-                                                }
-                                              },
-                                              "block_types": {
-                                                "ip_set_forwarded_ip_config": {
-                                                  "block": {
-                                                    "attributes": {
-                                                      "fallback_behavior": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "header_name": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "position": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      }
-                                                    },
-                                                    "description_kind": "plain"
-                                                  },
-                                                  "max_items": 1,
-                                                  "nesting_mode": "list"
-                                                }
-                                              },
-                                              "description_kind": "plain"
-                                            },
-                                            "max_items": 1,
-                                            "nesting_mode": "list"
-                                          },
-                                          "label_match_statement": {
-                                            "block": {
-                                              "attributes": {
-                                                "key": {
-                                                  "description_kind": "plain",
-                                                  "required": true,
-                                                  "type": "string"
-                                                },
-                                                "scope": {
                                                   "description_kind": "plain",
                                                   "required": true,
                                                   "type": "string"
@@ -3819,27 +3277,6 @@ const awsWafv2RuleGroup = `{
                                       ]
                                     }
                                   },
-                                  "block_types": {
-                                    "forwarded_ip_config": {
-                                      "block": {
-                                        "attributes": {
-                                          "fallback_behavior": {
-                                            "description_kind": "plain",
-                                            "required": true,
-                                            "type": "string"
-                                          },
-                                          "header_name": {
-                                            "description_kind": "plain",
-                                            "required": true,
-                                            "type": "string"
-                                          }
-                                        },
-                                        "description_kind": "plain"
-                                      },
-                                      "max_items": 1,
-                                      "nesting_mode": "list"
-                                    }
-                                  },
                                   "description_kind": "plain"
                                 },
                                 "max_items": 1,
@@ -3849,51 +3286,6 @@ const awsWafv2RuleGroup = `{
                                 "block": {
                                   "attributes": {
                                     "arn": {
-                                      "description_kind": "plain",
-                                      "required": true,
-                                      "type": "string"
-                                    }
-                                  },
-                                  "block_types": {
-                                    "ip_set_forwarded_ip_config": {
-                                      "block": {
-                                        "attributes": {
-                                          "fallback_behavior": {
-                                            "description_kind": "plain",
-                                            "required": true,
-                                            "type": "string"
-                                          },
-                                          "header_name": {
-                                            "description_kind": "plain",
-                                            "required": true,
-                                            "type": "string"
-                                          },
-                                          "position": {
-                                            "description_kind": "plain",
-                                            "required": true,
-                                            "type": "string"
-                                          }
-                                        },
-                                        "description_kind": "plain"
-                                      },
-                                      "max_items": 1,
-                                      "nesting_mode": "list"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "max_items": 1,
-                                "nesting_mode": "list"
-                              },
-                              "label_match_statement": {
-                                "block": {
-                                  "attributes": {
-                                    "key": {
-                                      "description_kind": "plain",
-                                      "required": true,
-                                      "type": "string"
-                                    },
-                                    "scope": {
                                       "description_kind": "plain",
                                       "required": true,
                                       "type": "string"
@@ -4034,27 +3426,6 @@ const awsWafv2RuleGroup = `{
                                                   ]
                                                 }
                                               },
-                                              "block_types": {
-                                                "forwarded_ip_config": {
-                                                  "block": {
-                                                    "attributes": {
-                                                      "fallback_behavior": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "header_name": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      }
-                                                    },
-                                                    "description_kind": "plain"
-                                                  },
-                                                  "max_items": 1,
-                                                  "nesting_mode": "list"
-                                                }
-                                              },
                                               "description_kind": "plain"
                                             },
                                             "max_items": 1,
@@ -4064,51 +3435,6 @@ const awsWafv2RuleGroup = `{
                                             "block": {
                                               "attributes": {
                                                 "arn": {
-                                                  "description_kind": "plain",
-                                                  "required": true,
-                                                  "type": "string"
-                                                }
-                                              },
-                                              "block_types": {
-                                                "ip_set_forwarded_ip_config": {
-                                                  "block": {
-                                                    "attributes": {
-                                                      "fallback_behavior": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "header_name": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "position": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      }
-                                                    },
-                                                    "description_kind": "plain"
-                                                  },
-                                                  "max_items": 1,
-                                                  "nesting_mode": "list"
-                                                }
-                                              },
-                                              "description_kind": "plain"
-                                            },
-                                            "max_items": 1,
-                                            "nesting_mode": "list"
-                                          },
-                                          "label_match_statement": {
-                                            "block": {
-                                              "attributes": {
-                                                "key": {
-                                                  "description_kind": "plain",
-                                                  "required": true,
-                                                  "type": "string"
-                                                },
-                                                "scope": {
                                                   "description_kind": "plain",
                                                   "required": true,
                                                   "type": "string"
@@ -4680,27 +4006,6 @@ const awsWafv2RuleGroup = `{
                                                   ]
                                                 }
                                               },
-                                              "block_types": {
-                                                "forwarded_ip_config": {
-                                                  "block": {
-                                                    "attributes": {
-                                                      "fallback_behavior": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "header_name": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      }
-                                                    },
-                                                    "description_kind": "plain"
-                                                  },
-                                                  "max_items": 1,
-                                                  "nesting_mode": "list"
-                                                }
-                                              },
                                               "description_kind": "plain"
                                             },
                                             "max_items": 1,
@@ -4710,51 +4015,6 @@ const awsWafv2RuleGroup = `{
                                             "block": {
                                               "attributes": {
                                                 "arn": {
-                                                  "description_kind": "plain",
-                                                  "required": true,
-                                                  "type": "string"
-                                                }
-                                              },
-                                              "block_types": {
-                                                "ip_set_forwarded_ip_config": {
-                                                  "block": {
-                                                    "attributes": {
-                                                      "fallback_behavior": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "header_name": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "position": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      }
-                                                    },
-                                                    "description_kind": "plain"
-                                                  },
-                                                  "max_items": 1,
-                                                  "nesting_mode": "list"
-                                                }
-                                              },
-                                              "description_kind": "plain"
-                                            },
-                                            "max_items": 1,
-                                            "nesting_mode": "list"
-                                          },
-                                          "label_match_statement": {
-                                            "block": {
-                                              "attributes": {
-                                                "key": {
-                                                  "description_kind": "plain",
-                                                  "required": true,
-                                                  "type": "string"
-                                                },
-                                                "scope": {
                                                   "description_kind": "plain",
                                                   "required": true,
                                                   "type": "string"
@@ -5763,27 +5023,6 @@ const awsWafv2RuleGroup = `{
                                                   ]
                                                 }
                                               },
-                                              "block_types": {
-                                                "forwarded_ip_config": {
-                                                  "block": {
-                                                    "attributes": {
-                                                      "fallback_behavior": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "header_name": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      }
-                                                    },
-                                                    "description_kind": "plain"
-                                                  },
-                                                  "max_items": 1,
-                                                  "nesting_mode": "list"
-                                                }
-                                              },
                                               "description_kind": "plain"
                                             },
                                             "max_items": 1,
@@ -5793,51 +5032,6 @@ const awsWafv2RuleGroup = `{
                                             "block": {
                                               "attributes": {
                                                 "arn": {
-                                                  "description_kind": "plain",
-                                                  "required": true,
-                                                  "type": "string"
-                                                }
-                                              },
-                                              "block_types": {
-                                                "ip_set_forwarded_ip_config": {
-                                                  "block": {
-                                                    "attributes": {
-                                                      "fallback_behavior": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "header_name": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "position": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      }
-                                                    },
-                                                    "description_kind": "plain"
-                                                  },
-                                                  "max_items": 1,
-                                                  "nesting_mode": "list"
-                                                }
-                                              },
-                                              "description_kind": "plain"
-                                            },
-                                            "max_items": 1,
-                                            "nesting_mode": "list"
-                                          },
-                                          "label_match_statement": {
-                                            "block": {
-                                              "attributes": {
-                                                "key": {
-                                                  "description_kind": "plain",
-                                                  "required": true,
-                                                  "type": "string"
-                                                },
-                                                "scope": {
                                                   "description_kind": "plain",
                                                   "required": true,
                                                   "type": "string"
@@ -6403,27 +5597,6 @@ const awsWafv2RuleGroup = `{
                                       ]
                                     }
                                   },
-                                  "block_types": {
-                                    "forwarded_ip_config": {
-                                      "block": {
-                                        "attributes": {
-                                          "fallback_behavior": {
-                                            "description_kind": "plain",
-                                            "required": true,
-                                            "type": "string"
-                                          },
-                                          "header_name": {
-                                            "description_kind": "plain",
-                                            "required": true,
-                                            "type": "string"
-                                          }
-                                        },
-                                        "description_kind": "plain"
-                                      },
-                                      "max_items": 1,
-                                      "nesting_mode": "list"
-                                    }
-                                  },
                                   "description_kind": "plain"
                                 },
                                 "max_items": 1,
@@ -6433,51 +5606,6 @@ const awsWafv2RuleGroup = `{
                                 "block": {
                                   "attributes": {
                                     "arn": {
-                                      "description_kind": "plain",
-                                      "required": true,
-                                      "type": "string"
-                                    }
-                                  },
-                                  "block_types": {
-                                    "ip_set_forwarded_ip_config": {
-                                      "block": {
-                                        "attributes": {
-                                          "fallback_behavior": {
-                                            "description_kind": "plain",
-                                            "required": true,
-                                            "type": "string"
-                                          },
-                                          "header_name": {
-                                            "description_kind": "plain",
-                                            "required": true,
-                                            "type": "string"
-                                          },
-                                          "position": {
-                                            "description_kind": "plain",
-                                            "required": true,
-                                            "type": "string"
-                                          }
-                                        },
-                                        "description_kind": "plain"
-                                      },
-                                      "max_items": 1,
-                                      "nesting_mode": "list"
-                                    }
-                                  },
-                                  "description_kind": "plain"
-                                },
-                                "max_items": 1,
-                                "nesting_mode": "list"
-                              },
-                              "label_match_statement": {
-                                "block": {
-                                  "attributes": {
-                                    "key": {
-                                      "description_kind": "plain",
-                                      "required": true,
-                                      "type": "string"
-                                    },
-                                    "scope": {
                                       "description_kind": "plain",
                                       "required": true,
                                       "type": "string"
@@ -6618,27 +5746,6 @@ const awsWafv2RuleGroup = `{
                                                   ]
                                                 }
                                               },
-                                              "block_types": {
-                                                "forwarded_ip_config": {
-                                                  "block": {
-                                                    "attributes": {
-                                                      "fallback_behavior": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "header_name": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      }
-                                                    },
-                                                    "description_kind": "plain"
-                                                  },
-                                                  "max_items": 1,
-                                                  "nesting_mode": "list"
-                                                }
-                                              },
                                               "description_kind": "plain"
                                             },
                                             "max_items": 1,
@@ -6648,51 +5755,6 @@ const awsWafv2RuleGroup = `{
                                             "block": {
                                               "attributes": {
                                                 "arn": {
-                                                  "description_kind": "plain",
-                                                  "required": true,
-                                                  "type": "string"
-                                                }
-                                              },
-                                              "block_types": {
-                                                "ip_set_forwarded_ip_config": {
-                                                  "block": {
-                                                    "attributes": {
-                                                      "fallback_behavior": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "header_name": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "position": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      }
-                                                    },
-                                                    "description_kind": "plain"
-                                                  },
-                                                  "max_items": 1,
-                                                  "nesting_mode": "list"
-                                                }
-                                              },
-                                              "description_kind": "plain"
-                                            },
-                                            "max_items": 1,
-                                            "nesting_mode": "list"
-                                          },
-                                          "label_match_statement": {
-                                            "block": {
-                                              "attributes": {
-                                                "key": {
-                                                  "description_kind": "plain",
-                                                  "required": true,
-                                                  "type": "string"
-                                                },
-                                                "scope": {
                                                   "description_kind": "plain",
                                                   "required": true,
                                                   "type": "string"
@@ -7264,27 +6326,6 @@ const awsWafv2RuleGroup = `{
                                                   ]
                                                 }
                                               },
-                                              "block_types": {
-                                                "forwarded_ip_config": {
-                                                  "block": {
-                                                    "attributes": {
-                                                      "fallback_behavior": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "header_name": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      }
-                                                    },
-                                                    "description_kind": "plain"
-                                                  },
-                                                  "max_items": 1,
-                                                  "nesting_mode": "list"
-                                                }
-                                              },
                                               "description_kind": "plain"
                                             },
                                             "max_items": 1,
@@ -7294,51 +6335,6 @@ const awsWafv2RuleGroup = `{
                                             "block": {
                                               "attributes": {
                                                 "arn": {
-                                                  "description_kind": "plain",
-                                                  "required": true,
-                                                  "type": "string"
-                                                }
-                                              },
-                                              "block_types": {
-                                                "ip_set_forwarded_ip_config": {
-                                                  "block": {
-                                                    "attributes": {
-                                                      "fallback_behavior": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "header_name": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      },
-                                                      "position": {
-                                                        "description_kind": "plain",
-                                                        "required": true,
-                                                        "type": "string"
-                                                      }
-                                                    },
-                                                    "description_kind": "plain"
-                                                  },
-                                                  "max_items": 1,
-                                                  "nesting_mode": "list"
-                                                }
-                                              },
-                                              "description_kind": "plain"
-                                            },
-                                            "max_items": 1,
-                                            "nesting_mode": "list"
-                                          },
-                                          "label_match_statement": {
-                                            "block": {
-                                              "attributes": {
-                                                "key": {
-                                                  "description_kind": "plain",
-                                                  "required": true,
-                                                  "type": "string"
-                                                },
-                                                "scope": {
                                                   "description_kind": "plain",
                                                   "required": true,
                                                   "type": "string"

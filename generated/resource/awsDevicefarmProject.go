@@ -14,11 +14,6 @@ const awsDevicefarmProject = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "default_job_timeout_minutes": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -29,23 +24,6 @@ const awsDevicefarmProject = `{
         "description_kind": "plain",
         "required": true,
         "type": "string"
-      },
-      "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "description_kind": "plain"

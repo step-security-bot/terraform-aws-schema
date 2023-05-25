@@ -9,11 +9,6 @@ import (
 const awsCognitoUserPoolClient = `{
   "block": {
     "attributes": {
-      "access_token_validity": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
       "allowed_oauth_flows": {
         "description_kind": "plain",
         "optional": true,
@@ -36,7 +31,6 @@ const awsCognitoUserPoolClient = `{
         ]
       },
       "callback_urls": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -54,12 +48,6 @@ const awsCognitoUserPoolClient = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "enable_token_revocation": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       },
       "explicit_auth_flows": {
         "description_kind": "plain",
@@ -80,13 +68,7 @@ const awsCognitoUserPoolClient = `{
         "optional": true,
         "type": "string"
       },
-      "id_token_validity": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
       "logout_urls": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -144,55 +126,25 @@ const awsCognitoUserPoolClient = `{
       "analytics_configuration": {
         "block": {
           "attributes": {
-            "application_arn": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "application_id": {
               "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": "string"
             },
             "external_id": {
               "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": "string"
             },
             "role_arn": {
-              "computed": true,
               "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": "string"
             },
             "user_data_shared": {
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "token_validity_units": {
-        "block": {
-          "attributes": {
-            "access_token": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "id_token": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "refresh_token": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
             }
           },
           "description_kind": "plain"

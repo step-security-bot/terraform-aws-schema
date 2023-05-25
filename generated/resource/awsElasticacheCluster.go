@@ -26,6 +26,14 @@ const awsElasticacheCluster = `{
         "optional": true,
         "type": "string"
       },
+      "availability_zones": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
+      },
       "az_mode": {
         "computed": true,
         "description_kind": "plain",
@@ -71,16 +79,6 @@ const awsElasticacheCluster = `{
       },
       "engine_version": {
         "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "engine_version_actual": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "final_snapshot_identifier": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -162,7 +160,7 @@ const awsElasticacheCluster = `{
         "description_kind": "plain",
         "optional": true,
         "type": [
-          "list",
+          "set",
           "string"
         ]
       },
@@ -189,15 +187,6 @@ const awsElasticacheCluster = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

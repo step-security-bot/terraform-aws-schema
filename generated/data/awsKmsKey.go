@@ -83,44 +83,6 @@ const awsKmsKey = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "multi_region": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
-      "multi_region_configuration": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "multi_region_key_type": "string",
-              "primary_key": [
-                "list",
-                [
-                  "object",
-                  {
-                    "arn": "string",
-                    "region": "string"
-                  }
-                ]
-              ],
-              "replica_keys": [
-                "list",
-                [
-                  "object",
-                  {
-                    "arn": "string",
-                    "region": "string"
-                  }
-                ]
-              ]
-            }
-          ]
-        ]
-      },
       "origin": {
         "computed": true,
         "description_kind": "plain",

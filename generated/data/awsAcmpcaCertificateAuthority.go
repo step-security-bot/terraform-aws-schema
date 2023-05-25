@@ -96,11 +96,6 @@ const awsAcmpcaCertificateAuthority = `{
                     "computed": true,
                     "description_kind": "plain",
                     "type": "string"
-                  },
-                  "s3_object_acl": {
-                    "computed": true,
-                    "description_kind": "plain",
-                    "type": "string"
                   }
                 },
                 "description_kind": "plain"

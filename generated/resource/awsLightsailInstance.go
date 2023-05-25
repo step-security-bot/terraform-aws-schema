@@ -47,17 +47,8 @@ const awsLightsailInstance = `{
       },
       "ipv6_address": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "ipv6_addresses": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          "string"
-        ]
       },
       "is_static_ip": {
         "computed": true,
@@ -90,15 +81,6 @@ const awsLightsailInstance = `{
         "type": "number"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

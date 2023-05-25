@@ -35,11 +35,6 @@ const awsEcsService = `{
         "optional": true,
         "type": "bool"
       },
-      "enable_execute_command": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "force_new_deployment": {
         "description_kind": "plain",
         "optional": true,
@@ -97,24 +92,10 @@ const awsEcsService = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "task_definition": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "wait_for_steady_state": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       }
     },
     "block_types": {
@@ -140,25 +121,6 @@ const awsEcsService = `{
           "description_kind": "plain"
         },
         "nesting_mode": "set"
-      },
-      "deployment_circuit_breaker": {
-        "block": {
-          "attributes": {
-            "enable": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "bool"
-            },
-            "rollback": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
       },
       "deployment_controller": {
         "block": {
@@ -268,6 +230,25 @@ const awsEcsService = `{
           "description_kind": "plain"
         },
         "max_items": 10,
+        "nesting_mode": "set"
+      },
+      "placement_strategy": {
+        "block": {
+          "attributes": {
+            "field": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "type": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 5,
         "nesting_mode": "set"
       },
       "service_registries": {

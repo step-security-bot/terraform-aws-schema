@@ -34,6 +34,15 @@ const awsLambdaInvocation = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
+      },
+      "result_map": {
+        "computed": true,
+        "deprecated": true,
+        "description_kind": "plain",
+        "type": [
+          "map",
+          "string"
+        ]
       }
     },
     "description_kind": "plain"

@@ -75,15 +75,6 @@ const awsGlueCrawler = `{
           "map",
           "string"
         ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "block_types": {
@@ -108,32 +99,6 @@ const awsGlueCrawler = `{
         },
         "nesting_mode": "list"
       },
-      "delta_target": {
-        "block": {
-          "attributes": {
-            "connection_name": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "delta_tables": {
-              "description_kind": "plain",
-              "required": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "write_manifest": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
-      },
       "dynamodb_target": {
         "block": {
           "attributes": {
@@ -141,16 +106,6 @@ const awsGlueCrawler = `{
               "description_kind": "plain",
               "required": true,
               "type": "string"
-            },
-            "scan_all": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "scan_rate": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
             }
           },
           "description_kind": "plain"
@@ -183,75 +138,9 @@ const awsGlueCrawler = `{
         },
         "nesting_mode": "list"
       },
-      "lineage_configuration": {
-        "block": {
-          "attributes": {
-            "crawler_lineage_settings": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "mongodb_target": {
-        "block": {
-          "attributes": {
-            "connection_name": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "path": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "scan_all": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
-      },
-      "recrawl_policy": {
-        "block": {
-          "attributes": {
-            "recrawl_behavior": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "s3_target": {
         "block": {
           "attributes": {
-            "connection_name": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "dlq_event_queue_arn": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "event_queue_arn": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "exclusions": {
               "description_kind": "plain",
               "optional": true,
@@ -264,11 +153,6 @@ const awsGlueCrawler = `{
               "description_kind": "plain",
               "required": true,
               "type": "string"
-            },
-            "sample_size": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
             }
           },
           "description_kind": "plain"

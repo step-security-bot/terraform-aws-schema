@@ -19,11 +19,6 @@ const awsServiceDiscoveryService = `{
         "optional": true,
         "type": "string"
       },
-      "force_destroy": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -42,15 +37,6 @@ const awsServiceDiscoveryService = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

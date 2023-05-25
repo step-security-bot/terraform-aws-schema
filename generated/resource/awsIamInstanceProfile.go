@@ -42,24 +42,18 @@ const awsIamInstanceProfile = `{
         "type": "string"
       },
       "role": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
+      "roles": {
         "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
-          "map",
+          "set",
           "string"
         ]
       },

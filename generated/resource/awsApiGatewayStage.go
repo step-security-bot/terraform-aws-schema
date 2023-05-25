@@ -78,15 +78,6 @@ const awsApiGatewayStage = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "variables": {
         "description_kind": "plain",
         "optional": true,
@@ -94,11 +85,6 @@ const awsApiGatewayStage = `{
           "map",
           "string"
         ]
-      },
-      "web_acl_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
       },
       "xray_tracing_enabled": {
         "description_kind": "plain",

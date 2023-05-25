@@ -25,11 +25,6 @@ const awsCurReportDefinition = `{
           "string"
         ]
       },
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "compression": {
         "description_kind": "plain",
         "required": true,
@@ -46,19 +41,9 @@ const awsCurReportDefinition = `{
         "optional": true,
         "type": "string"
       },
-      "refresh_closed_reports": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "report_name": {
         "description_kind": "plain",
         "required": true,
-        "type": "string"
-      },
-      "report_versioning": {
-        "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "s3_bucket": {

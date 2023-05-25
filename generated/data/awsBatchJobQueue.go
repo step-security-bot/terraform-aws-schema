@@ -44,11 +44,6 @@ const awsBatchJobQueue = `{
         "description_kind": "plain",
         "type": "number"
       },
-      "scheduling_policy_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "state": {
         "computed": true,
         "description_kind": "plain",
@@ -63,15 +58,6 @@ const awsBatchJobQueue = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "tags": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "description_kind": "plain"

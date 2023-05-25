@@ -73,15 +73,6 @@ const awsEc2TransitGateway = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "vpn_ecmp_support": {
         "description_kind": "plain",
         "optional": true,

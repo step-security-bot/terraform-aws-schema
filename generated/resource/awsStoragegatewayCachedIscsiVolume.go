@@ -30,16 +30,6 @@ const awsStoragegatewayCachedIscsiVolume = `{
         "optional": true,
         "type": "string"
       },
-      "kms_encrypted": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "kms_key": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "lun_number": {
         "computed": true,
         "description_kind": "plain",
@@ -66,15 +56,6 @@ const awsStoragegatewayCachedIscsiVolume = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

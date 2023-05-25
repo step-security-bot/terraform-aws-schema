@@ -84,15 +84,6 @@ const awsDxPublicVirtualInterface = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "vlan": {
         "description_kind": "plain",
         "required": true,

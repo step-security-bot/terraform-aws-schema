@@ -47,6 +47,20 @@ const awsEmrCluster = `{
         "optional": true,
         "type": "string"
       },
+      "core_instance_count": {
+        "computed": true,
+        "deprecated": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
+      "core_instance_type": {
+        "computed": true,
+        "deprecated": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "custom_ami_id": {
         "description_kind": "plain",
         "optional": true,
@@ -69,12 +83,14 @@ const awsEmrCluster = `{
         "optional": true,
         "type": "bool"
       },
-      "log_encryption_kms_key_id": {
+      "log_uri": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "log_uri": {
+      "master_instance_type": {
+        "computed": true,
+        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -156,15 +172,6 @@ const awsEmrCluster = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "termination_protection": {
         "computed": true,
         "description_kind": "plain",
@@ -178,20 +185,6 @@ const awsEmrCluster = `{
       }
     },
     "block_types": {
-      "auto_termination_policy": {
-        "block": {
-          "attributes": {
-            "idle_timeout": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "bootstrap_action": {
         "block": {
           "attributes": {
@@ -216,176 +209,6 @@ const awsEmrCluster = `{
           },
           "description_kind": "plain"
         },
-        "nesting_mode": "list"
-      },
-      "core_instance_fleet": {
-        "block": {
-          "attributes": {
-            "id": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "name": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "provisioned_on_demand_capacity": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "number"
-            },
-            "provisioned_spot_capacity": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "number"
-            },
-            "target_on_demand_capacity": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "target_spot_capacity": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            }
-          },
-          "block_types": {
-            "instance_type_configs": {
-              "block": {
-                "attributes": {
-                  "bid_price": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "bid_price_as_percentage_of_on_demand_price": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  },
-                  "instance_type": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "weighted_capacity": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  }
-                },
-                "block_types": {
-                  "configurations": {
-                    "block": {
-                      "attributes": {
-                        "classification": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "string"
-                        },
-                        "properties": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": [
-                            "map",
-                            "string"
-                          ]
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "nesting_mode": "set"
-                  },
-                  "ebs_config": {
-                    "block": {
-                      "attributes": {
-                        "iops": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "number"
-                        },
-                        "size": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "number"
-                        },
-                        "type": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        },
-                        "volumes_per_instance": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "number"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "nesting_mode": "set"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "set"
-            },
-            "launch_specifications": {
-              "block": {
-                "block_types": {
-                  "on_demand_specification": {
-                    "block": {
-                      "attributes": {
-                        "allocation_strategy": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "nesting_mode": "list"
-                  },
-                  "spot_specification": {
-                    "block": {
-                      "attributes": {
-                        "allocation_strategy": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        },
-                        "block_duration_minutes": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "number"
-                        },
-                        "timeout_action": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        },
-                        "timeout_duration_minutes": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "number"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "nesting_mode": "list"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
         "nesting_mode": "list"
       },
       "core_instance_group": {
@@ -499,25 +322,89 @@ const awsEmrCluster = `{
               "type": "string"
             },
             "subnet_id": {
-              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
-            },
-            "subnet_ids": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
             }
           },
           "description_kind": "plain"
         },
         "max_items": 1,
         "nesting_mode": "list"
+      },
+      "instance_group": {
+        "block": {
+          "attributes": {
+            "autoscaling_policy": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "bid_price": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "id": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "string"
+            },
+            "instance_count": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "instance_role": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "instance_type": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "name": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "block_types": {
+            "ebs_config": {
+              "block": {
+                "attributes": {
+                  "iops": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
+                  "size": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "number"
+                  },
+                  "type": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "volumes_per_instance": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "set"
+            }
+          },
+          "deprecated": true,
+          "description_kind": "plain"
+        },
+        "nesting_mode": "set"
       },
       "kerberos_attributes": {
         "block": {
@@ -549,176 +436,6 @@ const awsEmrCluster = `{
               "description_kind": "plain",
               "required": true,
               "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "master_instance_fleet": {
-        "block": {
-          "attributes": {
-            "id": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "name": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "provisioned_on_demand_capacity": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "number"
-            },
-            "provisioned_spot_capacity": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "number"
-            },
-            "target_on_demand_capacity": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "target_spot_capacity": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            }
-          },
-          "block_types": {
-            "instance_type_configs": {
-              "block": {
-                "attributes": {
-                  "bid_price": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "bid_price_as_percentage_of_on_demand_price": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  },
-                  "instance_type": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "weighted_capacity": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  }
-                },
-                "block_types": {
-                  "configurations": {
-                    "block": {
-                      "attributes": {
-                        "classification": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "string"
-                        },
-                        "properties": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": [
-                            "map",
-                            "string"
-                          ]
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "nesting_mode": "set"
-                  },
-                  "ebs_config": {
-                    "block": {
-                      "attributes": {
-                        "iops": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "number"
-                        },
-                        "size": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "number"
-                        },
-                        "type": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        },
-                        "volumes_per_instance": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "number"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "nesting_mode": "set"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "set"
-            },
-            "launch_specifications": {
-              "block": {
-                "block_types": {
-                  "on_demand_specification": {
-                    "block": {
-                      "attributes": {
-                        "allocation_strategy": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "nesting_mode": "list"
-                  },
-                  "spot_specification": {
-                    "block": {
-                      "attributes": {
-                        "allocation_strategy": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        },
-                        "block_duration_minutes": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "number"
-                        },
-                        "timeout_action": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        },
-                        "timeout_duration_minutes": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "number"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "nesting_mode": "list"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"

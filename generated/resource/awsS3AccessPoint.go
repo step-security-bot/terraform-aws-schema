@@ -15,11 +15,6 @@ const awsS3AccessPoint = `{
         "optional": true,
         "type": "string"
       },
-      "alias": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
@@ -34,14 +29,6 @@ const awsS3AccessPoint = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "endpoints": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "map",
-          "string"
-        ]
       },
       "has_public_access_policy": {
         "computed": true,
@@ -65,7 +52,6 @@ const awsS3AccessPoint = `{
         "type": "string"
       },
       "policy": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

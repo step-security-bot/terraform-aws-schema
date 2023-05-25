@@ -73,15 +73,6 @@ const awsAcmpcaCertificateAuthority = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "type": {
         "description_kind": "plain",
         "optional": true,
@@ -208,12 +199,6 @@ const awsAcmpcaCertificateAuthority = `{
                     "type": "number"
                   },
                   "s3_bucket_name": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "s3_object_acl": {
-                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"

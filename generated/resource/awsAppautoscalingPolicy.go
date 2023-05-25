@@ -9,16 +9,36 @@ import (
 const awsAppautoscalingPolicy = `{
   "block": {
     "attributes": {
+      "adjustment_type": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
+      },
+      "cooldown": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
       },
       "id": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
+      },
+      "metric_aggregation_type": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "min_adjustment_magnitude": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
       },
       "name": {
         "description_kind": "plain",
@@ -47,6 +67,29 @@ const awsAppautoscalingPolicy = `{
       }
     },
     "block_types": {
+      "step_adjustment": {
+        "block": {
+          "attributes": {
+            "metric_interval_lower_bound": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "metric_interval_upper_bound": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "scaling_adjustment": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "number"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "set"
+      },
       "step_scaling_policy_configuration": {
         "block": {
           "attributes": {

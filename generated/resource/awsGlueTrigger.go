@@ -40,26 +40,7 @@ const awsGlueTrigger = `{
         "optional": true,
         "type": "string"
       },
-      "start_on_creation": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "state": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -100,31 +81,10 @@ const awsGlueTrigger = `{
               "optional": true,
               "type": "string"
             },
-            "security_configuration": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "timeout": {
               "description_kind": "plain",
               "optional": true,
               "type": "number"
-            }
-          },
-          "block_types": {
-            "notification_property": {
-              "block": {
-                "attributes": {
-                  "notify_delay_after": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"

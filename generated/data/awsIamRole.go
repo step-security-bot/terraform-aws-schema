@@ -19,6 +19,11 @@ const awsIamRole = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "assume_role_policy_document": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "create_date": {
         "computed": true,
         "description_kind": "plain",
@@ -53,6 +58,16 @@ const awsIamRole = `{
       "permissions_boundary": {
         "computed": true,
         "description_kind": "plain",
+        "type": "string"
+      },
+      "role_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "role_name": {
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "tags": {

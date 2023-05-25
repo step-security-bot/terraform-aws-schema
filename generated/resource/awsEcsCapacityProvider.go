@@ -32,15 +32,6 @@ const awsEcsCapacityProvider = `{
           "map",
           "string"
         ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "block_types": {
@@ -63,12 +54,6 @@ const awsEcsCapacityProvider = `{
             "managed_scaling": {
               "block": {
                 "attributes": {
-                  "instance_warmup_period": {
-                    "computed": true,
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  },
                   "maximum_scaling_step_size": {
                     "computed": true,
                     "description_kind": "plain",

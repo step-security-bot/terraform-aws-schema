@@ -33,15 +33,6 @@ const awsDxHostedPrivateVirtualInterfaceAccepter = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "virtual_interface_id": {
         "description_kind": "plain",
         "required": true,

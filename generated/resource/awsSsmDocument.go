@@ -130,21 +130,7 @@ const awsSsmDocument = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "target_type": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "version_name": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -175,7 +161,6 @@ const awsSsmDocument = `{
           },
           "description_kind": "plain"
         },
-        "max_items": 20,
         "nesting_mode": "list"
       }
     },

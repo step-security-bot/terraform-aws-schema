@@ -14,11 +14,6 @@ const awsMqBroker = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "authentication_strategy": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "auto_minor_version_upgrade": {
         "computed": true,
         "description_kind": "plain",
@@ -108,46 +103,6 @@ const awsMqBroker = `{
           ]
         ]
       },
-      "ldap_server_metadata": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "hosts": [
-                "list",
-                "string"
-              ],
-              "role_base": "string",
-              "role_name": "string",
-              "role_search_matching": "string",
-              "role_search_subtree": "bool",
-              "service_account_password": "string",
-              "service_account_username": "string",
-              "user_base": "string",
-              "user_role_name": "string",
-              "user_search_matching": "string",
-              "user_search_subtree": "bool"
-            }
-          ]
-        ]
-      },
-      "logs": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "audit": "string",
-              "general": "bool"
-            }
-          ]
-        ]
-      },
       "maintenance_window_start_time": {
         "computed": true,
         "description_kind": "plain",
@@ -175,11 +130,6 @@ const awsMqBroker = `{
           "set",
           "string"
         ]
-      },
-      "storage_type": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
       },
       "subnet_ids": {
         "computed": true,
@@ -215,6 +165,27 @@ const awsMqBroker = `{
             }
           ]
         ]
+      }
+    },
+    "block_types": {
+      "logs": {
+        "block": {
+          "attributes": {
+            "audit": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "bool"
+            },
+            "general": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": "bool"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

@@ -48,15 +48,6 @@ const awsVpcPeeringConnectionAccepter = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "vpc_id": {
         "computed": true,
         "description_kind": "plain",

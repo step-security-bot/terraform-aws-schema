@@ -20,11 +20,6 @@ const awsSnsTopicPolicy = `{
         "optional": true,
         "type": "string"
       },
-      "owner": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "policy": {
         "description_kind": "plain",
         "required": true,

@@ -30,23 +30,6 @@ const awsLbListenerRule = `{
         "description_kind": "plain",
         "optional": true,
         "type": "number"
-      },
-      "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "block_types": {
@@ -89,16 +72,19 @@ const awsLbListenerRule = `{
                     "type": "string"
                   },
                   "scope": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"
                   },
                   "session_cookie_name": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"
                   },
                   "session_timeout": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "number"
@@ -163,16 +149,19 @@ const awsLbListenerRule = `{
                     "type": "string"
                   },
                   "scope": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"
                   },
                   "session_cookie_name": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"
                   },
                   "session_timeout": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "number"
@@ -313,13 +302,33 @@ const awsLbListenerRule = `{
       },
       "condition": {
         "block": {
+          "attributes": {
+            "field": {
+              "computed": true,
+              "deprecated": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "values": {
+              "computed": true,
+              "deprecated": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "list",
+                "string"
+              ]
+            }
+          },
           "block_types": {
             "host_header": {
               "block": {
                 "attributes": {
                   "values": {
+                    "computed": true,
                     "description_kind": "plain",
-                    "required": true,
+                    "optional": true,
                     "type": [
                       "set",
                       "string"
@@ -374,8 +383,9 @@ const awsLbListenerRule = `{
               "block": {
                 "attributes": {
                   "values": {
+                    "computed": true,
                     "description_kind": "plain",
-                    "required": true,
+                    "optional": true,
                     "type": [
                       "set",
                       "string"

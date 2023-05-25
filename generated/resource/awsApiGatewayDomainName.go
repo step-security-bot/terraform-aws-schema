@@ -99,15 +99,6 @@ const awsApiGatewayDomainName = `{
           "map",
           "string"
         ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "block_types": {
@@ -121,25 +112,6 @@ const awsApiGatewayDomainName = `{
                 "list",
                 "string"
               ]
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "mutual_tls_authentication": {
-        "block": {
-          "attributes": {
-            "truststore_uri": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "truststore_version": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
             }
           },
           "description_kind": "plain"

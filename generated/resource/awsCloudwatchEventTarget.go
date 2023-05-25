@@ -14,11 +14,6 @@ const awsCloudwatchEventTarget = `{
         "required": true,
         "type": "string"
       },
-      "event_bus_name": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -82,33 +77,9 @@ const awsCloudwatchEventTarget = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
-      "dead_letter_config": {
-        "block": {
-          "attributes": {
-            "arn": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "ecs_target": {
         "block": {
           "attributes": {
-            "enable_ecs_managed_tags": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "enable_execute_command": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
             "group": {
               "description_kind": "plain",
               "optional": true,
@@ -123,19 +94,6 @@ const awsCloudwatchEventTarget = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
-            },
-            "propagate_tags": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "tags": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "map",
-                "string"
-              ]
             },
             "task_count": {
               "description_kind": "plain",
@@ -178,58 +136,6 @@ const awsCloudwatchEventTarget = `{
               },
               "max_items": 1,
               "nesting_mode": "list"
-            },
-            "placement_constraint": {
-              "block": {
-                "attributes": {
-                  "expression": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "type": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 10,
-              "nesting_mode": "set"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "http_target": {
-        "block": {
-          "attributes": {
-            "header_parameters": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "map",
-                "string"
-              ]
-            },
-            "path_parameter_values": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "query_string_parameters": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "map",
-                "string"
-              ]
             }
           },
           "description_kind": "plain"
@@ -266,64 +172,6 @@ const awsCloudwatchEventTarget = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "redshift_target": {
-        "block": {
-          "attributes": {
-            "database": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "db_user": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "secrets_manager_arn": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "sql": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "statement_name": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "with_event": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "retry_policy": {
-        "block": {
-          "attributes": {
-            "maximum_event_age_in_seconds": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "maximum_retry_attempts": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
             }
           },
           "description_kind": "plain"
@@ -370,7 +218,7 @@ const awsCloudwatchEventTarget = `{
     },
     "description_kind": "plain"
   },
-  "version": 1
+  "version": 0
 }`
 
 func AwsCloudwatchEventTargetSchema() *tfjson.Schema {

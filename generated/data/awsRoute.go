@@ -9,12 +9,6 @@ import (
 const awsRoute = `{
   "block": {
     "attributes": {
-      "carrier_gateway_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "destination_cidr_block": {
         "computed": true,
         "description_kind": "plain",
@@ -22,12 +16,6 @@ const awsRoute = `{
         "type": "string"
       },
       "destination_ipv6_cidr_block": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "destination_prefix_list_id": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
@@ -52,12 +40,6 @@ const awsRoute = `{
         "type": "string"
       },
       "instance_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "local_gateway_id": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,

@@ -30,15 +30,6 @@ const awsIamUser = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "tags": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "user_id": {
         "computed": true,
         "description_kind": "plain",

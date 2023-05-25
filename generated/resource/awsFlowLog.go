@@ -72,15 +72,6 @@ const awsFlowLog = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "traffic_type": {
         "description_kind": "plain",
         "required": true,
@@ -90,32 +81,6 @@ const awsFlowLog = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      }
-    },
-    "block_types": {
-      "destination_options": {
-        "block": {
-          "attributes": {
-            "file_format": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "hive_compatible_partitions": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "per_hour_partition": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

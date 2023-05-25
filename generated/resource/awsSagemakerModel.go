@@ -43,15 +43,6 @@ const awsSagemakerModel = `{
           "map",
           "string"
         ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "block_types": {
@@ -76,49 +67,14 @@ const awsSagemakerModel = `{
               "required": true,
               "type": "string"
             },
-            "mode": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "model_data_url": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             }
           },
-          "block_types": {
-            "image_config": {
-              "block": {
-                "attributes": {
-                  "repository_access_mode": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            }
-          },
           "description_kind": "plain"
         },
-        "nesting_mode": "list"
-      },
-      "inference_execution_config": {
-        "block": {
-          "attributes": {
-            "mode": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
         "nesting_mode": "list"
       },
       "primary_container": {
@@ -142,31 +98,10 @@ const awsSagemakerModel = `{
               "required": true,
               "type": "string"
             },
-            "mode": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "model_data_url": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
-            }
-          },
-          "block_types": {
-            "image_config": {
-              "block": {
-                "attributes": {
-                  "repository_access_mode": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"

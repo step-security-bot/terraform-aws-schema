@@ -9,11 +9,6 @@ import (
 const awsEc2ClientVpnNetworkAssociation = `{
   "block": {
     "attributes": {
-      "association_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "client_vpn_endpoint_id": {
         "description_kind": "plain",
         "required": true,
@@ -28,7 +23,6 @@ const awsEc2ClientVpnNetworkAssociation = `{
       "security_groups": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "set",
           "string"

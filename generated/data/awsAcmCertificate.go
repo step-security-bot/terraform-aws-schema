@@ -38,11 +38,6 @@ const awsAcmCertificate = `{
         "optional": true,
         "type": "bool"
       },
-      "status": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "statuses": {
         "description_kind": "plain",
         "optional": true,

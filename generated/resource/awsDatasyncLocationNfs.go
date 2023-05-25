@@ -38,15 +38,6 @@ const awsDatasyncLocationNfs = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "uri": {
         "computed": true,
         "description_kind": "plain",
@@ -54,20 +45,6 @@ const awsDatasyncLocationNfs = `{
       }
     },
     "block_types": {
-      "mount_options": {
-        "block": {
-          "attributes": {
-            "version": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "on_prem_config": {
         "block": {
           "attributes": {

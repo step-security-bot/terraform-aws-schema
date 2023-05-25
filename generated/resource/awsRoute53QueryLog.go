@@ -9,11 +9,6 @@ import (
 const awsRoute53QueryLog = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "cloudwatch_log_group_arn": {
         "description_kind": "plain",
         "required": true,

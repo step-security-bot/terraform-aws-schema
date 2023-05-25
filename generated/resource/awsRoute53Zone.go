@@ -9,11 +9,6 @@ import (
 const awsRoute53Zone = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "comment": {
         "description_kind": "plain",
         "optional": true,
@@ -56,14 +51,17 @@ const awsRoute53Zone = `{
           "string"
         ]
       },
-      "tags_all": {
+      "vpc_id": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
+        "type": "string"
+      },
+      "vpc_region": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       },
       "zone_id": {
         "computed": true,

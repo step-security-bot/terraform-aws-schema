@@ -9,6 +9,13 @@ import (
 const awsGlueJob = `{
   "block": {
     "attributes": {
+      "allocated_capacity": {
+        "computed": true,
+        "deprecated": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
@@ -63,14 +70,6 @@ const awsGlueJob = `{
         "required": true,
         "type": "string"
       },
-      "non_overridable_arguments": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "number_of_workers": {
         "description_kind": "plain",
         "optional": true,
@@ -87,15 +86,6 @@ const awsGlueJob = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

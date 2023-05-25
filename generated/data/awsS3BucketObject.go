@@ -19,11 +19,6 @@ const awsS3BucketObject = `{
         "required": true,
         "type": "string"
       },
-      "bucket_key_enabled": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
       "cache_control": {
         "computed": true,
         "description_kind": "plain",

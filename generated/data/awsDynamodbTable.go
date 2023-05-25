@@ -121,7 +121,6 @@ const awsDynamodbTable = `{
           [
             "object",
             {
-              "kms_key_arn": "string",
               "region_name": "string"
             }
           ]
@@ -143,11 +142,6 @@ const awsDynamodbTable = `{
         "type": "string"
       },
       "stream_view_type": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "table_class": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"

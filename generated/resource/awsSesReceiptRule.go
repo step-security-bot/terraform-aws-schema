@@ -14,12 +14,8 @@ const awsSesReceiptRule = `{
         "optional": true,
         "type": "string"
       },
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "enabled": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
@@ -49,6 +45,7 @@ const awsSesReceiptRule = `{
         "type": "string"
       },
       "scan_enabled": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
@@ -131,6 +128,7 @@ const awsSesReceiptRule = `{
               "type": "string"
             },
             "invocation_type": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -186,11 +184,6 @@ const awsSesReceiptRule = `{
       "sns_action": {
         "block": {
           "attributes": {
-            "encoding": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "position": {
               "description_kind": "plain",
               "required": true,

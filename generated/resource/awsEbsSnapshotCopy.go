@@ -40,11 +40,6 @@ const awsEbsSnapshotCopy = `{
         "optional": true,
         "type": "string"
       },
-      "outpost_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "owner_alias": {
         "computed": true,
         "description_kind": "plain",
@@ -54,11 +49,6 @@ const awsEbsSnapshotCopy = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "permanent_restore": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       },
       "source_region": {
         "description_kind": "plain",
@@ -70,12 +60,6 @@ const awsEbsSnapshotCopy = `{
         "required": true,
         "type": "string"
       },
-      "storage_tier": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "tags": {
         "description_kind": "plain",
         "optional": true,
@@ -83,20 +67,6 @@ const awsEbsSnapshotCopy = `{
           "map",
           "string"
         ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "temporary_restore_days": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
       },
       "volume_id": {
         "computed": true,

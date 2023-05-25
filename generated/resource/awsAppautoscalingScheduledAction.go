@@ -37,12 +37,12 @@ const awsAppautoscalingScheduledAction = `{
       },
       "scalable_dimension": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "schedule": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "service_namespace": {
@@ -51,11 +51,6 @@ const awsAppautoscalingScheduledAction = `{
         "type": "string"
       },
       "start_time": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "timezone": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -68,18 +63,17 @@ const awsAppautoscalingScheduledAction = `{
             "max_capacity": {
               "description_kind": "plain",
               "optional": true,
-              "type": "string"
+              "type": "number"
             },
             "min_capacity": {
               "description_kind": "plain",
               "optional": true,
-              "type": "string"
+              "type": "number"
             }
           },
           "description_kind": "plain"
         },
         "max_items": 1,
-        "min_items": 1,
         "nesting_mode": "list"
       }
     },

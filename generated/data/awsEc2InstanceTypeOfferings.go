@@ -19,7 +19,7 @@ const awsEc2InstanceTypeOfferings = `{
         "computed": true,
         "description_kind": "plain",
         "type": [
-          "list",
+          "set",
           "string"
         ]
       },
@@ -27,22 +27,6 @@ const awsEc2InstanceTypeOfferings = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "location_types": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          "string"
-        ]
-      },
-      "locations": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          "string"
-        ]
       }
     },
     "block_types": {

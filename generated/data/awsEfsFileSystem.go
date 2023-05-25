@@ -14,16 +14,6 @@ const awsEfsFileSystem = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "availability_zone_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "availability_zone_name": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "creation_token": {
         "computed": true,
         "description_kind": "plain",
@@ -65,8 +55,7 @@ const awsEfsFileSystem = `{
           [
             "object",
             {
-              "transition_to_ia": "string",
-              "transition_to_primary_storage_class": "string"
+              "transition_to_ia": "string"
             }
           ]
         ]

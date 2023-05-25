@@ -50,15 +50,6 @@ const awsBatchComputeEnvironment = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "tags": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "type": {
         "computed": true,
         "description_kind": "plain",

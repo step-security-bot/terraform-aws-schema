@@ -72,20 +72,6 @@ const awsEksCluster = `{
           ]
         ]
       },
-      "kubernetes_network_config": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "ip_family": "string",
-              "service_ipv4_cidr": "string"
-            }
-          ]
-        ]
-      },
       "name": {
         "description_kind": "plain",
         "required": true,

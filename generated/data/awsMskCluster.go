@@ -19,16 +19,6 @@ const awsMskCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "bootstrap_brokers_sasl_iam": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "bootstrap_brokers_sasl_scram": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "bootstrap_brokers_tls": {
         "computed": true,
         "description_kind": "plain",

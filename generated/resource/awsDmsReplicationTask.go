@@ -9,11 +9,6 @@ import (
 const awsDmsReplicationTask = `{
   "block": {
     "attributes": {
-      "cdc_start_position": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "cdc_start_time": {
         "description_kind": "plain",
         "optional": true,
@@ -61,15 +56,6 @@ const awsDmsReplicationTask = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

@@ -33,7 +33,6 @@ const awsLaunchTemplate = `{
                     "iops": "number",
                     "kms_key_id": "string",
                     "snapshot_id": "string",
-                    "throughput": "number",
                     "volume_size": "number",
                     "volume_type": "string"
                   }
@@ -87,19 +86,6 @@ const awsLaunchTemplate = `{
             "object",
             {
               "type": "string"
-            }
-          ]
-        ]
-      },
-      "enclave_options": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "enabled": "bool"
             }
           ]
         ]
@@ -202,10 +188,8 @@ const awsLaunchTemplate = `{
             "object",
             {
               "http_endpoint": "string",
-              "http_protocol_ipv6": "string",
               "http_put_response_hop_limit": "number",
-              "http_tokens": "string",
-              "instance_metadata_tags": "string"
+              "http_tokens": "string"
             }
           ]
         ]
@@ -236,12 +220,10 @@ const awsLaunchTemplate = `{
           [
             "object",
             {
-              "associate_carrier_ip_address": "string",
               "associate_public_ip_address": "string",
-              "delete_on_termination": "string",
+              "delete_on_termination": "bool",
               "description": "string",
               "device_index": "number",
-              "interface_type": "string",
               "ipv4_address_count": "number",
               "ipv4_addresses": [
                 "set",
@@ -252,7 +234,6 @@ const awsLaunchTemplate = `{
                 "set",
                 "string"
               ],
-              "network_card_index": "number",
               "network_interface_id": "string",
               "private_ip_address": "string",
               "security_groups": [
@@ -276,7 +257,6 @@ const awsLaunchTemplate = `{
               "availability_zone": "string",
               "group_name": "string",
               "host_id": "string",
-              "host_resource_group_arn": "string",
               "partition_number": "number",
               "spread_domain": "string",
               "tenancy": "string"

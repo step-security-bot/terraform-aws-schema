@@ -9,11 +9,6 @@ import (
 const awsRoute53HealthCheck = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "child_health_threshold": {
         "description_kind": "plain",
         "optional": true,
@@ -37,11 +32,6 @@ const awsRoute53HealthCheck = `{
         "optional": true,
         "type": "string"
       },
-      "disabled": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "enable_sni": {
         "computed": true,
         "description_kind": "plain",
@@ -49,7 +39,6 @@ const awsRoute53HealthCheck = `{
         "type": "bool"
       },
       "failure_threshold": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "number"
@@ -113,26 +102,12 @@ const awsRoute53HealthCheck = `{
         "optional": true,
         "type": "string"
       },
-      "routing_control_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "search_string": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

@@ -11,13 +11,11 @@ const awsS3Bucket = `{
     "attributes": {
       "acceleration_status": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
       "acl": {
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -66,12 +64,6 @@ const awsS3Bucket = `{
         "optional": true,
         "type": "string"
       },
-      "object_lock_enabled": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "policy": {
         "description_kind": "plain",
         "optional": true,
@@ -80,11 +72,11 @@ const awsS3Bucket = `{
       "region": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "request_payer": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -97,25 +89,14 @@ const awsS3Bucket = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "website_domain": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
       "website_endpoint": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -163,7 +144,6 @@ const awsS3Bucket = `{
               "type": "number"
             }
           },
-          "deprecated": true,
           "description_kind": "plain"
         },
         "nesting_mode": "list"
@@ -195,7 +175,6 @@ const awsS3Bucket = `{
               "type": "string"
             }
           },
-          "deprecated": true,
           "description_kind": "plain"
         },
         "nesting_mode": "set"
@@ -314,7 +293,6 @@ const awsS3Bucket = `{
               "nesting_mode": "set"
             }
           },
-          "deprecated": true,
           "description_kind": "plain"
         },
         "nesting_mode": "list"
@@ -333,7 +311,6 @@ const awsS3Bucket = `{
               "type": "string"
             }
           },
-          "deprecated": true,
           "description_kind": "plain"
         },
         "nesting_mode": "set"
@@ -342,9 +319,8 @@ const awsS3Bucket = `{
         "block": {
           "attributes": {
             "object_lock_enabled": {
-              "deprecated": true,
               "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": "string"
             }
           },
@@ -378,7 +354,6 @@ const awsS3Bucket = `{
                     "nesting_mode": "list"
                   }
                 },
-                "deprecated": true,
                 "description_kind": "plain"
               },
               "max_items": 1,
@@ -403,11 +378,6 @@ const awsS3Bucket = `{
             "rules": {
               "block": {
                 "attributes": {
-                  "delete_marker_replication_status": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
                   "id": {
                     "description_kind": "plain",
                     "optional": true,
@@ -461,44 +431,6 @@ const awsS3Bucket = `{
                               "owner": {
                                 "description_kind": "plain",
                                 "required": true,
-                                "type": "string"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 1,
-                          "nesting_mode": "list"
-                        },
-                        "metrics": {
-                          "block": {
-                            "attributes": {
-                              "minutes": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "number"
-                              },
-                              "status": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "string"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 1,
-                          "nesting_mode": "list"
-                        },
-                        "replication_time": {
-                          "block": {
-                            "attributes": {
-                              "minutes": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "number"
-                              },
-                              "status": {
-                                "description_kind": "plain",
-                                "optional": true,
                                 "type": "string"
                               }
                             },
@@ -566,7 +498,6 @@ const awsS3Bucket = `{
               "nesting_mode": "set"
             }
           },
-          "deprecated": true,
           "description_kind": "plain"
         },
         "max_items": 1,
@@ -577,13 +508,6 @@ const awsS3Bucket = `{
           "block_types": {
             "rule": {
               "block": {
-                "attributes": {
-                  "bucket_key_enabled": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "bool"
-                  }
-                },
                 "block_types": {
                   "apply_server_side_encryption_by_default": {
                     "block": {
@@ -613,7 +537,6 @@ const awsS3Bucket = `{
               "nesting_mode": "list"
             }
           },
-          "deprecated": true,
           "description_kind": "plain"
         },
         "max_items": 1,
@@ -633,7 +556,6 @@ const awsS3Bucket = `{
               "type": "bool"
             }
           },
-          "deprecated": true,
           "description_kind": "plain"
         },
         "max_items": 1,
@@ -663,7 +585,6 @@ const awsS3Bucket = `{
               "type": "string"
             }
           },
-          "deprecated": true,
           "description_kind": "plain"
         },
         "max_items": 1,

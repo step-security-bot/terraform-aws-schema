@@ -9,6 +9,12 @@ import (
 const awsRegion = `{
   "block": {
     "attributes": {
+      "current": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "description": {
         "computed": true,
         "description_kind": "plain",

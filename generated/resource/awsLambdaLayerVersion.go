@@ -14,14 +14,6 @@ const awsLambdaLayerVersion = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "compatible_architectures": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
       "compatible_runtimes": {
         "description_kind": "plain",
         "optional": true,
@@ -80,21 +72,6 @@ const awsLambdaLayerVersion = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "signing_job_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "signing_profile_version_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "skip_destroy": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       },
       "source_code_hash": {
         "computed": true,

@@ -38,40 +38,10 @@ const awsBatchJobDefinition = `{
           "string"
         ]
       },
-      "platform_capabilities": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
-      "propagate_tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "revision": {
         "computed": true,
         "description_kind": "plain",
         "type": "number"
-      },
-      "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       },
       "type": {
         "description_kind": "plain",
@@ -87,37 +57,6 @@ const awsBatchJobDefinition = `{
               "description_kind": "plain",
               "optional": true,
               "type": "number"
-            }
-          },
-          "block_types": {
-            "evaluate_on_exit": {
-              "block": {
-                "attributes": {
-                  "action": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "on_exit_code": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "on_reason": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "on_status_reason": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 5,
-              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"

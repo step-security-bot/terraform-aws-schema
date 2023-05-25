@@ -39,7 +39,7 @@ const awsAcmCertificate = `{
         "computed": true,
         "description_kind": "plain",
         "type": [
-          "set",
+          "list",
           [
             "object",
             {
@@ -73,20 +73,11 @@ const awsAcmCertificate = `{
         "description_kind": "plain",
         "optional": true,
         "type": [
-          "set",
+          "list",
           "string"
         ]
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

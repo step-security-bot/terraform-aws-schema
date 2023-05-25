@@ -14,11 +14,6 @@ const awsStoragegatewayNfsFileShare = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "audit_destination_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "client_list": {
         "description_kind": "plain",
         "required": true,
@@ -28,12 +23,6 @@ const awsStoragegatewayNfsFileShare = `{
         ]
       },
       "default_storage_class": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "file_share_name": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -74,11 +63,6 @@ const awsStoragegatewayNfsFileShare = `{
         "required": true,
         "type": "string"
       },
-      "notification_policy": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "object_acl": {
         "description_kind": "plain",
         "optional": true,
@@ -116,32 +100,9 @@ const awsStoragegatewayNfsFileShare = `{
           "map",
           "string"
         ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "block_types": {
-      "cache_attributes": {
-        "block": {
-          "attributes": {
-            "cache_stale_timeout_in_seconds": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "nfs_file_share_defaults": {
         "block": {
           "attributes": {
@@ -158,12 +119,12 @@ const awsStoragegatewayNfsFileShare = `{
             "group_id": {
               "description_kind": "plain",
               "optional": true,
-              "type": "string"
+              "type": "number"
             },
             "owner_id": {
               "description_kind": "plain",
               "optional": true,
-              "type": "string"
+              "type": "number"
             }
           },
           "description_kind": "plain"

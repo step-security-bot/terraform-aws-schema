@@ -59,21 +59,6 @@ const awsSpotFleetRequest = `{
           "string"
         ]
       },
-      "on_demand_allocation_strategy": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "on_demand_max_total_price": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "on_demand_target_capacity": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
       "replace_unhealthy_instances": {
         "description_kind": "plain",
         "optional": true,
@@ -90,15 +75,6 @@ const awsSpotFleetRequest = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -280,12 +256,6 @@ const awsSpotFleetRequest = `{
                     "optional": true,
                     "type": "string"
                   },
-                  "throughput": {
-                    "computed": true,
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  },
                   "volume_size": {
                     "computed": true,
                     "description_kind": "plain",
@@ -346,12 +316,6 @@ const awsSpotFleetRequest = `{
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"
-                  },
-                  "throughput": {
-                    "computed": true,
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
                   },
                   "volume_size": {
                     "computed": true,
@@ -449,29 +413,6 @@ const awsSpotFleetRequest = `{
           "description_kind": "plain"
         },
         "nesting_mode": "set"
-      },
-      "spot_maintenance_strategies": {
-        "block": {
-          "block_types": {
-            "capacity_rebalance": {
-              "block": {
-                "attributes": {
-                  "replacement_strategy": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
       },
       "timeouts": {
         "block": {

@@ -21,11 +21,6 @@ const awsCloudformationStackSetInstance = `{
         "optional": true,
         "type": "string"
       },
-      "organizational_unit_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "parameter_overrides": {
         "description_kind": "plain",
         "optional": true,
@@ -57,23 +52,6 @@ const awsCloudformationStackSetInstance = `{
       }
     },
     "block_types": {
-      "deployment_targets": {
-        "block": {
-          "attributes": {
-            "organizational_unit_ids": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "timeouts": {
         "block": {
           "attributes": {

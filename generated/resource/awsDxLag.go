@@ -14,11 +14,6 @@ const awsDxLag = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "connection_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "connections_bandwidth": {
         "description_kind": "plain",
         "required": true,
@@ -55,27 +50,13 @@ const awsDxLag = `{
         "required": true,
         "type": "string"
       },
-      "owner_account_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "provider_name": {
+      "number_of_connections": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
+        "type": "number"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

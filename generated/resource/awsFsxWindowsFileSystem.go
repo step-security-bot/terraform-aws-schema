@@ -14,14 +14,6 @@ const awsFsxWindowsFileSystem = `{
         "optional": true,
         "type": "string"
       },
-      "aliases": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
@@ -32,11 +24,6 @@ const awsFsxWindowsFileSystem = `{
         "optional": true,
         "type": "number"
       },
-      "backup_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "copy_tags_to_backups": {
         "description_kind": "plain",
         "optional": true,
@@ -44,11 +31,6 @@ const awsFsxWindowsFileSystem = `{
       },
       "daily_automatic_backup_start_time": {
         "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "deployment_type": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -83,22 +65,6 @@ const awsFsxWindowsFileSystem = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "preferred_file_server_ip": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "preferred_subnet_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "remote_administration_endpoint": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "security_group_ids": {
         "description_kind": "plain",
         "optional": true,
@@ -113,15 +79,9 @@ const awsFsxWindowsFileSystem = `{
         "type": "bool"
       },
       "storage_capacity": {
-        "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "number"
-      },
-      "storage_type": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
       },
       "subnet_ids": {
         "description_kind": "plain",
@@ -132,15 +92,6 @@ const awsFsxWindowsFileSystem = `{
         ]
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -166,31 +117,6 @@ const awsFsxWindowsFileSystem = `{
       }
     },
     "block_types": {
-      "audit_log_configuration": {
-        "block": {
-          "attributes": {
-            "audit_log_destination": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "file_access_audit_log_level": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "file_share_access_audit_log_level": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "self_managed_active_directory": {
         "block": {
           "attributes": {
@@ -243,11 +169,6 @@ const awsFsxWindowsFileSystem = `{
               "type": "string"
             },
             "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "update": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"

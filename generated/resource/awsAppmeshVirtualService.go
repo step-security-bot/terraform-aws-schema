@@ -35,32 +35,12 @@ const awsAppmeshVirtualService = `{
         "required": true,
         "type": "string"
       },
-      "mesh_owner": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "name": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "resource_owner": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

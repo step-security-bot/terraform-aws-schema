@@ -47,37 +47,9 @@ const awsEcrRepository = `{
           "map",
           "string"
         ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "block_types": {
-      "encryption_configuration": {
-        "block": {
-          "attributes": {
-            "encryption_type": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "kms_key": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
-      },
       "image_scanning_configuration": {
         "block": {
           "attributes": {

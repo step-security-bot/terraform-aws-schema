@@ -64,7 +64,6 @@ const awsLaunchConfiguration = `{
         "type": "string"
       },
       "name_prefix": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -148,12 +147,6 @@ const awsLaunchConfiguration = `{
               "optional": true,
               "type": "string"
             },
-            "throughput": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
             "volume_size": {
               "computed": true,
               "description_kind": "plain",
@@ -189,33 +182,6 @@ const awsLaunchConfiguration = `{
         },
         "nesting_mode": "set"
       },
-      "metadata_options": {
-        "block": {
-          "attributes": {
-            "http_endpoint": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "http_put_response_hop_limit": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "http_tokens": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "root_block_device": {
         "block": {
           "attributes": {
@@ -231,12 +197,6 @@ const awsLaunchConfiguration = `{
               "type": "bool"
             },
             "iops": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "throughput": {
               "computed": true,
               "description_kind": "plain",
               "optional": true,

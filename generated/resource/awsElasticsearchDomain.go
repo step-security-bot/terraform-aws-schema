@@ -67,15 +67,6 @@ const awsElasticsearchDomain = `{
           "map",
           "string"
         ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "block_types": {
@@ -118,68 +109,6 @@ const awsElasticsearchDomain = `{
               },
               "max_items": 1,
               "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "auto_tune_options": {
-        "block": {
-          "attributes": {
-            "desired_state": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "rollback_on_disable": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "block_types": {
-            "maintenance_schedule": {
-              "block": {
-                "attributes": {
-                  "cron_expression_for_recurrence": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "start_at": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "block_types": {
-                  "duration": {
-                    "block": {
-                      "attributes": {
-                        "unit": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        },
-                        "value": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "number"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "max_items": 1,
-                    "min_items": 1,
-                    "nesting_mode": "list"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "set"
             }
           },
           "description_kind": "plain"
@@ -289,24 +218,9 @@ const awsElasticsearchDomain = `{
       "domain_endpoint_options": {
         "block": {
           "attributes": {
-            "custom_endpoint": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "custom_endpoint_certificate_arn": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "custom_endpoint_enabled": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
             "enforce_https": {
               "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": "bool"
             },
             "tls_security_policy": {

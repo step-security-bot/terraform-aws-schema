@@ -78,11 +78,13 @@ const awsApiGatewayMethodSettings = `{
               "type": "bool"
             },
             "throttling_burst_limit": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "number"
             },
             "throttling_rate_limit": {
+              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "number"

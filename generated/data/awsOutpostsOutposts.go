@@ -43,12 +43,6 @@ const awsOutpostsOutposts = `{
           "string"
         ]
       },
-      "owner_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "site_id": {
         "computed": true,
         "description_kind": "plain",

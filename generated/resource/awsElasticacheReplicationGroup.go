@@ -15,13 +15,7 @@ const awsElasticacheReplicationGroup = `{
         "optional": true,
         "type": "bool"
       },
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "at_rest_encryption_enabled": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
@@ -50,21 +44,10 @@ const awsElasticacheReplicationGroup = `{
           "string"
         ]
       },
-      "cluster_enabled": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
       "configuration_endpoint_address": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "data_tiering_enabled": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       },
       "engine": {
         "description_kind": "plain",
@@ -72,22 +55,6 @@ const awsElasticacheReplicationGroup = `{
         "type": "string"
       },
       "engine_version": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "engine_version_actual": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "final_snapshot_identifier": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "global_replication_group_id": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
@@ -118,11 +85,6 @@ const awsElasticacheReplicationGroup = `{
           "string"
         ]
       },
-      "multi_az_enabled": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "node_type": {
         "computed": true,
         "description_kind": "plain",
@@ -152,11 +114,6 @@ const awsElasticacheReplicationGroup = `{
         "type": "number"
       },
       "primary_endpoint_address": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "reader_endpoint_address": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -227,28 +184,10 @@ const awsElasticacheReplicationGroup = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "transit_encryption_enabled": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
-      },
-      "user_group_ids": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
       }
     },
     "block_types": {
@@ -256,9 +195,8 @@ const awsElasticacheReplicationGroup = `{
         "block": {
           "attributes": {
             "num_node_groups": {
-              "computed": true,
               "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": "number"
             },
             "replicas_per_node_group": {

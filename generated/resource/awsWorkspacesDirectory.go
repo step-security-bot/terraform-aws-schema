@@ -56,7 +56,6 @@ const awsWorkspacesDirectory = `{
       "ip_group_ids": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "set",
           "string"
@@ -77,15 +76,6 @@ const awsWorkspacesDirectory = `{
         ]
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -124,89 +114,6 @@ const awsWorkspacesDirectory = `{
               "type": "bool"
             },
             "switch_running_mode": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "workspace_access_properties": {
-        "block": {
-          "attributes": {
-            "device_type_android": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "device_type_chromeos": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "device_type_ios": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "device_type_linux": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "device_type_osx": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "device_type_web": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "device_type_windows": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "device_type_zeroclient": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "workspace_creation_properties": {
-        "block": {
-          "attributes": {
-            "custom_security_group_id": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "default_ou": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "enable_internet_access": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "enable_maintenance_mode": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "user_enabled_as_local_administrator": {
               "description_kind": "plain",
               "optional": true,
               "type": "bool"

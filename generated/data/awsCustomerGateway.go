@@ -19,18 +19,7 @@ const awsCustomerGateway = `{
         "description_kind": "plain",
         "type": "number"
       },
-      "certificate_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "device_name": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "id": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

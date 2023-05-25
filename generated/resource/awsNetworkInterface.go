@@ -9,11 +9,6 @@ import (
 const awsNetworkInterface = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "description": {
         "description_kind": "plain",
         "optional": true,
@@ -25,82 +20,12 @@ const awsNetworkInterface = `{
         "optional": true,
         "type": "string"
       },
-      "interface_type": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "ipv4_prefix_count": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
-      "ipv4_prefixes": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
-      "ipv6_address_count": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
-      "ipv6_address_list": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "list",
-          "string"
-        ]
-      },
-      "ipv6_address_list_enabled": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "ipv6_addresses": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
-      "ipv6_prefix_count": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
-      "ipv6_prefixes": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
       "mac_address": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
       "outpost_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "owner_id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -115,20 +40,6 @@ const awsNetworkInterface = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "private_ip_list": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "list",
-          "string"
-        ]
-      },
-      "private_ip_list_enabled": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       },
       "private_ips": {
         "computed": true,
@@ -165,15 +76,6 @@ const awsNetworkInterface = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

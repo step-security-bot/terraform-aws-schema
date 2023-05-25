@@ -69,6 +69,11 @@ const awsNetworkAcl = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "subnet_id": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "subnet_ids": {
         "computed": true,
         "description_kind": "plain",
@@ -79,15 +84,6 @@ const awsNetworkAcl = `{
         ]
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

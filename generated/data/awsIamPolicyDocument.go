@@ -25,14 +25,6 @@ const awsIamPolicyDocument = `{
         "optional": true,
         "type": "string"
       },
-      "override_policy_documents": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "list",
-          "string"
-        ]
-      },
       "policy_id": {
         "description_kind": "plain",
         "optional": true,
@@ -42,14 +34,6 @@ const awsIamPolicyDocument = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "source_policy_documents": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "list",
-          "string"
-        ]
       },
       "version": {
         "description_kind": "plain",
@@ -117,7 +101,7 @@ const awsIamPolicyDocument = `{
                     "description_kind": "plain",
                     "required": true,
                     "type": [
-                      "list",
+                      "set",
                       "string"
                     ]
                   },

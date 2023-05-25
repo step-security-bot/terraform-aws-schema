@@ -26,6 +26,7 @@ const awsDbInstance = `{
         "type": "bool"
       },
       "apply_immediately": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
@@ -75,11 +76,6 @@ const awsDbInstance = `{
         "optional": true,
         "type": "bool"
       },
-      "customer_owned_ip_enabled": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "db_subnet_group_name": {
         "computed": true,
         "description_kind": "plain",
@@ -110,7 +106,7 @@ const awsDbInstance = `{
         "description_kind": "plain",
         "optional": true,
         "type": [
-          "set",
+          "list",
           "string"
         ]
       },
@@ -129,11 +125,6 @@ const awsDbInstance = `{
         "computed": true,
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
-      },
-      "engine_version_actual": {
-        "computed": true,
-        "description_kind": "plain",
         "type": "string"
       },
       "final_snapshot_identifier": {
@@ -185,11 +176,6 @@ const awsDbInstance = `{
         "optional": true,
         "type": "string"
       },
-      "latest_restorable_time": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "license_model": {
         "computed": true,
         "description_kind": "plain",
@@ -225,12 +211,6 @@ const awsDbInstance = `{
         "type": "bool"
       },
       "name": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "nchar_character_set_name": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
@@ -282,11 +262,6 @@ const awsDbInstance = `{
         "optional": true,
         "type": "bool"
       },
-      "replica_mode": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "replicas": {
         "computed": true,
         "description_kind": "plain",
@@ -319,7 +294,6 @@ const awsDbInstance = `{
         "type": "bool"
       },
       "snapshot_identifier": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -341,15 +315,6 @@ const awsDbInstance = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -380,35 +345,6 @@ const awsDbInstance = `{
       }
     },
     "block_types": {
-      "restore_to_point_in_time": {
-        "block": {
-          "attributes": {
-            "restore_time": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "source_db_instance_identifier": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "source_dbi_resource_id": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "use_latest_restorable_time": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "s3_import": {
         "block": {
           "attributes": {

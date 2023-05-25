@@ -45,15 +45,6 @@ const awsKinesisFirehoseDeliveryStream = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "version_id": {
         "computed": true,
         "description_kind": "plain",
@@ -75,14 +66,9 @@ const awsKinesisFirehoseDeliveryStream = `{
               "optional": true,
               "type": "number"
             },
-            "cluster_endpoint": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "domain_arn": {
               "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": "string"
             },
             "index_name": {
@@ -183,41 +169,6 @@ const awsKinesisFirehoseDeliveryStream = `{
                       "description_kind": "plain"
                     },
                     "nesting_mode": "list"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
-            "vpc_config": {
-              "block": {
-                "attributes": {
-                  "role_arn": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "security_group_ids": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": [
-                      "set",
-                      "string"
-                    ]
-                  },
-                  "subnet_ids": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": [
-                      "set",
-                      "string"
-                    ]
-                  },
-                  "vpc_id": {
-                    "computed": true,
-                    "description_kind": "plain",
-                    "type": "string"
                   }
                 },
                 "description_kind": "plain"
@@ -548,25 +499,6 @@ const awsKinesisFirehoseDeliveryStream = `{
               "max_items": 1,
               "nesting_mode": "list"
             },
-            "dynamic_partitioning_configuration": {
-              "block": {
-                "attributes": {
-                  "enabled": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "bool"
-                  },
-                  "retry_duration": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
             "processing_configuration": {
               "block": {
                 "attributes": {
@@ -639,11 +571,6 @@ const awsKinesisFirehoseDeliveryStream = `{
                     "optional": true,
                     "type": "string"
                   },
-                  "error_output_prefix": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
                   "kms_key_arn": {
                     "description_kind": "plain",
                     "optional": true,
@@ -683,165 +610,6 @@ const awsKinesisFirehoseDeliveryStream = `{
                       "description_kind": "plain"
                     },
                     "max_items": 1,
-                    "nesting_mode": "list"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "http_endpoint_configuration": {
-        "block": {
-          "attributes": {
-            "access_key": {
-              "description_kind": "plain",
-              "optional": true,
-              "sensitive": true,
-              "type": "string"
-            },
-            "buffering_interval": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "buffering_size": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "name": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "retry_duration": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "role_arn": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "s3_backup_mode": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "url": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "block_types": {
-            "cloudwatch_logging_options": {
-              "block": {
-                "attributes": {
-                  "enabled": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "bool"
-                  },
-                  "log_group_name": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "log_stream_name": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
-            "processing_configuration": {
-              "block": {
-                "attributes": {
-                  "enabled": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "bool"
-                  }
-                },
-                "block_types": {
-                  "processors": {
-                    "block": {
-                      "attributes": {
-                        "type": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        }
-                      },
-                      "block_types": {
-                        "parameters": {
-                          "block": {
-                            "attributes": {
-                              "parameter_name": {
-                                "description_kind": "plain",
-                                "required": true,
-                                "type": "string"
-                              },
-                              "parameter_value": {
-                                "description_kind": "plain",
-                                "required": true,
-                                "type": "string"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "nesting_mode": "list"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "nesting_mode": "list"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
-            "request_configuration": {
-              "block": {
-                "attributes": {
-                  "content_encoding": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  }
-                },
-                "block_types": {
-                  "common_attributes": {
-                    "block": {
-                      "attributes": {
-                        "name": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        },
-                        "value": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
                     "nesting_mode": "list"
                   }
                 },
@@ -1022,11 +790,6 @@ const awsKinesisFirehoseDeliveryStream = `{
                     "optional": true,
                     "type": "string"
                   },
-                  "error_output_prefix": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
                   "kms_key_arn": {
                     "description_kind": "plain",
                     "optional": true,
@@ -1103,11 +866,6 @@ const awsKinesisFirehoseDeliveryStream = `{
               "optional": true,
               "type": "string"
             },
-            "error_output_prefix": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "kms_key_arn": {
               "description_kind": "plain",
               "optional": true,
@@ -1162,16 +920,6 @@ const awsKinesisFirehoseDeliveryStream = `{
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
-            },
-            "key_arn": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "key_type": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
             }
           },
           "description_kind": "plain"

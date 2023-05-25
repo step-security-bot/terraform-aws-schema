@@ -45,11 +45,6 @@ const awsEbsSnapshot = `{
         "optional": true,
         "type": "bool"
       },
-      "outpost_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "owner_alias": {
         "computed": true,
         "description_kind": "plain",
@@ -90,11 +85,6 @@ const awsEbsSnapshot = `{
         ]
       },
       "state": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "storage_tier": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"

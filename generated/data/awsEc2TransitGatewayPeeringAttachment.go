@@ -10,7 +10,6 @@ const awsEc2TransitGatewayPeeringAttachment = `{
   "block": {
     "attributes": {
       "id": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

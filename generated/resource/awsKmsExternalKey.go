@@ -14,11 +14,6 @@ const awsKmsExternalKey = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "bypass_policy_lockout_safety_check": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "deletion_window_in_days": {
         "description_kind": "plain",
         "optional": true,
@@ -62,12 +57,6 @@ const awsKmsExternalKey = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "multi_region": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "policy": {
         "computed": true,
         "description_kind": "plain",
@@ -75,15 +64,6 @@ const awsKmsExternalKey = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

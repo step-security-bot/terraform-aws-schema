@@ -74,21 +74,7 @@ const awsEcsTaskDefinition = `{
         "description_kind": "plain",
         "type": "number"
       },
-      "skip_destroy": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -103,20 +89,6 @@ const awsEcsTaskDefinition = `{
       }
     },
     "block_types": {
-      "ephemeral_storage": {
-        "block": {
-          "attributes": {
-            "size_in_gib": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "number"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "inference_accelerator": {
         "block": {
           "attributes": {
@@ -171,25 +143,6 @@ const awsEcsTaskDefinition = `{
               ]
             },
             "type": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "runtime_platform": {
-        "block": {
-          "attributes": {
-            "cpu_architecture": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "operating_system_family": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -298,47 +251,6 @@ const awsEcsTaskDefinition = `{
                       "description_kind": "plain"
                     },
                     "max_items": 1,
-                    "nesting_mode": "list"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
-            "fsx_windows_file_server_volume_configuration": {
-              "block": {
-                "attributes": {
-                  "file_system_id": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "root_directory": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "block_types": {
-                  "authorization_config": {
-                    "block": {
-                      "attributes": {
-                        "credentials_parameter": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        },
-                        "domain": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "max_items": 1,
-                    "min_items": 1,
                     "nesting_mode": "list"
                   }
                 },

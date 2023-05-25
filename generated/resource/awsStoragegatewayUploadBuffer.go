@@ -10,15 +10,8 @@ const awsStoragegatewayUploadBuffer = `{
   "block": {
     "attributes": {
       "disk_id": {
-        "computed": true,
         "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "disk_path": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "gateway_arn": {

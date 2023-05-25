@@ -9,11 +9,6 @@ import (
 const awsEfsMountTarget = `{
   "block": {
     "attributes": {
-      "access_point_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "availability_zone_id": {
         "computed": true,
         "description_kind": "plain",
@@ -37,7 +32,6 @@ const awsEfsMountTarget = `{
       "file_system_id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "id": {
@@ -57,9 +51,8 @@ const awsEfsMountTarget = `{
         "type": "string"
       },
       "mount_target_id": {
-        "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "network_interface_id": {

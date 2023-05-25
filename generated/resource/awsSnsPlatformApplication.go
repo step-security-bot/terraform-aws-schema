@@ -58,13 +58,11 @@ const awsSnsPlatformApplication = `{
       "platform_credential": {
         "description_kind": "plain",
         "required": true,
-        "sensitive": true,
         "type": "string"
       },
       "platform_principal": {
         "description_kind": "plain",
         "optional": true,
-        "sensitive": true,
         "type": "string"
       },
       "success_feedback_role_arn": {

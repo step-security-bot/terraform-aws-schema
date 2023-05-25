@@ -9,17 +9,7 @@ import (
 const awsIamAccessKey = `{
   "block": {
     "attributes": {
-      "create_date": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "encrypted_secret": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "encrypted_ses_smtp_password_v4": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -46,6 +36,13 @@ const awsIamAccessKey = `{
         "sensitive": true,
         "type": "string"
       },
+      "ses_smtp_password": {
+        "computed": true,
+        "deprecated": true,
+        "description_kind": "plain",
+        "sensitive": true,
+        "type": "string"
+      },
       "ses_smtp_password_v4": {
         "computed": true,
         "description_kind": "plain",
@@ -53,6 +50,7 @@ const awsIamAccessKey = `{
         "type": "string"
       },
       "status": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

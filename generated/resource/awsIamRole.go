@@ -40,15 +40,6 @@ const awsIamRole = `{
         "optional": true,
         "type": "string"
       },
-      "managed_policy_arns": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
       "max_session_duration": {
         "description_kind": "plain",
         "optional": true,
@@ -61,7 +52,6 @@ const awsIamRole = `{
         "type": "string"
       },
       "name_prefix": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -84,39 +74,10 @@ const awsIamRole = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "unique_id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      }
-    },
-    "block_types": {
-      "inline_policy": {
-        "block": {
-          "attributes": {
-            "name": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "policy": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "set"
       }
     },
     "description_kind": "plain"

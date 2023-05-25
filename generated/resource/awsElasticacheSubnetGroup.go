@@ -9,11 +9,6 @@ import (
 const awsElasticacheSubnetGroup = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "description": {
         "description_kind": "plain",
         "optional": true,
@@ -35,23 +30,6 @@ const awsElasticacheSubnetGroup = `{
         "required": true,
         "type": [
           "set",
-          "string"
-        ]
-      },
-      "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
           "string"
         ]
       }

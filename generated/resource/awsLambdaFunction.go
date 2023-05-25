@@ -9,23 +9,9 @@ import (
 const awsLambdaFunction = `{
   "block": {
     "attributes": {
-      "architectures": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "list",
-          "string"
-        ]
-      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
-        "type": "string"
-      },
-      "code_signing_config_arn": {
-        "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "description": {
@@ -45,16 +31,11 @@ const awsLambdaFunction = `{
       },
       "handler": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "id": {
         "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "image_uri": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -87,11 +68,6 @@ const awsLambdaFunction = `{
         "optional": true,
         "type": "number"
       },
-      "package_type": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "publish": {
         "description_kind": "plain",
         "optional": true,
@@ -114,7 +90,7 @@ const awsLambdaFunction = `{
       },
       "runtime": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "s3_bucket": {
@@ -132,16 +108,6 @@ const awsLambdaFunction = `{
         "optional": true,
         "type": "string"
       },
-      "signing_job_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "signing_profile_version_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "source_code_hash": {
         "computed": true,
         "description_kind": "plain",
@@ -154,15 +120,6 @@ const awsLambdaFunction = `{
         "type": "number"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -224,36 +181,6 @@ const awsLambdaFunction = `{
             "local_mount_path": {
               "description_kind": "plain",
               "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "image_config": {
-        "block": {
-          "attributes": {
-            "command": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "list",
-                "string"
-              ]
-            },
-            "entry_point": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "list",
-                "string"
-              ]
-            },
-            "working_directory": {
-              "description_kind": "plain",
-              "optional": true,
               "type": "string"
             }
           },

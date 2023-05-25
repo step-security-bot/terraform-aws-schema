@@ -9,11 +9,6 @@ import (
 const awsEip = `{
   "block": {
     "attributes": {
-      "address": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "allocation_id": {
         "computed": true,
         "description_kind": "plain",
@@ -25,11 +20,6 @@ const awsEip = `{
         "type": "string"
       },
       "association_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "carrier_ip": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -56,12 +46,6 @@ const awsEip = `{
         "type": "string"
       },
       "instance": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "network_border_group": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
@@ -100,15 +84,6 @@ const awsEip = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

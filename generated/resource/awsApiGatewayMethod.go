@@ -43,11 +43,6 @@ const awsApiGatewayMethod = `{
         "optional": true,
         "type": "string"
       },
-      "operation_name": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "request_models": {
         "description_kind": "plain",
         "optional": true,
@@ -63,6 +58,11 @@ const awsApiGatewayMethod = `{
           "map",
           "bool"
         ]
+      },
+      "request_parameters_in_json": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       },
       "request_validator_id": {
         "description_kind": "plain",

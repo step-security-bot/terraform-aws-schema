@@ -19,15 +19,10 @@ const awsAlbTargetGroup = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "connection_termination": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "deregistration_delay": {
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
+        "type": "number"
       },
       "id": {
         "computed": true,
@@ -62,19 +57,7 @@ const awsAlbTargetGroup = `{
         "optional": true,
         "type": "number"
       },
-      "preserve_client_ip": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "protocol": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "protocol_version": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -90,15 +73,6 @@ const awsAlbTargetGroup = `{
         "type": "number"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -182,11 +156,6 @@ const awsAlbTargetGroup = `{
               "description_kind": "plain",
               "optional": true,
               "type": "number"
-            },
-            "cookie_name": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
             },
             "enabled": {
               "description_kind": "plain",

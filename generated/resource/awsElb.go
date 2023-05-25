@@ -38,11 +38,6 @@ const awsElb = `{
         "optional": true,
         "type": "bool"
       },
-      "desync_mitigation_mode": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "dns_name": {
         "computed": true,
         "description_kind": "plain",
@@ -115,15 +110,6 @@ const awsElb = `{
         ]
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

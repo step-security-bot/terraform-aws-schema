@@ -47,15 +47,6 @@ const awsAthenaWorkgroup = `{
           "map",
           "string"
         ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "block_types": {
@@ -76,33 +67,9 @@ const awsAthenaWorkgroup = `{
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
-            },
-            "requester_pays_enabled": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
             }
           },
           "block_types": {
-            "engine_version": {
-              "block": {
-                "attributes": {
-                  "effective_engine_version": {
-                    "computed": true,
-                    "description_kind": "plain",
-                    "type": "string"
-                  },
-                  "selected_engine_version": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
             "result_configuration": {
               "block": {
                 "attributes": {

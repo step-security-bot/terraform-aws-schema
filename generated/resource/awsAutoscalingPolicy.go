@@ -51,6 +51,11 @@ const awsAutoscalingPolicy = `{
         "optional": true,
         "type": "number"
       },
+      "min_adjustment_step": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "number"
+      },
       "name": {
         "description_kind": "plain",
         "required": true,
@@ -68,111 +73,6 @@ const awsAutoscalingPolicy = `{
       }
     },
     "block_types": {
-      "predictive_scaling_configuration": {
-        "block": {
-          "attributes": {
-            "max_capacity_breach_behavior": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "max_capacity_buffer": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "mode": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "scheduling_buffer_time": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "block_types": {
-            "metric_specification": {
-              "block": {
-                "attributes": {
-                  "target_value": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "number"
-                  }
-                },
-                "block_types": {
-                  "predefined_load_metric_specification": {
-                    "block": {
-                      "attributes": {
-                        "predefined_metric_type": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        },
-                        "resource_label": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "max_items": 1,
-                    "nesting_mode": "list"
-                  },
-                  "predefined_metric_pair_specification": {
-                    "block": {
-                      "attributes": {
-                        "predefined_metric_type": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        },
-                        "resource_label": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "max_items": 1,
-                    "nesting_mode": "list"
-                  },
-                  "predefined_scaling_metric_specification": {
-                    "block": {
-                      "attributes": {
-                        "predefined_metric_type": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        },
-                        "resource_label": {
-                          "description_kind": "plain",
-                          "required": true,
-                          "type": "string"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "max_items": 1,
-                    "nesting_mode": "list"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "min_items": 1,
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "step_adjustment": {
         "block": {
           "attributes": {

@@ -9,11 +9,6 @@ import (
 const awsAlbListener = `{
   "block": {
     "attributes": {
-      "alpn_policy": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
@@ -85,34 +80,6 @@ const awsAlbListener = `{
                   }
                 ]
               ],
-              "forward": [
-                "list",
-                [
-                  "object",
-                  {
-                    "stickiness": [
-                      "list",
-                      [
-                        "object",
-                        {
-                          "duration": "number",
-                          "enabled": "bool"
-                        }
-                      ]
-                    ],
-                    "target_group": [
-                      "set",
-                      [
-                        "object",
-                        {
-                          "arn": "string",
-                          "weight": "number"
-                        }
-                      ]
-                    ]
-                  }
-                ]
-              ],
               "order": "number",
               "redirect": [
                 "list",
@@ -161,15 +128,6 @@ const awsAlbListener = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "tags": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "description_kind": "plain"

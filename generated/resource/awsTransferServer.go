@@ -14,21 +14,6 @@ const awsTransferServer = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "certificate": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "directory_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "domain": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "endpoint": {
         "computed": true,
         "description_kind": "plain",
@@ -43,11 +28,6 @@ const awsTransferServer = `{
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
-      },
-      "function": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
       },
       "host_key": {
         "description_kind": "plain",
@@ -81,30 +61,7 @@ const awsTransferServer = `{
         "optional": true,
         "type": "string"
       },
-      "protocols": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
-      "security_policy_name": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -122,40 +79,9 @@ const awsTransferServer = `{
       "endpoint_details": {
         "block": {
           "attributes": {
-            "address_allocation_ids": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "security_group_ids": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
-            "subnet_ids": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
             "vpc_endpoint_id": {
-              "computed": true,
               "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "vpc_id": {
-              "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": "string"
             }
           },

@@ -15,13 +15,11 @@ const awsStoragegatewayLocalDisk = `{
         "type": "string"
       },
       "disk_node": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
       "disk_path": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

@@ -29,11 +29,6 @@ const awsAmiFromInstance = `{
         "description_kind": "plain",
         "type": "bool"
       },
-      "hypervisor": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -41,16 +36,6 @@ const awsAmiFromInstance = `{
         "type": "string"
       },
       "image_location": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "image_owner_alias": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "image_type": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -69,26 +54,6 @@ const awsAmiFromInstance = `{
         "description_kind": "plain",
         "required": true,
         "type": "string"
-      },
-      "owner_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "platform": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "platform_details": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "public": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
       },
       "ramdisk_id": {
         "computed": true,
@@ -128,20 +93,6 @@ const awsAmiFromInstance = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "usage_operation": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "virtualization_type": {
         "computed": true,
         "description_kind": "plain",
@@ -176,11 +127,6 @@ const awsAmiFromInstance = `{
               "computed": true,
               "description_kind": "plain",
               "type": "string"
-            },
-            "throughput": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "number"
             },
             "volume_size": {
               "computed": true,

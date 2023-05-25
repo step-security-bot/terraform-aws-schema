@@ -41,19 +41,9 @@ const awsCurReportDefinition = `{
         "optional": true,
         "type": "string"
       },
-      "refresh_closed_reports": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
       "report_name": {
         "description_kind": "plain",
         "required": true,
-        "type": "string"
-      },
-      "report_versioning": {
-        "computed": true,
-        "description_kind": "plain",
         "type": "string"
       },
       "s3_bucket": {

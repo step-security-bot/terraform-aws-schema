@@ -19,12 +19,6 @@ const awsS3BucketObject = `{
         "required": true,
         "type": "string"
       },
-      "bucket_key_enabled": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "cache_control": {
         "description_kind": "plain",
         "optional": true,
@@ -84,7 +78,6 @@ const awsS3BucketObject = `{
         "type": "string"
       },
       "kms_key_id": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -123,11 +116,6 @@ const awsS3BucketObject = `{
         "optional": true,
         "type": "string"
       },
-      "source_hash": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "storage_class": {
         "computed": true,
         "description_kind": "plain",
@@ -135,15 +123,6 @@ const awsS3BucketObject = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

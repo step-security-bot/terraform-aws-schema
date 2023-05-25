@@ -48,11 +48,6 @@ const awsAmi = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "ena_support": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
       "executable_users": {
         "description_kind": "plain",
         "optional": true,
@@ -130,11 +125,6 @@ const awsAmi = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "platform_details": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "product_codes": {
         "computed": true,
         "description_kind": "plain",
@@ -200,11 +190,6 @@ const awsAmi = `{
           "map",
           "string"
         ]
-      },
-      "usage_operation": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
       },
       "virtualization_type": {
         "computed": true,

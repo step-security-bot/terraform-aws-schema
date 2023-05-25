@@ -25,7 +25,6 @@ const awsRdsGlobalCluster = `{
         "type": "bool"
       },
       "engine": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -36,29 +35,10 @@ const awsRdsGlobalCluster = `{
         "optional": true,
         "type": "string"
       },
-      "force_destroy": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "global_cluster_identifier": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
-      },
-      "global_cluster_members": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "set",
-          [
-            "object",
-            {
-              "db_cluster_arn": "string",
-              "is_writer": "bool"
-            }
-          ]
-        ]
       },
       "global_cluster_resource_id": {
         "computed": true,
@@ -71,14 +51,7 @@ const awsRdsGlobalCluster = `{
         "optional": true,
         "type": "string"
       },
-      "source_db_cluster_identifier": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "storage_encrypted": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"

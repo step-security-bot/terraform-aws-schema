@@ -55,11 +55,6 @@ const awsApigatewayv2Integration = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "integration_subtype": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "integration_type": {
         "description_kind": "plain",
         "required": true,
@@ -80,14 +75,6 @@ const awsApigatewayv2Integration = `{
         "optional": true,
         "type": "string"
       },
-      "request_parameters": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "request_templates": {
         "description_kind": "plain",
         "optional": true,
@@ -102,47 +89,9 @@ const awsApigatewayv2Integration = `{
         "type": "string"
       },
       "timeout_milliseconds": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "number"
-      }
-    },
-    "block_types": {
-      "response_parameters": {
-        "block": {
-          "attributes": {
-            "mappings": {
-              "description_kind": "plain",
-              "required": true,
-              "type": [
-                "map",
-                "string"
-              ]
-            },
-            "status_code": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "set"
-      },
-      "tls_config": {
-        "block": {
-          "attributes": {
-            "server_name_to_verify": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

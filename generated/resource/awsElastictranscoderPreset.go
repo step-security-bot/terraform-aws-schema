@@ -203,7 +203,6 @@ const awsElastictranscoderPreset = `{
               "type": "string"
             },
             "max_frame_rate": {
-              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"

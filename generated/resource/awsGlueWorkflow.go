@@ -9,11 +9,6 @@ import (
 const awsGlueWorkflow = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "default_run_properties": {
         "description_kind": "plain",
         "optional": true,
@@ -33,32 +28,10 @@ const awsGlueWorkflow = `{
         "optional": true,
         "type": "string"
       },
-      "max_concurrent_runs": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
       "name": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "description_kind": "plain"

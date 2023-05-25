@@ -65,12 +65,6 @@ const awsAutoscalingSchedule = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "time_zone": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
       }
     },
     "description_kind": "plain"

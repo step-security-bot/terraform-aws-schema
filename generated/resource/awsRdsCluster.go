@@ -9,11 +9,6 @@ import (
 const awsRdsCluster = `{
   "block": {
     "attributes": {
-      "allow_major_version_upgrade": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "apply_immediately": {
         "computed": true,
         "description_kind": "plain",
@@ -87,11 +82,6 @@ const awsRdsCluster = `{
         "optional": true,
         "type": "string"
       },
-      "db_instance_parameter_group_name": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "db_subnet_group_name": {
         "computed": true,
         "description_kind": "plain",
@@ -99,11 +89,6 @@ const awsRdsCluster = `{
         "type": "string"
       },
       "deletion_protection": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "enable_global_write_forwarding": {
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
@@ -117,7 +102,7 @@ const awsRdsCluster = `{
         "description_kind": "plain",
         "optional": true,
         "type": [
-          "set",
+          "list",
           "string"
         ]
       },
@@ -142,11 +127,6 @@ const awsRdsCluster = `{
         "optional": true,
         "type": "string"
       },
-      "engine_version_actual": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "final_snapshot_identifier": {
         "description_kind": "plain",
         "optional": true,
@@ -168,7 +148,6 @@ const awsRdsCluster = `{
         "type": "bool"
       },
       "iam_roles": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -244,21 +223,11 @@ const awsRdsCluster = `{
         "type": "string"
       },
       "storage_encrypted": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -277,35 +246,6 @@ const awsRdsCluster = `{
       }
     },
     "block_types": {
-      "restore_to_point_in_time": {
-        "block": {
-          "attributes": {
-            "restore_to_time": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "restore_type": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "source_cluster_identifier": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "use_latest_restorable_time": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "s3_import": {
         "block": {
           "attributes": {

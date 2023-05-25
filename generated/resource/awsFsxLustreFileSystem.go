@@ -14,61 +14,12 @@ const awsFsxLustreFileSystem = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "auto_import_policy": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "automatic_backup_retention_days": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
-      "backup_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "copy_tags_to_backups": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "daily_automatic_backup_start_time": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "data_compression_type": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "deployment_type": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "dns_name": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "drive_cache_type": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "export_path": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "file_system_type_version": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
@@ -91,22 +42,11 @@ const awsFsxLustreFileSystem = `{
         "optional": true,
         "type": "number"
       },
-      "kms_key_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "mount_name": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "network_interface_ids": {
         "computed": true,
         "description_kind": "plain",
         "type": [
-          "list",
+          "set",
           "string"
         ]
       },
@@ -114,11 +54,6 @@ const awsFsxLustreFileSystem = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "per_unit_storage_throughput": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
       },
       "security_group_ids": {
         "description_kind": "plain",
@@ -130,13 +65,8 @@ const awsFsxLustreFileSystem = `{
       },
       "storage_capacity": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "number"
-      },
-      "storage_type": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
       },
       "subnet_ids": {
         "description_kind": "plain",
@@ -147,15 +77,6 @@ const awsFsxLustreFileSystem = `{
         ]
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -185,11 +106,6 @@ const awsFsxLustreFileSystem = `{
               "type": "string"
             },
             "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "update": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"

@@ -20,9 +20,8 @@ const awsDynamodbTable = `{
         "type": "string"
       },
       "hash_key": {
-        "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "id": {
@@ -42,25 +41,9 @@ const awsDynamodbTable = `{
         "type": "string"
       },
       "read_capacity": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "number"
-      },
-      "restore_date_time": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "restore_source_name": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "restore_to_latest_time": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       },
       "stream_arn": {
         "computed": true,
@@ -83,11 +66,6 @@ const awsDynamodbTable = `{
         "optional": true,
         "type": "string"
       },
-      "table_class": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "tags": {
         "description_kind": "plain",
         "optional": true,
@@ -96,17 +74,7 @@ const awsDynamodbTable = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "write_capacity": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "number"
@@ -129,6 +97,7 @@ const awsDynamodbTable = `{
           },
           "description_kind": "plain"
         },
+        "min_items": 1,
         "nesting_mode": "set"
       },
       "global_secondary_index": {
@@ -148,7 +117,7 @@ const awsDynamodbTable = `{
               "description_kind": "plain",
               "optional": true,
               "type": [
-                "set",
+                "list",
                 "string"
               ]
             },
@@ -225,12 +194,6 @@ const awsDynamodbTable = `{
       "replica": {
         "block": {
           "attributes": {
-            "kms_key_arn": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "region_name": {
               "description_kind": "plain",
               "required": true,

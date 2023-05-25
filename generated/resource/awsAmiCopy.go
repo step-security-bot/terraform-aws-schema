@@ -24,11 +24,6 @@ const awsAmiCopy = `{
         "optional": true,
         "type": "string"
       },
-      "destination_outpost_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "ena_support": {
         "computed": true,
         "description_kind": "plain",
@@ -39,11 +34,6 @@ const awsAmiCopy = `{
         "optional": true,
         "type": "bool"
       },
-      "hypervisor": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -51,16 +41,6 @@ const awsAmiCopy = `{
         "type": "string"
       },
       "image_location": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "image_owner_alias": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "image_type": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -85,26 +65,6 @@ const awsAmiCopy = `{
         "description_kind": "plain",
         "required": true,
         "type": "string"
-      },
-      "owner_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "platform": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "platform_details": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "public": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
       },
       "ramdisk_id": {
         "computed": true,
@@ -144,20 +104,6 @@ const awsAmiCopy = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "usage_operation": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "virtualization_type": {
         "computed": true,
         "description_kind": "plain",
@@ -192,11 +138,6 @@ const awsAmiCopy = `{
               "computed": true,
               "description_kind": "plain",
               "type": "string"
-            },
-            "throughput": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "number"
             },
             "volume_size": {
               "computed": true,

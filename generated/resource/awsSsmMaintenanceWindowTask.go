@@ -41,9 +41,8 @@ const awsSsmMaintenanceWindowTask = `{
         "type": "number"
       },
       "service_role_arn": {
-        "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "task_arn": {
@@ -63,6 +62,31 @@ const awsSsmMaintenanceWindowTask = `{
       }
     },
     "block_types": {
+      "logging_info": {
+        "block": {
+          "attributes": {
+            "s3_bucket_name": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "s3_bucket_prefix": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "s3_region": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "deprecated": true,
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "targets": {
         "block": {
           "attributes": {
@@ -82,7 +106,7 @@ const awsSsmMaintenanceWindowTask = `{
           },
           "description_kind": "plain"
         },
-        "max_items": 5,
+        "min_items": 1,
         "nesting_mode": "list"
       },
       "task_invocation_parameters": {
@@ -168,11 +192,6 @@ const awsSsmMaintenanceWindowTask = `{
                     "optional": true,
                     "type": "string"
                   },
-                  "document_version": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
                   "output_s3_bucket": {
                     "description_kind": "plain",
                     "optional": true,
@@ -195,26 +214,6 @@ const awsSsmMaintenanceWindowTask = `{
                   }
                 },
                 "block_types": {
-                  "cloudwatch_config": {
-                    "block": {
-                      "attributes": {
-                        "cloudwatch_log_group_name": {
-                          "computed": true,
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "string"
-                        },
-                        "cloudwatch_output_enabled": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "bool"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "max_items": 1,
-                    "nesting_mode": "list"
-                  },
                   "notification_config": {
                     "block": {
                       "attributes": {
@@ -294,6 +293,28 @@ const awsSsmMaintenanceWindowTask = `{
         },
         "max_items": 1,
         "nesting_mode": "list"
+      },
+      "task_parameters": {
+        "block": {
+          "attributes": {
+            "name": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "values": {
+              "description_kind": "plain",
+              "required": true,
+              "type": [
+                "list",
+                "string"
+              ]
+            }
+          },
+          "deprecated": true,
+          "description_kind": "plain"
+        },
+        "nesting_mode": "set"
       }
     },
     "description_kind": "plain"

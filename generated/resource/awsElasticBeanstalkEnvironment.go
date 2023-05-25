@@ -132,15 +132,6 @@ const awsElasticBeanstalkEnvironment = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "template_name": {
         "description_kind": "plain",
         "optional": true,

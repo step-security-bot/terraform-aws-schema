@@ -14,11 +14,6 @@ const awsKmsKey = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "bypass_policy_lockout_safety_check": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "customer_master_key_spec": {
         "description_kind": "plain",
         "optional": true,
@@ -61,12 +56,6 @@ const awsKmsKey = `{
         "optional": true,
         "type": "string"
       },
-      "multi_region": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "policy": {
         "computed": true,
         "description_kind": "plain",
@@ -74,15 +63,6 @@ const awsKmsKey = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

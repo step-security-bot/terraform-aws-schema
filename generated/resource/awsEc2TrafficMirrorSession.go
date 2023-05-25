@@ -30,11 +30,6 @@ const awsEc2TrafficMirrorSession = `{
         "required": true,
         "type": "string"
       },
-      "owner_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "packet_length": {
         "description_kind": "plain",
         "optional": true,
@@ -46,15 +41,6 @@ const awsEc2TrafficMirrorSession = `{
         "type": "number"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

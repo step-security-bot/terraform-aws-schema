@@ -14,11 +14,6 @@ const awsS3BucketNotification = `{
         "required": true,
         "type": "string"
       },
-      "eventbridge": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",

@@ -30,11 +30,6 @@ const awsConfigDeliveryChannel = `{
         "optional": true,
         "type": "string"
       },
-      "s3_kms_key_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "sns_topic_arn": {
         "description_kind": "plain",
         "optional": true,

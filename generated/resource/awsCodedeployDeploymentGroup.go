@@ -14,11 +14,6 @@ const awsCodedeployDeploymentGroup = `{
         "required": true,
         "type": "string"
       },
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "autoscaling_groups": {
         "description_kind": "plain",
         "optional": true,
@@ -27,19 +22,9 @@ const awsCodedeployDeploymentGroup = `{
           "string"
         ]
       },
-      "compute_platform": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "deployment_config_name": {
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
-      },
-      "deployment_group_id": {
-        "computed": true,
-        "description_kind": "plain",
         "type": "string"
       },
       "deployment_group_name": {
@@ -57,23 +42,6 @@ const awsCodedeployDeploymentGroup = `{
         "description_kind": "plain",
         "required": true,
         "type": "string"
-      },
-      "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "block_types": {

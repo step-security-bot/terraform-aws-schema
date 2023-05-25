@@ -9,11 +9,6 @@ import (
 const awsLbListener = `{
   "block": {
     "attributes": {
-      "alpn_policy": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
@@ -37,11 +32,10 @@ const awsLbListener = `{
       },
       "port": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "number"
       },
       "protocol": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -51,23 +45,6 @@ const awsLbListener = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "block_types": {
@@ -284,7 +261,7 @@ const awsLbListener = `{
                       "description_kind": "plain"
                     },
                     "max_items": 5,
-                    "min_items": 1,
+                    "min_items": 2,
                     "nesting_mode": "set"
                   }
                 },

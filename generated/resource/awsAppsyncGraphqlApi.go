@@ -43,15 +43,6 @@ const awsAppsyncGraphqlApi = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "uris": {
         "computed": true,
         "description_kind": "plain",
@@ -77,30 +68,6 @@ const awsAppsyncGraphqlApi = `{
             }
           },
           "block_types": {
-            "lambda_authorizer_config": {
-              "block": {
-                "attributes": {
-                  "authorizer_result_ttl_in_seconds": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  },
-                  "authorizer_uri": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "identity_validation_expression": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
             "openid_connect_config": {
               "block": {
                 "attributes": {
@@ -158,30 +125,6 @@ const awsAppsyncGraphqlApi = `{
           },
           "description_kind": "plain"
         },
-        "nesting_mode": "list"
-      },
-      "lambda_authorizer_config": {
-        "block": {
-          "attributes": {
-            "authorizer_result_ttl_in_seconds": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "authorizer_uri": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "identity_validation_expression": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
         "nesting_mode": "list"
       },
       "log_config": {

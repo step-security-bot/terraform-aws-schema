@@ -9,11 +9,6 @@ import (
 const awsCognitoIdentityPool = `{
   "block": {
     "attributes": {
-      "allow_classic_flow": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "allow_unauthenticated_identities": {
         "description_kind": "plain",
         "optional": true,
@@ -44,7 +39,7 @@ const awsCognitoIdentityPool = `{
         "description_kind": "plain",
         "optional": true,
         "type": [
-          "set",
+          "list",
           "string"
         ]
       },
@@ -65,15 +60,6 @@ const awsCognitoIdentityPool = `{
         ]
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

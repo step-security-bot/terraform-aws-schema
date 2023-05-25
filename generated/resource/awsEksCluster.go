@@ -100,15 +100,6 @@ const awsEksCluster = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "version": {
         "computed": true,
         "description_kind": "plain",
@@ -144,27 +135,6 @@ const awsEksCluster = `{
               "max_items": 1,
               "min_items": 1,
               "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "kubernetes_network_config": {
-        "block": {
-          "attributes": {
-            "ip_family": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "service_ipv4_cidr": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
             }
           },
           "description_kind": "plain"

@@ -9,11 +9,6 @@ import (
 const awsCodepipelineWebhook = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "authentication": {
         "description_kind": "plain",
         "required": true,
@@ -31,15 +26,6 @@ const awsCodepipelineWebhook = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -100,7 +86,6 @@ const awsCodepipelineWebhook = `{
           },
           "description_kind": "plain"
         },
-        "max_items": 5,
         "min_items": 1,
         "nesting_mode": "set"
       }

@@ -19,11 +19,6 @@ const awsCloudwatchEventRule = `{
         "optional": true,
         "type": "string"
       },
-      "event_bus_name": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "event_pattern": {
         "description_kind": "plain",
         "optional": true,
@@ -47,7 +42,6 @@ const awsCloudwatchEventRule = `{
         "type": "string"
       },
       "name_prefix": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -63,15 +57,6 @@ const awsCloudwatchEventRule = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

@@ -41,40 +41,6 @@ const awsElasticsearchDomain = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "auto_tune_options": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "desired_state": "string",
-              "maintenance_schedule": [
-                "set",
-                [
-                  "object",
-                  {
-                    "cron_expression_for_recurrence": "string",
-                    "duration": [
-                      "list",
-                      [
-                        "object",
-                        {
-                          "unit": "string",
-                          "value": "number"
-                        }
-                      ]
-                    ],
-                    "start_at": "string"
-                  }
-                ]
-              ],
-              "rollback_on_disable": "string"
-            }
-          ]
-        ]
-      },
       "cluster_config": {
         "computed": true,
         "description_kind": "plain",

@@ -22,16 +22,6 @@ const awsSsmPatchBaseline = `{
         "optional": true,
         "type": "string"
       },
-      "approved_patches_enable_non_security": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "description": {
         "description_kind": "plain",
         "optional": true,
@@ -61,22 +51,7 @@ const awsSsmPatchBaseline = `{
           "string"
         ]
       },
-      "rejected_patches_action": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -91,13 +66,8 @@ const awsSsmPatchBaseline = `{
           "attributes": {
             "approve_after_days": {
               "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": "number"
-            },
-            "approve_until_date": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
             },
             "compliance_level": {
               "description_kind": "plain",
@@ -159,33 +129,6 @@ const awsSsmPatchBaseline = `{
           "description_kind": "plain"
         },
         "max_items": 4,
-        "nesting_mode": "list"
-      },
-      "source": {
-        "block": {
-          "attributes": {
-            "configuration": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "name": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "products": {
-              "description_kind": "plain",
-              "required": true,
-              "type": [
-                "list",
-                "string"
-              ]
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 20,
         "nesting_mode": "list"
       }
     },

@@ -35,16 +35,6 @@ const awsAlb = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "customer_owned_ipv4_pool": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "desync_mitigation_mode": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "dns_name": {
         "computed": true,
         "description_kind": "plain",
@@ -56,16 +46,6 @@ const awsAlb = `{
         "type": "bool"
       },
       "enable_deletion_protection": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
-      "enable_http2": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
-      "enable_waf_fail_open": {
         "computed": true,
         "description_kind": "plain",
         "type": "bool"
@@ -119,9 +99,6 @@ const awsAlb = `{
             "object",
             {
               "allocation_id": "string",
-              "ipv6_address": "string",
-              "outpost_id": "string",
-              "private_ipv4_address": "string",
               "subnet_id": "string"
             }
           ]

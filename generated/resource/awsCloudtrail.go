@@ -92,106 +92,12 @@ const awsCloudtrail = `{
           "map",
           "string"
         ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "block_types": {
-      "advanced_event_selector": {
-        "block": {
-          "attributes": {
-            "name": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "block_types": {
-            "field_selector": {
-              "block": {
-                "attributes": {
-                  "ends_with": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": [
-                      "list",
-                      "string"
-                    ]
-                  },
-                  "equals": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": [
-                      "list",
-                      "string"
-                    ]
-                  },
-                  "field": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "not_ends_with": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": [
-                      "list",
-                      "string"
-                    ]
-                  },
-                  "not_equals": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": [
-                      "list",
-                      "string"
-                    ]
-                  },
-                  "not_starts_with": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": [
-                      "list",
-                      "string"
-                    ]
-                  },
-                  "starts_with": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": [
-                      "list",
-                      "string"
-                    ]
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "min_items": 1,
-              "nesting_mode": "set"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
-      },
       "event_selector": {
         "block": {
           "attributes": {
-            "exclude_management_event_sources": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
             "include_management_events": {
               "description_kind": "plain",
               "optional": true,
@@ -229,19 +135,6 @@ const awsCloudtrail = `{
           "description_kind": "plain"
         },
         "max_items": 5,
-        "nesting_mode": "list"
-      },
-      "insight_selector": {
-        "block": {
-          "attributes": {
-            "insight_type": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
         "nesting_mode": "list"
       }
     },

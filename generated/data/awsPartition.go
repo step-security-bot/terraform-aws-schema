@@ -24,11 +24,6 @@ const awsPartition = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "reverse_dns_prefix": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
       }
     },
     "description_kind": "plain"

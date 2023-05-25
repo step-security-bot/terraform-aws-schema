@@ -61,11 +61,6 @@ const awsInstance = `{
               "iops": "number",
               "kms_key_id": "string",
               "snapshot_id": "string",
-              "tags": [
-                "map",
-                "string"
-              ],
-              "throughput": "number",
               "volume_id": "string",
               "volume_size": "number",
               "volume_type": "string"
@@ -77,19 +72,6 @@ const awsInstance = `{
         "computed": true,
         "description_kind": "plain",
         "type": "bool"
-      },
-      "enclave_options": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "enabled": "bool"
-            }
-          ]
-        ]
       },
       "ephemeral_block_device": {
         "computed": true,
@@ -156,14 +138,6 @@ const awsInstance = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "ipv6_addresses": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "set",
-          "string"
-        ]
-      },
       "key_name": {
         "computed": true,
         "description_kind": "plain",
@@ -179,8 +153,7 @@ const awsInstance = `{
             {
               "http_endpoint": "string",
               "http_put_response_hop_limit": "number",
-              "http_tokens": "string",
-              "instance_metadata_tags": "string"
+              "http_tokens": "string"
             }
           ]
         ]
@@ -209,11 +182,6 @@ const awsInstance = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "placement_partition_number": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "number"
       },
       "private_dns": {
         "computed": true,
@@ -248,24 +216,11 @@ const awsInstance = `{
               "encrypted": "bool",
               "iops": "number",
               "kms_key_id": "string",
-              "tags": [
-                "map",
-                "string"
-              ],
-              "throughput": "number",
               "volume_id": "string",
               "volume_size": "number",
               "volume_type": "string"
             }
           ]
-        ]
-      },
-      "secondary_private_ips": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "set",
-          "string"
         ]
       },
       "security_groups": {

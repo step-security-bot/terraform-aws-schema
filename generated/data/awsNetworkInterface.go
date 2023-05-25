@@ -9,11 +9,6 @@ import (
 const awsNetworkInterface = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "association": {
         "computed": true,
         "description_kind": "plain",
@@ -24,8 +19,6 @@ const awsNetworkInterface = `{
             {
               "allocation_id": "string",
               "association_id": "string",
-              "carrier_ip": "string",
-              "customer_owned_ip": "string",
               "ip_owner_id": "string",
               "public_dns_name": "string",
               "public_ip": "string"

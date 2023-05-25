@@ -18,7 +18,6 @@ const awsKmsSecrets = `{
       "plaintext": {
         "computed": true,
         "description_kind": "plain",
-        "sensitive": true,
         "type": [
           "map",
           "string"

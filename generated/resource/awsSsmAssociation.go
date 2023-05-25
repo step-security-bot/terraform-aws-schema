@@ -9,11 +9,6 @@ import (
 const awsSsmAssociation = `{
   "block": {
     "attributes": {
-      "apply_only_at_cron_interval": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "association_id": {
         "computed": true,
         "description_kind": "plain",
@@ -91,11 +86,6 @@ const awsSsmAssociation = `{
               "type": "string"
             },
             "s3_key_prefix": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "s3_region": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"

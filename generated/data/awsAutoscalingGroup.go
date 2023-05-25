@@ -53,21 +53,6 @@ const awsAutoscalingGroup = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "launch_template": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "id": "string",
-              "name": "string",
-              "version": "string"
-            }
-          ]
-        ]
-      },
       "load_balancers": {
         "computed": true,
         "description_kind": "plain",

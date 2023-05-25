@@ -20,7 +20,6 @@ const awsDefaultSecurityGroup = `{
         "type": "string"
       },
       "egress": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -60,7 +59,6 @@ const awsDefaultSecurityGroup = `{
         "type": "string"
       },
       "ingress": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -116,20 +114,31 @@ const awsDefaultSecurityGroup = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "vpc_id": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
+      }
+    },
+    "block_types": {
+      "timeouts": {
+        "block": {
+          "attributes": {
+            "create": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "delete": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"

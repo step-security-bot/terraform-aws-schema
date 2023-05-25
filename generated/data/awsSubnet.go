@@ -31,41 +31,16 @@ const awsSubnet = `{
         "optional": true,
         "type": "string"
       },
-      "available_ip_address_count": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "number"
-      },
       "cidr_block": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "customer_owned_ipv4_pool": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "default_for_az": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
-        "type": "bool"
-      },
-      "enable_dns64": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
-      "enable_resource_name_dns_a_record_on_launch": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
-      "enable_resource_name_dns_aaaa_record_on_launch": {
-        "computed": true,
-        "description_kind": "plain",
         "type": "bool"
       },
       "id": {
@@ -85,16 +60,6 @@ const awsSubnet = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "ipv6_native": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
-      "map_customer_owned_ip_on_launch": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
       "map_public_ip_on_launch": {
         "computed": true,
         "description_kind": "plain",
@@ -106,11 +71,6 @@ const awsSubnet = `{
         "type": "string"
       },
       "owner_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "private_dns_hostname_type_on_launch": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"

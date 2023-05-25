@@ -12,6 +12,7 @@ const awsIamServerCertificate = `{
       "arn": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "certificate_body": {
@@ -22,11 +23,6 @@ const awsIamServerCertificate = `{
       "certificate_chain": {
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
-      },
-      "expiration": {
-        "computed": true,
-        "description_kind": "plain",
         "type": "string"
       },
       "id": {
@@ -55,28 +51,6 @@ const awsIamServerCertificate = `{
         "description_kind": "plain",
         "required": true,
         "sensitive": true,
-        "type": "string"
-      },
-      "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "upload_date": {
-        "computed": true,
-        "description_kind": "plain",
         "type": "string"
       }
     },

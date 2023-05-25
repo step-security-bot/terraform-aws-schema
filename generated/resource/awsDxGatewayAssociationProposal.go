@@ -20,7 +20,7 @@ const awsDxGatewayAssociationProposal = `{
       },
       "associated_gateway_id": {
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "associated_gateway_owner_account_id": {
@@ -45,6 +45,12 @@ const awsDxGatewayAssociationProposal = `{
       },
       "id": {
         "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "vpn_gateway_id": {
+        "deprecated": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

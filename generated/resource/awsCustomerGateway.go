@@ -19,16 +19,6 @@ const awsCustomerGateway = `{
         "required": true,
         "type": "string"
       },
-      "certificate_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "device_name": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -41,15 +31,6 @@ const awsCustomerGateway = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

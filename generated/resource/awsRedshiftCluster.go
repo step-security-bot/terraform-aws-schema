@@ -30,25 +30,16 @@ const awsRedshiftCluster = `{
         "optional": true,
         "type": "string"
       },
+      "bucket_name": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "cluster_identifier": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
-      },
-      "cluster_nodes": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "node_role": "string",
-              "private_ip_address": "string",
-              "public_ip_address": "string"
-            }
-          ]
-        ]
       },
       "cluster_parameter_group_name": {
         "computed": true,
@@ -109,6 +100,12 @@ const awsRedshiftCluster = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
+      },
+      "enable_logging": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
       },
       "encrypted": {
         "description_kind": "plain",
@@ -195,6 +192,12 @@ const awsRedshiftCluster = `{
         "optional": true,
         "type": "bool"
       },
+      "s3_key_prefix": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "skip_final_snapshot": {
         "description_kind": "plain",
         "optional": true,
@@ -211,15 +214,6 @@ const awsRedshiftCluster = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

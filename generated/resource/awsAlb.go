@@ -19,16 +19,6 @@ const awsAlb = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "customer_owned_ipv4_pool": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "desync_mitigation_mode": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "dns_name": {
         "computed": true,
         "description_kind": "plain",
@@ -50,11 +40,6 @@ const awsAlb = `{
         "type": "bool"
       },
       "enable_http2": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "enable_waf_fail_open": {
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
@@ -124,15 +109,6 @@ const awsAlb = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "vpc_id": {
         "computed": true,
         "description_kind": "plain",
@@ -173,21 +149,6 @@ const awsAlb = `{
         "block": {
           "attributes": {
             "allocation_id": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "ipv6_address": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "outpost_id": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "private_ipv4_address": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"

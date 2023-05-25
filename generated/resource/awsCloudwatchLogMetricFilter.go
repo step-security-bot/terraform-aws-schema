@@ -40,14 +40,6 @@ const awsCloudwatchLogMetricFilter = `{
               "optional": true,
               "type": "string"
             },
-            "dimensions": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "map",
-                "string"
-              ]
-            },
             "name": {
               "description_kind": "plain",
               "required": true,
@@ -56,11 +48,6 @@ const awsCloudwatchLogMetricFilter = `{
             "namespace": {
               "description_kind": "plain",
               "required": true,
-              "type": "string"
-            },
-            "unit": {
-              "description_kind": "plain",
-              "optional": true,
               "type": "string"
             },
             "value": {

@@ -26,7 +26,7 @@ const awsLambdaEventSourceMapping = `{
       },
       "event_source_arn": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "function_arn": {
@@ -38,14 +38,6 @@ const awsLambdaEventSourceMapping = `{
         "description_kind": "plain",
         "required": true,
         "type": "string"
-      },
-      "function_response_types": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
       },
       "id": {
         "computed": true,
@@ -86,14 +78,6 @@ const awsLambdaEventSourceMapping = `{
         "optional": true,
         "type": "number"
       },
-      "queues": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
       "starting_position": {
         "description_kind": "plain",
         "optional": true,
@@ -113,19 +97,6 @@ const awsLambdaEventSourceMapping = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "topics": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
-      "tumbling_window_in_seconds": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
       },
       "uuid": {
         "computed": true,
@@ -156,65 +127,6 @@ const awsLambdaEventSourceMapping = `{
         },
         "max_items": 1,
         "nesting_mode": "list"
-      },
-      "filter_criteria": {
-        "block": {
-          "block_types": {
-            "filter": {
-              "block": {
-                "attributes": {
-                  "pattern": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 5,
-              "nesting_mode": "set"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "self_managed_event_source": {
-        "block": {
-          "attributes": {
-            "endpoints": {
-              "description_kind": "plain",
-              "required": true,
-              "type": [
-                "map",
-                "string"
-              ]
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
-      "source_access_configuration": {
-        "block": {
-          "attributes": {
-            "type": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "uri": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 22,
-        "nesting_mode": "set"
       }
     },
     "description_kind": "plain"

@@ -46,16 +46,6 @@ const awsAvailabilityZone = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "parent_zone_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "parent_zone_name": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "region": {
         "computed": true,
         "description_kind": "plain",
@@ -71,11 +61,6 @@ const awsAvailabilityZone = `{
         "computed": true,
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
-      },
-      "zone_type": {
-        "computed": true,
-        "description_kind": "plain",
         "type": "string"
       }
     },

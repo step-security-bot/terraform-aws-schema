@@ -21,9 +21,13 @@ const awsBatchComputeEnvironment = `{
         "type": "string"
       },
       "compute_environment_name_prefix": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
+        "type": "string"
+      },
+      "ecc_cluster_arn": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       },
       "ecs_cluster_arn": {
@@ -38,9 +42,8 @@ const awsBatchComputeEnvironment = `{
         "type": "string"
       },
       "service_role": {
-        "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "state": {
@@ -57,23 +60,6 @@ const awsBatchComputeEnvironment = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       },
       "type": {
         "description_kind": "plain",
@@ -113,12 +99,12 @@ const awsBatchComputeEnvironment = `{
             },
             "instance_role": {
               "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": "string"
             },
             "instance_type": {
               "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": [
                 "set",
                 "string"
@@ -131,7 +117,7 @@ const awsBatchComputeEnvironment = `{
             },
             "min_vcpus": {
               "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": "number"
             },
             "security_group_ids": {
@@ -170,26 +156,6 @@ const awsBatchComputeEnvironment = `{
             }
           },
           "block_types": {
-            "ec2_configuration": {
-              "block": {
-                "attributes": {
-                  "image_id_override": {
-                    "computed": true,
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "image_type": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
             "launch_template": {
               "block": {
                 "attributes": {

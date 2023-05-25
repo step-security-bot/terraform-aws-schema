@@ -14,22 +14,7 @@ const awsTransferServer = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "certificate": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "domain": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "endpoint": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "endpoint_type": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -51,19 +36,6 @@ const awsTransferServer = `{
         "type": "string"
       },
       "logging_role": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "protocols": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          "string"
-        ]
-      },
-      "security_policy_name": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"

@@ -33,15 +33,6 @@ const awsEc2Fleet = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "terminate_instances": {
         "description_kind": "plain",
         "optional": true,
@@ -164,31 +155,6 @@ const awsEc2Fleet = `{
               "description_kind": "plain",
               "optional": true,
               "type": "number"
-            }
-          },
-          "block_types": {
-            "maintenance_strategies": {
-              "block": {
-                "block_types": {
-                  "capacity_rebalance": {
-                    "block": {
-                      "attributes": {
-                        "replacement_strategy": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "string"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "max_items": 1,
-                    "nesting_mode": "list"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"

@@ -77,26 +77,6 @@ const awsApigatewayv2Route = `{
         "type": "string"
       }
     },
-    "block_types": {
-      "request_parameter": {
-        "block": {
-          "attributes": {
-            "request_parameter_key": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "required": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "set"
-      }
-    },
     "description_kind": "plain"
   },
   "version": 0

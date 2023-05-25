@@ -19,11 +19,6 @@ const awsSnsTopicSubscription = `{
         "optional": true,
         "type": "number"
       },
-      "confirmation_was_authenticated": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
       "delivery_policy": {
         "description_kind": "plain",
         "optional": true,
@@ -50,16 +45,6 @@ const awsSnsTopicSubscription = `{
         "optional": true,
         "type": "string"
       },
-      "owner_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "pending_confirmation": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
       "protocol": {
         "description_kind": "plain",
         "required": true,
@@ -69,16 +54,6 @@ const awsSnsTopicSubscription = `{
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
-      },
-      "redrive_policy": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "subscription_role_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
       },
       "topic_arn": {
         "description_kind": "plain",

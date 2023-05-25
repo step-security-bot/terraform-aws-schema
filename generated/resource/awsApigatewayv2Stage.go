@@ -30,7 +30,6 @@ const awsApigatewayv2Stage = `{
         "type": "string"
       },
       "deployment_id": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -76,15 +75,6 @@ const awsApigatewayv2Stage = `{
           "map",
           "string"
         ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "block_types": {
@@ -121,7 +111,6 @@ const awsApigatewayv2Stage = `{
               "type": "bool"
             },
             "logging_level": {
-              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -156,7 +145,6 @@ const awsApigatewayv2Stage = `{
               "type": "bool"
             },
             "logging_level": {
-              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": "string"

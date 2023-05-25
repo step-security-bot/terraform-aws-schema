@@ -15,11 +15,6 @@ const awsBudgetsBudget = `{
         "optional": true,
         "type": "string"
       },
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "budget_type": {
         "description_kind": "plain",
         "required": true,
@@ -68,9 +63,8 @@ const awsBudgetsBudget = `{
         "type": "string"
       },
       "time_period_start": {
-        "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "time_unit": {
@@ -80,27 +74,6 @@ const awsBudgetsBudget = `{
       }
     },
     "block_types": {
-      "cost_filter": {
-        "block": {
-          "attributes": {
-            "name": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "values": {
-              "description_kind": "plain",
-              "required": true,
-              "type": [
-                "list",
-                "string"
-              ]
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "set"
-      },
       "cost_types": {
         "block": {
           "attributes": {

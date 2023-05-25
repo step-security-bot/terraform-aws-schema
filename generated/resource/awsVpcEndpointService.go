@@ -44,14 +44,6 @@ const awsVpcEndpointService = `{
           "string"
         ]
       },
-      "gateway_load_balancer_arns": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -65,7 +57,7 @@ const awsVpcEndpointService = `{
       },
       "network_load_balancer_arns": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": [
           "set",
           "string"
@@ -74,24 +66,7 @@ const awsVpcEndpointService = `{
       "private_dns_name": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
-      },
-      "private_dns_name_configuration": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "name": "string",
-              "state": "string",
-              "type": "string",
-              "value": "string"
-            }
-          ]
-        ]
       },
       "service_name": {
         "computed": true,
@@ -109,15 +84,6 @@ const awsVpcEndpointService = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

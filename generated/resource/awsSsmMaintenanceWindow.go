@@ -55,11 +55,6 @@ const awsSsmMaintenanceWindow = `{
         "required": true,
         "type": "string"
       },
-      "schedule_offset": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
       "schedule_timezone": {
         "description_kind": "plain",
         "optional": true,
@@ -71,15 +66,6 @@ const awsSsmMaintenanceWindow = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

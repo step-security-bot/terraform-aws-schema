@@ -20,11 +20,6 @@ const awsLbTargetGroup = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "connection_termination": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
       "deregistration_delay": {
         "computed": true,
         "description_kind": "plain",
@@ -78,17 +73,7 @@ const awsLbTargetGroup = `{
         "description_kind": "plain",
         "type": "number"
       },
-      "preserve_client_ip": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "protocol": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "protocol_version": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -112,7 +97,6 @@ const awsLbTargetGroup = `{
             "object",
             {
               "cookie_duration": "number",
-              "cookie_name": "string",
               "enabled": "bool",
               "type": "string"
             }

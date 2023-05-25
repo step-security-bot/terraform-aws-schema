@@ -14,6 +14,24 @@ const awsAvailabilityZones = `{
         "optional": true,
         "type": "bool"
       },
+      "blacklisted_names": {
+        "deprecated": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
+      },
+      "blacklisted_zone_ids": {
+        "deprecated": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
+      },
       "exclude_names": {
         "description_kind": "plain",
         "optional": true,
@@ -31,8 +49,8 @@ const awsAvailabilityZones = `{
         ]
       },
       "group_names": {
-        "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": [
           "set",
           "string"

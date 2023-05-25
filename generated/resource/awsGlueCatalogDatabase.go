@@ -32,7 +32,6 @@ const awsGlueCatalogDatabase = `{
         "type": "string"
       },
       "location_uri": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -49,27 +48,6 @@ const awsGlueCatalogDatabase = `{
           "map",
           "string"
         ]
-      }
-    },
-    "block_types": {
-      "target_database": {
-        "block": {
-          "attributes": {
-            "catalog_id": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "database_name": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

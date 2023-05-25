@@ -14,17 +14,6 @@ const awsEfsFileSystem = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "availability_zone_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "availability_zone_name": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "creation_token": {
         "computed": true,
         "description_kind": "plain",
@@ -54,16 +43,6 @@ const awsEfsFileSystem = `{
         "optional": true,
         "type": "string"
       },
-      "number_of_mount_targets": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "number"
-      },
-      "owner_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "performance_mode": {
         "computed": true,
         "description_kind": "plain",
@@ -75,31 +54,13 @@ const awsEfsFileSystem = `{
         "optional": true,
         "type": "number"
       },
-      "size_in_bytes": {
+      "reference_name": {
         "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "value": "number",
-              "value_in_ia": "number",
-              "value_in_standard": "number"
-            }
-          ]
-        ]
-      },
-      "tags": {
         "description_kind": "plain",
         "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
+        "type": "string"
       },
-      "tags_all": {
-        "computed": true,
+      "tags": {
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -119,18 +80,13 @@ const awsEfsFileSystem = `{
           "attributes": {
             "transition_to_ia": {
               "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "transition_to_primary_storage_class": {
-              "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": "string"
             }
           },
           "description_kind": "plain"
         },
-        "max_items": 2,
+        "max_items": 1,
         "nesting_mode": "list"
       }
     },

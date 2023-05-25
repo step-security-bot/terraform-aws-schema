@@ -42,15 +42,6 @@ const awsApiGatewayUsagePlan = `{
           "map",
           "string"
         ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "block_types": {
@@ -68,34 +59,9 @@ const awsApiGatewayUsagePlan = `{
               "type": "string"
             }
           },
-          "block_types": {
-            "throttle": {
-              "block": {
-                "attributes": {
-                  "burst_limit": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  },
-                  "path": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "rate_limit": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "nesting_mode": "set"
-            }
-          },
           "description_kind": "plain"
         },
-        "nesting_mode": "set"
+        "nesting_mode": "list"
       },
       "quota_settings": {
         "block": {

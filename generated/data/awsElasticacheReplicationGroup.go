@@ -9,11 +9,6 @@ import (
 const awsElasticacheReplicationGroup = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "auth_token_enabled": {
         "computed": true,
         "description_kind": "plain",
@@ -43,11 +38,6 @@ const awsElasticacheReplicationGroup = `{
           "string"
         ]
       },
-      "multi_az_enabled": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
       "node_type": {
         "computed": true,
         "description_kind": "plain",
@@ -64,11 +54,6 @@ const awsElasticacheReplicationGroup = `{
         "type": "number"
       },
       "primary_endpoint_address": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "reader_endpoint_address": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"

@@ -33,15 +33,6 @@ const awsBackupPlan = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "version": {
         "computed": true,
         "description_kind": "plain",
@@ -49,27 +40,6 @@ const awsBackupPlan = `{
       }
     },
     "block_types": {
-      "advanced_backup_setting": {
-        "block": {
-          "attributes": {
-            "backup_options": {
-              "description_kind": "plain",
-              "required": true,
-              "type": [
-                "map",
-                "string"
-              ]
-            },
-            "resource_type": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "set"
-      },
       "rule": {
         "block": {
           "attributes": {
@@ -77,11 +47,6 @@ const awsBackupPlan = `{
               "description_kind": "plain",
               "optional": true,
               "type": "number"
-            },
-            "enable_continuous_backup": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
             },
             "recovery_point_tags": {
               "description_kind": "plain",

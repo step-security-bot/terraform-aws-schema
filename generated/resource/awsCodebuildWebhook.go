@@ -14,11 +14,6 @@ const awsCodebuildWebhook = `{
         "optional": true,
         "type": "string"
       },
-      "build_type": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",

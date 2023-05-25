@@ -69,16 +69,6 @@ const awsDmsEndpoint = `{
         "optional": true,
         "type": "number"
       },
-      "secrets_manager_access_role_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "secrets_manager_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "server_name": {
         "description_kind": "plain",
         "optional": true,
@@ -96,15 +86,6 @@ const awsDmsEndpoint = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -156,88 +137,6 @@ const awsDmsEndpoint = `{
               "required": true,
               "type": "string"
             },
-            "include_control_details": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "include_null_and_empty": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "include_partition_value": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "include_table_alter_operations": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "include_transaction_details": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "message_format": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "message_max_bytes": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "no_hex_prefix": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "partition_include_schema_table": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "sasl_password": {
-              "description_kind": "plain",
-              "optional": true,
-              "sensitive": true,
-              "type": "string"
-            },
-            "sasl_username": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "security_protocol": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "ssl_ca_certificate_arn": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "ssl_client_certificate_arn": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "ssl_client_key_arn": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "ssl_client_key_password": {
-              "description_kind": "plain",
-              "optional": true,
-              "sensitive": true,
-              "type": "string"
-            },
             "topic": {
               "description_kind": "plain",
               "optional": true,
@@ -252,40 +151,10 @@ const awsDmsEndpoint = `{
       "kinesis_settings": {
         "block": {
           "attributes": {
-            "include_control_details": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "include_null_and_empty": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "include_partition_value": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "include_table_alter_operations": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "include_transaction_details": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
             "message_format": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
-            },
-            "partition_include_schema_table": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
             },
             "service_access_role_arn": {
               "description_kind": "plain",
@@ -370,37 +239,7 @@ const awsDmsEndpoint = `{
               "optional": true,
               "type": "string"
             },
-            "data_format": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "date_partition_enabled": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "encryption_mode": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "external_table_definition": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "parquet_timestamp_in_millisecond": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "parquet_version": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "server_side_encryption_kms_key_id": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"

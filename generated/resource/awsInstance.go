@@ -10,9 +10,8 @@ const awsInstance = `{
   "block": {
     "attributes": {
       "ami": {
-        "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "arn": {
@@ -45,13 +44,11 @@ const awsInstance = `{
         "type": "number"
       },
       "disable_api_termination": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
       },
       "ebs_optimized": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
@@ -84,7 +81,6 @@ const awsInstance = `{
         "type": "string"
       },
       "instance_initiated_shutdown_behavior": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -95,9 +91,8 @@ const awsInstance = `{
         "type": "string"
       },
       "instance_type": {
-        "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "ipv6_address_count": {
@@ -122,10 +117,14 @@ const awsInstance = `{
         "type": "string"
       },
       "monitoring": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
+      },
+      "network_interface_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
       },
       "outpost_arn": {
         "computed": true,
@@ -142,12 +141,6 @@ const awsInstance = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "placement_partition_number": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
       },
       "primary_network_interface_id": {
         "computed": true,
@@ -174,15 +167,6 @@ const awsInstance = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "secondary_private_ips": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
       },
       "security_groups": {
         "computed": true,
@@ -212,15 +196,6 @@ const awsInstance = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "tenancy": {
         "computed": true,
         "description_kind": "plain",
@@ -228,18 +203,17 @@ const awsInstance = `{
         "type": "string"
       },
       "user_data": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
       "user_data_base64": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
       "volume_tags": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -258,36 +232,6 @@ const awsInstance = `{
       }
     },
     "block_types": {
-      "capacity_reservation_specification": {
-        "block": {
-          "attributes": {
-            "capacity_reservation_preference": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "block_types": {
-            "capacity_reservation_target": {
-              "block": {
-                "attributes": {
-                  "capacity_reservation_id": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "credit_specification": {
         "block": {
           "attributes": {
@@ -339,20 +283,6 @@ const awsInstance = `{
               "optional": true,
               "type": "string"
             },
-            "tags": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "map",
-                "string"
-              ]
-            },
-            "throughput": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
             "volume_id": {
               "computed": true,
               "description_kind": "plain",
@@ -374,21 +304,6 @@ const awsInstance = `{
           "description_kind": "plain"
         },
         "nesting_mode": "set"
-      },
-      "enclave_options": {
-        "block": {
-          "attributes": {
-            "enabled": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
       },
       "ephemeral_block_device": {
         "block": {
@@ -413,32 +328,6 @@ const awsInstance = `{
         },
         "nesting_mode": "set"
       },
-      "launch_template": {
-        "block": {
-          "attributes": {
-            "id": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "name": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "version": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "metadata_options": {
         "block": {
           "attributes": {
@@ -456,11 +345,6 @@ const awsInstance = `{
             },
             "http_tokens": {
               "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "instance_metadata_tags": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -524,20 +408,6 @@ const awsInstance = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
-            },
-            "tags": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "map",
-                "string"
-              ]
-            },
-            "throughput": {
-              "computed": true,
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
             },
             "volume_id": {
               "computed": true,

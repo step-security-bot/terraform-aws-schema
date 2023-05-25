@@ -12,7 +12,6 @@ const awsOutpostsOutpost = `{
       "arn": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "availability_zone": {
@@ -45,7 +44,6 @@ const awsOutpostsOutpost = `{
       "owner_id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "site_id": {

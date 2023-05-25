@@ -80,11 +80,6 @@ const awsRdsClusterInstance = `{
         "optional": true,
         "type": "string"
       },
-      "engine_version_actual": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -136,12 +131,6 @@ const awsRdsClusterInstance = `{
         "optional": true,
         "type": "string"
       },
-      "performance_insights_retention_period": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
       "port": {
         "computed": true,
         "description_kind": "plain",
@@ -175,15 +164,6 @@ const awsRdsClusterInstance = `{
         "type": "bool"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

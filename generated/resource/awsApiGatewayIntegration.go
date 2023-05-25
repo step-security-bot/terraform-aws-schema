@@ -73,6 +73,11 @@ const awsApiGatewayIntegration = `{
           "string"
         ]
       },
+      "request_parameters_in_json": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "request_templates": {
         "description_kind": "plain",
         "optional": true,
@@ -105,22 +110,6 @@ const awsApiGatewayIntegration = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      }
-    },
-    "block_types": {
-      "tls_config": {
-        "block": {
-          "attributes": {
-            "insecure_skip_verification": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

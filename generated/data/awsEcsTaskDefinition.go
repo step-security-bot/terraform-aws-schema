@@ -9,11 +9,6 @@ import (
 const awsEcsTaskDefinition = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "family": {
         "computed": true,
         "description_kind": "plain",

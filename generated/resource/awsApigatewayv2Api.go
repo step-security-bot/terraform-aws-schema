@@ -24,11 +24,6 @@ const awsApigatewayv2Api = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "body": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "credentials_arn": {
         "description_kind": "plain",
         "optional": true,
@@ -39,20 +34,10 @@ const awsApigatewayv2Api = `{
         "optional": true,
         "type": "string"
       },
-      "disable_execute_api_endpoint": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "execution_arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "fail_on_warnings": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       },
       "id": {
         "computed": true,
@@ -81,15 +66,6 @@ const awsApigatewayv2Api = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

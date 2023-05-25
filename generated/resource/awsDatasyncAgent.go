@@ -37,27 +37,6 @@ const awsDatasyncAgent = `{
         "optional": true,
         "type": "string"
       },
-      "private_link_endpoint": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "security_group_arns": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
-      "subnet_arns": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "set",
-          "string"
-        ]
-      },
       "tags": {
         "description_kind": "plain",
         "optional": true,
@@ -65,20 +44,6 @@ const awsDatasyncAgent = `{
           "map",
           "string"
         ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "vpc_endpoint_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
       }
     },
     "block_types": {

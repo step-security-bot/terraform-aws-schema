@@ -53,15 +53,6 @@ const awsWorkspacesWorkspace = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "user_name": {
         "description_kind": "plain",
         "required": true,
@@ -79,29 +70,6 @@ const awsWorkspacesWorkspace = `{
       }
     },
     "block_types": {
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "create": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "update": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
-      },
       "workspace_properties": {
         "block": {
           "attributes": {

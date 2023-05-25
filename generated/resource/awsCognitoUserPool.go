@@ -35,16 +35,6 @@ const awsCognitoUserPool = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "custom_domain": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "domain": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "email_verification_message": {
         "computed": true,
         "description_kind": "plain",
@@ -61,11 +51,6 @@ const awsCognitoUserPool = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "estimated_number_of_users": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "number"
       },
       "id": {
         "computed": true,
@@ -107,53 +92,16 @@ const awsCognitoUserPool = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "username_attributes": {
         "description_kind": "plain",
         "optional": true,
         "type": [
-          "set",
+          "list",
           "string"
         ]
       }
     },
     "block_types": {
-      "account_recovery_setting": {
-        "block": {
-          "block_types": {
-            "recovery_mechanism": {
-              "block": {
-                "attributes": {
-                  "name": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "priority": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "number"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "min_items": 1,
-              "nesting_mode": "set"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "admin_create_user_config": {
         "block": {
           "attributes": {
@@ -161,6 +109,13 @@ const awsCognitoUserPool = `{
               "description_kind": "plain",
               "optional": true,
               "type": "bool"
+            },
+            "unused_account_validity_days": {
+              "computed": true,
+              "deprecated": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
             }
           },
           "block_types": {
@@ -216,11 +171,6 @@ const awsCognitoUserPool = `{
       "email_configuration": {
         "block": {
           "attributes": {
-            "configuration_set": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "email_sending_account": {
               "description_kind": "plain",
               "optional": true,
@@ -265,11 +215,6 @@ const awsCognitoUserPool = `{
               "optional": true,
               "type": "string"
             },
-            "kms_key_id": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
             "post_authentication": {
               "description_kind": "plain",
               "optional": true,
@@ -304,46 +249,6 @@ const awsCognitoUserPool = `{
               "description_kind": "plain",
               "optional": true,
               "type": "string"
-            }
-          },
-          "block_types": {
-            "custom_email_sender": {
-              "block": {
-                "attributes": {
-                  "lambda_arn": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "lambda_version": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
-            "custom_sms_sender": {
-              "block": {
-                "attributes": {
-                  "lambda_arn": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  },
-                  "lambda_version": {
-                    "description_kind": "plain",
-                    "required": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
             }
           },
           "description_kind": "plain"

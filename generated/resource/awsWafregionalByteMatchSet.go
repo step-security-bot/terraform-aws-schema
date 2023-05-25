@@ -22,6 +22,51 @@ const awsWafregionalByteMatchSet = `{
       }
     },
     "block_types": {
+      "byte_match_tuple": {
+        "block": {
+          "attributes": {
+            "positional_constraint": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "target_string": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "text_transformation": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "block_types": {
+            "field_to_match": {
+              "block": {
+                "attributes": {
+                  "data": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "type": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "min_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "set"
+      },
       "byte_match_tuples": {
         "block": {
           "attributes": {

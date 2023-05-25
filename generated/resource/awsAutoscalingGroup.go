@@ -23,11 +23,6 @@ const awsAutoscalingGroup = `{
           "string"
         ]
       },
-      "capacity_rebalance": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "default_cooldown": {
         "computed": true,
         "description_kind": "plain",
@@ -49,11 +44,6 @@ const awsAutoscalingGroup = `{
         ]
       },
       "force_delete": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "force_delete_warm_pool": {
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
@@ -81,6 +71,7 @@ const awsAutoscalingGroup = `{
         "type": "string"
       },
       "load_balancers": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -120,7 +111,6 @@ const awsAutoscalingGroup = `{
         "type": "string"
       },
       "name_prefix": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -161,6 +151,7 @@ const awsAutoscalingGroup = `{
         ]
       },
       "target_group_arns": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -240,62 +231,6 @@ const awsAutoscalingGroup = `{
           "description_kind": "plain"
         },
         "nesting_mode": "set"
-      },
-      "instance_refresh": {
-        "block": {
-          "attributes": {
-            "strategy": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "triggers": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            }
-          },
-          "block_types": {
-            "preferences": {
-              "block": {
-                "attributes": {
-                  "checkpoint_delay": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "checkpoint_percentages": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": [
-                      "list",
-                      "number"
-                    ]
-                  },
-                  "instance_warmup": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "min_healthy_percentage": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
       },
       "launch_template": {
         "block": {
@@ -414,34 +349,6 @@ const awsAutoscalingGroup = `{
                           "type": "string"
                         }
                       },
-                      "block_types": {
-                        "launch_template_specification": {
-                          "block": {
-                            "attributes": {
-                              "launch_template_id": {
-                                "computed": true,
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "string"
-                              },
-                              "launch_template_name": {
-                                "computed": true,
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "string"
-                              },
-                              "version": {
-                                "description_kind": "plain",
-                                "optional": true,
-                                "type": "string"
-                              }
-                            },
-                            "description_kind": "plain"
-                          },
-                          "max_items": 1,
-                          "nesting_mode": "list"
-                        }
-                      },
                       "description_kind": "plain"
                     },
                     "nesting_mode": "list"
@@ -494,30 +401,6 @@ const awsAutoscalingGroup = `{
           "description_kind": "plain"
         },
         "nesting_mode": "single"
-      },
-      "warm_pool": {
-        "block": {
-          "attributes": {
-            "max_group_prepared_capacity": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "min_size": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            },
-            "pool_state": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

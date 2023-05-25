@@ -25,12 +25,6 @@ const awsPlacementGroup = `{
         "required": true,
         "type": "string"
       },
-      "partition_count": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
       "placement_group_id": {
         "computed": true,
         "description_kind": "plain",
@@ -42,15 +36,6 @@ const awsPlacementGroup = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

@@ -10,7 +10,6 @@ const awsApiGatewayRestApi = `{
   "block": {
     "attributes": {
       "api_key_source": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -21,7 +20,6 @@ const awsApiGatewayRestApi = `{
         "type": "string"
       },
       "binary_media_types": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -40,16 +38,9 @@ const awsApiGatewayRestApi = `{
         "type": "string"
       },
       "description": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "disable_execute_api_endpoint": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       },
       "execution_arn": {
         "computed": true,
@@ -72,16 +63,7 @@ const awsApiGatewayRestApi = `{
         "required": true,
         "type": "string"
       },
-      "parameters": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "policy": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -92,15 +74,6 @@ const awsApiGatewayRestApi = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -122,7 +95,6 @@ const awsApiGatewayRestApi = `{
               ]
             },
             "vpc_endpoint_ids": {
-              "computed": true,
               "description_kind": "plain",
               "optional": true,
               "type": [

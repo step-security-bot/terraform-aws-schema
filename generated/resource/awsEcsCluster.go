@@ -15,7 +15,6 @@ const awsEcsCluster = `{
         "type": "string"
       },
       "capacity_providers": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -41,82 +40,9 @@ const awsEcsCluster = `{
           "map",
           "string"
         ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "block_types": {
-      "configuration": {
-        "block": {
-          "block_types": {
-            "execute_command_configuration": {
-              "block": {
-                "attributes": {
-                  "kms_key_id": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "logging": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  }
-                },
-                "block_types": {
-                  "log_configuration": {
-                    "block": {
-                      "attributes": {
-                        "cloud_watch_encryption_enabled": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "bool"
-                        },
-                        "cloud_watch_log_group_name": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "string"
-                        },
-                        "s3_bucket_encryption_enabled": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "bool"
-                        },
-                        "s3_bucket_name": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "string"
-                        },
-                        "s3_key_prefix": {
-                          "description_kind": "plain",
-                          "optional": true,
-                          "type": "string"
-                        }
-                      },
-                      "description_kind": "plain"
-                    },
-                    "max_items": 1,
-                    "nesting_mode": "list"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
-      },
       "default_capacity_provider_strategy": {
         "block": {
           "attributes": {

@@ -10,9 +10,8 @@ const awsVpcIpv4CidrBlockAssociation = `{
   "block": {
     "attributes": {
       "cidr_block": {
-        "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "id": {
@@ -20,16 +19,6 @@ const awsVpcIpv4CidrBlockAssociation = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "ipv4_ipam_pool_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "ipv4_netmask_length": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
       },
       "vpc_id": {
         "description_kind": "plain",

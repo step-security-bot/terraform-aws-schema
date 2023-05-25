@@ -44,15 +44,6 @@ const awsSwfDomain = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "workflow_execution_retention_period_in_days": {
         "description_kind": "plain",
         "required": true,

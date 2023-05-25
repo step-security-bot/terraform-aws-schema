@@ -9,11 +9,6 @@ import (
 const awsEfsFileSystemPolicy = `{
   "block": {
     "attributes": {
-      "bypass_policy_lockout_safety_check": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "file_system_id": {
         "description_kind": "plain",
         "required": true,

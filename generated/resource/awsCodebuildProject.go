@@ -29,11 +29,6 @@ const awsCodebuildProject = `{
         "optional": true,
         "type": "number"
       },
-      "concurrent_build_limit": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
       "description": {
         "computed": true,
         "description_kind": "plain",
@@ -57,25 +52,10 @@ const awsCodebuildProject = `{
         "required": true,
         "type": "string"
       },
-      "project_visibility": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "public_project_alias": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "queued_timeout": {
         "description_kind": "plain",
         "optional": true,
         "type": "number"
-      },
-      "resource_access_role": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
       },
       "service_role": {
         "description_kind": "plain",
@@ -94,15 +74,6 @@ const awsCodebuildProject = `{
           "map",
           "string"
         ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
       }
     },
     "block_types": {
@@ -110,11 +81,6 @@ const awsCodebuildProject = `{
         "block": {
           "attributes": {
             "artifact_identifier": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "bucket_owner_access": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -164,54 +130,6 @@ const awsCodebuildProject = `{
         },
         "max_items": 1,
         "min_items": 1,
-        "nesting_mode": "list"
-      },
-      "build_batch_config": {
-        "block": {
-          "attributes": {
-            "combine_artifacts": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "bool"
-            },
-            "service_role": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "timeout_in_mins": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
-            }
-          },
-          "block_types": {
-            "restrictions": {
-              "block": {
-                "attributes": {
-                  "compute_types_allowed": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": [
-                      "list",
-                      "string"
-                    ]
-                  },
-                  "maximum_builds_allowed": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "number"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
         "nesting_mode": "list"
       },
       "cache": {
@@ -325,39 +243,6 @@ const awsCodebuildProject = `{
         "min_items": 1,
         "nesting_mode": "list"
       },
-      "file_system_locations": {
-        "block": {
-          "attributes": {
-            "identifier": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "location": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "mount_options": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "mount_point": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "type": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "set"
-      },
       "logs_config": {
         "block": {
           "block_types": {
@@ -388,11 +273,6 @@ const awsCodebuildProject = `{
             "s3_logs": {
               "block": {
                 "attributes": {
-                  "bucket_owner_access": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
                   "encryption_disabled": {
                     "description_kind": "plain",
                     "optional": true,
@@ -426,11 +306,6 @@ const awsCodebuildProject = `{
             "artifact_identifier": {
               "description_kind": "plain",
               "required": true,
-              "type": "string"
-            },
-            "bucket_owner_access": {
-              "description_kind": "plain",
-              "optional": true,
               "type": "string"
             },
             "encryption_disabled": {
@@ -476,26 +351,6 @@ const awsCodebuildProject = `{
           },
           "description_kind": "plain"
         },
-        "max_items": 12,
-        "nesting_mode": "set"
-      },
-      "secondary_source_version": {
-        "block": {
-          "attributes": {
-            "source_identifier": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "source_version": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 12,
         "nesting_mode": "set"
       },
       "secondary_sources": {
@@ -542,36 +397,14 @@ const awsCodebuildProject = `{
               "block": {
                 "attributes": {
                   "resource": {
-                    "deprecated": true,
                     "description_kind": "plain",
                     "optional": true,
                     "sensitive": true,
                     "type": "string"
                   },
                   "type": {
-                    "deprecated": true,
                     "description_kind": "plain",
                     "required": true,
-                    "type": "string"
-                  }
-                },
-                "deprecated": true,
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
-            "build_status_config": {
-              "block": {
-                "attributes": {
-                  "context": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "target_url": {
-                    "description_kind": "plain",
-                    "optional": true,
                     "type": "string"
                   }
                 },
@@ -597,7 +430,6 @@ const awsCodebuildProject = `{
           },
           "description_kind": "plain"
         },
-        "max_items": 12,
         "nesting_mode": "set"
       },
       "source": {
@@ -639,36 +471,14 @@ const awsCodebuildProject = `{
               "block": {
                 "attributes": {
                   "resource": {
-                    "deprecated": true,
                     "description_kind": "plain",
                     "optional": true,
                     "sensitive": true,
                     "type": "string"
                   },
                   "type": {
-                    "deprecated": true,
                     "description_kind": "plain",
                     "required": true,
-                    "type": "string"
-                  }
-                },
-                "deprecated": true,
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            },
-            "build_status_config": {
-              "block": {
-                "attributes": {
-                  "context": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  },
-                  "target_url": {
-                    "description_kind": "plain",
-                    "optional": true,
                     "type": "string"
                   }
                 },

@@ -15,11 +15,6 @@ const awsDmsReplicationInstance = `{
         "optional": true,
         "type": "number"
       },
-      "allow_major_version_upgrade": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "apply_immediately": {
         "description_kind": "plain",
         "optional": true,
@@ -111,15 +106,6 @@ const awsDmsReplicationInstance = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

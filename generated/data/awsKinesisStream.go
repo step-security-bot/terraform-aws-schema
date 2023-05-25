@@ -64,19 +64,6 @@ const awsKinesisStream = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "stream_mode_details": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "stream_mode": "string"
-            }
-          ]
-        ]
-      },
       "tags": {
         "computed": true,
         "description_kind": "plain",

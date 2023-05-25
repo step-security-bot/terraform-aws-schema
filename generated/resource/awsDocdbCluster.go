@@ -106,11 +106,6 @@ const awsDocdbCluster = `{
         "optional": true,
         "type": "string"
       },
-      "global_cluster_identifier": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "hosted_zone_id": {
         "computed": true,
         "description_kind": "plain",
@@ -178,15 +173,6 @@ const awsDocdbCluster = `{
         "type": "bool"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

@@ -35,11 +35,6 @@ const awsVolumeAttachment = `{
         "optional": true,
         "type": "bool"
       },
-      "stop_instance_before_detaching": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "volume_id": {
         "description_kind": "plain",
         "required": true,

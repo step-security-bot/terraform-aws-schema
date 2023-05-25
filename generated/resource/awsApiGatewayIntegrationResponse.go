@@ -38,6 +38,11 @@ const awsApiGatewayIntegrationResponse = `{
           "string"
         ]
       },
+      "response_parameters_in_json": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "response_templates": {
         "description_kind": "plain",
         "optional": true,

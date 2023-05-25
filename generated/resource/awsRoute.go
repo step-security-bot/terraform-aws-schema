@@ -9,11 +9,6 @@ import (
 const awsRoute = `{
   "block": {
     "attributes": {
-      "carrier_gateway_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "destination_cidr_block": {
         "description_kind": "plain",
         "optional": true,
@@ -25,16 +20,18 @@ const awsRoute = `{
         "type": "string"
       },
       "destination_prefix_list_id": {
+        "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "egress_only_gateway_id": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
       "gateway_id": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -56,12 +53,8 @@ const awsRoute = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "local_gateway_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "nat_gateway_id": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
@@ -92,11 +85,6 @@ const awsRoute = `{
         "optional": true,
         "type": "string"
       },
-      "vpc_endpoint_id": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "vpc_peering_connection_id": {
         "description_kind": "plain",
         "optional": true,
@@ -113,11 +101,6 @@ const awsRoute = `{
               "type": "string"
             },
             "delete": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "update": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"

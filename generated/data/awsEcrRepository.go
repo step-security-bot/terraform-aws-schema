@@ -14,42 +14,10 @@ const awsEcrRepository = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "encryption_configuration": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "encryption_type": "string",
-              "kms_key": "string"
-            }
-          ]
-        ]
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
-      },
-      "image_scanning_configuration": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "scan_on_push": "bool"
-            }
-          ]
-        ]
-      },
-      "image_tag_mutability": {
-        "computed": true,
-        "description_kind": "plain",
         "type": "string"
       },
       "name": {
@@ -60,7 +28,6 @@ const awsEcrRepository = `{
       "registry_id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "repository_url": {

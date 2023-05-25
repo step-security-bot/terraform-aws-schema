@@ -45,11 +45,6 @@ const awsAppsyncFunction = `{
         "optional": true,
         "type": "string"
       },
-      "max_batch_size": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
       "name": {
         "description_kind": "plain",
         "required": true,
@@ -64,43 +59,6 @@ const awsAppsyncFunction = `{
         "description_kind": "plain",
         "required": true,
         "type": "string"
-      }
-    },
-    "block_types": {
-      "sync_config": {
-        "block": {
-          "attributes": {
-            "conflict_detection": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "conflict_handler": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "block_types": {
-            "lambda_conflict_handler_config": {
-              "block": {
-                "attributes": {
-                  "lambda_conflict_handler_arn": {
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
-              "max_items": 1,
-              "nesting_mode": "list"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "max_items": 1,
-        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

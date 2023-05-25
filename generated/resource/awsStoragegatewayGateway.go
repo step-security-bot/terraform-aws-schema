@@ -20,29 +20,9 @@ const awsStoragegatewayGateway = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "average_download_rate_limit_in_bits_per_sec": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
-      "average_upload_rate_limit_in_bits_per_sec": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
-      },
       "cloudwatch_log_group_arn": {
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
-      },
-      "ec2_instance_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "endpoint_type": {
-        "computed": true,
-        "description_kind": "plain",
         "type": "string"
       },
       "gateway_id": {
@@ -61,19 +41,6 @@ const awsStoragegatewayGateway = `{
         "required": true,
         "type": "string"
       },
-      "gateway_network_interface": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "list",
-          [
-            "object",
-            {
-              "ipv4_address": "string"
-            }
-          ]
-        ]
-      },
       "gateway_timezone": {
         "description_kind": "plain",
         "required": true,
@@ -89,11 +56,6 @@ const awsStoragegatewayGateway = `{
         "optional": true,
         "type": "string"
       },
-      "host_environment": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -105,33 +67,13 @@ const awsStoragegatewayGateway = `{
         "optional": true,
         "type": "string"
       },
-      "smb_file_share_visibility": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "smb_guest_password": {
         "description_kind": "plain",
         "optional": true,
         "sensitive": true,
         "type": "string"
       },
-      "smb_security_strategy": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -149,27 +91,9 @@ const awsStoragegatewayGateway = `{
       "smb_active_directory_settings": {
         "block": {
           "attributes": {
-            "active_directory_status": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "domain_controllers": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            },
             "domain_name": {
               "description_kind": "plain",
               "required": true,
-              "type": "string"
-            },
-            "organizational_unit": {
-              "description_kind": "plain",
-              "optional": true,
               "type": "string"
             },
             "password": {
@@ -177,11 +101,6 @@ const awsStoragegatewayGateway = `{
               "required": true,
               "sensitive": true,
               "type": "string"
-            },
-            "timeout_in_seconds": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "number"
             },
             "username": {
               "description_kind": "plain",

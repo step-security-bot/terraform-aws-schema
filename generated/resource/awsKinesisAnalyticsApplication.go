@@ -45,26 +45,12 @@ const awsKinesisAnalyticsApplication = `{
         "required": true,
         "type": "string"
       },
-      "start_application": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "status": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
@@ -116,11 +102,24 @@ const awsKinesisAnalyticsApplication = `{
               "required": true,
               "type": "string"
             },
-            "stream_names": {
+            "starting_position_configuration": {
               "computed": true,
               "description_kind": "plain",
               "type": [
                 "list",
+                [
+                  "object",
+                  {
+                    "starting_position": "string"
+                  }
+                ]
+              ]
+            },
+            "stream_names": {
+              "computed": true,
+              "description_kind": "plain",
+              "type": [
+                "set",
                 "string"
               ]
             }
@@ -168,9 +167,8 @@ const awsKinesisAnalyticsApplication = `{
               "block": {
                 "attributes": {
                   "count": {
-                    "computed": true,
                     "description_kind": "plain",
-                    "optional": true,
+                    "required": true,
                     "type": "number"
                   }
                 },
@@ -239,7 +237,6 @@ const awsKinesisAnalyticsApplication = `{
                       },
                       "description_kind": "plain"
                     },
-                    "max_items": 1000,
                     "min_items": 1,
                     "nesting_mode": "list"
                   },
@@ -307,20 +304,6 @@ const awsKinesisAnalyticsApplication = `{
               },
               "max_items": 1,
               "min_items": 1,
-              "nesting_mode": "list"
-            },
-            "starting_position_configuration": {
-              "block": {
-                "attributes": {
-                  "starting_position": {
-                    "computed": true,
-                    "description_kind": "plain",
-                    "optional": true,
-                    "type": "string"
-                  }
-                },
-                "description_kind": "plain"
-              },
               "nesting_mode": "list"
             }
           },
@@ -406,7 +389,7 @@ const awsKinesisAnalyticsApplication = `{
                 "attributes": {
                   "record_format_type": {
                     "description_kind": "plain",
-                    "required": true,
+                    "optional": true,
                     "type": "string"
                   }
                 },
@@ -420,7 +403,7 @@ const awsKinesisAnalyticsApplication = `{
           "description_kind": "plain"
         },
         "max_items": 3,
-        "nesting_mode": "set"
+        "nesting_mode": "list"
       },
       "reference_data_sources": {
         "block": {
@@ -493,7 +476,6 @@ const awsKinesisAnalyticsApplication = `{
                       },
                       "description_kind": "plain"
                     },
-                    "max_items": 1000,
                     "min_items": 1,
                     "nesting_mode": "list"
                   },

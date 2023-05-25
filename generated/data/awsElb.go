@@ -53,11 +53,6 @@ const awsElb = `{
         "description_kind": "plain",
         "type": "bool"
       },
-      "desync_mitigation_mode": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "dns_name": {
         "computed": true,
         "description_kind": "plain",

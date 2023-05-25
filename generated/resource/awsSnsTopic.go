@@ -29,11 +29,6 @@ const awsSnsTopic = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "content_based_deduplication": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "delivery_policy": {
         "description_kind": "plain",
         "optional": true,
@@ -43,26 +38,6 @@ const awsSnsTopic = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
-      },
-      "fifo_topic": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "firehose_failure_feedback_role_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "firehose_success_feedback_role_arn": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "firehose_success_feedback_sample_rate": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "number"
       },
       "http_failure_feedback_role_arn": {
         "description_kind": "plain",
@@ -112,14 +87,8 @@ const awsSnsTopic = `{
         "type": "string"
       },
       "name_prefix": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
-      },
-      "owner": {
-        "computed": true,
-        "description_kind": "plain",
         "type": "string"
       },
       "policy": {
@@ -144,15 +113,6 @@ const awsSnsTopic = `{
         "type": "number"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

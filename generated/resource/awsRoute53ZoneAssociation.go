@@ -15,11 +15,6 @@ const awsRoute53ZoneAssociation = `{
         "optional": true,
         "type": "string"
       },
-      "owning_account": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "vpc_id": {
         "description_kind": "plain",
         "required": true,

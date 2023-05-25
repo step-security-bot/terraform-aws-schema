@@ -11,12 +11,7 @@ const awsNatGateway = `{
     "attributes": {
       "allocation_id": {
         "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "connectivity_type": {
-        "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "id": {
@@ -46,15 +41,6 @@ const awsNatGateway = `{
         "type": "string"
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [

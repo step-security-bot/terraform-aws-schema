@@ -53,21 +53,32 @@ const awsApiGatewayApiKey = `{
           "string"
         ]
       },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
       "value": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "sensitive": true,
         "type": "string"
+      }
+    },
+    "block_types": {
+      "stage_key": {
+        "block": {
+          "attributes": {
+            "rest_api_id": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "stage_name": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "set"
       }
     },
     "description_kind": "plain"

@@ -14,11 +14,6 @@ const awsPinpointEmailChannel = `{
         "required": true,
         "type": "string"
       },
-      "configuration_set": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "enabled": {
         "description_kind": "plain",
         "optional": true,
@@ -47,7 +42,7 @@ const awsPinpointEmailChannel = `{
       },
       "role_arn": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       }
     },

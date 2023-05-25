@@ -34,26 +34,6 @@ const awsDefaultSubnet = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "customer_owned_ipv4_pool": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
-      "enable_dns64": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "enable_resource_name_dns_a_record_on_launch": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "enable_resource_name_dns_aaaa_record_on_launch": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -69,16 +49,6 @@ const awsDefaultSubnet = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      },
-      "ipv6_native": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
-      },
-      "map_customer_owned_ip_on_launch": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
       },
       "map_public_ip_on_launch": {
         "computed": true,
@@ -96,22 +66,7 @@ const awsDefaultSubnet = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "private_dns_hostname_type_on_launch": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
-      },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": [
