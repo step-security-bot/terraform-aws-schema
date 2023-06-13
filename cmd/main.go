@@ -18,7 +18,7 @@ import (
 	githttp "github.com/go-git/go-git/v5/plumbing/transport/http"
 	"github.com/google/go-github/v51/github"
 	"github.com/hashicorp/go-version"
-	"github.com/lonegunmanb/terraform-aws-schema/v4/schema"
+	"github.com/lonegunmanb/terraform-aws-schema/v5/schema"
 	"golang.org/x/oauth2"
 )
 

@@ -8,10 +8,10 @@ The internal package from the Terraform AWS Provider is not publicly accessible,
 
 Each tag version of the Terraform AWS Provider has a corresponding tag in this repository. You can find the schema files for each provider version under the respective tag.
 
-e.g.: to use `aws`'s `4.67.0` schema, you could:
+e.g.: to use `aws`'s `5.0.0` schema, you could:
 
 ```shell
-$ go get github.com/lonegunmanb/terraform-aws-schema/v4@v4.67.0
+$ go get github.com/lonegunmanb/terraform-aws-schema/v5@v5.0.0
 ```
 
 Then you can read schemas like this:
@@ -20,7 +20,7 @@ Then you can read schemas like this:
 import (
 "testing"
 
-"github.com/lonegunmanb/terraform-aws-schema/v4/generated"
+"github.com/lonegunmanb/terraform-aws-schema/v5/generated"
 "github.com/stretchr/testify/assert"
 )
 
