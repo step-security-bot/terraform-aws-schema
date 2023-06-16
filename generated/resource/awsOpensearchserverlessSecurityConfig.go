@@ -6,46 +6,56 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsLambdaProvisionedConcurrencyConfig = `{
+const awsOpensearchserverlessSecurityConfig = `{
   "block": {
     "attributes": {
-      "function_name": {
+      "config_version": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
+        "type": "string"
+      },
+      "description": {
+        "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "provisioned_concurrent_executions": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "number"
-      },
-      "qualifier": {
+      "name": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "skip_destroy": {
+      "type": {
         "description_kind": "plain",
-        "optional": true,
-        "type": "bool"
+        "required": true,
+        "type": "string"
       }
     },
     "block_types": {
-      "timeouts": {
+      "saml_options": {
         "block": {
           "attributes": {
-            "create": {
+            "group_attribute": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
-            "update": {
+            "metadata": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "session_timeout": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "user_attribute": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -58,11 +68,11 @@ const awsLambdaProvisionedConcurrencyConfig = `{
     },
     "description_kind": "plain"
   },
-  "version": 1
+  "version": 0
 }`
 
-func AwsLambdaProvisionedConcurrencyConfigSchema() *tfjson.Schema {
+func AwsOpensearchserverlessSecurityConfigSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsLambdaProvisionedConcurrencyConfig), &result)
+	_ = json.Unmarshal([]byte(awsOpensearchserverlessSecurityConfig), &result)
 	return &result
 }

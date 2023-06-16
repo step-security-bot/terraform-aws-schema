@@ -6,10 +6,15 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsLambdaProvisionedConcurrencyConfig = `{
+const awsChimesdkvoiceSipMediaApplication = `{
   "block": {
     "attributes": {
-      "function_name": {
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "aws_region": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -20,49 +25,53 @@ const awsLambdaProvisionedConcurrencyConfig = `{
         "optional": true,
         "type": "string"
       },
-      "provisioned_concurrent_executions": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "number"
-      },
-      "qualifier": {
+      "name": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "skip_destroy": {
+      "tags": {
         "description_kind": "plain",
         "optional": true,
-        "type": "bool"
+        "type": [
+          "map",
+          "string"
+        ]
+      },
+      "tags_all": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
       }
     },
     "block_types": {
-      "timeouts": {
+      "endpoints": {
         "block": {
           "attributes": {
-            "create": {
+            "lambda_arn": {
               "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            },
-            "update": {
-              "description_kind": "plain",
-              "optional": true,
+              "required": true,
               "type": "string"
             }
           },
           "description_kind": "plain"
         },
-        "nesting_mode": "single"
+        "max_items": 1,
+        "min_items": 1,
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"
   },
-  "version": 1
+  "version": 0
 }`
 
-func AwsLambdaProvisionedConcurrencyConfigSchema() *tfjson.Schema {
+func AwsChimesdkvoiceSipMediaApplicationSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsLambdaProvisionedConcurrencyConfig), &result)
+	_ = json.Unmarshal([]byte(awsChimesdkvoiceSipMediaApplication), &result)
 	return &result
 }

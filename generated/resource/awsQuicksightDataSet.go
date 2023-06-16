@@ -686,7 +686,6 @@ const awsQuicksightDataSet = `{
           "description_kind": "plain"
         },
         "max_items": 32,
-        "min_items": 1,
         "nesting_mode": "set"
       },
       "refresh_properties": {

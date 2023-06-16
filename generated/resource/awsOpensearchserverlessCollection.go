@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsGlueDataQualityRuleset = `{
+const awsOpensearchserverlessCollection = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,7 +14,12 @@ const awsGlueDataQualityRuleset = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "created_on": {
+      "collection_endpoint": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "dashboard_endpoint": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -27,25 +32,14 @@ const awsGlueDataQualityRuleset = `{
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "last_modified_on": {
+      "kms_key_arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
       "name": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "recommendation_run_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "ruleset": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -61,37 +55,36 @@ const awsGlueDataQualityRuleset = `{
       "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": [
           "map",
           "string"
         ]
+      },
+      "type": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
       }
     },
     "block_types": {
-      "target_table": {
+      "timeouts": {
         "block": {
           "attributes": {
-            "catalog_id": {
+            "create": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
-            "database_name": {
+            "delete": {
               "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "table_name": {
-              "description_kind": "plain",
-              "required": true,
+              "optional": true,
               "type": "string"
             }
           },
           "description_kind": "plain"
         },
-        "max_items": 1,
-        "nesting_mode": "list"
+        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"
@@ -99,8 +92,8 @@ const awsGlueDataQualityRuleset = `{
   "version": 0
 }`
 
-func AwsGlueDataQualityRulesetSchema() *tfjson.Schema {
+func AwsOpensearchserverlessCollectionSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsGlueDataQualityRuleset), &result)
+	_ = json.Unmarshal([]byte(awsOpensearchserverlessCollection), &result)
 	return &result
 }

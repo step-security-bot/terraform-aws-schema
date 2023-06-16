@@ -6,34 +6,40 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsLambdaProvisionedConcurrencyConfig = `{
+const awsOpensearchserverlessVpcEndpoint = `{
   "block": {
     "attributes": {
-      "function_name": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
-      "provisioned_concurrent_executions": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "number"
-      },
-      "qualifier": {
+      "name": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "skip_destroy": {
+      "security_group_ids": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
-        "type": "bool"
+        "type": [
+          "set",
+          "string"
+        ]
+      },
+      "subnet_ids": {
+        "description_kind": "plain",
+        "required": true,
+        "type": [
+          "set",
+          "string"
+        ]
+      },
+      "vpc_id": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
       }
     },
     "block_types": {
@@ -41,6 +47,11 @@ const awsLambdaProvisionedConcurrencyConfig = `{
         "block": {
           "attributes": {
             "create": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "delete": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -58,11 +69,11 @@ const awsLambdaProvisionedConcurrencyConfig = `{
     },
     "description_kind": "plain"
   },
-  "version": 1
+  "version": 0
 }`
 
-func AwsLambdaProvisionedConcurrencyConfigSchema() *tfjson.Schema {
+func AwsOpensearchserverlessVpcEndpointSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsLambdaProvisionedConcurrencyConfig), &result)
+	_ = json.Unmarshal([]byte(awsOpensearchserverlessVpcEndpoint), &result)
 	return &result
 }
