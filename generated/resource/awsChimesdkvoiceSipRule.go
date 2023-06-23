@@ -6,34 +6,18 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsAppconfigEnvironment = `{
+const awsChimesdkvoiceSipRule = `{
   "block": {
     "attributes": {
-      "application_id": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "description": {
-        "computed": true,
+      "disabled": {
         "description_kind": "plain",
         "optional": true,
-        "type": "string"
-      },
-      "environment_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
+        "type": "bool"
       },
       "id": {
         "computed": true,
-        "deprecated": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "name": {
@@ -41,45 +25,41 @@ const awsAppconfigEnvironment = `{
         "required": true,
         "type": "string"
       },
-      "state": {
-        "computed": true,
+      "trigger_type": {
         "description_kind": "plain",
+        "required": true,
         "type": "string"
       },
-      "tags": {
+      "trigger_value": {
         "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "map",
-          "string"
-        ]
+        "required": true,
+        "type": "string"
       }
     },
     "block_types": {
-      "monitor": {
+      "target_applications": {
         "block": {
           "attributes": {
-            "alarm_arn": {
+            "aws_region": {
               "description_kind": "plain",
               "required": true,
               "type": "string"
             },
-            "alarm_role_arn": {
+            "priority": {
               "description_kind": "plain",
-              "optional": true,
+              "required": true,
+              "type": "number"
+            },
+            "sip_media_application_id": {
+              "description_kind": "plain",
+              "required": true,
               "type": "string"
             }
           },
           "description_kind": "plain"
         },
+        "max_items": 25,
+        "min_items": 1,
         "nesting_mode": "set"
       }
     },
@@ -88,8 +68,8 @@ const awsAppconfigEnvironment = `{
   "version": 0
 }`
 
-func AwsAppconfigEnvironmentSchema() *tfjson.Schema {
+func AwsChimesdkvoiceSipRuleSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsAppconfigEnvironment), &result)
+	_ = json.Unmarshal([]byte(awsChimesdkvoiceSipRule), &result)
 	return &result
 }

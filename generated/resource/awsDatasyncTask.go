@@ -125,6 +125,11 @@ const awsDatasyncTask = `{
               "optional": true,
               "type": "string"
             },
+            "object_tags": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "overwrite_mode": {
               "description_kind": "plain",
               "optional": true,

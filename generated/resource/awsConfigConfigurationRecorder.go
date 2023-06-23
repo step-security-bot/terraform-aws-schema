@@ -49,6 +49,37 @@ const awsConfigConfigurationRecorder = `{
               ]
             }
           },
+          "block_types": {
+            "exclusion_by_resource_types": {
+              "block": {
+                "attributes": {
+                  "resource_types": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
+            "recording_strategy": {
+              "block": {
+                "attributes": {
+                  "use_only": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            }
+          },
           "description_kind": "plain"
         },
         "max_items": 1,
