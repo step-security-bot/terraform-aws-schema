@@ -115,6 +115,55 @@ const awsFisExperimentTemplate = `{
         "min_items": 1,
         "nesting_mode": "set"
       },
+      "log_configuration": {
+        "block": {
+          "attributes": {
+            "log_schema_version": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "number"
+            }
+          },
+          "block_types": {
+            "cloudwatch_logs_configuration": {
+              "block": {
+                "attributes": {
+                  "log_group_arn": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "s3_configuration": {
+              "block": {
+                "attributes": {
+                  "bucket_name": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "prefix": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "stop_condition": {
         "block": {
           "attributes": {
@@ -141,6 +190,14 @@ const awsFisExperimentTemplate = `{
               "description_kind": "plain",
               "required": true,
               "type": "string"
+            },
+            "parameters": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "map",
+                "string"
+              ]
             },
             "resource_arns": {
               "description_kind": "plain",

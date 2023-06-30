@@ -134,6 +134,11 @@ const awsBatchComputeEnvironment = `{
               "optional": true,
               "type": "number"
             },
+            "placement_group": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "security_group_ids": {
               "description_kind": "plain",
               "optional": true,

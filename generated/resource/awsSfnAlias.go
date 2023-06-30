@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsResourceexplorer2Index = `{
+const awsSfnAlias = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,51 +14,62 @@ const awsResourceexplorer2Index = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "id": {
+      "creation_date": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "tags": {
+      "description": {
         "description_kind": "plain",
         "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
+        "type": "string"
       },
-      "tags_all": {
+      "id": {
         "computed": true,
         "description_kind": "plain",
-        "type": [
-          "map",
-          "string"
-        ]
+        "optional": true,
+        "type": "string"
       },
-      "type": {
+      "name": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       }
     },
     "block_types": {
+      "routing_configuration": {
+        "block": {
+          "attributes": {
+            "state_machine_version_arn": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "weight": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "number"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "min_items": 1,
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {
             "create": {
-              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "delete": {
-              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
             },
             "update": {
-              "description": "A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as \"30s\" or \"2h45m\". Valid time units are \"s\" (seconds), \"m\" (minutes), \"h\" (hours).",
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -74,8 +85,8 @@ const awsResourceexplorer2Index = `{
   "version": 0
 }`
 
-func AwsResourceexplorer2IndexSchema() *tfjson.Schema {
+func AwsSfnAliasSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsResourceexplorer2Index), &result)
+	_ = json.Unmarshal([]byte(awsSfnAlias), &result)
 	return &result
 }

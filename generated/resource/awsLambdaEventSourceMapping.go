@@ -90,7 +90,7 @@ const awsLambdaEventSourceMapping = `{
         "description_kind": "plain",
         "optional": true,
         "type": [
-          "set",
+          "list",
           "string"
         ]
       },

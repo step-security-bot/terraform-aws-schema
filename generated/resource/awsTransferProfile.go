@@ -1,4 +1,4 @@
-package data
+package resource
 
 import (
 	"encoding/json"
@@ -6,28 +6,21 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsSfnStateMachine = `{
+const awsTransferProfile = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
+      "as2_id": {
         "description_kind": "plain",
+        "required": true,
         "type": "string"
       },
-      "creation_date": {
-        "computed": true,
+      "certificate_ids": {
         "description_kind": "plain",
-        "type": "string"
-      },
-      "definition": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "description": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
       },
       "id": {
         "computed": true,
@@ -35,25 +28,32 @@ const awsSfnStateMachine = `{
         "optional": true,
         "type": "string"
       },
-      "name": {
+      "profile_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "profile_type": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "revision_id": {
-        "computed": true,
+      "tags": {
         "description_kind": "plain",
-        "type": "string"
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
       },
-      "role_arn": {
+      "tags_all": {
         "computed": true,
         "description_kind": "plain",
-        "type": "string"
-      },
-      "status": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
       }
     },
     "description_kind": "plain"
@@ -61,8 +61,8 @@ const awsSfnStateMachine = `{
   "version": 0
 }`
 
-func AwsSfnStateMachineSchema() *tfjson.Schema {
+func AwsTransferProfileSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsSfnStateMachine), &result)
+	_ = json.Unmarshal([]byte(awsTransferProfile), &result)
 	return &result
 }

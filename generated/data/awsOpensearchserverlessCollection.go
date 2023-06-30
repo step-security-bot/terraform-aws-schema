@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsSfnStateMachine = `{
+const awsOpensearchserverlessCollection = `{
   "block": {
     "attributes": {
       "arn": {
@@ -14,12 +14,17 @@ const awsSfnStateMachine = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "creation_date": {
+      "collection_endpoint": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "definition": {
+      "created_date": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "dashboard_endpoint": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -35,22 +40,31 @@ const awsSfnStateMachine = `{
         "optional": true,
         "type": "string"
       },
+      "kms_key_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "last_modified_date": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "name": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
-      },
-      "revision_id": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
-      "role_arn": {
+      "tags": {
         "computed": true,
         "description_kind": "plain",
-        "type": "string"
+        "type": [
+          "map",
+          "string"
+        ]
       },
-      "status": {
+      "type": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -61,8 +75,8 @@ const awsSfnStateMachine = `{
   "version": 0
 }`
 
-func AwsSfnStateMachineSchema() *tfjson.Schema {
+func AwsOpensearchserverlessCollectionSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsSfnStateMachine), &result)
+	_ = json.Unmarshal([]byte(awsOpensearchserverlessCollection), &result)
 	return &result
 }

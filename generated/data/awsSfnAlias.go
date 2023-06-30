@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsSfnStateMachine = `{
+const awsSfnAlias = `{
   "block": {
     "attributes": {
       "arn": {
@@ -19,14 +19,9 @@ const awsSfnStateMachine = `{
         "description_kind": "plain",
         "type": "string"
       },
-      "definition": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "description": {
-        "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "id": {
@@ -40,19 +35,23 @@ const awsSfnStateMachine = `{
         "required": true,
         "type": "string"
       },
-      "revision_id": {
+      "routing_configuration": {
         "computed": true,
         "description_kind": "plain",
-        "type": "string"
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "state_machine_version_arn": "string",
+              "weight": "number"
+            }
+          ]
+        ]
       },
-      "role_arn": {
-        "computed": true,
+      "statemachine_arn": {
         "description_kind": "plain",
-        "type": "string"
-      },
-      "status": {
-        "computed": true,
-        "description_kind": "plain",
+        "required": true,
         "type": "string"
       }
     },
@@ -61,8 +60,8 @@ const awsSfnStateMachine = `{
   "version": 0
 }`
 
-func AwsSfnStateMachineSchema() *tfjson.Schema {
+func AwsSfnAliasSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsSfnStateMachine), &result)
+	_ = json.Unmarshal([]byte(awsSfnAlias), &result)
 	return &result
 }

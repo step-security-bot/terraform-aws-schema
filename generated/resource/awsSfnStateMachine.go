@@ -24,6 +24,11 @@ const awsSfnStateMachine = `{
         "required": true,
         "type": "string"
       },
+      "description": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -42,9 +47,24 @@ const awsSfnStateMachine = `{
         "optional": true,
         "type": "string"
       },
+      "publish": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
+      "revision_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "role_arn": {
         "description_kind": "plain",
         "required": true,
+        "type": "string"
+      },
+      "state_machine_version_arn": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       },
       "status": {
@@ -72,6 +92,11 @@ const awsSfnStateMachine = `{
       "type": {
         "description_kind": "plain",
         "optional": true,
+        "type": "string"
+      },
+      "version_description": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       }
     },

@@ -1,4 +1,4 @@
-package data
+package resource
 
 import (
 	"encoding/json"
@@ -6,27 +6,34 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsSfnStateMachine = `{
+const awsTransferCertificate = `{
   "block": {
     "attributes": {
-      "arn": {
+      "active_date": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "creation_date": {
-        "computed": true,
+      "certificate": {
         "description_kind": "plain",
+        "required": true,
+        "sensitive": true,
         "type": "string"
       },
-      "definition": {
+      "certificate_chain": {
+        "description_kind": "plain",
+        "optional": true,
+        "sensitive": true,
+        "type": "string"
+      },
+      "certificate_id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
       "description": {
-        "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "id": {
@@ -35,24 +42,37 @@ const awsSfnStateMachine = `{
         "optional": true,
         "type": "string"
       },
-      "name": {
+      "inactive_date": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "private_key": {
+        "description_kind": "plain",
+        "optional": true,
+        "sensitive": true,
+        "type": "string"
+      },
+      "tags": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
+      "tags_all": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
+      "usage": {
         "description_kind": "plain",
         "required": true,
-        "type": "string"
-      },
-      "revision_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "role_arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "status": {
-        "computed": true,
-        "description_kind": "plain",
         "type": "string"
       }
     },
@@ -61,8 +81,8 @@ const awsSfnStateMachine = `{
   "version": 0
 }`
 
-func AwsSfnStateMachineSchema() *tfjson.Schema {
+func AwsTransferCertificateSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsSfnStateMachine), &result)
+	_ = json.Unmarshal([]byte(awsTransferCertificate), &result)
 	return &result
 }

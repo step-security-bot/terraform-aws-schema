@@ -6,24 +6,9 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsSfnStateMachine = `{
+const awsOpensearchserverlessAccessPolicy = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "creation_date": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "definition": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "description": {
         "computed": true,
         "description_kind": "plain",
@@ -32,7 +17,6 @@ const awsSfnStateMachine = `{
       "id": {
         "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "name": {
@@ -40,19 +24,19 @@ const awsSfnStateMachine = `{
         "required": true,
         "type": "string"
       },
-      "revision_id": {
+      "policy": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "role_arn": {
+      "policy_version": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "status": {
-        "computed": true,
+      "type": {
         "description_kind": "plain",
+        "required": true,
         "type": "string"
       }
     },
@@ -61,8 +45,8 @@ const awsSfnStateMachine = `{
   "version": 0
 }`
 
-func AwsSfnStateMachineSchema() *tfjson.Schema {
+func AwsOpensearchserverlessAccessPolicySchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsSfnStateMachine), &result)
+	_ = json.Unmarshal([]byte(awsOpensearchserverlessAccessPolicy), &result)
 	return &result
 }

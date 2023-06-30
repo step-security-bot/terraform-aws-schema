@@ -56,7 +56,7 @@ const awsVpcSecurityGroupEgressRule = `{
       },
       "security_group_id": {
         "description_kind": "plain",
-        "optional": true,
+        "required": true,
         "type": "string"
       },
       "security_group_rule_id": {
