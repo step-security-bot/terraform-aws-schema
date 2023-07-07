@@ -79,6 +79,20 @@ const awsKeyspacesTable = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "client_side_timestamps": {
+        "block": {
+          "attributes": {
+            "status": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "comment": {
         "block": {
           "attributes": {

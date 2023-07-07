@@ -67,6 +67,25 @@ const awsInternetmonitorMonitor = `{
       }
     },
     "block_types": {
+      "health_events_config": {
+        "block": {
+          "attributes": {
+            "availability_score_threshold": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "performance_score_threshold": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "internet_measurements_log_delivery": {
         "block": {
           "block_types": {

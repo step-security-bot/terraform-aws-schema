@@ -177,6 +177,40 @@ const awsGlueCrawler = `{
         },
         "nesting_mode": "list"
       },
+      "iceberg_target": {
+        "block": {
+          "attributes": {
+            "connection_name": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "exclusions": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "list",
+                "string"
+              ]
+            },
+            "maximum_traversal_depth": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "number"
+            },
+            "paths": {
+              "description_kind": "plain",
+              "required": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            }
+          },
+          "description_kind": "plain"
+        },
+        "nesting_mode": "list"
+      },
       "jdbc_target": {
         "block": {
           "attributes": {

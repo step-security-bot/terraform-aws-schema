@@ -121,6 +121,39 @@ const awsTimestreamwriteTable = `{
         },
         "max_items": 1,
         "nesting_mode": "list"
+      },
+      "schema": {
+        "block": {
+          "block_types": {
+            "composite_partition_key": {
+              "block": {
+                "attributes": {
+                  "enforcement_in_record": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "name": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "type": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"
