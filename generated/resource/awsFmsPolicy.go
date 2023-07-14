@@ -161,6 +161,45 @@ const awsFmsPolicy = `{
               "type": "string"
             }
           },
+          "block_types": {
+            "policy_option": {
+              "block": {
+                "block_types": {
+                  "network_firewall_policy": {
+                    "block": {
+                      "attributes": {
+                        "firewall_deployment_model": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
+                  "third_party_firewall_policy": {
+                    "block": {
+                      "attributes": {
+                        "firewall_deployment_model": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
           "description_kind": "plain"
         },
         "max_items": 1,

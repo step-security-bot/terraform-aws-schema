@@ -323,6 +323,11 @@ const awsMqBroker = `{
               "sensitive": true,
               "type": "string"
             },
+            "replication_user": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
             "username": {
               "description_kind": "plain",
               "required": true,

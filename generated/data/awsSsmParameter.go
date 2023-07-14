@@ -20,6 +20,11 @@ const awsSsmParameter = `{
         "optional": true,
         "type": "string"
       },
+      "insecure_value": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "name": {
         "description_kind": "plain",
         "required": true,

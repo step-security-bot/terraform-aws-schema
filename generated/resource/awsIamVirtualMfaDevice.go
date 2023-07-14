@@ -19,6 +19,11 @@ const awsIamVirtualMfaDevice = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "enable_date": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -51,6 +56,11 @@ const awsIamVirtualMfaDevice = `{
           "map",
           "string"
         ]
+      },
+      "user_name": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
       },
       "virtual_mfa_device_name": {
         "description_kind": "plain",
