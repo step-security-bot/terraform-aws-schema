@@ -127,6 +127,15 @@ const awsAppmeshGatewayRoute = `{
                                     }
                                   ]
                                 ],
+                                "path": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "exact": "string"
+                                    }
+                                  ]
+                                ],
                                 "prefix": [
                                   "list",
                                   [
@@ -265,6 +274,15 @@ const awsAppmeshGatewayRoute = `{
                                     "object",
                                     {
                                       "default_target_hostname": "string"
+                                    }
+                                  ]
+                                ],
+                                "path": [
+                                  "list",
+                                  [
+                                    "object",
+                                    {
+                                      "exact": "string"
                                     }
                                   ]
                                 ],

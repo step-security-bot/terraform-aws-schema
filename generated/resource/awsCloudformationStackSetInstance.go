@@ -55,6 +55,22 @@ const awsCloudformationStackSetInstance = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "stack_instance_summaries": {
+        "computed": true,
+        "description": "List of stack instances created from an organizational unit deployment target. This will only be populated when ` + "`" + `deployment_targets` + "`" + ` is set.",
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "account_id": "string",
+              "organizational_unit_id": "string",
+              "stack_id": "string"
+            }
+          ]
+        ]
+      },
       "stack_set_name": {
         "description_kind": "plain",
         "required": true,

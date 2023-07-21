@@ -38,6 +38,7 @@ const awsDatasyncAgent = `{
         "type": "string"
       },
       "private_link_endpoint": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"

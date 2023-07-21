@@ -14,16 +14,6 @@ const awsDmsReplicationInstance = `{
         "description_kind": "plain",
         "type": "number"
       },
-      "allow_major_version_upgrade": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
-      "apply_immediately": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "bool"
-      },
       "auto_minor_version_upgrade": {
         "computed": true,
         "description_kind": "plain",

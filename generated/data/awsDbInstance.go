@@ -151,6 +151,11 @@ const awsDbInstance = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "max_allocated_storage": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
       "monitoring_interval": {
         "computed": true,
         "description_kind": "plain",

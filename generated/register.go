@@ -1241,6 +1241,7 @@ func init() {
 	resources["aws_wafv2_web_acl_logging_configuration"] = resource.AwsWafv2WebAclLoggingConfigurationSchema()  
 	resources["aws_worklink_fleet"] = resource.AwsWorklinkFleetSchema()  
 	resources["aws_worklink_website_certificate_authority_association"] = resource.AwsWorklinkWebsiteCertificateAuthorityAssociationSchema()  
+	resources["aws_workspaces_connection_alias"] = resource.AwsWorkspacesConnectionAliasSchema()  
 	resources["aws_workspaces_directory"] = resource.AwsWorkspacesDirectorySchema()  
 	resources["aws_workspaces_ip_group"] = resource.AwsWorkspacesIpGroupSchema()  
 	resources["aws_workspaces_workspace"] = resource.AwsWorkspacesWorkspaceSchema()  

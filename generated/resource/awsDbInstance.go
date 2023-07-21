@@ -52,6 +52,12 @@ const awsDbInstance = `{
         "optional": true,
         "type": "number"
       },
+      "backup_target": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "backup_window": {
         "computed": true,
         "description_kind": "plain",

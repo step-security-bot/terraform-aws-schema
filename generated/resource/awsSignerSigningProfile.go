@@ -108,6 +108,20 @@ const awsSignerSigningProfile = `{
         },
         "max_items": 1,
         "nesting_mode": "list"
+      },
+      "signing_material": {
+        "block": {
+          "attributes": {
+            "certificate_arn": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

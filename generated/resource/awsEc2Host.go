@@ -14,6 +14,11 @@ const awsEc2Host = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "asset_id": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "auto_placement": {
         "description_kind": "plain",
         "optional": true,

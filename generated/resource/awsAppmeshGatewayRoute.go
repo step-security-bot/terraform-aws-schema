@@ -179,6 +179,20 @@ const awsAppmeshGatewayRoute = `{
                                 "max_items": 1,
                                 "nesting_mode": "list"
                               },
+                              "path": {
+                                "block": {
+                                  "attributes": {
+                                    "exact": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              },
                               "prefix": {
                                 "block": {
                                   "attributes": {
@@ -423,6 +437,20 @@ const awsAppmeshGatewayRoute = `{
                                 "block": {
                                   "attributes": {
                                     "default_target_hostname": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              },
+                              "path": {
+                                "block": {
+                                  "attributes": {
+                                    "exact": {
                                       "description_kind": "plain",
                                       "required": true,
                                       "type": "string"

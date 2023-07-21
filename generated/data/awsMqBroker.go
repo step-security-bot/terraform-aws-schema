@@ -211,6 +211,7 @@ const awsMqBroker = `{
                 "set",
                 "string"
               ],
+              "replication_user": "bool",
               "username": "string"
             }
           ]

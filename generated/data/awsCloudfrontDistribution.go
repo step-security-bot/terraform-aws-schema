@@ -69,6 +69,11 @@ const awsCloudfrontDistribution = `{
           "map",
           "string"
         ]
+      },
+      "web_acl_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
       }
     },
     "description_kind": "plain"

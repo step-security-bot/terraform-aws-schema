@@ -44,7 +44,8 @@ const awsVpcEndpoint = `{
           [
             "object",
             {
-              "dns_record_ip_type": "string"
+              "dns_record_ip_type": "string",
+              "private_dns_only_for_inbound_resolver_endpoint": "bool"
             }
           ]
         ]
