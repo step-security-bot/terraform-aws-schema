@@ -209,6 +209,7 @@ const awsBatchComputeEnvironment = `{
                     "type": "string"
                   },
                   "version": {
+                    "computed": true,
                     "description_kind": "plain",
                     "optional": true,
                     "type": "string"

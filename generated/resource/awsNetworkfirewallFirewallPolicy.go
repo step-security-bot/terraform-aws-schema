@@ -102,6 +102,48 @@ const awsNetworkfirewallFirewallPolicy = `{
             }
           },
           "block_types": {
+            "policy_variables": {
+              "block": {
+                "block_types": {
+                  "rule_variables": {
+                    "block": {
+                      "attributes": {
+                        "key": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "block_types": {
+                        "ip_set": {
+                          "block": {
+                            "attributes": {
+                              "definition": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": [
+                                  "set",
+                                  "string"
+                                ]
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "min_items": 1,
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "nesting_mode": "set"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "stateful_engine_options": {
               "block": {
                 "attributes": {

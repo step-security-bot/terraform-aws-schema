@@ -73,6 +73,14 @@ const awsTransferServer = `{
         "required": true,
         "type": "string"
       },
+      "structured_log_destinations": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          "string"
+        ]
+      },
       "url": {
         "computed": true,
         "description_kind": "plain",

@@ -238,7 +238,7 @@ const awsFinspaceKxCluster = `{
                   },
                   "db_paths": {
                     "description_kind": "plain",
-                    "required": true,
+                    "optional": true,
                     "type": [
                       "set",
                       "string"
@@ -247,7 +247,6 @@ const awsFinspaceKxCluster = `{
                 },
                 "description_kind": "plain"
               },
-              "min_items": 1,
               "nesting_mode": "list"
             }
           },

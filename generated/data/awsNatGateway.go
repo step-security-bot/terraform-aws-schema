@@ -45,6 +45,27 @@ const awsNatGateway = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "secondary_allocation_ids": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          "string"
+        ]
+      },
+      "secondary_private_ip_address_count": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
+      "secondary_private_ip_addresses": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          "string"
+        ]
+      },
       "state": {
         "computed": true,
         "description_kind": "plain",

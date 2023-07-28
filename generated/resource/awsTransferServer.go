@@ -107,6 +107,15 @@ const awsTransferServer = `{
         "optional": true,
         "type": "string"
       },
+      "structured_log_destinations": {
+        "description": "This is a set of arns of destinations that will receive structured logs from the transfer server",
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
+      },
       "tags": {
         "description_kind": "plain",
         "optional": true,

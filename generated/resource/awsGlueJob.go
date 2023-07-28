@@ -135,6 +135,12 @@ const awsGlueJob = `{
               "optional": true,
               "type": "string"
             },
+            "runtime": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "script_location": {
               "description_kind": "plain",
               "required": true,

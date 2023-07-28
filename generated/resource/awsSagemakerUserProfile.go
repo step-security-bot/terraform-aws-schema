@@ -122,6 +122,25 @@ const awsSagemakerUserProfile = `{
                     },
                     "max_items": 1,
                     "nesting_mode": "list"
+                  },
+                  "workspace_settings": {
+                    "block": {
+                      "attributes": {
+                        "s3_artifact_path": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "s3_kms_key_id": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
                   }
                 },
                 "description_kind": "plain"

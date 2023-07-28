@@ -773,6 +773,544 @@ const awsMedialiveChannel = `{
               "max_items": 1,
               "nesting_mode": "list"
             },
+            "caption_descriptions": {
+              "block": {
+                "attributes": {
+                  "accessibility": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "caption_selector_name": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "language_code": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "language_description": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "name": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "block_types": {
+                  "destination_settings": {
+                    "block": {
+                      "block_types": {
+                        "arib_destination_settings": {
+                          "block": {
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        },
+                        "burn_in_destination_settings": {
+                          "block": {
+                            "attributes": {
+                              "alignment": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "background_color": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "background_opacity": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "font_color": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "font_opacity": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "font_resolution": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "font_size": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "outline_color": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              },
+                              "outline_size": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "shadow_color": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "shadow_opacity": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "shadow_x_offset": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "shadow_y_offset": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "teletext_grid_control": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              },
+                              "x_position": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "y_position": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              }
+                            },
+                            "block_types": {
+                              "font": {
+                                "block": {
+                                  "attributes": {
+                                    "password_param": {
+                                      "computed": true,
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "uri": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    },
+                                    "username": {
+                                      "computed": true,
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        },
+                        "dvb_sub_destination_settings": {
+                          "block": {
+                            "attributes": {
+                              "alignment": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "background_color": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "background_opacity": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "font_color": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "font_opacity": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "font_resolution": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "font_size": {
+                                "computed": true,
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "outline_color": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "outline_size": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "shadow_color": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "shadow_opacity": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "shadow_x_offset": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "shadow_y_offset": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "teletext_grid_control": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "x_position": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              },
+                              "y_position": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "number"
+                              }
+                            },
+                            "block_types": {
+                              "font": {
+                                "block": {
+                                  "attributes": {
+                                    "password_param": {
+                                      "computed": true,
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    },
+                                    "uri": {
+                                      "description_kind": "plain",
+                                      "required": true,
+                                      "type": "string"
+                                    },
+                                    "username": {
+                                      "computed": true,
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "string"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        },
+                        "ebu_tt_d_destination_settings": {
+                          "block": {
+                            "attributes": {
+                              "copyright_holder": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "fill_line_gap": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "font_family": {
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "style_control": {
+                                "computed": true,
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        },
+                        "embedded_destination_settings": {
+                          "block": {
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        },
+                        "embedded_plus_scte20_destination_settings": {
+                          "block": {
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        },
+                        "rtmp_caption_info_destination_settings": {
+                          "block": {
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        },
+                        "scte20_plus_embedded_destination_settings": {
+                          "block": {
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        },
+                        "scte27_destination_settings": {
+                          "block": {
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        },
+                        "smpte_tt_destination_settings": {
+                          "block": {
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        },
+                        "teletext_destination_settings": {
+                          "block": {
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        },
+                        "ttml_destination_settings": {
+                          "block": {
+                            "attributes": {
+                              "style_control": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        },
+                        "webvtt_destination_settings": {
+                          "block": {
+                            "attributes": {
+                              "style_control": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "nesting_mode": "list"
+            },
+            "global_configuration": {
+              "block": {
+                "attributes": {
+                  "initial_audio_gain": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
+                  "input_end_action": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "output_locking_mode": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "output_timing_source": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "support_low_framerate_inputs": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "block_types": {
+                  "input_loss_behavior": {
+                    "block": {
+                      "attributes": {
+                        "black_frame_msec": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        },
+                        "input_loss_image_color": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "input_loss_image_type": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "string"
+                        },
+                        "repeat_frame_msec": {
+                          "description_kind": "plain",
+                          "optional": true,
+                          "type": "number"
+                        }
+                      },
+                      "block_types": {
+                        "input_loss_image_slate": {
+                          "block": {
+                            "attributes": {
+                              "password_param": {
+                                "computed": true,
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              },
+                              "uri": {
+                                "description_kind": "plain",
+                                "required": true,
+                                "type": "string"
+                              },
+                              "username": {
+                                "computed": true,
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "string"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "motion_graphics_configuration": {
+              "block": {
+                "attributes": {
+                  "motion_graphics_insertion": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "block_types": {
+                  "motion_graphics_settings": {
+                    "block": {
+                      "block_types": {
+                        "html_motion_graphics_settings": {
+                          "block": {
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "min_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
+            "nielsen_configuration": {
+              "block": {
+                "attributes": {
+                  "distributor_id": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "nielsen_pcm_to_id3_tagging": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            },
             "output_groups": {
               "block": {
                 "attributes": {
