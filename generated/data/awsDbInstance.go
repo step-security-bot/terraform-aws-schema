@@ -55,8 +55,9 @@ const awsDbInstance = `{
         "type": "string"
       },
       "db_instance_identifier": {
+        "computed": true,
         "description_kind": "plain",
-        "required": true,
+        "optional": true,
         "type": "string"
       },
       "db_instance_port": {

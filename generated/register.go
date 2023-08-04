@@ -1012,6 +1012,7 @@ func init() {
 	resources["aws_sagemaker_monitoring_schedule"] = resource.AwsSagemakerMonitoringScheduleSchema()  
 	resources["aws_sagemaker_notebook_instance"] = resource.AwsSagemakerNotebookInstanceSchema()  
 	resources["aws_sagemaker_notebook_instance_lifecycle_configuration"] = resource.AwsSagemakerNotebookInstanceLifecycleConfigurationSchema()  
+	resources["aws_sagemaker_pipeline"] = resource.AwsSagemakerPipelineSchema()  
 	resources["aws_sagemaker_project"] = resource.AwsSagemakerProjectSchema()  
 	resources["aws_sagemaker_servicecatalog_portfolio_status"] = resource.AwsSagemakerServicecatalogPortfolioStatusSchema()  
 	resources["aws_sagemaker_space"] = resource.AwsSagemakerSpaceSchema()  

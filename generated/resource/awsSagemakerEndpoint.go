@@ -155,7 +155,66 @@ const awsSagemakerEndpoint = `{
                 "description_kind": "plain"
               },
               "max_items": 1,
-              "min_items": 1,
+              "nesting_mode": "list"
+            },
+            "rolling_update_policy": {
+              "block": {
+                "attributes": {
+                  "maximum_execution_timeout_in_seconds": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "number"
+                  },
+                  "wait_interval_in_seconds": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "number"
+                  }
+                },
+                "block_types": {
+                  "maximum_batch_size": {
+                    "block": {
+                      "attributes": {
+                        "type": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "value": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "number"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "min_items": 1,
+                    "nesting_mode": "list"
+                  },
+                  "rollback_maximum_batch_size": {
+                    "block": {
+                      "attributes": {
+                        "type": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "value": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "number"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
               "nesting_mode": "list"
             }
           },

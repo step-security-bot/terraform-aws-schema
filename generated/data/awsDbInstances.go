@@ -30,6 +30,15 @@ const awsDbInstances = `{
           "list",
           "string"
         ]
+      },
+      "tags": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
       }
     },
     "block_types": {

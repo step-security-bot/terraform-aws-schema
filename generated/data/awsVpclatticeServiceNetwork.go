@@ -27,6 +27,7 @@ const awsVpclatticeServiceNetwork = `{
       "id": {
         "computed": true,
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
       "last_updated_at": {

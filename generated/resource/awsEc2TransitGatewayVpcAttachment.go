@@ -56,11 +56,13 @@ const awsEc2TransitGatewayVpcAttachment = `{
         ]
       },
       "transit_gateway_default_route_table_association": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"
       },
       "transit_gateway_default_route_table_propagation": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"

@@ -125,6 +125,15 @@ const awsDbSnapshot = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "tags": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "map",
+          "string"
+        ]
+      },
       "vpc_id": {
         "computed": true,
         "description_kind": "plain",
