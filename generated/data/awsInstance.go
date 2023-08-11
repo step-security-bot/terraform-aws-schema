@@ -201,6 +201,7 @@ const awsInstance = `{
             "object",
             {
               "http_endpoint": "string",
+              "http_protocol_ipv6": "string",
               "http_put_response_hop_limit": "number",
               "http_tokens": "string",
               "instance_metadata_tags": "string"

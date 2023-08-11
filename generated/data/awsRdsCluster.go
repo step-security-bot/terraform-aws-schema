@@ -65,6 +65,11 @@ const awsRdsCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "db_system_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "enabled_cloudwatch_logs_exports": {
         "computed": true,
         "description_kind": "plain",

@@ -175,7 +175,7 @@ const awsEc2ClientVpnEndpoint = `{
               "description_kind": "plain",
               "required": true,
               "type": [
-                "list",
+                "set",
                 "string"
               ]
             }

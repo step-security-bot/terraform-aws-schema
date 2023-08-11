@@ -210,7 +210,7 @@ const awsLambdaEventSourceMapping = `{
                 },
                 "description_kind": "plain"
               },
-              "max_items": 5,
+              "max_items": 10,
               "nesting_mode": "set"
             }
           },

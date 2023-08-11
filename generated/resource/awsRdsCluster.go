@@ -109,6 +109,12 @@ const awsRdsCluster = `{
         "optional": true,
         "type": "string"
       },
+      "db_system_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "deletion_protection": {
         "description_kind": "plain",
         "optional": true,

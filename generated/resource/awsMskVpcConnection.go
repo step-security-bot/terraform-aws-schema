@@ -6,40 +6,26 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsTransferCertificate = `{
+const awsMskVpcConnection = `{
   "block": {
     "attributes": {
-      "active_date": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
       },
-      "certificate": {
+      "authentication": {
         "description_kind": "plain",
         "required": true,
-        "sensitive": true,
         "type": "string"
       },
-      "certificate_chain": {
+      "client_subnets": {
         "description_kind": "plain",
-        "optional": true,
-        "sensitive": true,
-        "type": "string"
-      },
-      "certificate_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "description": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
+        "required": true,
+        "type": [
+          "set",
+          "string"
+        ]
       },
       "id": {
         "computed": true,
@@ -47,16 +33,13 @@ const awsTransferCertificate = `{
         "optional": true,
         "type": "string"
       },
-      "inactive_date": {
-        "computed": true,
+      "security_groups": {
         "description_kind": "plain",
-        "type": "string"
-      },
-      "private_key": {
-        "description_kind": "plain",
-        "optional": true,
-        "sensitive": true,
-        "type": "string"
+        "required": true,
+        "type": [
+          "set",
+          "string"
+        ]
       },
       "tags": {
         "description_kind": "plain",
@@ -75,7 +58,12 @@ const awsTransferCertificate = `{
           "string"
         ]
       },
-      "usage": {
+      "target_cluster_arn": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "vpc_id": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
@@ -86,8 +74,8 @@ const awsTransferCertificate = `{
   "version": 0
 }`
 
-func AwsTransferCertificateSchema() *tfjson.Schema {
+func AwsMskVpcConnectionSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsTransferCertificate), &result)
+	_ = json.Unmarshal([]byte(awsMskVpcConnection), &result)
 	return &result
 }

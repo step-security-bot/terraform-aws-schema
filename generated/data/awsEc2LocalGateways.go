@@ -46,7 +46,7 @@ const awsEc2LocalGateways = `{
               "description_kind": "plain",
               "required": true,
               "type": [
-                "list",
+                "set",
                 "string"
               ]
             }

@@ -1,4 +1,4 @@
-package resource
+package data
 
 import (
 	"encoding/json"
@@ -6,22 +6,22 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsTransferProfile = `{
+const awsMskVpcConnection = `{
   "block": {
     "attributes": {
       "arn": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "as2_id": {
         "description_kind": "plain",
         "required": true,
         "type": "string"
       },
-      "certificate_ids": {
+      "authentication": {
+        "computed": true,
         "description_kind": "plain",
-        "optional": true,
+        "type": "string"
+      },
+      "client_subnets": {
+        "computed": true,
+        "description_kind": "plain",
         "type": [
           "set",
           "string"
@@ -33,25 +33,15 @@ const awsTransferProfile = `{
         "optional": true,
         "type": "string"
       },
-      "profile_id": {
+      "security_groups": {
         "computed": true,
         "description_kind": "plain",
-        "type": "string"
-      },
-      "profile_type": {
-        "description_kind": "plain",
-        "required": true,
-        "type": "string"
+        "type": [
+          "set",
+          "string"
+        ]
       },
       "tags": {
-        "description_kind": "plain",
-        "optional": true,
-        "type": [
-          "map",
-          "string"
-        ]
-      },
-      "tags_all": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
@@ -59,6 +49,16 @@ const awsTransferProfile = `{
           "map",
           "string"
         ]
+      },
+      "target_cluster_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "vpc_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
       }
     },
     "description_kind": "plain"
@@ -66,8 +66,8 @@ const awsTransferProfile = `{
   "version": 0
 }`
 
-func AwsTransferProfileSchema() *tfjson.Schema {
+func AwsMskVpcConnectionSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsTransferProfile), &result)
+	_ = json.Unmarshal([]byte(awsMskVpcConnection), &result)
 	return &result
 }

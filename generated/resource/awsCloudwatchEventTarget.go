@@ -395,6 +395,34 @@ const awsCloudwatchEventTarget = `{
         "max_items": 5,
         "nesting_mode": "list"
       },
+      "sagemaker_pipeline_target": {
+        "block": {
+          "block_types": {
+            "pipeline_parameter_list": {
+              "block": {
+                "attributes": {
+                  "name": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "value": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 200,
+              "nesting_mode": "set"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "sqs_target": {
         "block": {
           "attributes": {

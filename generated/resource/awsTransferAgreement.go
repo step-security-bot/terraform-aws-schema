@@ -19,6 +19,11 @@ const awsTransferAgreement = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "base_directory": {
         "description_kind": "plain",
         "required": true,

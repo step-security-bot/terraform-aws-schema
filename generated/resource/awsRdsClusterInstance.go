@@ -47,6 +47,11 @@ const awsRdsClusterInstance = `{
         "optional": true,
         "type": "bool"
       },
+      "custom_iam_instance_profile": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "db_parameter_group_name": {
         "computed": true,
         "description_kind": "plain",

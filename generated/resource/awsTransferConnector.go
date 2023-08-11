@@ -14,6 +14,11 @@ const awsTransferConnector = `{
         "required": true,
         "type": "string"
       },
+      "arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "connector_id": {
         "computed": true,
         "description_kind": "plain",

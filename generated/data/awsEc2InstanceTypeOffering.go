@@ -47,7 +47,7 @@ const awsEc2InstanceTypeOffering = `{
               "description_kind": "plain",
               "required": true,
               "type": [
-                "list",
+                "set",
                 "string"
               ]
             }

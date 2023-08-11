@@ -42,7 +42,7 @@ const awsEc2TransitGatewayRouteTableAssociations = `{
               "description_kind": "plain",
               "required": true,
               "type": [
-                "list",
+                "set",
                 "string"
               ]
             }

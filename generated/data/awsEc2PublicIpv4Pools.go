@@ -46,7 +46,7 @@ const awsEc2PublicIpv4Pools = `{
               "description_kind": "plain",
               "required": true,
               "type": [
-                "list",
+                "set",
                 "string"
               ]
             }

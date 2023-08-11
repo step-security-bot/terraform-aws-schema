@@ -32,6 +32,11 @@ const awsCloudfrontDistribution = `{
         "optional": true,
         "type": "string"
       },
+      "continuous_deployment_policy_id": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "default_root_object": {
         "description_kind": "plain",
         "optional": true,
@@ -89,6 +94,11 @@ const awsCloudfrontDistribution = `{
         "type": "string"
       },
       "retain_on_delete": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
+      "staging": {
         "description_kind": "plain",
         "optional": true,
         "type": "bool"

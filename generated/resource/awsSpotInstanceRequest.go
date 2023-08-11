@@ -572,6 +572,11 @@ const awsSpotInstanceRequest = `{
               "optional": true,
               "type": "string"
             },
+            "http_protocol_ipv6": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
             "http_put_response_hop_limit": {
               "computed": true,
               "description_kind": "plain",

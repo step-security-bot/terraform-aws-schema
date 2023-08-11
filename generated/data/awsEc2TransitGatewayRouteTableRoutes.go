@@ -6,7 +6,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsEc2TransitGatewayVpcAttachments = `{
+const awsEc2TransitGatewayRouteTableRoutes = `{
   "block": {
     "attributes": {
       "id": {
@@ -15,13 +15,27 @@ const awsEc2TransitGatewayVpcAttachments = `{
         "optional": true,
         "type": "string"
       },
-      "ids": {
+      "routes": {
         "computed": true,
         "description_kind": "plain",
         "type": [
           "list",
-          "string"
+          [
+            "object",
+            {
+              "destination_cidr_block": "string",
+              "prefix_list_id": "string",
+              "state": "string",
+              "transit_gateway_route_table_announcement_id": "string",
+              "type": "string"
+            }
+          ]
         ]
+      },
+      "transit_gateway_route_table_id": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
       }
     },
     "block_types": {
@@ -44,20 +58,8 @@ const awsEc2TransitGatewayVpcAttachments = `{
           },
           "description_kind": "plain"
         },
+        "min_items": 1,
         "nesting_mode": "set"
-      },
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "read": {
-              "description_kind": "plain",
-              "optional": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "single"
       }
     },
     "description_kind": "plain"
@@ -65,8 +67,8 @@ const awsEc2TransitGatewayVpcAttachments = `{
   "version": 0
 }`
 
-func AwsEc2TransitGatewayVpcAttachmentsSchema() *tfjson.Schema {
+func AwsEc2TransitGatewayRouteTableRoutesSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsEc2TransitGatewayVpcAttachments), &result)
+	_ = json.Unmarshal([]byte(awsEc2TransitGatewayRouteTableRoutes), &result)
 	return &result
 }

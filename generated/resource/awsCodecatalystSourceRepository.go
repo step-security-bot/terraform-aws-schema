@@ -1,4 +1,4 @@
-package data
+package resource
 
 import (
 	"encoding/json"
@@ -6,50 +6,51 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsEc2TransitGatewayVpcAttachments = `{
+const awsCodecatalystSourceRepository = `{
   "block": {
     "attributes": {
+      "description": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
       },
-      "ids": {
-        "computed": true,
+      "name": {
         "description_kind": "plain",
-        "type": [
-          "list",
-          "string"
-        ]
+        "required": true,
+        "type": "string"
+      },
+      "project_name": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "space_name": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
       }
     },
     "block_types": {
-      "filter": {
-        "block": {
-          "attributes": {
-            "name": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "values": {
-              "description_kind": "plain",
-              "required": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "set"
-      },
       "timeouts": {
         "block": {
           "attributes": {
-            "read": {
+            "create": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "delete": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            },
+            "update": {
               "description_kind": "plain",
               "optional": true,
               "type": "string"
@@ -65,8 +66,8 @@ const awsEc2TransitGatewayVpcAttachments = `{
   "version": 0
 }`
 
-func AwsEc2TransitGatewayVpcAttachmentsSchema() *tfjson.Schema {
+func AwsCodecatalystSourceRepositorySchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsEc2TransitGatewayVpcAttachments), &result)
+	_ = json.Unmarshal([]byte(awsCodecatalystSourceRepository), &result)
 	return &result
 }

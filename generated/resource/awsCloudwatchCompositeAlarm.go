@@ -82,6 +82,32 @@ const awsCloudwatchCompositeAlarm = `{
         ]
       }
     },
+    "block_types": {
+      "actions_suppressor": {
+        "block": {
+          "attributes": {
+            "alarm": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "extension_period": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "number"
+            },
+            "wait_period": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "number"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      }
+    },
     "description_kind": "plain"
   },
   "version": 0

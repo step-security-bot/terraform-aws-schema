@@ -49,6 +49,21 @@ const awsMskCluster = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "bootstrap_brokers_vpc_connectivity_sasl_iam": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "bootstrap_brokers_vpc_connectivity_sasl_scram": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "bootstrap_brokers_vpc_connectivity_tls": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "cluster_name": {
         "description_kind": "plain",
         "required": true,
@@ -157,6 +172,53 @@ const awsMskCluster = `{
                           "description_kind": "plain",
                           "optional": true,
                           "type": "string"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
+                  "vpc_connectivity": {
+                    "block": {
+                      "block_types": {
+                        "client_authentication": {
+                          "block": {
+                            "attributes": {
+                              "tls": {
+                                "computed": true,
+                                "description_kind": "plain",
+                                "optional": true,
+                                "type": "bool"
+                              }
+                            },
+                            "block_types": {
+                              "sasl": {
+                                "block": {
+                                  "attributes": {
+                                    "iam": {
+                                      "computed": true,
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "bool"
+                                    },
+                                    "scram": {
+                                      "computed": true,
+                                      "description_kind": "plain",
+                                      "optional": true,
+                                      "type": "bool"
+                                    }
+                                  },
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              }
+                            },
+                            "description_kind": "plain"
+                          },
+                          "max_items": 1,
+                          "nesting_mode": "list"
                         }
                       },
                       "description_kind": "plain"

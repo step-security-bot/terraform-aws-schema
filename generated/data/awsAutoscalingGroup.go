@@ -426,7 +426,7 @@ const awsAutoscalingGroup = `{
     },
     "description_kind": "plain"
   },
-  "version": 0
+  "version": 1
 }`
 
 func AwsAutoscalingGroupSchema() *tfjson.Schema {

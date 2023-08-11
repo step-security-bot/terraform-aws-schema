@@ -126,7 +126,7 @@ const awsEc2TransitGatewayMulticastDomain = `{
               "description_kind": "plain",
               "required": true,
               "type": [
-                "list",
+                "set",
                 "string"
               ]
             }

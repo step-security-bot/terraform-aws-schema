@@ -104,7 +104,7 @@ const awsEc2Host = `{
               "description_kind": "plain",
               "required": true,
               "type": [
-                "list",
+                "set",
                 "string"
               ]
             }

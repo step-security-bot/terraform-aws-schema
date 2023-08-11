@@ -90,6 +90,11 @@ const awsAutoscalingGroup = `{
         "optional": true,
         "type": "string"
       },
+      "ignore_failed_scaling_activities": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
+      },
       "launch_configuration": {
         "description_kind": "plain",
         "optional": true,
@@ -863,7 +868,7 @@ const awsAutoscalingGroup = `{
     },
     "description_kind": "plain"
   },
-  "version": 0
+  "version": 1
 }`
 
 func AwsAutoscalingGroupSchema() *tfjson.Schema {

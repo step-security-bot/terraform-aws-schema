@@ -6,31 +6,23 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 )
 
-const awsEc2TransitGatewayConnectPeer = `{
+const awsCodecatalystDevEnvironment = `{
   "block": {
     "attributes": {
-      "arn": {
-        "computed": true,
+      "alias": {
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
-      "bgp_asn": {
-        "computed": true,
+      "creator_id": {
         "description_kind": "plain",
+        "optional": true,
         "type": "string"
       },
-      "bgp_peer_address": {
-        "computed": true,
+      "env_id": {
         "description_kind": "plain",
+        "required": true,
         "type": "string"
-      },
-      "bgp_transit_gateway_addresses": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": [
-          "set",
-          "string"
-        ]
       },
       "id": {
         "computed": true,
@@ -38,15 +30,64 @@ const awsEc2TransitGatewayConnectPeer = `{
         "optional": true,
         "type": "string"
       },
-      "inside_cidr_blocks": {
+      "ides": {
         "computed": true,
         "description_kind": "plain",
         "type": [
           "list",
-          "string"
+          [
+            "object",
+            {
+              "name": "string",
+              "runtime": "string"
+            }
+          ]
         ]
       },
-      "peer_address": {
+      "inactivity_timeout_minutes": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "number"
+      },
+      "instance_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "last_updated_time": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "persistent_storage": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "size": "number"
+            }
+          ]
+        ]
+      },
+      "project_name": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "space_name": {
+        "description_kind": "plain",
+        "required": true,
+        "type": "string"
+      },
+      "status": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "status_reason": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
@@ -59,58 +100,27 @@ const awsEc2TransitGatewayConnectPeer = `{
           "map",
           "string"
         ]
-      },
-      "transit_gateway_address": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "transit_gateway_attachment_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "type": "string"
-      },
-      "transit_gateway_connect_peer_id": {
-        "computed": true,
-        "description_kind": "plain",
-        "optional": true,
-        "type": "string"
       }
     },
     "block_types": {
-      "filter": {
+      "repositories": {
         "block": {
           "attributes": {
-            "name": {
+            "branch_name": {
+              "computed": true,
               "description_kind": "plain",
-              "required": true,
               "type": "string"
             },
-            "values": {
+            "repository_name": {
+              "computed": true,
               "description_kind": "plain",
-              "required": true,
-              "type": [
-                "set",
-                "string"
-              ]
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "set"
-      },
-      "timeouts": {
-        "block": {
-          "attributes": {
-            "read": {
-              "description_kind": "plain",
-              "optional": true,
               "type": "string"
             }
           },
           "description_kind": "plain"
         },
-        "nesting_mode": "single"
+        "max_items": 100,
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"
@@ -118,8 +128,8 @@ const awsEc2TransitGatewayConnectPeer = `{
   "version": 0
 }`
 
-func AwsEc2TransitGatewayConnectPeerSchema() *tfjson.Schema {
+func AwsCodecatalystDevEnvironmentSchema() *tfjson.Schema {
 	var result tfjson.Schema
-	_ = json.Unmarshal([]byte(awsEc2TransitGatewayConnectPeer), &result)
+	_ = json.Unmarshal([]byte(awsCodecatalystDevEnvironment), &result)
 	return &result
 }
