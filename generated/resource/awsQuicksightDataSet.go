@@ -498,7 +498,7 @@ const awsQuicksightDataSet = `{
           "description_kind": "plain"
         },
         "max_items": 64,
-        "nesting_mode": "list"
+        "nesting_mode": "set"
       },
       "physical_table_map": {
         "block": {

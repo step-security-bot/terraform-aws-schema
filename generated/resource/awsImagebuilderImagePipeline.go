@@ -104,6 +104,44 @@ const awsImagebuilderImagePipeline = `{
       }
     },
     "block_types": {
+      "image_scanning_configuration": {
+        "block": {
+          "attributes": {
+            "image_scanning_enabled": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            }
+          },
+          "block_types": {
+            "ecr_configuration": {
+              "block": {
+                "attributes": {
+                  "container_tags": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": [
+                      "set",
+                      "string"
+                    ]
+                  },
+                  "repository_name": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "image_tests_configuration": {
         "block": {
           "attributes": {

@@ -65,6 +65,32 @@ const awsImagebuilderImagePipeline = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "image_scanning_configuration": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "ecr_configuration": [
+                "list",
+                [
+                  "object",
+                  {
+                    "container_tags": [
+                      "set",
+                      "string"
+                    ],
+                    "repository_name": "string"
+                  }
+                ]
+              ],
+              "image_scanning_enabled": "bool"
+            }
+          ]
+        ]
+      },
       "image_tests_configuration": {
         "computed": true,
         "description_kind": "plain",

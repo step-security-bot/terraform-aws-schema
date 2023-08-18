@@ -30,6 +30,14 @@ const awsRamResourceShare = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "resource_arns": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          "string"
+        ]
+      },
       "resource_owner": {
         "description_kind": "plain",
         "required": true,
