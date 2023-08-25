@@ -4188,7 +4188,21 @@ const awsMedialiveChannel = `{
                               "audio_track_selection": {
                                 "block": {
                                   "block_types": {
-                                    "track": {
+                                    "dolby_e_decode": {
+                                      "block": {
+                                        "attributes": {
+                                          "program_selection": {
+                                            "description_kind": "plain",
+                                            "required": true,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "description_kind": "plain"
+                                      },
+                                      "max_items": 1,
+                                      "nesting_mode": "list"
+                                    },
+                                    "tracks": {
                                       "block": {
                                         "attributes": {
                                           "track": {
@@ -4251,7 +4265,14 @@ const awsMedialiveChannel = `{
                                 "max_items": 1,
                                 "nesting_mode": "list"
                               },
-                              "dvb_tdt_settings": {
+                              "arib_source_settings": {
+                                "block": {
+                                  "description_kind": "plain"
+                                },
+                                "max_items": 1,
+                                "nesting_mode": "list"
+                              },
+                              "dvb_sub_source_settings": {
                                 "block": {
                                   "attributes": {
                                     "ocr_language": {
@@ -4284,11 +4305,6 @@ const awsMedialiveChannel = `{
                                       "type": "string"
                                     },
                                     "source_608_channel_number": {
-                                      "description_kind": "plain",
-                                      "optional": true,
-                                      "type": "number"
-                                    },
-                                    "source_608_track_number": {
                                       "description_kind": "plain",
                                       "optional": true,
                                       "type": "number"

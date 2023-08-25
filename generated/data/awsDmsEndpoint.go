@@ -19,6 +19,22 @@ const awsDmsEndpoint = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "elasticsearch_settings": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "endpoint_uri": "string",
+              "error_retry_duration": "number",
+              "full_load_error_percentage": "number",
+              "service_access_role_arn": "string"
+            }
+          ]
+        ]
+      },
       "endpoint_arn": {
         "computed": true,
         "description_kind": "plain",
@@ -40,8 +56,8 @@ const awsDmsEndpoint = `{
         "type": "string"
       },
       "extra_connection_attributes": {
+        "computed": true,
         "description_kind": "plain",
-        "optional": true,
         "type": "string"
       },
       "id": {
@@ -49,6 +65,36 @@ const awsDmsEndpoint = `{
         "description_kind": "plain",
         "optional": true,
         "type": "string"
+      },
+      "kafka_settings": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "broker": "string",
+              "include_control_details": "bool",
+              "include_null_and_empty": "bool",
+              "include_partition_value": "bool",
+              "include_table_alter_operations": "bool",
+              "include_transaction_details": "bool",
+              "message_format": "string",
+              "message_max_bytes": "number",
+              "no_hex_prefix": "bool",
+              "partition_include_schema_table": "bool",
+              "sasl_password": "string",
+              "sasl_username": "string",
+              "security_protocol": "string",
+              "ssl_ca_certificate_arn": "string",
+              "ssl_client_certificate_arn": "string",
+              "ssl_client_key_arn": "string",
+              "ssl_client_key_password": "string",
+              "topic": "string"
+            }
+          ]
+        ]
       },
       "kinesis_settings": {
         "computed": true,
@@ -75,6 +121,24 @@ const awsDmsEndpoint = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
+      },
+      "mongodb_settings": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "auth_mechanism": "string",
+              "auth_source": "string",
+              "auth_type": "string",
+              "docs_to_investigate": "string",
+              "extract_doc_id": "string",
+              "nesting_level": "string"
+            }
+          ]
+        ]
       },
       "password": {
         "computed": true,
@@ -210,172 +274,6 @@ const awsDmsEndpoint = `{
         "computed": true,
         "description_kind": "plain",
         "type": "string"
-      }
-    },
-    "block_types": {
-      "elasticsearch_settings": {
-        "block": {
-          "attributes": {
-            "endpoint_uri": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "error_retry_duration": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "number"
-            },
-            "full_load_error_percentage": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "number"
-            },
-            "service_access_role_arn": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
-      },
-      "kafka_settings": {
-        "block": {
-          "attributes": {
-            "broker": {
-              "description_kind": "plain",
-              "required": true,
-              "type": "string"
-            },
-            "include_control_details": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "bool"
-            },
-            "include_null_and_empty": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "bool"
-            },
-            "include_partition_value": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "bool"
-            },
-            "include_table_alter_operations": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "bool"
-            },
-            "include_transaction_details": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "bool"
-            },
-            "message_format": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "message_max_bytes": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "number"
-            },
-            "no_hex_prefix": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "bool"
-            },
-            "partition_include_schema_table": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "bool"
-            },
-            "sasl_password": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "sasl_username": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "security_protocol": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "ssl_ca_certificate_arn": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "ssl_client_certificate_arn": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "ssl_client_key_arn": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "ssl_client_key_password": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "topic": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
-      },
-      "mongodb_settings": {
-        "block": {
-          "attributes": {
-            "auth_mechanism": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "auth_source": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "auth_type": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "docs_to_investigate": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "extract_doc_id": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            },
-            "nesting_level": {
-              "computed": true,
-              "description_kind": "plain",
-              "type": "string"
-            }
-          },
-          "description_kind": "plain"
-        },
-        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

@@ -45,6 +45,11 @@ const awsDmsReplicationInstance = `{
         "description_kind": "plain",
         "type": "bool"
       },
+      "network_type": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "preferred_maintenance_window": {
         "computed": true,
         "description_kind": "plain",

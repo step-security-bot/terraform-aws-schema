@@ -136,6 +136,77 @@ const awsFinspaceKxEnvironment = `{
               "type": "string"
             }
           },
+          "block_types": {
+            "attachment_network_acl_configuration": {
+              "block": {
+                "attributes": {
+                  "cidr_block": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "protocol": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "rule_action": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "rule_number": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "number"
+                  }
+                },
+                "block_types": {
+                  "icmp_type_code": {
+                    "block": {
+                      "attributes": {
+                        "code": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "number"
+                        },
+                        "type": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "number"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  },
+                  "port_range": {
+                    "block": {
+                      "attributes": {
+                        "from": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "number"
+                        },
+                        "to": {
+                          "description_kind": "plain",
+                          "required": true,
+                          "type": "number"
+                        }
+                      },
+                      "description_kind": "plain"
+                    },
+                    "max_items": 1,
+                    "nesting_mode": "list"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 100,
+              "nesting_mode": "list"
+            }
+          },
           "description_kind": "plain"
         },
         "max_items": 1,

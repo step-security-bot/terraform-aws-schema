@@ -19,6 +19,11 @@ const awsEc2NetworkInsightsPath = `{
         "required": true,
         "type": "string"
       },
+      "destination_arn": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "destination_ip": {
         "description_kind": "plain",
         "optional": true,
@@ -43,6 +48,11 @@ const awsEc2NetworkInsightsPath = `{
       "source": {
         "description_kind": "plain",
         "required": true,
+        "type": "string"
+      },
+      "source_arn": {
+        "computed": true,
+        "description_kind": "plain",
         "type": "string"
       },
       "source_ip": {

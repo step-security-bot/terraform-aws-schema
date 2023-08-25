@@ -10,6 +10,7 @@ const awsS3ObjectCopy = `{
   "block": {
     "attributes": {
       "acl": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "string"
