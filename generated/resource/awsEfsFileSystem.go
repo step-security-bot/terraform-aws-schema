@@ -54,6 +54,11 @@ const awsEfsFileSystem = `{
         "optional": true,
         "type": "string"
       },
+      "name": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "number_of_mount_targets": {
         "computed": true,
         "description_kind": "plain",

@@ -50,6 +50,12 @@ const awsFsxOpenzfsFileSystem = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "endpoint_ip_address_range": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "id": {
         "computed": true,
         "description_kind": "plain",
@@ -75,10 +81,24 @@ const awsFsxOpenzfsFileSystem = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "preferred_subnet_id": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "root_volume_id": {
         "computed": true,
         "description_kind": "plain",
         "type": "string"
+      },
+      "route_table_ids": {
+        "computed": true,
+        "description_kind": "plain",
+        "optional": true,
+        "type": [
+          "set",
+          "string"
+        ]
       },
       "security_group_ids": {
         "description_kind": "plain",

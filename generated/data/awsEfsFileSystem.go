@@ -71,6 +71,11 @@ const awsEfsFileSystem = `{
           ]
         ]
       },
+      "name": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "performance_mode": {
         "computed": true,
         "description_kind": "plain",

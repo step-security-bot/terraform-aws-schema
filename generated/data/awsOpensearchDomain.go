@@ -98,6 +98,7 @@ const awsOpensearchDomain = `{
               "dedicated_master_type": "string",
               "instance_count": "number",
               "instance_type": "string",
+              "multi_az_with_standby_enabled": "bool",
               "warm_count": "number",
               "warm_enabled": "bool",
               "warm_type": "string",

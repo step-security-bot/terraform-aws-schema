@@ -228,6 +228,11 @@ const awsOpensearchDomain = `{
               "optional": true,
               "type": "string"
             },
+            "multi_az_with_standby_enabled": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            },
             "warm_count": {
               "description_kind": "plain",
               "optional": true,

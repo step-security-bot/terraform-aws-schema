@@ -17,7 +17,7 @@ const awsCodeartifactDomain = `{
       "asset_size_bytes": {
         "computed": true,
         "description_kind": "plain",
-        "type": "number"
+        "type": "string"
       },
       "created_time": {
         "computed": true,
