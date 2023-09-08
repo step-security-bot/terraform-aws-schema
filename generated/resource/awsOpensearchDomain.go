@@ -509,6 +509,21 @@ const awsOpensearchDomain = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "software_update_options": {
+        "block": {
+          "attributes": {
+            "auto_software_update_enabled": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "bool"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "timeouts": {
         "block": {
           "attributes": {

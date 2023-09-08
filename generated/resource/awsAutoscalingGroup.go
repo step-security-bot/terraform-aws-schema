@@ -311,10 +311,20 @@ const awsAutoscalingGroup = `{
                     "optional": true,
                     "type": "number"
                   },
+                  "scale_in_protected_instances": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
                   "skip_matching": {
                     "description_kind": "plain",
                     "optional": true,
                     "type": "bool"
+                  },
+                  "standby_instances": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
                   }
                 },
                 "description_kind": "plain"

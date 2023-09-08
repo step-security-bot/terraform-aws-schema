@@ -14,6 +14,11 @@ const awsApiGatewayApiKey = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "customer_id": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "description": {
         "computed": true,
         "description_kind": "plain",

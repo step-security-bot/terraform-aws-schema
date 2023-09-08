@@ -69,6 +69,16 @@ const awsS3Objects = `{
         "optional": true,
         "type": "string"
       },
+      "request_charged": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "request_payer": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "start_after": {
         "description_kind": "plain",
         "optional": true,

@@ -191,6 +191,26 @@ const awsFsxWindowsFileSystem = `{
         "max_items": 1,
         "nesting_mode": "list"
       },
+      "disk_iops_configuration": {
+        "block": {
+          "attributes": {
+            "iops": {
+              "computed": true,
+              "description_kind": "plain",
+              "optional": true,
+              "type": "number"
+            },
+            "mode": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "self_managed_active_directory": {
         "block": {
           "attributes": {

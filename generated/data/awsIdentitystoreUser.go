@@ -201,6 +201,26 @@ const awsIdentitystoreUser = `{
         },
         "max_items": 1,
         "nesting_mode": "list"
+      },
+      "filter": {
+        "block": {
+          "attributes": {
+            "attribute_path": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            },
+            "attribute_value": {
+              "description_kind": "plain",
+              "required": true,
+              "type": "string"
+            }
+          },
+          "deprecated": true,
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
       }
     },
     "description_kind": "plain"

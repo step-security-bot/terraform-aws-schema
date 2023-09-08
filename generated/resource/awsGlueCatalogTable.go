@@ -76,6 +76,35 @@ const awsGlueCatalogTable = `{
       }
     },
     "block_types": {
+      "open_table_format_input": {
+        "block": {
+          "block_types": {
+            "iceberg_input": {
+              "block": {
+                "attributes": {
+                  "metadata_operation": {
+                    "description_kind": "plain",
+                    "required": true,
+                    "type": "string"
+                  },
+                  "version": {
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "description_kind": "plain"
+              },
+              "max_items": 1,
+              "min_items": 1,
+              "nesting_mode": "list"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
+        "nesting_mode": "list"
+      },
       "partition_index": {
         "block": {
           "attributes": {

@@ -9,10 +9,23 @@ import (
 const awsApiGatewayAccount = `{
   "block": {
     "attributes": {
+      "api_key_version": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "cloudwatch_role_arn": {
         "description_kind": "plain",
         "optional": true,
         "type": "string"
+      },
+      "features": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "set",
+          "string"
+        ]
       },
       "id": {
         "computed": true,

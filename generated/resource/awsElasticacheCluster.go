@@ -224,6 +224,11 @@ const awsElasticacheCluster = `{
           "map",
           "string"
         ]
+      },
+      "transit_encryption_enabled": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "bool"
       }
     },
     "block_types": {

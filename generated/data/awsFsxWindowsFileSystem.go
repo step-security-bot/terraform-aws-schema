@@ -67,6 +67,20 @@ const awsFsxWindowsFileSystem = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "disk_iops_configuration": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "iops": "number",
+              "mode": "string"
+            }
+          ]
+        ]
+      },
       "dns_name": {
         "computed": true,
         "description_kind": "plain",

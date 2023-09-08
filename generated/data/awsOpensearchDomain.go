@@ -256,6 +256,19 @@ const awsOpensearchDomain = `{
           ]
         ]
       },
+      "software_update_options": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": [
+          "list",
+          [
+            "object",
+            {
+              "auto_software_update_enabled": "bool"
+            }
+          ]
+        ]
+      },
       "tags": {
         "computed": true,
         "description_kind": "plain",

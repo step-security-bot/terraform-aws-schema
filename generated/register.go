@@ -1098,6 +1098,8 @@ func init() {
 	resources["aws_sfn_activity"] = resource.AwsSfnActivitySchema()  
 	resources["aws_sfn_alias"] = resource.AwsSfnAliasSchema()  
 	resources["aws_sfn_state_machine"] = resource.AwsSfnStateMachineSchema()  
+	resources["aws_shield_drt_access_log_bucket_association"] = resource.AwsShieldDrtAccessLogBucketAssociationSchema()  
+	resources["aws_shield_drt_access_role_arn_association"] = resource.AwsShieldDrtAccessRoleArnAssociationSchema()  
 	resources["aws_shield_protection"] = resource.AwsShieldProtectionSchema()  
 	resources["aws_shield_protection_group"] = resource.AwsShieldProtectionGroupSchema()  
 	resources["aws_shield_protection_health_check_association"] = resource.AwsShieldProtectionHealthCheckAssociationSchema()  

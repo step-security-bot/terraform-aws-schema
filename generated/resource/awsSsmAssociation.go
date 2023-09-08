@@ -86,6 +86,11 @@ const awsSsmAssociation = `{
         "optional": true,
         "type": "string"
       },
+      "sync_compliance": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
       "wait_for_success_timeout_seconds": {
         "description_kind": "plain",
         "optional": true,
