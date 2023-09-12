@@ -15,6 +15,11 @@ const awsS3ControlObjectLambdaAccessPoint = `{
         "optional": true,
         "type": "string"
       },
+      "alias": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "arn": {
         "computed": true,
         "description_kind": "plain",
