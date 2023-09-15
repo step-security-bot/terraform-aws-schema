@@ -29,6 +29,31 @@ const awsS3Object = `{
         "description_kind": "plain",
         "type": "string"
       },
+      "checksum_crc32": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "checksum_crc32c": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "checksum_mode": {
+        "description_kind": "plain",
+        "optional": true,
+        "type": "string"
+      },
+      "checksum_sha1": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
+      "checksum_sha256": {
+        "computed": true,
+        "description_kind": "plain",
+        "type": "string"
+      },
       "content_disposition": {
         "computed": true,
         "description_kind": "plain",

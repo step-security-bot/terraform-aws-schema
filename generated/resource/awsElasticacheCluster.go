@@ -226,6 +226,7 @@ const awsElasticacheCluster = `{
         ]
       },
       "transit_encryption_enabled": {
+        "computed": true,
         "description_kind": "plain",
         "optional": true,
         "type": "bool"

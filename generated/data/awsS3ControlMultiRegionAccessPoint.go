@@ -71,6 +71,7 @@ const awsS3ControlMultiRegionAccessPoint = `{
             "object",
             {
               "bucket": "string",
+              "bucket_account_id": "string",
               "region": "string"
             }
           ]

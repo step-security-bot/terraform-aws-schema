@@ -89,6 +89,17 @@ const awsS3ControlMultiRegionAccessPoint = `{
                     "description_kind": "plain",
                     "required": true,
                     "type": "string"
+                  },
+                  "bucket_account_id": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "region": {
+                    "computed": true,
+                    "description_kind": "plain",
+                    "type": "string"
                   }
                 },
                 "description_kind": "plain"

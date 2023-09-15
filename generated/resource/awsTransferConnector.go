@@ -106,7 +106,28 @@ const awsTransferConnector = `{
           "description_kind": "plain"
         },
         "max_items": 1,
-        "min_items": 1,
+        "nesting_mode": "list"
+      },
+      "sftp_config": {
+        "block": {
+          "attributes": {
+            "trusted_host_keys": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": [
+                "set",
+                "string"
+              ]
+            },
+            "user_secret_id": {
+              "description_kind": "plain",
+              "optional": true,
+              "type": "string"
+            }
+          },
+          "description_kind": "plain"
+        },
+        "max_items": 1,
         "nesting_mode": "list"
       }
     },
